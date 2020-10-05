@@ -1,0 +1,722 @@
+padmin@jjvm006:~/Kube$ kubectl describe vmi testvm
+Name:         testvm
+Namespace:    default
+Labels:       kubevirt.io/domain=testvm
+              kubevirt.io/nodeName=minikube
+              kubevirt.io/size=small
+Annotations:  kubevirt.io/latest-observed-api-version: v1alpha3
+              kubevirt.io/storage-observed-api-version: v1alpha3
+API Version:  kubevirt.io/v1alpha3
+Kind:         VirtualMachineInstance
+Metadata:
+  Creation Timestamp:  2020-09-23T14:57:09Z
+  Finalizers:
+    foregroundDeleteVirtualMachine
+  Generation:  8
+  Managed Fields:
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubevirt.io/latest-observed-api-version:
+          f:kubevirt.io/storage-observed-api-version:
+        f:labels:
+          .:
+          f:kubevirt.io/domain:
+          f:kubevirt.io/nodeName:
+          f:kubevirt.io/size:
+        f:ownerReferences:
+      f:spec:
+        .:
+        f:domain:
+          .:
+          f:devices:
+            .:
+            f:disks:
+            f:interfaces:
+          f:firmware:
+            .:
+            f:uuid:
+          f:machine:
+            .:
+            f:type:
+          f:resources:
+            .:
+            f:requests:
+              .:
+              f:memory:
+        f:networks:
+        f:volumes:
+      f:status:
+        .:
+        f:activePods:
+          .:
+          f:bceb0ed4-1c67-491e-8821-5d7b0969f9b4:
+        f:conditions:
+        f:guestOSInfo:
+        f:nodeName:
+        f:qosClass:
+    Manager:      virt-controller
+    Operation:    Update
+    Time:         2020-09-23T14:57:46Z
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        f:interfaces:
+        f:migrationMethod:
+        f:phase:
+    Manager:    virt-handler
+    Operation:  Update
+    Time:       2020-09-23T14:57:46Z
+  Owner References:
+    API Version:           kubevirt.io/v1alpha3
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  VirtualMachine
+    Name:                  testvm
+    UID:                   061efcc2-ed3f-453d-b3d2-06050feeb611
+  Resource Version:        1066357
+  Self Link:               /apis/kubevirt.io/v1alpha3/namespaces/default/virtualmachineinstances/testvm
+  UID:                     d43b0cae-152d-46fa-8a1b-7b68e22a095f
+Spec:
+  Domain:
+    Devices:
+      Disks:
+        Disk:
+          Bus:  virtio
+        Name:   rootfs
+        Disk:
+          Bus:  virtio
+        Name:   cloudinit
+      Interfaces:
+        Masquerade:
+        Name:  default
+    Features:
+      Acpi:
+        Enabled:  true
+    Firmware:
+      Uuid:  5a9fc181-957e-5c32-9e5a-2de5e9673531
+    Machine:
+      Type:  q35
+    Resources:
+      Requests:
+        Cpu:     100m
+        Memory:  64M
+  Networks:
+    Name:  default
+    Pod:
+  Volumes:
+    Container Disk:
+      Image:              kubevirt/cirros-registry-disk-demo
+      Image Pull Policy:  Always
+    Name:                 rootfs
+    Cloud Init No Cloud:
+      userDataBase64:  SGkuXG4=
+    Name:              cloudinit
+Status:
+  Active Pods:
+    bceb0ed4-1c67-491e-8821-5d7b0969f9b4:  minikube
+  Conditions:
+    Last Probe Time:       <nil>
+    Last Transition Time:  <nil>
+    Status:                True
+    Type:                  LiveMigratable
+    Last Probe Time:       <nil>
+    Last Transition Time:  2020-09-23T14:57:42Z
+    Status:                True
+    Type:                  Ready
+  Guest OS Info:
+  Interfaces:
+    Ip Address:  172.17.0.10
+    Ip Addresses:
+      172.17.0.10
+    Mac:             02:00:00:f0:45:0a
+    Name:            default
+  Migration Method:  BlockMigration
+  Node Name:         minikube
+  Phase:             Running
+  Qos Class:         Burstable
+Events:
+  Type    Reason            Age                    From                       Message
+  ----    ------            ----                   ----                       -------
+  Normal  SuccessfulCreate  9m6s                   virtualmachine-controller  Created virtual machine pod virt-launcher-testvm-jdjr8
+  Normal  Started           8m29s                  virt-handler, minikube     VirtualMachineInstance started.
+  Normal  Created           2m43s (x6 over 8m30s)  virt-handler, minikube     VirtualMachineInstance defined.
+padmin@jjvm006:~/Kube$ kubectl describe vm testvm
+Name:         testvm
+Namespace:    default
+Labels:       <none>
+Annotations:  kubevirt.io/latest-observed-api-version: v1alpha3
+              kubevirt.io/storage-observed-api-version: v1alpha3
+API Version:  kubevirt.io/v1alpha3
+Kind:         VirtualMachine
+Metadata:
+  Creation Timestamp:  2020-09-23T14:50:13Z
+  Generation:          2
+  Managed Fields:
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubectl.kubernetes.io/last-applied-configuration:
+      f:spec:
+        .:
+        f:template:
+          .:
+          f:metadata:
+            .:
+            f:labels:
+              .:
+              f:kubevirt.io/domain:
+              f:kubevirt.io/size:
+          f:spec:
+            .:
+            f:domain:
+              .:
+              f:devices:
+                .:
+                f:disks:
+                f:interfaces:
+              f:resources:
+                .:
+                f:requests:
+                  .:
+                  f:memory:
+            f:networks:
+            f:volumes:
+    Manager:      kubectl-client-side-apply
+    Operation:    Update
+    Time:         2020-09-23T14:50:13Z
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:running:
+    Manager:      virt-api
+    Operation:    Update
+    Time:         2020-09-23T14:57:08Z
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:kubevirt.io/latest-observed-api-version:
+          f:kubevirt.io/storage-observed-api-version:
+      f:status:
+        .:
+        f:conditions:
+        f:created:
+        f:ready:
+    Manager:         virt-controller
+    Operation:       Update
+    Time:            2020-09-23T14:57:46Z
+  Resource Version:  1066359
+  Self Link:         /apis/kubevirt.io/v1alpha3/namespaces/default/virtualmachines/testvm
+  UID:               061efcc2-ed3f-453d-b3d2-06050feeb611
+Spec:
+  Running:  true
+  Template:
+    Metadata:
+      Creation Timestamp:  <nil>
+      Labels:
+        kubevirt.io/domain:  testvm
+        kubevirt.io/size:    small
+    Spec:
+      Domain:
+        Devices:
+          Disks:
+            Disk:
+              Bus:  virtio
+            Name:   rootfs
+            Disk:
+              Bus:  virtio
+            Name:   cloudinit
+          Interfaces:
+            Masquerade:
+            Name:  default
+        Machine:
+          Type:  q35
+        Resources:
+          Requests:
+            Memory:  64M
+      Networks:
+        Name:  default
+        Pod:
+      Volumes:
+        Container Disk:
+          Image:  kubevirt/cirros-registry-disk-demo
+        Name:     rootfs
+        Cloud Init No Cloud:
+          userDataBase64:  SGkuXG4=
+        Name:              cloudinit
+Status:
+  Conditions:
+    Last Probe Time:       <nil>
+    Last Transition Time:  2020-09-23T14:57:42Z
+    Status:                True
+    Type:                  Ready
+  Created:                 true
+  Ready:                   true
+Events:
+  Type    Reason            Age   From                       Message
+  ----    ------            ----  ----                       -------
+  Normal  SuccessfulCreate  10m   virtualmachine-controller  Started the virtual machine by creating the new virtual machine instance testvm
+padmin@jjvm006:~/Kube$ for i in vm vmi vmim vmipreset vmirs vmsnapshot vmsnapshotcontent; do set -x; kubectl get -A $i; set +x; done; 
++ kubectl get -A vm
+NAMESPACE   NAME     AGE   VOLUME
+default     testvm   17m   
++ set +x
++ kubectl get -A vmi
+NAMESPACE   NAME     AGE   PHASE     IP            NODENAME
+default     testvm   10m   Running   172.17.0.10   minikube
++ set +x
++ kubectl get -A vmim
+No resources found
++ set +x
++ kubectl get -A vmipreset
+No resources found
++ set +x
++ kubectl get -A vmirs
+No resources found
++ set +x
++ kubectl get -A vmsnapshot
+No resources found
++ set +x
++ kubectl get -A vmsnapshotcontent
+No resources found
++ set +x
+
+
+padmin@jjvm006:~/Kube$ ./virtctl stop testvm
+VM testvm was scheduled to stop
+padmin@jjvm006:~/Kube$ kubectl describe vmi testvm
+Name:         testvm
+Namespace:    default
+Labels:       kubevirt.io/domain=testvm
+              kubevirt.io/nodeName=minikube
+              kubevirt.io/size=small
+Annotations:  kubevirt.io/latest-observed-api-version: v1alpha3
+              kubevirt.io/storage-observed-api-version: v1alpha3
+API Version:  kubevirt.io/v1alpha3
+Kind:         VirtualMachineInstance
+Metadata:
+  Creation Timestamp:             2020-09-23T14:57:09Z
+  Deletion Grace Period Seconds:  0
+  Deletion Timestamp:             2020-09-23T15:13:38Z
+  Finalizers:
+    foregroundDeleteVirtualMachine
+  Generation:  11
+  Managed Fields:
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubevirt.io/latest-observed-api-version:
+          f:kubevirt.io/storage-observed-api-version:
+        f:labels:
+          .:
+          f:kubevirt.io/domain:
+          f:kubevirt.io/nodeName:
+          f:kubevirt.io/size:
+        f:ownerReferences:
+      f:spec:
+        .:
+        f:domain:
+          .:
+          f:devices:
+            .:
+            f:disks:
+            f:interfaces:
+          f:firmware:
+            .:
+            f:uuid:
+          f:machine:
+            .:
+            f:type:
+          f:resources:
+            .:
+            f:requests:
+              .:
+              f:memory:
+        f:networks:
+        f:volumes:
+      f:status:
+        .:
+        f:activePods:
+          .:
+          f:bceb0ed4-1c67-491e-8821-5d7b0969f9b4:
+        f:conditions:
+        f:guestOSInfo:
+        f:nodeName:
+        f:qosClass:
+    Manager:      virt-controller
+    Operation:    Update
+    Time:         2020-09-23T15:13:44Z
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        f:interfaces:
+        f:migrationMethod:
+        f:phase:
+    Manager:    virt-handler
+    Operation:  Update
+    Time:       2020-09-23T15:13:44Z
+  Owner References:
+    API Version:           kubevirt.io/v1alpha3
+    Block Owner Deletion:  true
+    Controller:            true
+    Kind:                  VirtualMachine
+    Name:                  testvm
+    UID:                   061efcc2-ed3f-453d-b3d2-06050feeb611
+  Resource Version:        1068010
+  Self Link:               /apis/kubevirt.io/v1alpha3/namespaces/default/virtualmachineinstances/testvm
+  UID:                     d43b0cae-152d-46fa-8a1b-7b68e22a095f
+Spec:
+  Domain:
+    Devices:
+      Disks:
+        Disk:
+          Bus:  virtio
+        Name:   rootfs
+        Disk:
+          Bus:  virtio
+        Name:   cloudinit
+      Interfaces:
+        Masquerade:
+        Name:  default
+    Features:
+      Acpi:
+        Enabled:  true
+    Firmware:
+      Uuid:  5a9fc181-957e-5c32-9e5a-2de5e9673531
+    Machine:
+      Type:  q35
+    Resources:
+      Requests:
+        Cpu:     100m
+        Memory:  64M
+  Networks:
+    Name:  default
+    Pod:
+  Volumes:
+    Container Disk:
+      Image:              kubevirt/cirros-registry-disk-demo
+      Image Pull Policy:  Always
+    Name:                 rootfs
+    Cloud Init No Cloud:
+      userDataBase64:  SGkuXG4=
+    Name:              cloudinit
+Status:
+  Active Pods:
+    bceb0ed4-1c67-491e-8821-5d7b0969f9b4:  minikube
+  Conditions:
+    Last Probe Time:       <nil>
+    Last Transition Time:  <nil>
+    Status:                True
+    Type:                  LiveMigratable
+  Guest OS Info:
+  Interfaces:
+    Ip Address:  172.17.0.10
+    Ip Addresses:
+      172.17.0.10
+    Mac:             02:00:00:f0:45:0a
+    Name:            default
+  Migration Method:  BlockMigration
+  Node Name:         minikube
+  Phase:             Succeeded
+  Qos Class:         Burstable
+Events:
+  Type    Reason            Age                From                       Message
+  ----    ------            ----               ----                       -------
+  Normal  SuccessfulCreate  16m                virtualmachine-controller  Created virtual machine pod virt-launcher-testvm-jdjr8
+  Normal  Started           16m                virt-handler, minikube     VirtualMachineInstance started.
+  Normal  Created           23s (x8 over 16m)  virt-handler, minikube     VirtualMachineInstance defined.
+  Normal  SuccessfulDelete  17s                virtualmachine-controller  Deleted virtual machine pod virt-launcher-testvm-jdjr8
+  Normal  ShuttingDown      11s (x4 over 17s)  virt-handler, minikube     Signaled Graceful Shutdown
+  Normal  Deleted           11s                virt-handler, minikube     Signaled Deletion
+  Normal  Stopped           11s                virt-handler, minikube     The VirtualMachineInstance was shut down.
+padmin@jjvm006:~/Kube$ kubectl watch vmi testvm
+Error: unknown command "watch" for "kubectl"
+
+Did you mean this?
+        patch
+
+Run 'kubectl --help' for usage.
+padmin@jjvm006:~/Kube$ kubectl watch vmi testvm -A
+Error: unknown command "watch" for "kubectl"
+
+Did you mean this?
+        patch
+
+Run 'kubectl --help' for usage.
+padmin@jjvm006:~/Kube$ kubectl describe vmi testvm
+Error from server (NotFound): virtualmachineinstances.kubevirt.io "testvm" not found
+padmin@jjvm006:~/Kube$ kubectl get vmi -A
+No resources found
+padmin@jjvm006:~/Kube$ kubectl get vm -A
+NAMESPACE   NAME     AGE   VOLUME
+default     testvm   25m   
+padmin@jjvm006:~/Kube$ kubectl get vm
+NAME     AGE   VOLUME
+testvm   26m   
+padmin@jjvm006:~/Kube$ kubectl get vm testvm
+NAME     AGE   VOLUME
+testvm   27m   
+padmin@jjvm006:~/Kube$ kubectl get vm testvm -o yaml
+apiVersion: kubevirt.io/v1alpha3
+kind: VirtualMachine
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"kubevirt.io/v1alpha3","kind":"VirtualMachine","metadata":{"annotations":{},"name":"testvm","namespace":"default"},"spec":{"running":false,"template":{"metadata":{"labels":{"kubevirt.io/domain":"testvm","kubevirt.io/size":"small"}},"spec":{"domain":{"devices":{"disks":[{"disk":{"bus":"virtio"},"name":"rootfs"},{"disk":{"bus":"virtio"},"name":"cloudinit"}],"interfaces":[{"masquerade":{},"name":"default"}]},"resources":{"requests":{"memory":"64M"}}},"networks":[{"name":"default","pod":{}}],"volumes":[{"containerDisk":{"image":"kubevirt/cirros-registry-disk-demo"},"name":"rootfs"},{"cloudInitNoCloud":{"userDataBase64":"SGkuXG4="},"name":"cloudinit"}]}}}}
+    kubevirt.io/latest-observed-api-version: v1alpha3
+    kubevirt.io/storage-observed-api-version: v1alpha3
+  creationTimestamp: "2020-09-23T14:50:13Z"
+  generation: 3
+  managedFields:
+  - apiVersion: kubevirt.io/v1alpha3
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:template:
+          .: {}
+          f:metadata:
+            .: {}
+            f:labels:
+              .: {}
+              f:kubevirt.io/domain: {}
+              f:kubevirt.io/size: {}
+          f:spec:
+            .: {}
+            f:domain:
+              .: {}
+              f:devices:
+                .: {}
+                f:disks: {}
+                f:interfaces: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:memory: {}
+            f:networks: {}
+            f:volumes: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2020-09-23T14:50:13Z"
+  - apiVersion: kubevirt.io/v1alpha3
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:kubevirt.io/latest-observed-api-version: {}
+          f:kubevirt.io/storage-observed-api-version: {}
+      f:status: {}
+    manager: virt-controller
+    operation: Update
+    time: "2020-09-23T14:57:46Z"
+  - apiVersion: kubevirt.io/v1alpha3
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:running: {}
+    manager: virt-api
+    operation: Update
+    time: "2020-09-23T15:13:37Z"
+  name: testvm
+  namespace: default
+  resourceVersion: "1068040"
+  selfLink: /apis/kubevirt.io/v1alpha3/namespaces/default/virtualmachines/testvm
+  uid: 061efcc2-ed3f-453d-b3d2-06050feeb611
+spec:
+  running: false
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        kubevirt.io/domain: testvm
+        kubevirt.io/size: small
+    spec:
+      domain:
+        devices:
+          disks:
+          - disk:
+              bus: virtio
+            name: rootfs
+          - disk:
+              bus: virtio
+            name: cloudinit
+          interfaces:
+          - masquerade: {}
+            name: default
+        machine:
+          type: q35
+        resources:
+          requests:
+            memory: 64M
+      networks:
+      - name: default
+        pod: {}
+      volumes:
+      - containerDisk:
+          image: kubevirt/cirros-registry-disk-demo
+        name: rootfs
+      - cloudInitNoCloud:
+          userDataBase64: SGkuXG4=
+        name: cloudinit
+status: {}
+padmin@jjvm006:~/Kube$ kubectl describe vm testvm
+Name:         testvm
+Namespace:    default
+Labels:       <none>
+Annotations:  kubevirt.io/latest-observed-api-version: v1alpha3
+              kubevirt.io/storage-observed-api-version: v1alpha3
+API Version:  kubevirt.io/v1alpha3
+Kind:         VirtualMachine
+Metadata:
+  Creation Timestamp:  2020-09-23T14:50:13Z
+  Generation:          3
+  Managed Fields:
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubectl.kubernetes.io/last-applied-configuration:
+      f:spec:
+        .:
+        f:template:
+          .:
+          f:metadata:
+            .:
+            f:labels:
+              .:
+              f:kubevirt.io/domain:
+              f:kubevirt.io/size:
+          f:spec:
+            .:
+            f:domain:
+              .:
+              f:devices:
+                .:
+                f:disks:
+                f:interfaces:
+              f:resources:
+                .:
+                f:requests:
+                  .:
+                  f:memory:
+            f:networks:
+            f:volumes:
+    Manager:      kubectl-client-side-apply
+    Operation:    Update
+    Time:         2020-09-23T14:50:13Z
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:kubevirt.io/latest-observed-api-version:
+          f:kubevirt.io/storage-observed-api-version:
+      f:status:
+    Manager:      virt-controller
+    Operation:    Update
+    Time:         2020-09-23T14:57:46Z
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        f:running:
+    Manager:         virt-api
+    Operation:       Update
+    Time:            2020-09-23T15:13:37Z
+  Resource Version:  1068040
+  Self Link:         /apis/kubevirt.io/v1alpha3/namespaces/default/virtualmachines/testvm
+  UID:               061efcc2-ed3f-453d-b3d2-06050feeb611
+Spec:
+  Running:  false
+  Template:
+    Metadata:
+      Creation Timestamp:  <nil>
+      Labels:
+        kubevirt.io/domain:  testvm
+        kubevirt.io/size:    small
+    Spec:
+      Domain:
+        Devices:
+          Disks:
+            Disk:
+              Bus:  virtio
+            Name:   rootfs
+            Disk:
+              Bus:  virtio
+            Name:   cloudinit
+          Interfaces:
+            Masquerade:
+            Name:  default
+        Machine:
+          Type:  q35
+        Resources:
+          Requests:
+            Memory:  64M
+      Networks:
+        Name:  default
+        Pod:
+      Volumes:
+        Container Disk:
+          Image:  kubevirt/cirros-registry-disk-demo
+        Name:     rootfs
+        Cloud Init No Cloud:
+          userDataBase64:  SGkuXG4=
+        Name:              cloudinit
+Status:
+Events:
+  Type    Reason            Age   From                       Message
+  ----    ------            ----  ----                       -------
+  Normal  SuccessfulCreate  20m   virtualmachine-controller  Started the virtual machine by creating the new virtual machine instance testvm
+  Normal  SuccessfulDelete  4m1s  virtualmachine-controller  Stopped the virtual machine by deleting the virtual machine instance d43b0cae-152d-46fa-8a1b-7b68e22a095f
+padmin@jjvm006:~/Kube$ kubectl get ev -A
+NAMESPACE   LAST SEEN   TYPE      REASON             OBJECT                           MESSAGE
+default     21m         Normal    SuccessfulCreate   virtualmachine/testvm            Started the virtual machine by creating the new virtual machine instance testvm
+default     21m         Normal    SuccessfulCreate   virtualmachineinstance/testvm    Created virtual machine pod virt-launcher-testvm-jdjr8
+default     4m47s       Normal    Created            virtualmachineinstance/testvm    VirtualMachineInstance defined.
+default     20m         Normal    Started            virtualmachineinstance/testvm    VirtualMachineInstance started.
+default     4m41s       Normal    SuccessfulDelete   virtualmachine/testvm            Stopped the virtual machine by deleting the virtual machine instance d43b0cae-152d-46fa-8a1b-7b68e22a095f
+default     4m41s       Normal    SuccessfulDelete   virtualmachineinstance/testvm    Deleted virtual machine pod virt-launcher-testvm-jdjr8
+default     4m35s       Normal    ShuttingDown       virtualmachineinstance/testvm    Signaled Graceful Shutdown
+default     4m35s       Normal    Deleted            virtualmachineinstance/testvm    Signaled Deletion
+default     4m35s       Normal    Stopped            virtualmachineinstance/testvm    The VirtualMachineInstance was shut down.
+default     <unknown>   Normal    Scheduled          pod/virt-launcher-testvm-jdjr8   Successfully assigned default/virt-launcher-testvm-jdjr8 to minikube
+default     21m         Normal    Pulling            pod/virt-launcher-testvm-jdjr8   Pulling image "index.docker.io/kubevirt/virt-launcher@sha256:c82e420fb4220c1f945a51dbf459813e86301784f71eb8cd797faf23e9dca295"
+default     21m         Normal    Pulled             pod/virt-launcher-testvm-jdjr8   Successfully pulled image "index.docker.io/kubevirt/virt-launcher@sha256:c82e420fb4220c1f945a51dbf459813e86301784f71eb8cd797faf23e9dca295"
+default     21m         Normal    Created            pod/virt-launcher-testvm-jdjr8   Created container container-disk-binary
+default     20m         Normal    Started            pod/virt-launcher-testvm-jdjr8   Started container container-disk-binary
+default     20m         Normal    Pulled             pod/virt-launcher-testvm-jdjr8   Container image "index.docker.io/kubevirt/virt-launcher@sha256:c82e420fb4220c1f945a51dbf459813e86301784f71eb8cd797faf23e9dca295" already present on machine
+default     20m         Normal    Created            pod/virt-launcher-testvm-jdjr8   Created container compute
+default     20m         Normal    Started            pod/virt-launcher-testvm-jdjr8   Started container compute
+default     20m         Normal    Pulling            pod/virt-launcher-testvm-jdjr8   Pulling image "kubevirt/cirros-registry-disk-demo"
+default     20m         Normal    Pulled             pod/virt-launcher-testvm-jdjr8   Successfully pulled image "kubevirt/cirros-registry-disk-demo"
+default     20m         Normal    Created            pod/virt-launcher-testvm-jdjr8   Created container volumerootfs
+default     20m         Normal    Started            pod/virt-launcher-testvm-jdjr8   Started container volumerootfs
+default     4m41s       Normal    Killing            pod/virt-launcher-testvm-jdjr8   Stopping container compute
+default     4m41s       Normal    Killing            pod/virt-launcher-testvm-jdjr8   Stopping container volumerootfs
+kubevirt    4m39s       Warning   Unhealthy          pod/virt-api-5c549c7c9c-64gx7    Readiness probe failed: Get https://172.17.0.5:8443/apis/subresources.kubevirt.io/v1alpha3/healthz: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+kubevirt    4m35s       Warning   Unhealthy          pod/virt-api-5c549c7c9c-scrxn    Readiness probe failed: Get https://172.17.0.6:8443/apis/subresources.kubevirt.io/v1alpha3/healthz: net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+
+
+
+

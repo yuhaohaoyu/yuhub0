@@ -1,0 +1,562 @@
+
+cluster-admin
+=============================
+metadata:
+  name: cluster-admin
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  kind: Group
+  name: system:masters
+
+kubeadm:get-nodes
+=============================
+metadata:
+  name: kubeadm:get-nodes
+roleRef:
+  kind: ClusterRole
+  name: kubeadm:get-nodes
+subjects:
+  kind: Group
+  name: system:bootstrappers:kubeadm:default-node-token
+
+kubeadm:kubelet-bootstrap
+=============================
+metadata:
+  name: kubeadm:kubelet-bootstrap
+roleRef:
+  kind: ClusterRole
+  name: system:node-bootstrapper
+subjects:
+  kind: Group
+  name: system:bootstrappers:kubeadm:default-node-token
+
+kubeadm:node-autoapprove-bootstrap
+=============================
+metadata:
+  name: kubeadm:node-autoapprove-bootstrap
+roleRef:
+  kind: ClusterRole
+  name: system:certificates.k8s.io:certificatesigningrequests:nodeclient
+subjects:
+  kind: Group
+  name: system:bootstrappers:kubeadm:default-node-token
+
+kubeadm:node-autoapprove-certificate-rotation
+=============================
+metadata:
+  name: kubeadm:node-autoapprove-certificate-rotation
+roleRef:
+  kind: ClusterRole
+  name: system:certificates.k8s.io:certificatesigningrequests:selfnodeclient
+subjects:
+  kind: Group
+  name: system:nodes
+
+kubeadm:node-proxier
+=============================
+metadata:
+  name: kubeadm:node-proxier
+roleRef:
+  kind: ClusterRole
+  name: system:node-proxier
+subjects:
+- kind: ServiceAccount
+  name: kube-proxy
+
+kubevirt-apiserver
+=============================
+metadata:
+  name: kubevirt-apiserver
+roleRef:
+  kind: ClusterRole
+  name: kubevirt-apiserver
+subjects:
+- kind: ServiceAccount
+  name: kubevirt-apiserver
+
+kubevirt-apiserver-auth-delegator
+=============================
+metadata:
+  name: kubevirt-apiserver-auth-delegator
+roleRef:
+  kind: ClusterRole
+  name: system:auth-delegator
+subjects:
+- kind: ServiceAccount
+  name: kubevirt-apiserver
+
+kubevirt-controller
+=============================
+metadata:
+  name: kubevirt-controller
+roleRef:
+  kind: ClusterRole
+  name: kubevirt-controller
+subjects:
+- kind: ServiceAccount
+  name: kubevirt-controller
+
+kubevirt-handler
+=============================
+metadata:
+  name: kubevirt-handler
+roleRef:
+  kind: ClusterRole
+  name: kubevirt-handler
+subjects:
+- kind: ServiceAccount
+  name: kubevirt-handler
+
+kubevirt-operator
+=============================
+metadata:
+  name: kubevirt-operator
+roleRef:
+  kind: ClusterRole
+  name: kubevirt-operator
+subjects:
+- kind: ServiceAccount
+  name: kubevirt-operator
+
+kubevirt.io:default
+=============================
+metadata:
+  name: kubevirt.io:default
+roleRef:
+  kind: ClusterRole
+  name: kubevirt.io:default
+subjects:
+  kind: Group
+  name: system:authenticated
+  kind: Group
+  name: system:unauthenticated
+
+minikube-rbac
+=============================
+metadata:
+  name: minikube-rbac
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: default
+
+storage-provisioner
+=============================
+metadata:
+  name: storage-provisioner
+roleRef:
+  kind: ClusterRole
+  name: system:persistent-volume-provisioner
+subjects:
+- kind: ServiceAccount
+  name: storage-provisioner
+
+system:basic-user
+=============================
+metadata:
+  name: system:basic-user
+roleRef:
+  kind: ClusterRole
+  name: system:basic-user
+subjects:
+  kind: Group
+  name: system:authenticated
+
+system:controller:attachdetach-controller
+=============================
+metadata:
+  name: system:controller:attachdetach-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:attachdetach-controller
+subjects:
+- kind: ServiceAccount
+  name: attachdetach-controller
+
+system:controller:certificate-controller
+=============================
+metadata:
+  name: system:controller:certificate-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:certificate-controller
+subjects:
+- kind: ServiceAccount
+  name: certificate-controller
+
+system:controller:clusterrole-aggregation-controller
+=============================
+metadata:
+  name: system:controller:clusterrole-aggregation-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:clusterrole-aggregation-controller
+subjects:
+- kind: ServiceAccount
+  name: clusterrole-aggregation-controller
+
+system:controller:cronjob-controller
+=============================
+metadata:
+  name: system:controller:cronjob-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:cronjob-controller
+subjects:
+- kind: ServiceAccount
+  name: cronjob-controller
+
+system:controller:daemon-set-controller
+=============================
+metadata:
+  name: system:controller:daemon-set-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:daemon-set-controller
+subjects:
+- kind: ServiceAccount
+  name: daemon-set-controller
+
+system:controller:deployment-controller
+=============================
+metadata:
+  name: system:controller:deployment-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:deployment-controller
+subjects:
+- kind: ServiceAccount
+  name: deployment-controller
+
+system:controller:disruption-controller
+=============================
+metadata:
+  name: system:controller:disruption-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:disruption-controller
+subjects:
+- kind: ServiceAccount
+  name: disruption-controller
+
+system:controller:endpoint-controller
+=============================
+metadata:
+  name: system:controller:endpoint-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:endpoint-controller
+subjects:
+- kind: ServiceAccount
+  name: endpoint-controller
+
+system:controller:endpointslice-controller
+=============================
+metadata:
+  name: system:controller:endpointslice-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:endpointslice-controller
+subjects:
+- kind: ServiceAccount
+  name: endpointslice-controller
+
+system:controller:expand-controller
+=============================
+metadata:
+  name: system:controller:expand-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:expand-controller
+subjects:
+- kind: ServiceAccount
+  name: expand-controller
+
+system:controller:generic-garbage-collector
+=============================
+metadata:
+  name: system:controller:generic-garbage-collector
+roleRef:
+  kind: ClusterRole
+  name: system:controller:generic-garbage-collector
+subjects:
+- kind: ServiceAccount
+  name: generic-garbage-collector
+
+system:controller:horizontal-pod-autoscaler
+=============================
+metadata:
+  name: system:controller:horizontal-pod-autoscaler
+roleRef:
+  kind: ClusterRole
+  name: system:controller:horizontal-pod-autoscaler
+subjects:
+- kind: ServiceAccount
+  name: horizontal-pod-autoscaler
+
+system:controller:job-controller
+=============================
+metadata:
+  name: system:controller:job-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:job-controller
+subjects:
+- kind: ServiceAccount
+  name: job-controller
+
+system:controller:namespace-controller
+=============================
+metadata:
+  name: system:controller:namespace-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:namespace-controller
+subjects:
+- kind: ServiceAccount
+  name: namespace-controller
+
+system:controller:node-controller
+=============================
+metadata:
+  name: system:controller:node-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:node-controller
+subjects:
+- kind: ServiceAccount
+  name: node-controller
+
+system:controller:persistent-volume-binder
+=============================
+metadata:
+  name: system:controller:persistent-volume-binder
+roleRef:
+  kind: ClusterRole
+  name: system:controller:persistent-volume-binder
+subjects:
+- kind: ServiceAccount
+  name: persistent-volume-binder
+
+system:controller:pod-garbage-collector
+=============================
+metadata:
+  name: system:controller:pod-garbage-collector
+roleRef:
+  kind: ClusterRole
+  name: system:controller:pod-garbage-collector
+subjects:
+- kind: ServiceAccount
+  name: pod-garbage-collector
+
+system:controller:pv-protection-controller
+=============================
+metadata:
+  name: system:controller:pv-protection-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:pv-protection-controller
+subjects:
+- kind: ServiceAccount
+  name: pv-protection-controller
+
+system:controller:pvc-protection-controller
+=============================
+metadata:
+  name: system:controller:pvc-protection-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:pvc-protection-controller
+subjects:
+- kind: ServiceAccount
+  name: pvc-protection-controller
+
+system:controller:replicaset-controller
+=============================
+metadata:
+  name: system:controller:replicaset-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:replicaset-controller
+subjects:
+- kind: ServiceAccount
+  name: replicaset-controller
+
+system:controller:replication-controller
+=============================
+metadata:
+  name: system:controller:replication-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:replication-controller
+subjects:
+- kind: ServiceAccount
+  name: replication-controller
+
+system:controller:resourcequota-controller
+=============================
+metadata:
+  name: system:controller:resourcequota-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:resourcequota-controller
+subjects:
+- kind: ServiceAccount
+  name: resourcequota-controller
+
+system:controller:route-controller
+=============================
+metadata:
+  name: system:controller:route-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:route-controller
+subjects:
+- kind: ServiceAccount
+  name: route-controller
+
+system:controller:service-account-controller
+=============================
+metadata:
+  name: system:controller:service-account-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:service-account-controller
+subjects:
+- kind: ServiceAccount
+  name: service-account-controller
+
+system:controller:service-controller
+=============================
+metadata:
+  name: system:controller:service-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:service-controller
+subjects:
+- kind: ServiceAccount
+  name: service-controller
+
+system:controller:statefulset-controller
+=============================
+metadata:
+  name: system:controller:statefulset-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:statefulset-controller
+subjects:
+- kind: ServiceAccount
+  name: statefulset-controller
+
+system:controller:ttl-controller
+=============================
+metadata:
+  name: system:controller:ttl-controller
+roleRef:
+  kind: ClusterRole
+  name: system:controller:ttl-controller
+subjects:
+- kind: ServiceAccount
+  name: ttl-controller
+
+system:coredns
+=============================
+metadata:
+  name: system:coredns
+roleRef:
+  kind: ClusterRole
+  name: system:coredns
+subjects:
+- kind: ServiceAccount
+  name: coredns
+
+system:discovery
+=============================
+metadata:
+  name: system:discovery
+roleRef:
+  kind: ClusterRole
+  name: system:discovery
+subjects:
+  kind: Group
+  name: system:authenticated
+
+system:kube-controller-manager
+=============================
+metadata:
+  name: system:kube-controller-manager
+roleRef:
+  kind: ClusterRole
+  name: system:kube-controller-manager
+subjects:
+  kind: User
+  name: system:kube-controller-manager
+
+system:kube-dns
+=============================
+metadata:
+  name: system:kube-dns
+roleRef:
+  kind: ClusterRole
+  name: system:kube-dns
+subjects:
+- kind: ServiceAccount
+  name: kube-dns
+
+system:kube-scheduler
+=============================
+metadata:
+  name: system:kube-scheduler
+roleRef:
+  kind: ClusterRole
+  name: system:kube-scheduler
+subjects:
+  kind: User
+  name: system:kube-scheduler
+
+system:node
+=============================
+metadata:
+  name: system:node
+roleRef:
+  kind: ClusterRole
+  name: system:node
+
+system:node-proxier
+=============================
+metadata:
+  name: system:node-proxier
+roleRef:
+  kind: ClusterRole
+  name: system:node-proxier
+subjects:
+  kind: User
+  name: system:kube-proxy
+
+system:public-info-viewer
+=============================
+metadata:
+  name: system:public-info-viewer
+roleRef:
+  kind: ClusterRole
+  name: system:public-info-viewer
+subjects:
+  kind: Group
+  name: system:authenticated
+  kind: Group
+  name: system:unauthenticated
+
+system:volume-scheduler
+=============================
+metadata:
+  name: system:volume-scheduler
+roleRef:
+  kind: ClusterRole
+  name: system:volume-scheduler
+subjects:
+  kind: User
+  name: system:kube-scheduler

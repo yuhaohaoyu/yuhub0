@@ -1,0 +1,634 @@
+
+kube-public kubeadm:bootstrap-signer-clusterinfo
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2020-08-28T15:29:18Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kubeadm
+    operation: Update
+    time: "2020-08-28T15:29:18Z"
+  name: kubeadm:bootstrap-signer-clusterinfo
+  namespace: kube-public
+  resourceVersion: "195"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-public/rolebindings/kubeadm:bootstrap-signer-clusterinfo
+  uid: 0200cfba-48d8-4d1a-8fa8-6de544014b04
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: kubeadm:bootstrap-signer-clusterinfo
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: system:anonymous
+
+kube-public system:controller:bootstrap-signer
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  creationTimestamp: "2020-08-28T15:29:16Z"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:rbac.authorization.kubernetes.io/autoupdate: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/bootstrapping: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2020-08-28T15:29:16Z"
+  name: system:controller:bootstrap-signer
+  namespace: kube-public
+  resourceVersion: "151"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-public/rolebindings/system:controller:bootstrap-signer
+  uid: af6eda13-2562-4232-aee9-bb4a0428618b
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: system:controller:bootstrap-signer
+subjects:
+- kind: ServiceAccount
+  name: bootstrap-signer
+  namespace: kube-system
+
+kube-system kube-proxy
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2020-08-28T15:29:19Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kubeadm
+    operation: Update
+    time: "2020-08-28T15:29:19Z"
+  name: kube-proxy
+  namespace: kube-system
+  resourceVersion: "228"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/kube-proxy
+  uid: 82495dcd-0367-4cc4-94b2-9ae23e49db83
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: kube-proxy
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: Group
+  name: system:bootstrappers:kubeadm:default-node-token
+
+kube-system kubeadm:kubelet-config-1.18
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2020-08-28T15:29:16Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kubeadm
+    operation: Update
+    time: "2020-08-28T15:29:16Z"
+  name: kubeadm:kubelet-config-1.18
+  namespace: kube-system
+  resourceVersion: "164"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/kubeadm:kubelet-config-1.18
+  uid: 0c19ff71-9330-484b-8dcd-c50d4fa6569a
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: kubeadm:kubelet-config-1.18
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: Group
+  name: system:nodes
+- apiGroup: rbac.authorization.k8s.io
+  kind: Group
+  name: system:bootstrappers:kubeadm:default-node-token
+
+kube-system kubeadm:nodes-kubeadm-config
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: "2020-08-28T15:29:16Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kubeadm
+    operation: Update
+    time: "2020-08-28T15:29:16Z"
+  name: kubeadm:nodes-kubeadm-config
+  namespace: kube-system
+  resourceVersion: "160"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/kubeadm:nodes-kubeadm-config
+  uid: 0905d419-3c76-4a59-8830-941620ca9f40
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: kubeadm:nodes-kubeadm-config
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: Group
+  name: system:bootstrappers:kubeadm:default-node-token
+- apiGroup: rbac.authorization.k8s.io
+  kind: Group
+  name: system:nodes
+
+kube-system system::extension-apiserver-authentication-reader
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  creationTimestamp: "2020-08-28T15:29:15Z"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:rbac.authorization.kubernetes.io/autoupdate: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/bootstrapping: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2020-08-28T15:29:15Z"
+  name: system::extension-apiserver-authentication-reader
+  namespace: kube-system
+  resourceVersion: "145"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/system::extension-apiserver-authentication-reader
+  uid: a4981bfd-97a0-4adb-bf48-ab9b8e809011
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: extension-apiserver-authentication-reader
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: system:kube-controller-manager
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: system:kube-scheduler
+
+kube-system system::leader-locking-kube-controller-manager
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  creationTimestamp: "2020-08-28T15:29:15Z"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:rbac.authorization.kubernetes.io/autoupdate: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/bootstrapping: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2020-08-28T15:29:15Z"
+  name: system::leader-locking-kube-controller-manager
+  namespace: kube-system
+  resourceVersion: "146"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/system::leader-locking-kube-controller-manager
+  uid: 82910271-e175-4676-8138-329409a88373
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: system::leader-locking-kube-controller-manager
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: system:kube-controller-manager
+- kind: ServiceAccount
+  name: kube-controller-manager
+  namespace: kube-system
+
+kube-system system::leader-locking-kube-scheduler
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  creationTimestamp: "2020-08-28T15:29:16Z"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:rbac.authorization.kubernetes.io/autoupdate: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/bootstrapping: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2020-08-28T15:29:16Z"
+  name: system::leader-locking-kube-scheduler
+  namespace: kube-system
+  resourceVersion: "147"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/system::leader-locking-kube-scheduler
+  uid: c7733579-a5ce-4248-a2ca-3cfc6f2f4af9
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: system::leader-locking-kube-scheduler
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: system:kube-scheduler
+- kind: ServiceAccount
+  name: kube-scheduler
+  namespace: kube-system
+
+kube-system system:controller:bootstrap-signer
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  creationTimestamp: "2020-08-28T15:29:16Z"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:rbac.authorization.kubernetes.io/autoupdate: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/bootstrapping: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2020-08-28T15:29:16Z"
+  name: system:controller:bootstrap-signer
+  namespace: kube-system
+  resourceVersion: "148"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/system:controller:bootstrap-signer
+  uid: 817554ba-fe71-4025-867b-59f17fe20d26
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: system:controller:bootstrap-signer
+subjects:
+- kind: ServiceAccount
+  name: bootstrap-signer
+  namespace: kube-system
+
+kube-system system:controller:cloud-provider
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  creationTimestamp: "2020-08-28T15:29:16Z"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:rbac.authorization.kubernetes.io/autoupdate: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/bootstrapping: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2020-08-28T15:29:16Z"
+  name: system:controller:cloud-provider
+  namespace: kube-system
+  resourceVersion: "149"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/system:controller:cloud-provider
+  uid: 7f1e8025-1416-45df-9c3a-44c6dbaf69df
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: system:controller:cloud-provider
+subjects:
+- kind: ServiceAccount
+  name: cloud-provider
+  namespace: kube-system
+
+kube-system system:controller:token-cleaner
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  creationTimestamp: "2020-08-28T15:29:16Z"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:rbac.authorization.kubernetes.io/autoupdate: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/bootstrapping: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2020-08-28T15:29:16Z"
+  name: system:controller:token-cleaner
+  namespace: kube-system
+  resourceVersion: "150"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/system:controller:token-cleaner
+  uid: 80ad4e72-5627-4207-907a-98e65bb87f81
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: system:controller:token-cleaner
+subjects:
+- kind: ServiceAccount
+  name: token-cleaner
+  namespace: kube-system
+
+kube-system system:persistent-volume-provisioner
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"EnsureExists"},"name":"system:persistent-volume-provisioner","namespace":"kube-system"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"system:persistent-volume-provisioner"},"subjects":[{"kind":"ServiceAccount","name":"storage-provisioner","namespace":"kube-system"}]}
+  creationTimestamp: "2020-08-28T15:29:21Z"
+  labels:
+    addonmanager.kubernetes.io/mode: EnsureExists
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:addonmanager.kubernetes.io/mode: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kubectl
+    operation: Update
+    time: "2020-08-28T15:29:21Z"
+  name: system:persistent-volume-provisioner
+  namespace: kube-system
+  resourceVersion: "266"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kube-system/rolebindings/system:persistent-volume-provisioner
+  uid: 80f8e59c-ec5b-48f4-8d1b-8e45439922ea
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: system:persistent-volume-provisioner
+subjects:
+- kind: ServiceAccount
+  name: storage-provisioner
+  namespace: kube-system
+
+kubevirt kubevirt-apiserver
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    kubevirt.io/install-strategy-identifier: 4f10d8a1712324b71d0ff3612f097563b4912e51
+    kubevirt.io/install-strategy-registry: index.docker.io/kubevirt
+    kubevirt.io/install-strategy-version: v0.33.0
+  creationTimestamp: "2020-09-15T16:56:05Z"
+  labels:
+    app.kubernetes.io/component: kubevirt
+    app.kubernetes.io/managed-by: kubevirt-operator
+    kubevirt.io: ""
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubevirt.io/install-strategy-identifier: {}
+          f:kubevirt.io/install-strategy-registry: {}
+          f:kubevirt.io/install-strategy-version: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:kubevirt.io: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: virt-operator
+    operation: Update
+    time: "2020-09-15T16:56:05Z"
+  name: kubevirt-apiserver
+  namespace: kubevirt
+  resourceVersion: "130807"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kubevirt/rolebindings/kubevirt-apiserver
+  uid: 56617fb1-c0ab-4417-84ef-dc9b45ef4e06
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: kubevirt-apiserver
+subjects:
+- kind: ServiceAccount
+  name: kubevirt-apiserver
+  namespace: kubevirt
+
+kubevirt kubevirt-handler
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    kubevirt.io/install-strategy-identifier: 4f10d8a1712324b71d0ff3612f097563b4912e51
+    kubevirt.io/install-strategy-registry: index.docker.io/kubevirt
+    kubevirt.io/install-strategy-version: v0.33.0
+  creationTimestamp: "2020-09-15T16:56:05Z"
+  labels:
+    app.kubernetes.io/component: kubevirt
+    app.kubernetes.io/managed-by: kubevirt-operator
+    kubevirt.io: ""
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubevirt.io/install-strategy-identifier: {}
+          f:kubevirt.io/install-strategy-registry: {}
+          f:kubevirt.io/install-strategy-version: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:kubevirt.io: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: virt-operator
+    operation: Update
+    time: "2020-09-15T16:56:05Z"
+  name: kubevirt-handler
+  namespace: kubevirt
+  resourceVersion: "130808"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kubevirt/rolebindings/kubevirt-handler
+  uid: 831789d7-2175-41d7-bd32-bf36cf94ecda
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: kubevirt-handler
+subjects:
+- kind: ServiceAccount
+  name: kubevirt-handler
+  namespace: kubevirt
+
+kubevirt kubevirt-operator-rolebinding
+====================
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{},"labels":{"kubevirt.io":""},"name":"kubevirt-operator-rolebinding","namespace":"kubevirt"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"kubevirt-operator"},"subjects":[{"kind":"ServiceAccount","name":"kubevirt-operator","namespace":"kubevirt"}]}
+  creationTimestamp: "2020-09-15T16:55:15Z"
+  labels:
+    kubevirt.io: ""
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          .: {}
+          f:kubevirt.io: {}
+      f:roleRef:
+        f:apiGroup: {}
+        f:kind: {}
+        f:name: {}
+      f:subjects: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2020-09-15T16:55:15Z"
+  name: kubevirt-operator-rolebinding
+  namespace: kubevirt
+  resourceVersion: "130647"
+  selfLink: /apis/rbac.authorization.k8s.io/v1/namespaces/kubevirt/rolebindings/kubevirt-operator-rolebinding
+  uid: 5ab0b777-bae1-4abb-8b2b-8a85e3c6d331
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: kubevirt-operator
+subjects:
+- kind: ServiceAccount
+  name: kubevirt-operator
+  namespace: kubevirt

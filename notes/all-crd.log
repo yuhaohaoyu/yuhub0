@@ -1,0 +1,14 @@
+root@jjvm006:/home/padmin/CODE/kubevirt# ./cluster-up/kubectl.sh get crd -A
+NAME                                                  CREATED AT
+cdiconfigs.cdi.kubevirt.io                            2020-09-28T20:17:05Z
+cdis.cdi.kubevirt.io                                  2020-09-28T20:16:59Z
+datavolumes.cdi.kubevirt.io                           2020-09-28T20:17:05Z
+kubevirts.kubevirt.io                                 2020-09-28T20:17:00Z
+virtualmachineinstancemigrations.kubevirt.io          2020-09-28T20:17:13Z
+virtualmachineinstancepresets.kubevirt.io             2020-09-28T20:17:13Z
+virtualmachineinstancereplicasets.kubevirt.io         2020-09-28T20:17:13Z
+virtualmachineinstances.kubevirt.io                   2020-09-28T20:17:13Z
+virtualmachines.kubevirt.io                           2020-09-28T20:17:13Z
+virtualmachinesnapshotcontents.snapshot.kubevirt.io   2020-09-28T20:17:13Z
+virtualmachinesnapshots.snapshot.kubevirt.io          2020-09-28T20:17:13Z
+

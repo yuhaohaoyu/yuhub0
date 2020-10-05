@@ -1,0 +1,29 @@
+howto at:
+	https://stackoverflow.com/questions/2719579/how-to-add-a-changed-file-to-an-older-not-last-commit-in-git
+
+Change code
+  331  git add access_test.go 
+  329  git log
+  330  git status
+
+Rebase to old
+  333  git rebase -i 99e3dd1d2f3932e1c55a748fae819e2cd87889e3
+  334  git stash access_test.go
+  335  git commit --fixup=99e3dd1d2f3932e1c55a748fae819e2cd87889e3
+  336  git rebase -i 99e3dd1d2f3932e1c55a748fae819e2cd87889e3
+  337  git commit --amend 
+  338  git rebase --continue
+
+Sync to upstream master
+  327  git fetch --all
+  339  git merge --no-commit upstream/master
+  340  git commit --signoff
+  341  git rebase upstream/master
+
+Test
+  342  cd ../
+  343  vi tests/access_test.go 
+  344  make functest
+
+Force push to PR
+  345  git push -f

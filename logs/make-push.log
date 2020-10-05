@@ -1,0 +1,540 @@
+hack/dockerized "hack/bazel-fmt.sh && DOCKER_PREFIX= DOCKER_TAG= DOCKER_TAG_ALT= IMAGE_PREFIX= IMAGE_PREFIX_ALT= KUBEVIRT_PROVIDER= PUSH_TARGETS='' ./hack/bazel-push-images.sh"
+go version go1.12.8 linux/amd64
+
+Unable to find image 'imega/jq:1.6' locally
+1.6: Pulling from imega/jq
+7962620bcd88: Pulling fs layer
+7962620bcd88: Download complete
+7962620bcd88: Pull complete
+Digest: sha256:39d079b17c958870d03cac5b7b70300dc2e86fc97f9c31ae9a505fcd97418fae
+Status: Downloaded newer image for imega/jq:1.6
+go version go1.12.8 linux/amd64
+Loading: 
+Loading: 0 packages loaded
+INFO: Build options --platforms and --stamp have changed, discarding analysis cache.
+Analyzing: target //:gazelle (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:gazelle (0 packages loaded, 6714 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:gazelle up-to-date:
+  bazel-bin/gazelle-runner.bash
+  bazel-bin/gazelle
+INFO: Elapsed time: 1.019s, Critical Path: 0.40s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/gazelle -bazel_run pkg/ tools/ tests/ cmd/
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:goimports (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:goimports (0 packages loaded, 29 targets configured).
+INFO: Found 1 target...
+[8 / 12] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:goimports up-to-date:
+  bazel-bin/goimports.bash
+INFO: Elapsed time: 0.389s, Critical Path: 0.10s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/goimports.bash
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:buildifier (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:buildifier (0 packages loaded, 561 targets configured).
+INFO: Found 1 target...
+[2 / 28] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:buildifier up-to-date:
+  bazel-bin/buildifier.bash
+INFO: Elapsed time: 0.637s, Critical Path: 0.17s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/buildifier.bash
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+INFO: Build option --define has changed, discarding analysis cache.
+Analyzing: target //:push-other-images (0 packages loaded, 0 targets configured)
+Analyzing: target //:push-other-images (42 packages loaded, 9677 targets configured)
+Analyzing: target //:push-other-images (44 packages loaded, 9699 targets configured)
+Analyzing: target //:push-other-images (49 packages loaded, 9702 targets configured)
+Analyzing: target //:push-other-images (49 packages loaded, 9702 targets configured)
+Analyzing: target //:push-other-images (49 packages loaded, 9702 targets configured)
+Analyzing: target //:push-other-images (49 packages loaded, 9702 targets configured)
+Analyzing: target //:push-other-images (50 packages loaded, 9704 targets configured)
+Analyzing: target //:push-other-images (52 packages loaded, 9704 targets configured)
+Analyzing: target //:push-other-images (94 packages loaded, 9841 targets configured)
+Analyzing: target //:push-other-images (94 packages loaded, 9841 targets configured)
+DEBUG: /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_gazelle/internal/go_repository.bzl:182:13: gazelle: gazelle: finding module path for import crypto/ed25519: exit status 1: can't load package: package crypto/ed25519: unknown import path "crypto/ed25519": cannot find module providing package crypto/ed25519
+gazelle: finding module path for import crypto/ed25519: exit status 1: can't load package: package crypto/ed25519: unknown import path "crypto/ed25519": cannot find module providing package crypto/ed25519
+gazelle: finding module path for import golang.org/x/sys/windows: exit status 1: can't load package: package golang.org/x/sys/windows: build constraints exclude all Go files in /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_gazelle_go_repository_cache/pkg/mod/golang.org/x/sys@v0.0.0-20200828081204-131dc92a58d5/windows
+Analyzing: target //:push-other-images (101 packages loaded, 9919 targets configured)
+Analyzing: target //:push-other-images (103 packages loaded, 9943 targets configured)
+Analyzing: target //:push-other-images (103 packages loaded, 9943 targets configured)
+Analyzing: target //:push-other-images (104 packages loaded, 9952 targets configured)
+Analyzing: target //:push-other-images (104 packages loaded, 9952 targets configured)
+Analyzing: target //:push-other-images (104 packages loaded, 9952 targets configured)
+Analyzing: target //:push-other-images (104 packages loaded, 9952 targets configured)
+Analyzing: target //:push-other-images (104 packages loaded, 9952 targets configured)
+Analyzing: target //:push-other-images (104 packages loaded, 9952 targets configured)
+INFO: Analyzed target //:push-other-images (106 packages loaded, 9966 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[734 / 842] Install RPMs inside a container; 1s processwrapper-sandbox ... (4 actions, 3 running)
+INFO: From Install RPMs inside a container:
+./usr/bin/qemu-img
+./usr/bin/qemu-io
+./usr/bin/qemu-nbd
+./usr/lib/.build-id
+./usr/lib/.build-id/21
+./usr/lib/.build-id/21/5623ce32a020008ffd93536f5dfaf235f71197
+./usr/lib/.build-id/57
+./usr/lib/.build-id/57/a8b638a88115c3a205fd89ffb8f4f19a82122a
+./usr/lib/.build-id/80
+./usr/lib/.build-id/80/24a412d7f784fccf1b720f75ddf06d14e2b3be
+./usr/share/man/man1/qemu-img.1.gz
+./usr/share/man/man8/qemu-nbd.8.gz
+10251 blocks
+./usr/bin/cstool
+./usr/lib/.build-id
+./usr/lib/.build-id/e2
+./usr/lib/.build-id/e2/db773e7fd14345cd48d94d355e2f9823e7e0b8
+./usr/lib/.build-id/ef
+./usr/lib/.build-id/ef/0e585af999c9eaab0765151d7cac670b2141b4
+./usr/lib64/libcapstone.so.3
+./usr/share/doc/capstone
+./usr/share/doc/capstone/ChangeLog
+./usr/share/doc/capstone/README
+./usr/share/licenses/capstone
+./usr/share/licenses/capstone/LICENSE.TXT
+./usr/share/licenses/capstone/LICENSE_LLVM.TXT
+5506 blocks
+./usr/lib/.build-id
+./usr/lib/.build-id/16
+./usr/lib/.build-id/16/8bc7651e4f5692ca6ddaf7d91a716c6c5ec048
+./usr/lib/.build-id/22
+./usr/lib/.build-id/22/b127d8ffe58cb0dc4b7ae7474ffb5b943daab1
+./usr/lib64/libaio.so.1
+./usr/lib64/libaio.so.1.0.0
+./usr/lib64/libaio.so.1.0.1
+./usr/share/doc/libaio
+./usr/share/doc/libaio/COPYING
+./usr/share/doc/libaio/TODO
+81 blocks
+./usr/lib/.build-id
+./usr/lib/.build-id/f7
+./usr/lib/.build-id/f7/27fe86920dd1eb7021a295d416e017254aab76
+./usr/lib64/libstdc++.so.6
+./usr/lib64/libstdc++.so.6.0.25
+./usr/share/gcc-8
+./usr/share/gcc-8/python
+./usr/share/gcc-8/python/libstdcxx
+./usr/share/gcc-8/python/libstdcxx/__init__.py
+./usr/share/gcc-8/python/libstdcxx/__pycache__
+./usr/share/gcc-8/python/libstdcxx/v6
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.py
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__
+./usr/share/gcc-8/python/libstdcxx/v6/printers.py
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.py
+./usr/share/gdb
+./usr/share/gdb/auto-load
+./usr/share/gdb/auto-load/usr
+./usr/share/gdb/auto-load/usr/lib64
+./usr/share/gdb/auto-load/usr/lib64/__pycache__
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.py
+./usr/share/gcc-8/python/libstdcxx/__init__.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/__init__.pyo linked to ./usr/share/gcc-8/python/libstdcxx/__init__.pyc
+./usr/share/gcc-8/python/libstdcxx/__init__.pyo
+./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyo
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/printers.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/printers.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/printers.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/printers.pyo
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyo
+./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.opt-1.pyc
+cpio: ./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.pyc linked to ./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.opt-1.pyc
+./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.pyc
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyc
+cpio: ./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyo linked to ./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyc
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyo
+3832 blocks
+Verifying packages...
+Preparing packages...
+qemu-img-2:2.11.2-5.fc28.x86_64
+Verifying packages...
+Preparing packages...
+capstone-3.0.5-1.fc28.x86_64
+Verifying packages...
+Preparing packages...
+libaio-0.3.110-11.fc28.x86_64
+Verifying packages...
+Preparing packages...
+libstdc++-8.3.1-2.fc28.x86_64
+[803 / 873] ImageLayer containerimages/virtio-container-disk-image-layer.tar; 3s processwrapper-sandbox ... (4 actions, 3 running)
+[832 / 887] GZIP containerimages/virtio-container-disk-image-layer.tar.gz; 7s processwrapper-sandbox ... (4 actions, 3 running)
+[839 / 887] GZIP containerimages/virtio-container-disk-image-layer.tar.gz; 19s processwrapper-sandbox ... (4 actions, 3 running)
+[859 / 891] GZIP images/disks-images-provider/disks-images-provider-image-layer.tar.gz; 22s processwrapper-sandbox ... (4 actions, 3 running)
+[884 / 891] Install RPMs inside a container; 7s processwrapper-sandbox
+INFO: From Install RPMs inside a container:
+./usr/bin/qemu-img
+./usr/bin/qemu-io
+./usr/bin/qemu-nbd
+./usr/lib/.build-id
+./usr/lib/.build-id/21
+./usr/lib/.build-id/21/5623ce32a020008ffd93536f5dfaf235f71197
+./usr/lib/.build-id/57
+./usr/lib/.build-id/57/a8b638a88115c3a205fd89ffb8f4f19a82122a
+./usr/lib/.build-id/80
+./usr/lib/.build-id/80/24a412d7f784fccf1b720f75ddf06d14e2b3be
+./usr/share/man/man1/qemu-img.1.gz
+./usr/share/man/man8/qemu-nbd.8.gz
+10251 blocks
+./etc/qemu-ga
+./etc/qemu-ga/fsfreeze-hook
+./etc/qemu-ga/fsfreeze-hook.d
+./etc/qemu-ga/fsfreeze-hook.d/mysql-flush.sh.sample
+./etc/sysconfig/qemu-ga
+./lib/udev/rules.d/99-qemu-guest-agent.rules
+./usr/bin/qemu-ga
+./usr/lib/.build-id
+./usr/lib/.build-id/76
+./usr/lib/.build-id/76/57e717b9b4990f3da72f35829a8d3e46fc6a3b
+./usr/lib/systemd/system/qemu-guest-agent.service
+./usr/share/man/man8/qemu-ga.8.gz
+1320 blocks
+./usr/bin/stress
+./usr/lib/.build-id
+./usr/lib/.build-id/4c
+./usr/lib/.build-id/4c/28da6d7bba5581bc4acecffc42eed8e7c976a9
+./usr/share/doc/stress
+./usr/share/doc/stress/AUTHORS
+./usr/share/doc/stress/COPYING
+./usr/share/doc/stress/ChangeLog
+./usr/share/doc/stress/NEWS
+./usr/share/doc/stress/README
+./usr/share/doc/stress/TODO
+./usr/share/doc/stress/stress.html
+./usr/share/info/stress.info.gz
+./usr/share/man/man1/stress.1.gz
+153 blocks
+./usr/lib/.build-id
+./usr/lib/.build-id/f7
+./usr/lib/.build-id/f7/27fe86920dd1eb7021a295d416e017254aab76
+./usr/lib64/libstdc++.so.6
+./usr/lib64/libstdc++.so.6.0.25
+./usr/share/gcc-8
+./usr/share/gcc-8/python
+./usr/share/gcc-8/python/libstdcxx
+./usr/share/gcc-8/python/libstdcxx/__init__.py
+./usr/share/gcc-8/python/libstdcxx/__pycache__
+./usr/share/gcc-8/python/libstdcxx/v6
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.py
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__
+./usr/share/gcc-8/python/libstdcxx/v6/printers.py
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.py
+./usr/share/gdb
+./usr/share/gdb/auto-load
+./usr/share/gdb/auto-load/usr
+./usr/share/gdb/auto-load/usr/lib64
+./usr/share/gdb/auto-load/usr/lib64/__pycache__
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.py
+./usr/share/gcc-8/python/libstdcxx/__init__.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/__init__.pyo linked to ./usr/share/gcc-8/python/libstdcxx/__init__.pyc
+./usr/share/gcc-8/python/libstdcxx/__init__.pyo
+./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyo
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/printers.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/printers.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/printers.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/printers.pyo
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyo
+./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.opt-1.pyc
+cpio: ./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.pyc linked to ./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.opt-1.pyc
+./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.pyc
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyc
+cpio: ./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyo linked to ./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyc
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyo
+3832 blocks
+./usr/bin/cstool
+./usr/lib/.build-id
+./usr/lib/.build-id/e2
+./usr/lib/.build-id/e2/db773e7fd14345cd48d94d355e2f9823e7e0b8
+./usr/lib/.build-id/ef
+./usr/lib/.build-id/ef/0e585af999c9eaab0765151d7cac670b2141b4
+./usr/lib64/libcapstone.so.3
+./usr/share/doc/capstone
+./usr/share/doc/capstone/ChangeLog
+./usr/share/doc/capstone/README
+./usr/share/licenses/capstone
+./usr/share/licenses/capstone/LICENSE.TXT
+./usr/share/licenses/capstone/LICENSE_LLVM.TXT
+5506 blocks
+./usr/lib/.build-id
+./usr/lib/.build-id/16
+./usr/lib/.build-id/16/8bc7651e4f5692ca6ddaf7d91a716c6c5ec048
+./usr/lib/.build-id/22
+./usr/lib/.build-id/22/b127d8ffe58cb0dc4b7ae7474ffb5b943daab1
+./usr/lib64/libaio.so.1
+./usr/lib64/libaio.so.1.0.0
+./usr/lib64/libaio.so.1.0.1
+./usr/share/doc/libaio
+./usr/share/doc/libaio/COPYING
+./usr/share/doc/libaio/TODO
+81 blocks
+./etc/mke2fs.conf
+./usr/bin/chattr
+./usr/bin/lsattr
+./usr/lib/.build-id
+./usr/lib/.build-id/0d
+./usr/lib/.build-id/0d/c484aaea417739eb62792964c590e65092e344
+./usr/lib/.build-id/17
+./usr/lib/.build-id/17/c498cd6a21401ad1e4e73d1458104acedbce6b
+./usr/lib/.build-id/17/c498cd6a21401ad1e4e73d1458104acedbce6b.1
+./usr/lib/.build-id/17/c498cd6a21401ad1e4e73d1458104acedbce6b.2
+./usr/lib/.build-id/17/c498cd6a21401ad1e4e73d1458104acedbce6b.3
+./usr/lib/.build-id/18
+./usr/lib/.build-id/18/9e9325319340c6d8db79d35236cc227a0acdac
+./usr/lib/.build-id/18/9e9325319340c6d8db79d35236cc227a0acdac.1
+./usr/lib/.build-id/18/9e9325319340c6d8db79d35236cc227a0acdac.2
+./usr/lib/.build-id/18/9e9325319340c6d8db79d35236cc227a0acdac.3
+./usr/lib/.build-id/44
+./usr/lib/.build-id/44/40f6886f31a91abc94887771262855e9dffe28
+./usr/lib/.build-id/67
+./usr/lib/.build-id/67/5a81f51ce5761f0a49cad933e368f144c97434
+./usr/lib/.build-id/68
+./usr/lib/.build-id/68/c5f2181cf61c08758575d3ab550f3ccf5a0fa1
+./usr/lib/.build-id/68/c5f2181cf61c08758575d3ab550f3ccf5a0fa1.1
+./usr/lib/.build-id/8f
+./usr/lib/.build-id/8f/7262a73dd8d53c01c3bf80fb139d873007f7eb
+./usr/lib/.build-id/8f/eaafae8722caf954042d5d27e330424242914e
+./usr/lib/.build-id/ac
+./usr/lib/.build-id/ac/88743ff05e244c188a07dd72f37de93d7dd15c
+./usr/lib/.build-id/b4
+./usr/lib/.build-id/b4/930b92360eb6c7f7ff378f1e0960721d3b61f9
+./usr/lib/.build-id/bd
+./usr/lib/.build-id/bd/be55623dd2f7dfc2053405467a899262b9f340
+./usr/lib/.build-id/be
+./usr/lib/.build-id/be/8684a66b510028e9171b00ad41a634475ce6dd
+./usr/lib/.build-id/c6
+./usr/lib/.build-id/c6/b4b209da568b986cfad96873e94a822e9d34bb
+./usr/lib/.build-id/df
+./usr/lib/.build-id/df/25c753e268341b008d0d8951131ba0617df559
+./usr/lib/.build-id/e4
+./usr/lib/.build-id/e4/3c36eb7f82319f2409ad3c2b6840a431e64bfe
+./usr/lib/.build-id/e7
+./usr/lib/.build-id/e7/2769378e68f792919a975094aff3c988726283
+./usr/lib/.build-id/ef
+./usr/lib/.build-id/ef/b00425a51e243faefd1601b37a280671fb188f
+./usr/lib/.build-id/f9
+./usr/lib/.build-id/f9/5056b062e3cd7d13f8f1ea1c0426b6128799ce
+./usr/sbin/badblocks
+./usr/sbin/debugfs
+./usr/sbin/dumpe2fs
+./usr/sbin/e2freefrag
+./usr/sbin/e2image
+./usr/sbin/e2undo
+./usr/sbin/e4crypt
+./usr/sbin/e4defrag
+./usr/sbin/filefrag
+./usr/sbin/fuse2fs
+./usr/sbin/logsave
+./usr/sbin/mklost+found
+./usr/sbin/resize2fs
+./usr/share/doc/e2fsprogs
+./usr/share/doc/e2fsprogs/README
+./usr/share/doc/e2fsprogs/RELEASE-NOTES
+./usr/share/locale/ca/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/cs/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/da/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/de/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/eo/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/es/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/fi/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/fr/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/hu/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/id/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/it/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/ms/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/nl/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/pl/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/sr/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/sv/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/tr/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/uk/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/vi/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/zh_CN/LC_MESSAGES/e2fsprogs.mo
+./usr/share/man/man1/chattr.1.gz
+./usr/share/man/man1/fuse2fs.1.gz
+./usr/share/man/man1/lsattr.1.gz
+./usr/share/man/man5/e2fsck.conf.5.gz
+./usr/share/man/man5/mke2fs.conf.5.gz
+./usr/share/man/man8/badblocks.8.gz
+./usr/share/man/man8/debugfs.8.gz
+./usr/share/man/man8/dumpe2fs.8.gz
+./usr/share/man/man8/e2freefrag.8.gz
+./usr/share/man/man8/e2image.8.gz
+./usr/share/man/man8/e2label.8.gz
+./usr/share/man/man8/e2undo.8.gz
+./usr/share/man/man8/e4crypt.8.gz
+./usr/share/man/man8/e4defrag.8.gz
+./usr/share/man/man8/filefrag.8.gz
+./usr/share/man/man8/logsave.8.gz
+./usr/share/man/man8/mklost+found.8.gz
+./usr/share/man/man8/resize2fs.8.gz
+./usr/share/man/man8/tune2fs.8.gz
+./usr/sbin/e2fsck
+./usr/sbin/fsck.ext2
+./usr/sbin/fsck.ext3
+cpio: ./usr/sbin/fsck.ext4 linked to ./usr/sbin/fsck.ext3
+cpio: ./usr/sbin/fsck.ext4 linked to ./usr/sbin/fsck.ext2
+cpio: ./usr/sbin/fsck.ext4 linked to ./usr/sbin/e2fsck
+./usr/sbin/fsck.ext4
+./usr/sbin/e2label
+cpio: ./usr/sbin/tune2fs linked to ./usr/sbin/e2label
+./usr/sbin/tune2fs
+./usr/sbin/mke2fs
+./usr/sbin/mkfs.ext2
+./usr/sbin/mkfs.ext3
+cpio: ./usr/sbin/mkfs.ext4 linked to ./usr/sbin/mkfs.ext3
+cpio: ./usr/sbin/mkfs.ext4 linked to ./usr/sbin/mkfs.ext2
+cpio: ./usr/sbin/mkfs.ext4 linked to ./usr/sbin/mke2fs
+./usr/sbin/mkfs.ext4
+./usr/share/man/man5/ext2.5.gz
+./usr/share/man/man5/ext3.5.gz
+cpio: ./usr/share/man/man5/ext4.5.gz linked to ./usr/share/man/man5/ext3.5.gz
+cpio: ./usr/share/man/man5/ext4.5.gz linked to ./usr/share/man/man5/ext2.5.gz
+./usr/share/man/man5/ext4.5.gz
+./usr/share/man/man8/e2fsck.8.gz
+./usr/share/man/man8/fsck.ext2.8.gz
+./usr/share/man/man8/fsck.ext3.8.gz
+cpio: ./usr/share/man/man8/fsck.ext4.8.gz linked to ./usr/share/man/man8/fsck.ext3.8.gz
+cpio: ./usr/share/man/man8/fsck.ext4.8.gz linked to ./usr/share/man/man8/fsck.ext2.8.gz
+cpio: ./usr/share/man/man8/fsck.ext4.8.gz linked to ./usr/share/man/man8/e2fsck.8.gz
+./usr/share/man/man8/fsck.ext4.8.gz
+./usr/share/man/man8/mke2fs.8.gz
+./usr/share/man/man8/mkfs.ext2.8.gz
+./usr/share/man/man8/mkfs.ext3.8.gz
+cpio: ./usr/share/man/man8/mkfs.ext4.8.gz linked to ./usr/share/man/man8/mkfs.ext3.8.gz
+cpio: ./usr/share/man/man8/mkfs.ext4.8.gz linked to ./usr/share/man/man8/mkfs.ext2.8.gz
+cpio: ./usr/share/man/man8/mkfs.ext4.8.gz linked to ./usr/share/man/man8/mke2fs.8.gz
+./usr/share/man/man8/mkfs.ext4.8.gz
+7978 blocks
+./usr/lib/.build-id
+./usr/lib/.build-id/05
+./usr/lib/.build-id/05/c14855225434b7232190e4e0dcaf55c1fa51d9
+./usr/lib/.build-id/2d
+./usr/lib/.build-id/2d/59e8ee3c86d5516dc90c6e3bf338e252986dd9
+./usr/lib/.build-id/41
+./usr/lib/.build-id/41/681a02690a6f6201c917419f177b2480ab42a3
+./usr/lib/.build-id/b8
+./usr/lib/.build-id/b8/829a767abdf8a08aa394421a762d9bdca245e7
+./usr/sbin/biosdecode
+./usr/sbin/dmidecode
+./usr/sbin/ownership
+./usr/sbin/vpddecode
+./usr/share/doc/dmidecode
+./usr/share/doc/dmidecode/AUTHORS
+./usr/share/doc/dmidecode/CHANGELOG
+./usr/share/doc/dmidecode/README
+./usr/share/licenses/dmidecode
+./usr/share/licenses/dmidecode/LICENSE
+./usr/share/man/man8/biosdecode.8.gz
+./usr/share/man/man8/dmidecode.8.gz
+./usr/share/man/man8/ownership.8.gz
+./usr/share/man/man8/vpddecode.8.gz
+502 blocks
+./etc/profile.d/which2.csh
+./etc/profile.d/which2.sh
+./usr/bin/which
+./usr/lib/.build-id
+./usr/lib/.build-id/b5
+./usr/lib/.build-id/b5/2ba875167611446830a98a1a37b94095cf1073
+./usr/share/doc/which
+./usr/share/doc/which/AUTHORS
+./usr/share/doc/which/EXAMPLES
+./usr/share/doc/which/NEWS
+./usr/share/doc/which/README
+./usr/share/info/which.info.gz
+./usr/share/licenses/which
+./usr/share/licenses/which/COPYING
+./usr/share/man/man1/which.1.gz
+160 blocks
+Verifying packages...
+Preparing packages...
+qemu-img-2:2.11.2-5.fc28.x86_64
+Verifying packages...
+Preparing packages...
+qemu-guest-agent-2:2.11.2-5.fc28.x86_64
+Verifying packages...
+Preparing packages...
+stress-1.0.4-20.fc28.x86_64
+Verifying packages...
+Preparing packages...
+libstdc++-8.3.1-2.fc28.x86_64
+Verifying packages...
+Preparing packages...
+capstone-3.0.5-1.fc28.x86_64
+Verifying packages...
+Preparing packages...
+libaio-0.3.110-11.fc28.x86_64
+Verifying packages...
+Preparing packages...
+e2fsprogs-1.44.2-0.fc28.x86_64
+Verifying packages...
+Preparing packages...
+dmidecode-1:3.1-5.fc28.x86_64
+Verifying packages...
+Preparing packages...
+which-2.21-8.fc28.x86_64
+[885 / 891] [Prepa] ImageLayer images/cdi-http-import-server/cdi-http-import-server-base-image-layer.tar
+Target //:push-other-images up-to-date:
+  bazel-bin/push-other-images
+INFO: Elapsed time: 140.886s, Critical Path: 40.91s
+INFO: 190 processes: 190 processwrapper-sandbox.
+INFO: Build completed successfully, 232 total actions
+INFO: Running command line: bazel-bin/push-other-images
+INFO: Build completed successfully, 232 total actions
+2020/08/28 13:48:05 Error pushing image to kubevirt/disks-images-provider:latest: unable to push image to kubevirt/disks-images-provider:latest: POST https://index.docker.io/v2/kubevirt/disks-images-provider/blobs/uploads/: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/disks-images-provider Type:repository] map[Action:push Class: Name:kubevirt/disks-images-provider Type:repository]]
+2020/08/28 13:48:05 Error pushing image to kubevirt/cdi-http-import-server:latest: unable to push image to kubevirt/cdi-http-import-server:latest: POST https://index.docker.io/v2/kubevirt/cdi-http-import-server/blobs/uploads/: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/cdi-http-import-server Type:repository] map[Action:push Class: Name:kubevirt/cdi-http-import-server Type:repository]]
+2020/08/28 13:48:05 Error pushing image to kubevirt/vm-killer:latest: unable to push image to kubevirt/vm-killer:latest: PUT https://index.docker.io/v2/kubevirt/vm-killer/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/vm-killer Type:repository] map[Action:push Class: Name:kubevirt/vm-killer Type:repository]]
+2020/08/28 13:48:05 Error pushing image to kubevirt/microlivecd-container-disk-demo:latest: unable to push image to kubevirt/microlivecd-container-disk-demo:latest: PUT https://index.docker.io/v2/kubevirt/microlivecd-container-disk-demo/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/microlivecd-container-disk-demo Type:repository] map[Action:push Class: Name:kubevirt/microlivecd-container-disk-demo Type:repository]]
+2020/08/28 13:48:05 Error pushing image to kubevirt/nfs-server:latest: unable to push image to kubevirt/nfs-server:latest: PUT https://index.docker.io/v2/kubevirt/nfs-server/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/nfs-server Type:repository] map[Action:push Class: Name:kubevirt/nfs-server Type:repository]]
+2020/08/28 13:48:05 Error pushing image to kubevirt/alpine-container-disk-demo:latest: unable to push image to kubevirt/alpine-container-disk-demo:latest: PUT https://index.docker.io/v2/kubevirt/alpine-container-disk-demo/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/alpine-container-disk-demo Type:repository] map[Action:push Class: Name:kubevirt/alpine-container-disk-demo Type:repository]]
+2020/08/28 13:48:05 Error pushing image to kubevirt/virtio-container-disk:latest: unable to push image to kubevirt/virtio-container-disk:latest: PUT https://index.docker.io/v2/kubevirt/virtio-container-disk/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/virtio-container-disk Type:repository] map[Action:push Class: Name:kubevirt/virtio-container-disk Type:repository]]
+2020/08/28 13:48:05 Error pushing image to kubevirt/cirros-container-disk-demo:latest: unable to push image to kubevirt/cirros-container-disk-demo:latest: PUT https://index.docker.io/v2/kubevirt/cirros-container-disk-demo/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/cirros-container-disk-demo Type:repository] map[Action:push Class: Name:kubevirt/cirros-container-disk-demo Type:repository]]
+2020/08/28 13:48:05 Error pushing image to kubevirt/fedora-cloud-container-disk-demo:latest: unable to push image to kubevirt/fedora-cloud-container-disk-demo:latest: PUT https://index.docker.io/v2/kubevirt/fedora-cloud-container-disk-demo/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/fedora-cloud-container-disk-demo Type:repository] map[Action:push Class: Name:kubevirt/fedora-cloud-container-disk-demo Type:repository]]
+2020/08/28 13:48:06 Error pushing image to kubevirt/winrmcli:latest: unable to push image to kubevirt/winrmcli:latest: PUT https://index.docker.io/v2/kubevirt/winrmcli/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/winrmcli Type:repository] map[Action:push Class: Name:kubevirt/winrmcli Type:repository]]
+2020/08/28 13:48:06 Error pushing image to kubevirt/subresource-access-test:latest: unable to push image to kubevirt/subresource-access-test:latest: PUT https://index.docker.io/v2/kubevirt/subresource-access-test/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/subresource-access-test Type:repository] map[Action:push Class: Name:kubevirt/subresource-access-test Type:repository]]
+2020/08/28 13:48:06 Error pushing image to kubevirt/cirros-custom-container-disk-demo:latest: unable to push image to kubevirt/cirros-custom-container-disk-demo:latest: PUT https://index.docker.io/v2/kubevirt/cirros-custom-container-disk-demo/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/cirros-custom-container-disk-demo Type:repository] map[Action:push Class: Name:kubevirt/cirros-custom-container-disk-demo Type:repository]]
+2020/08/28 13:48:06 Error pushing image to kubevirt/example-hook-sidecar:latest: unable to push image to kubevirt/example-hook-sidecar:latest: PUT https://index.docker.io/v2/kubevirt/example-hook-sidecar/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/example-hook-sidecar Type:repository] map[Action:push Class: Name:kubevirt/example-hook-sidecar Type:repository]]
+2020/08/28 13:48:06 Error pushing image to kubevirt/example-cloudinit-hook-sidecar:latest: unable to push image to kubevirt/example-cloudinit-hook-sidecar:latest: PUT https://index.docker.io/v2/kubevirt/example-cloudinit-hook-sidecar/manifests/latest: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:kubevirt/example-cloudinit-hook-sidecar Type:repository] map[Action:push Class: Name:kubevirt/example-cloudinit-hook-sidecar Type:repository]]
+Makefile:24: recipe for target 'bazel-push-images' failed
+make: *** [bazel-push-images] Error 1

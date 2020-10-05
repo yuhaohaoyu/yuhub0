@@ -1,0 +1,176 @@
+root@jjvm006:/home/padmin/CODE/kubevirt# make cluster-up
+./cluster-up/up.sh
++ up
+++ _add_common_params
++++ _registry_volume
++++ echo kubevirt_registry
+++ local 'params=--nodes 1 --memory 5120M --cpu 6 --secondary-nics 0 --random-ports --background --prefix k8s-1.15 --registry-volume kubevirt_registry kubevirtci/k8s-1.15@sha256:c58cb9d79968590f24e070bc2517088d44fa2f83ba73e989a7e0f690ad08460b  --ocp-port 8443'
+++ [[ '' =~ windows.* ]]
+++ [[ '' =~ os-.* ]]
+++ '[' -n '' ']'
+++ echo --nodes 1 --memory 5120M --cpu 6 --secondary-nics 0 --random-ports --background --prefix k8s-1.15 --registry-volume kubevirt_registry kubevirtci/k8s-1.15@sha256:c58cb9d79968590f24e070bc2517088d44fa2f83ba73e989a7e0f690ad08460b --ocp-port 8443
++ docker run --privileged --net=host --rm -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9 run --nodes 1 --memory 5120M --cpu 6 --secondary-nics 0 --random-ports --background --prefix k8s-1.15 --registry-volume kubevirt_registry kubevirtci/k8s-1.15@sha256:c58cb9d79968590f24e070bc2517088d44fa2f83ba73e989a7e0f690ad08460b --ocp-port 8443
+Download the image docker.io/kubevirtci/k8s-1.15@sha256:c58cb9d79968590f24e070bc2517088d44fa2f83ba73e989a7e0f690ad08460b
+Downloading ......
+Downloading ......
+2020/09/19 02:16:55 Waiting for host: 192.168.66.101:22
+2020/09/19 02:16:58 Problem with dial: dial tcp 192.168.66.101:22: getsockopt: no route to host. Sleeping 5s
+2020/09/19 02:17:06 Problem with dial: dial tcp 192.168.66.101:22: getsockopt: no route to host. Sleeping 5s
+2020/09/19 02:17:14 Problem with dial: dial tcp 192.168.66.101:22: getsockopt: no route to host. Sleeping 5s
+2020/09/19 02:17:22 Problem with dial: dial tcp 192.168.66.101:22: getsockopt: no route to host. Sleeping 5s
+2020/09/19 02:17:30 Problem with dial: dial tcp 192.168.66.101:22: getsockopt: no route to host. Sleeping 5s
+2020/09/19 02:17:38 Problem with dial: dial tcp 192.168.66.101:22: getsockopt: no route to host. Sleeping 5s
+2020/09/19 02:17:46 Problem with dial: dial tcp 192.168.66.101:22: getsockopt: no route to host. Sleeping 5s
+2020/09/19 02:17:54 Problem with dial: dial tcp 192.168.66.101:22: getsockopt: no route to host. Sleeping 5s
+2020/09/19 02:17:59 Connected to tcp://192.168.66.101:22
++ cat /proc/meminfo
++ sed -e 's/ //g'
++ grep HugePages_Total:64
+HugePages_Total:64
+++ cut -c2-
+++ sed 's/ //g'
+++ kubectl version --short --client
+++ cut -d: -f2
++ version=1.15.1
++ cni_manifest=/tmp/cni.yaml
+++ grep active
+++ wc -l
+++ systemctl status docker
++ [[ 0 -eq 0 ]]
++ sleep 2
+++ systemctl status docker
+++ grep active
+++ wc -l
++ [[ 1 -eq 0 ]]
++ kubeadm init --config /etc/kubernetes/kubeadm.conf
+[init] Using Kubernetes version: v1.15.1
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of your internet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Activating the kubelet service
+[certs] Using certificateDir folder "/etc/kubernetes/pki"
+[certs] Generating "ca" certificate and key
+[certs] Generating "apiserver-kubelet-client" certificate and key
+[certs] Generating "apiserver" certificate and key
+[certs] apiserver serving cert is signed for DNS names [node01 kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local] and IPs [10.96.0.1 192.168.66.101]
+[certs] Generating "front-proxy-ca" certificate and key
+[certs] Generating "front-proxy-client" certificate and key
+[certs] Generating "etcd/ca" certificate and key
+[certs] Generating "etcd/peer" certificate and key
+[certs] etcd/peer serving cert is signed for DNS names [node01 localhost] and IPs [192.168.66.101 127.0.0.1 ::1]
+[certs] Generating "etcd/healthcheck-client" certificate and key
+[certs] Generating "apiserver-etcd-client" certificate and key
+[certs] Generating "etcd/server" certificate and key
+[certs] etcd/server serving cert is signed for DNS names [node01 localhost] and IPs [192.168.66.101 127.0.0.1 ::1]
+[certs] Generating "sa" key and public key
+[kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+[kubeconfig] Writing "admin.conf" kubeconfig file
+[kubeconfig] Writing "kubelet.conf" kubeconfig file
+[kubeconfig] Writing "controller-manager.conf" kubeconfig file
+[kubeconfig] Writing "scheduler.conf" kubeconfig file
+[control-plane] Using manifest folder "/etc/kubernetes/manifests"
+[control-plane] Creating static Pod manifest for "kube-apiserver"
+[controlplane] Adding extra host path mount "audit-conf" to "kube-apiserver"
+[controlplane] Adding extra host path mount "audit-log" to "kube-apiserver"
+[control-plane] Creating static Pod manifest for "kube-controller-manager"
+[controlplane] Adding extra host path mount "audit-conf" to "kube-apiserver"
+[controlplane] Adding extra host path mount "audit-log" to "kube-apiserver"
+[control-plane] Creating static Pod manifest for "kube-scheduler"
+[controlplane] Adding extra host path mount "audit-conf" to "kube-apiserver"
+[controlplane] Adding extra host path mount "audit-log" to "kube-apiserver"
+[etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+[kubelet-check] Initial timeout of 40s passed.
+[apiclient] All control plane components are healthy after 44.010716 seconds
+[upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+[kubelet] Creating a ConfigMap "kubelet-config-1.15" in namespace kube-system with the configuration for the kubelets in the cluster
+[upload-certs] Skipping phase. Please see --upload-certs
+[mark-control-plane] Marking the node node01 as control-plane by adding the label "node-role.kubernetes.io/master=''"
+[mark-control-plane] Marking the node node01 as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]
+[bootstrap-token] Using token: abcdef.1234567890123456
+[bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+[bootstrap-token] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+[bootstrap-token] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+[bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+[addons] Applied essential addon: CoreDNS
+[addons] Applied essential addon: kube-proxy
+
+Your Kubernetes control-plane has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 192.168.66.101:6443 --token abcdef.1234567890123456 \
+    --discovery-token-ca-cert-hash sha256:dc75a33b63c5c8cc713f0f21f03159a27d2e2f95b851508a431fce8fdd1b664d 
++ kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f /tmp/cni.yaml
+clusterrole.rbac.authorization.k8s.io/flannel created
+clusterrolebinding.rbac.authorization.k8s.io/flannel created
+serviceaccount/flannel created
+configmap/kube-flannel-cfg created
+daemonset.apps/kube-flannel-ds-amd64 created
+daemonset.apps/kube-flannel-ds-arm64 created
+daemonset.apps/kube-flannel-ds-arm created
+daemonset.apps/kube-flannel-ds-ppc64le created
+daemonset.apps/kube-flannel-ds-s390x created
++ kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes node01 node-role.kubernetes.io/master:NoSchedule-
+node/node01 untainted
++ kubectl --kubeconfig=/etc/kubernetes/admin.conf get nodes --no-headers
+node01   NotReady   master   6s    v1.15.1
++ kubectl_rc=0
++ retry_counter=0
++ [[ 0 -lt 20 ]]
++ [[ 0 -ne 0 ]]
++ local_volume_manifest=/tmp/local-volume.yaml
++ kubectl --kubeconfig=/etc/kubernetes/admin.conf create -f /tmp/local-volume.yaml
+storageclass.storage.k8s.io/local created
+configmap/local-storage-config created
+clusterrolebinding.rbac.authorization.k8s.io/local-storage-provisioner-pv-binding created
+clusterrole.rbac.authorization.k8s.io/local-storage-provisioner-node-clusterrole created
+clusterrolebinding.rbac.authorization.k8s.io/local-storage-provisioner-node-binding created
+role.rbac.authorization.k8s.io/local-storage-provisioner-jobs-role created
+rolebinding.rbac.authorization.k8s.io/local-storage-provisioner-jobs-rolebinding created
+serviceaccount/local-storage-admin created
+daemonset.extensions/local-volume-provisioner created
++ docker run --privileged --net=host --rm -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9 scp --prefix k8s-1.15 /usr/bin/kubectl -
++ chmod u+x /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl
++ docker run --privileged --net=host --rm -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9 scp --prefix k8s-1.15 /etc/kubernetes/admin.conf -
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
+++ _main_ip
+++ echo 127.0.0.1
+++ _port k8s
+++ docker run --privileged --net=host --rm -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9 ports --prefix k8s-1.15 k8s
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl config set-cluster kubernetes --server=https://127.0.0.1:32768
+Cluster "kubernetes" set.
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl config set-cluster kubernetes --insecure-skip-tls-verify=true
+Cluster "kubernetes" set.
++ prepare_config
++ BASE_PATH=/home/padmin/CODE/kubevirt/_ci-configs
++ cat
+++ _main_ip
+++ echo 127.0.0.1
+++ _port registry
+++ docker run --privileged --net=host --rm -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9 ports --prefix k8s-1.15 registry
++ kubectl='docker run --privileged --net=host --rm  -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9 --prefix k8s-1.15 ssh node01 -- sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf'
++ '[' 1 -gt 1 ']'
++ label=node-role.kubernetes.io/master
++ docker run --privileged --net=host --rm -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9 --prefix k8s-1.15 ssh node01 -- sudo kubectl --kubeconfig=/etc/kubernetes/admin.conf label node -l node-role.kubernetes.io/master node-role.kubernetes.io/worker=
+2020/09/19 02:19:28 Waiting for host: 192.168.66.101:22
+2020/09/19 02:19:28 Connected to tcp://192.168.66.101:22
+node/node01 labeled
++ '[' '' == true ']'
++ set +x
+

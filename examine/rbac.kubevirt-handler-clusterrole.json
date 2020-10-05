@@ -1,0 +1,122 @@
+{
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+        "annotations": {
+            "kubevirt.io/install-strategy-identifier": "4f10d8a1712324b71d0ff3612f097563b4912e51",
+            "kubevirt.io/install-strategy-registry": "index.docker.io/kubevirt",
+            "kubevirt.io/install-strategy-version": "v0.33.0"
+        },
+        "creationTimestamp": "2020-09-15T16:56:04Z",
+        "labels": {
+            "app.kubernetes.io/component": "kubevirt",
+            "app.kubernetes.io/managed-by": "kubevirt-operator",
+            "kubevirt.io": ""
+        },
+        "managedFields": [
+            {
+                "apiVersion": "rbac.authorization.k8s.io/v1",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:kubevirt.io/install-strategy-identifier": {},
+                            "f:kubevirt.io/install-strategy-registry": {},
+                            "f:kubevirt.io/install-strategy-version": {}
+                        },
+                        "f:labels": {
+                            ".": {},
+                            "f:app.kubernetes.io/component": {},
+                            "f:app.kubernetes.io/managed-by": {},
+                            "f:kubevirt.io": {}
+                        }
+                    },
+                    "f:rules": {}
+                },
+                "manager": "virt-operator",
+                "operation": "Update",
+                "time": "2020-09-15T16:56:04Z"
+            }
+        ],
+        "name": "kubevirt-handler",
+        "resourceVersion": "130799",
+        "selfLink": "/apis/rbac.authorization.k8s.io/v1/clusterroles/kubevirt-handler",
+        "uid": "1673e27d-106e-4e62-845d-5f395ac4140c"
+    },
+    "rules": [
+        {
+            "apiGroups": [
+                "kubevirt.io"
+            ],
+            "resources": [
+                "virtualmachineinstances"
+            ],
+            "verbs": [
+                "update",
+                "list",
+                "watch"
+            ]
+        },
+        {
+            "apiGroups": [
+                ""
+            ],
+            "resources": [
+                "persistentvolumeclaims"
+            ],
+            "verbs": [
+                "get"
+            ]
+        },
+        {
+            "apiGroups": [
+                ""
+            ],
+            "resources": [
+                "nodes"
+            ],
+            "verbs": [
+                "patch"
+            ]
+        },
+        {
+            "apiGroups": [
+                ""
+            ],
+            "resources": [
+                "events"
+            ],
+            "verbs": [
+                "create",
+                "patch"
+            ]
+        },
+        {
+            "apiGroups": [
+                "apiextensions.k8s.io"
+            ],
+            "resources": [
+                "customresourcedefinitions"
+            ],
+            "verbs": [
+                "get",
+                "list",
+                "watch"
+            ]
+        },
+        {
+            "apiGroups": [
+                "kubevirt.io"
+            ],
+            "resources": [
+                "kubevirts"
+            ],
+            "verbs": [
+                "get",
+                "list",
+                "watch"
+            ]
+        }
+    ]
+}

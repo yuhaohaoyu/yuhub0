@@ -1,0 +1,197 @@
+
+componentstatuses
+NAME                 STATUS    MESSAGE             ERROR
+controller-manager   Healthy   ok                  
+scheduler            Healthy   ok                  
+etcd-0               Healthy   {"health":"true"}   
+
+namespaces
+NAME              STATUS        AGE
+default           Active        18d
+kube-node-lease   Active        18d
+kube-public       Active        18d
+kube-system       Active        18d
+kubevirt          Terminating   21h
+
+nodes
+NAME       STATUS   ROLES    AGE   VERSION
+minikube   Ready    master   18d   v1.18.3
+
+persistentvolumes
+
+mutatingwebhookconfigurations.admissionregistration.k8s.io
+
+validatingwebhookconfigurations.admissionregistration.k8s.io
+
+customresourcedefinitions.apiextensions.k8s.io
+NAME                    CREATED AT
+kubevirts.kubevirt.io   2020-09-14T18:16:12Z
+
+apiservices.apiregistration.k8s.io
+NAME                                   SERVICE   AVAILABLE   AGE
+v1.                                    Local     True        18d
+v1.admissionregistration.k8s.io        Local     True        18d
+v1.apiextensions.k8s.io                Local     True        18d
+v1.apps                                Local     True        18d
+v1.authentication.k8s.io               Local     True        18d
+v1.authorization.k8s.io                Local     True        18d
+v1.autoscaling                         Local     True        18d
+v1.batch                               Local     True        18d
+v1.coordination.k8s.io                 Local     True        18d
+v1.networking.k8s.io                   Local     True        18d
+v1.rbac.authorization.k8s.io           Local     True        18d
+v1.scheduling.k8s.io                   Local     True        18d
+v1.storage.k8s.io                      Local     True        18d
+v1alpha3.kubevirt.io                   Local     True        21h
+v1beta1.admissionregistration.k8s.io   Local     True        18d
+v1beta1.apiextensions.k8s.io           Local     True        18d
+v1beta1.authentication.k8s.io          Local     True        18d
+v1beta1.authorization.k8s.io           Local     True        18d
+v1beta1.batch                          Local     True        18d
+v1beta1.certificates.k8s.io            Local     True        18d
+v1beta1.coordination.k8s.io            Local     True        18d
+v1beta1.discovery.k8s.io               Local     True        18d
+v1beta1.events.k8s.io                  Local     True        18d
+v1beta1.extensions                     Local     True        18d
+v1beta1.networking.k8s.io              Local     True        18d
+v1beta1.node.k8s.io                    Local     True        18d
+v1beta1.policy                         Local     True        18d
+v1beta1.rbac.authorization.k8s.io      Local     True        18d
+v1beta1.scheduling.k8s.io              Local     True        18d
+v1beta1.storage.k8s.io                 Local     True        18d
+v2beta1.autoscaling                    Local     True        18d
+v2beta2.autoscaling                    Local     True        18d
+
+certificatesigningrequests.certificates.k8s.io
+
+ingressclasses.networking.k8s.io
+
+runtimeclasses.node.k8s.io
+
+podsecuritypolicies.policy
+
+clusterrolebindings.rbac.authorization.k8s.io
+NAME                                                   ROLE                                                                               AGE
+cluster-admin                                          ClusterRole/cluster-admin                                                          18d
+kubeadm:get-nodes                                      ClusterRole/kubeadm:get-nodes                                                      18d
+kubeadm:kubelet-bootstrap                              ClusterRole/system:node-bootstrapper                                               18d
+kubeadm:node-autoapprove-bootstrap                     ClusterRole/system:certificates.k8s.io:certificatesigningrequests:nodeclient       18d
+kubeadm:node-autoapprove-certificate-rotation          ClusterRole/system:certificates.k8s.io:certificatesigningrequests:selfnodeclient   18d
+kubeadm:node-proxier                                   ClusterRole/system:node-proxier                                                    18d
+minikube-rbac                                          ClusterRole/cluster-admin                                                          18d
+storage-provisioner                                    ClusterRole/system:persistent-volume-provisioner                                   18d
+system:basic-user                                      ClusterRole/system:basic-user                                                      18d
+system:controller:attachdetach-controller              ClusterRole/system:controller:attachdetach-controller                              18d
+system:controller:certificate-controller               ClusterRole/system:controller:certificate-controller                               18d
+system:controller:clusterrole-aggregation-controller   ClusterRole/system:controller:clusterrole-aggregation-controller                   18d
+system:controller:cronjob-controller                   ClusterRole/system:controller:cronjob-controller                                   18d
+system:controller:daemon-set-controller                ClusterRole/system:controller:daemon-set-controller                                18d
+system:controller:deployment-controller                ClusterRole/system:controller:deployment-controller                                18d
+system:controller:disruption-controller                ClusterRole/system:controller:disruption-controller                                18d
+system:controller:endpoint-controller                  ClusterRole/system:controller:endpoint-controller                                  18d
+system:controller:endpointslice-controller             ClusterRole/system:controller:endpointslice-controller                             18d
+system:controller:expand-controller                    ClusterRole/system:controller:expand-controller                                    18d
+system:controller:generic-garbage-collector            ClusterRole/system:controller:generic-garbage-collector                            18d
+system:controller:horizontal-pod-autoscaler            ClusterRole/system:controller:horizontal-pod-autoscaler                            18d
+system:controller:job-controller                       ClusterRole/system:controller:job-controller                                       18d
+system:controller:namespace-controller                 ClusterRole/system:controller:namespace-controller                                 18d
+system:controller:node-controller                      ClusterRole/system:controller:node-controller                                      18d
+system:controller:persistent-volume-binder             ClusterRole/system:controller:persistent-volume-binder                             18d
+system:controller:pod-garbage-collector                ClusterRole/system:controller:pod-garbage-collector                                18d
+system:controller:pv-protection-controller             ClusterRole/system:controller:pv-protection-controller                             18d
+system:controller:pvc-protection-controller            ClusterRole/system:controller:pvc-protection-controller                            18d
+system:controller:replicaset-controller                ClusterRole/system:controller:replicaset-controller                                18d
+system:controller:replication-controller               ClusterRole/system:controller:replication-controller                               18d
+system:controller:resourcequota-controller             ClusterRole/system:controller:resourcequota-controller                             18d
+system:controller:route-controller                     ClusterRole/system:controller:route-controller                                     18d
+system:controller:service-account-controller           ClusterRole/system:controller:service-account-controller                           18d
+system:controller:service-controller                   ClusterRole/system:controller:service-controller                                   18d
+system:controller:statefulset-controller               ClusterRole/system:controller:statefulset-controller                               18d
+system:controller:ttl-controller                       ClusterRole/system:controller:ttl-controller                                       18d
+system:coredns                                         ClusterRole/system:coredns                                                         18d
+system:discovery                                       ClusterRole/system:discovery                                                       18d
+system:kube-controller-manager                         ClusterRole/system:kube-controller-manager                                         18d
+system:kube-dns                                        ClusterRole/system:kube-dns                                                        18d
+system:kube-scheduler                                  ClusterRole/system:kube-scheduler                                                  18d
+system:node                                            ClusterRole/system:node                                                            18d
+system:node-proxier                                    ClusterRole/system:node-proxier                                                    18d
+system:public-info-viewer                              ClusterRole/system:public-info-viewer                                              18d
+system:volume-scheduler                                ClusterRole/system:volume-scheduler                                                18d
+
+clusterroles.rbac.authorization.k8s.io
+NAME                                                                   CREATED AT
+admin                                                                  2020-08-28T15:29:11Z
+cluster-admin                                                          2020-08-28T15:29:11Z
+edit                                                                   2020-08-28T15:29:11Z
+kubeadm:get-nodes                                                      2020-08-28T15:29:18Z
+system:aggregate-to-admin                                              2020-08-28T15:29:11Z
+system:aggregate-to-edit                                               2020-08-28T15:29:11Z
+system:aggregate-to-view                                               2020-08-28T15:29:11Z
+system:auth-delegator                                                  2020-08-28T15:29:12Z
+system:basic-user                                                      2020-08-28T15:29:11Z
+system:certificates.k8s.io:certificatesigningrequests:nodeclient       2020-08-28T15:29:12Z
+system:certificates.k8s.io:certificatesigningrequests:selfnodeclient   2020-08-28T15:29:12Z
+system:certificates.k8s.io:kube-apiserver-client-approver              2020-08-28T15:29:12Z
+system:certificates.k8s.io:kube-apiserver-client-kubelet-approver      2020-08-28T15:29:12Z
+system:certificates.k8s.io:kubelet-serving-approver                    2020-08-28T15:29:12Z
+system:certificates.k8s.io:legacy-unknown-approver                     2020-08-28T15:29:12Z
+system:controller:attachdetach-controller                              2020-08-28T15:29:12Z
+system:controller:certificate-controller                               2020-08-28T15:29:13Z
+system:controller:clusterrole-aggregation-controller                   2020-08-28T15:29:12Z
+system:controller:cronjob-controller                                   2020-08-28T15:29:12Z
+system:controller:daemon-set-controller                                2020-08-28T15:29:12Z
+system:controller:deployment-controller                                2020-08-28T15:29:12Z
+system:controller:disruption-controller                                2020-08-28T15:29:12Z
+system:controller:endpoint-controller                                  2020-08-28T15:29:12Z
+system:controller:endpointslice-controller                             2020-08-28T15:29:12Z
+system:controller:expand-controller                                    2020-08-28T15:29:13Z
+system:controller:generic-garbage-collector                            2020-08-28T15:29:13Z
+system:controller:horizontal-pod-autoscaler                            2020-08-28T15:29:13Z
+system:controller:job-controller                                       2020-08-28T15:29:13Z
+system:controller:namespace-controller                                 2020-08-28T15:29:13Z
+system:controller:node-controller                                      2020-08-28T15:29:13Z
+system:controller:persistent-volume-binder                             2020-08-28T15:29:13Z
+system:controller:pod-garbage-collector                                2020-08-28T15:29:13Z
+system:controller:pv-protection-controller                             2020-08-28T15:29:13Z
+system:controller:pvc-protection-controller                            2020-08-28T15:29:13Z
+system:controller:replicaset-controller                                2020-08-28T15:29:13Z
+system:controller:replication-controller                               2020-08-28T15:29:13Z
+system:controller:resourcequota-controller                             2020-08-28T15:29:13Z
+system:controller:route-controller                                     2020-08-28T15:29:13Z
+system:controller:service-account-controller                           2020-08-28T15:29:13Z
+system:controller:service-controller                                   2020-08-28T15:29:13Z
+system:controller:statefulset-controller                               2020-08-28T15:29:13Z
+system:controller:ttl-controller                                       2020-08-28T15:29:13Z
+system:coredns                                                         2020-08-28T15:29:19Z
+system:discovery                                                       2020-08-28T15:29:11Z
+system:heapster                                                        2020-08-28T15:29:11Z
+system:kube-aggregator                                                 2020-08-28T15:29:12Z
+system:kube-controller-manager                                         2020-08-28T15:29:12Z
+system:kube-dns                                                        2020-08-28T15:29:12Z
+system:kube-scheduler                                                  2020-08-28T15:29:12Z
+system:kubelet-api-admin                                               2020-08-28T15:29:11Z
+system:node                                                            2020-08-28T15:29:11Z
+system:node-bootstrapper                                               2020-08-28T15:29:12Z
+system:node-problem-detector                                           2020-08-28T15:29:11Z
+system:node-proxier                                                    2020-08-28T15:29:12Z
+system:persistent-volume-provisioner                                   2020-08-28T15:29:12Z
+system:public-info-viewer                                              2020-08-28T15:29:11Z
+system:volume-scheduler                                                2020-08-28T15:29:12Z
+view                                                                   2020-08-28T15:29:11Z
+
+priorityclasses.scheduling.k8s.io
+NAME                      VALUE        GLOBAL-DEFAULT   AGE
+system-cluster-critical   2000000000   false            18d
+system-node-critical      2000001000   false            18d
+
+csidrivers.storage.k8s.io
+
+csinodes.storage.k8s.io
+NAME       DRIVERS   AGE
+minikube   0         18d
+
+storageclasses.storage.k8s.io
+NAME                 PROVISIONER                RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+standard (default)   k8s.io/minikube-hostpath   Delete          Immediate           false                  18d
+
+volumeattachments.storage.k8s.io

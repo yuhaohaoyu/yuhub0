@@ -1,0 +1,43 @@
+
+|Resource API	| API Group		| Verbs	|
+| ----		| ---			| ---	|
+|*		| kubevirt.io		| * |
+
+|Resource API	| API Group		| Verbs	|
+| ----		| ---			| ---	|
+|vm		| kubevirt.io		| get, list, watch, patch	|
+|vmi		| kubevirt.io		| get, list, watch, patch	|
+|vmim		| kubevirt.io		| create, get, list, watch, patch	|
+|vmpreset	| kubevirt.io		| list, watch	|
+|kubevirt	| kubevirt.io		| get, list, watch	|
+
+|Resource API	| API Group		| Verbs	|
+| ----		| ---			| ---	|
+|*		| snapshot.kubevirt.io	| * |
+|*		| cdi.kubevirt.io	| * |
+
+|Resource API	| API Group		| Verbs	|
+| ----		| ---			| ---	|
+|vmsnapshot	| snapshot.kubevirt.io	| get, list, watch	|
+|vmrestore	| snapshot.kubevirt.io	| get, list, watch	|
+
+
+
+
+The purpose of the PR is to address the problem discussed in issue 3512, i.e. to prevent the service account kubevirt-controller from modifying or deleting custom resources in the API Group kubevirt.io.
+
+One reason that the problem existed was that the the RBAC role associated with the service account kubevirt-controller can do anything to all the resources in the API Group kubevirt.io.
+
+The solution follows the discussion in the issue: to refactor the RBAC rule associated to the kubevirt-controller role by spelling out action verbs to each of the 6 resources in the API group. In this PR, the permission associated to the RBAC role kubevirt-controller are summarized as below:
+
+Resource API	API Group	Verbs
+vm, vmi	kubevirt.io	get, list, watch, patch
+vmireplicaset	kubevirt.io	get, list, watch, patch
+vmim	kubevirt.io	create, get, list, watch, patch
+vmpreset	kubevirt.io	list, watch
+kubevirt	kubevirt.io	get, list, watch
+The PR includes an addition of 6 tests to tests/access_test.go that essentially runs the command
+kubectl auth can-i delete vm --as system:serviceaccount:kubevirt:kubevirt-controller
+for the 8 verbs against the 6 resource objects.
+
+Finally, the PR contains a few lines of code cleaning up for good coding practice: replacing recurring string literals by constants.

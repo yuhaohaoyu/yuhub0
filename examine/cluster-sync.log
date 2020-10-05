@@ -1,0 +1,2179 @@
+root@jjvm006:/home/padmin/CODE/kubevirt# make cluster-sync
+./hack/cluster-build.sh
+Building ...
+go version go1.12.8 linux/amd64
+Waiting for rsyncd to be ready
+9d1de24153843e056c77fbb71e0454bcd16b4cf57fc071b4ffc393ce61d2be81
+go version go1.12.8 linux/amd64
+Another command holds the client lock: 
+pid=15
+owner=client
+cwd=/root/go/src/kubevirt.io/kubevirt
+
+Waiting for it to complete...
+Another command (pid=15) is running.  Waiting for it to complete on the server...
+INFO: Analyzed 43 targets (820 packages loaded, 11862 targets configured).
+INFO: Found 43 targets...
+INFO: Elapsed time: 420.346s, Critical Path: 62.29s
+INFO: 1102 processes: 1102 processwrapper-sandbox.
+INFO: Build completed successfully, 1221 total actions
+INFO: Build option --platforms has changed, discarding analysis cache.
+INFO: Analyzed target //:build-dump (0 packages loaded, 10555 targets configured).
+INFO: Found 1 target...
+Target //:build-dump up-to-date:
+  bazel-bin/dump-copier
+INFO: Elapsed time: 3.041s, Critical Path: 0.20s
+INFO: 1 process: 1 processwrapper-sandbox.
+INFO: Build completed successfully, 2 total actions
+INFO: Build completed successfully, 2 total actions
+INFO: Analyzed target //:build-virtctl (0 packages loaded, 129 targets configured).
+INFO: Found 1 target...
+Target //:build-virtctl up-to-date:
+  bazel-bin/virtctl-copier
+INFO: Elapsed time: 0.535s, Critical Path: 0.17s
+INFO: 1 process: 1 processwrapper-sandbox.
+INFO: Build completed successfully, 2 total actions
+INFO: Build completed successfully, 2 total actions
+INFO: Build option --platforms has changed, discarding analysis cache.
+INFO: Analyzed target //:build-virtctl (0 packages loaded, 9076 targets configured).
+INFO: Found 1 target...
+Target //:build-virtctl up-to-date:
+  bazel-bin/virtctl-copier
+INFO: Elapsed time: 1.837s, Critical Path: 0.23s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Build completed successfully, 1 total action
+INFO: Build option --platforms has changed, discarding analysis cache.
+INFO: Analyzed target //:build-virtctl (0 packages loaded, 9065 targets configured).
+INFO: Found 1 target...
+Target //:build-virtctl up-to-date:
+  bazel-bin/virtctl-copier
+INFO: Elapsed time: 66.082s, Critical Path: 54.18s
+INFO: 299 processes: 299 processwrapper-sandbox.
+INFO: Build completed successfully, 300 total actions
+INFO: Build completed successfully, 300 total actions
+INFO: Build option --platforms has changed, discarding analysis cache.
+INFO: Analyzed target //:build-virtctl (2 packages loaded, 8856 targets configured).
+INFO: Found 1 target...
+Target //:build-virtctl up-to-date:
+  bazel-bin/virtctl-copier
+INFO: Elapsed time: 64.599s, Critical Path: 50.94s
+INFO: 300 processes: 300 processwrapper-sandbox.
+INFO: Build completed successfully, 301 total actions
+INFO: Build completed successfully, 301 total actions
+go version go1.12.8 linux/amd64
+
+go version go1.12.8 linux/amd64
+INFO: Build options --define, --platforms, and --stamp have changed, discarding analysis cache.
+DEBUG: /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_gazelle/internal/go_repository.bzl:182:13: gazelle: gazelle: finding module path for import crypto/ed25519: exit status 1: can't load package: package crypto/ed25519: unknown import path "crypto/ed25519": cannot find module providing package crypto/ed25519
+gazelle: finding module path for import crypto/ed25519: exit status 1: can't load package: package crypto/ed25519: unknown import path "crypto/ed25519": cannot find module providing package crypto/ed25519
+gazelle: finding module path for import golang.org/x/sys/windows: exit status 1: can't load package: package golang.org/x/sys/windows: build constraints exclude all Go files in /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_gazelle_go_repository_cache/pkg/mod/golang.org/x/sys@v0.0.0-20200918174421-af09f7315aff/windows
+INFO: Analyzed target //:push-other-images (85 packages loaded, 9966 targets configured).
+INFO: Found 1 target...
+INFO: From Install RPMs inside a container:
+./usr/bin/qemu-img
+./usr/bin/qemu-io
+./usr/bin/qemu-nbd
+./usr/lib/.build-id
+./usr/lib/.build-id/21
+./usr/lib/.build-id/21/5623ce32a020008ffd93536f5dfaf235f71197
+./usr/lib/.build-id/57
+./usr/lib/.build-id/57/a8b638a88115c3a205fd89ffb8f4f19a82122a
+./usr/lib/.build-id/80
+./usr/lib/.build-id/80/24a412d7f784fccf1b720f75ddf06d14e2b3be
+./usr/share/man/man1/qemu-img.1.gz
+./usr/share/man/man8/qemu-nbd.8.gz
+10251 blocks
+./usr/bin/cstool
+./usr/lib/.build-id
+./usr/lib/.build-id/e2
+./usr/lib/.build-id/e2/db773e7fd14345cd48d94d355e2f9823e7e0b8
+./usr/lib/.build-id/ef
+./usr/lib/.build-id/ef/0e585af999c9eaab0765151d7cac670b2141b4
+./usr/lib64/libcapstone.so.3
+./usr/share/doc/capstone
+./usr/share/doc/capstone/ChangeLog
+./usr/share/doc/capstone/README
+./usr/share/licenses/capstone
+./usr/share/licenses/capstone/LICENSE.TXT
+./usr/share/licenses/capstone/LICENSE_LLVM.TXT
+5506 blocks
+./usr/lib/.build-id
+./usr/lib/.build-id/16
+./usr/lib/.build-id/16/8bc7651e4f5692ca6ddaf7d91a716c6c5ec048
+./usr/lib/.build-id/22
+./usr/lib/.build-id/22/b127d8ffe58cb0dc4b7ae7474ffb5b943daab1
+./usr/lib64/libaio.so.1
+./usr/lib64/libaio.so.1.0.0
+./usr/lib64/libaio.so.1.0.1
+./usr/share/doc/libaio
+./usr/share/doc/libaio/COPYING
+./usr/share/doc/libaio/TODO
+81 blocks
+./usr/lib/.build-id
+./usr/lib/.build-id/f7
+./usr/lib/.build-id/f7/27fe86920dd1eb7021a295d416e017254aab76
+./usr/lib64/libstdc++.so.6
+./usr/lib64/libstdc++.so.6.0.25
+./usr/share/gcc-8
+./usr/share/gcc-8/python
+./usr/share/gcc-8/python/libstdcxx
+./usr/share/gcc-8/python/libstdcxx/__init__.py
+./usr/share/gcc-8/python/libstdcxx/__pycache__
+./usr/share/gcc-8/python/libstdcxx/v6
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.py
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__
+./usr/share/gcc-8/python/libstdcxx/v6/printers.py
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.py
+./usr/share/gdb
+./usr/share/gdb/auto-load
+./usr/share/gdb/auto-load/usr
+./usr/share/gdb/auto-load/usr/lib64
+./usr/share/gdb/auto-load/usr/lib64/__pycache__
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.py
+./usr/share/gcc-8/python/libstdcxx/__init__.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/__init__.pyo linked to ./usr/share/gcc-8/python/libstdcxx/__init__.pyc
+./usr/share/gcc-8/python/libstdcxx/__init__.pyo
+./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyo
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/printers.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/printers.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/printers.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/printers.pyo
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyo
+./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.opt-1.pyc
+cpio: ./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.pyc linked to ./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.opt-1.pyc
+./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.pyc
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyc
+cpio: ./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyo linked to ./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyc
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyo
+3832 blocks
+Verifying packages...
+Preparing packages...
+qemu-img-2:2.11.2-5.fc28.x86_64
+Verifying packages...
+Preparing packages...
+capstone-3.0.5-1.fc28.x86_64
+Verifying packages...
+Preparing packages...
+libaio-0.3.110-11.fc28.x86_64
+Verifying packages...
+Preparing packages...
+libstdc++-8.3.1-2.fc28.x86_64
+INFO: From Install RPMs inside a container:
+./usr/bin/qemu-img
+./usr/bin/qemu-io
+./usr/bin/qemu-nbd
+./usr/lib/.build-id
+./usr/lib/.build-id/21
+./usr/lib/.build-id/21/5623ce32a020008ffd93536f5dfaf235f71197
+./usr/lib/.build-id/57
+./usr/lib/.build-id/57/a8b638a88115c3a205fd89ffb8f4f19a82122a
+./usr/lib/.build-id/80
+./usr/lib/.build-id/80/24a412d7f784fccf1b720f75ddf06d14e2b3be
+./usr/share/man/man1/qemu-img.1.gz
+./usr/share/man/man8/qemu-nbd.8.gz
+10251 blocks
+./etc/qemu-ga
+./etc/qemu-ga/fsfreeze-hook
+./etc/qemu-ga/fsfreeze-hook.d
+./etc/qemu-ga/fsfreeze-hook.d/mysql-flush.sh.sample
+./etc/sysconfig/qemu-ga
+./lib/udev/rules.d/99-qemu-guest-agent.rules
+./usr/bin/qemu-ga
+./usr/lib/.build-id
+./usr/lib/.build-id/76
+./usr/lib/.build-id/76/57e717b9b4990f3da72f35829a8d3e46fc6a3b
+./usr/lib/systemd/system/qemu-guest-agent.service
+./usr/share/man/man8/qemu-ga.8.gz
+1320 blocks
+./usr/bin/stress
+./usr/lib/.build-id
+./usr/lib/.build-id/4c
+./usr/lib/.build-id/4c/28da6d7bba5581bc4acecffc42eed8e7c976a9
+./usr/share/doc/stress
+./usr/share/doc/stress/AUTHORS
+./usr/share/doc/stress/COPYING
+./usr/share/doc/stress/ChangeLog
+./usr/share/doc/stress/NEWS
+./usr/share/doc/stress/README
+./usr/share/doc/stress/TODO
+./usr/share/doc/stress/stress.html
+./usr/share/info/stress.info.gz
+./usr/share/man/man1/stress.1.gz
+153 blocks
+./usr/lib/.build-id
+./usr/lib/.build-id/f7
+./usr/lib/.build-id/f7/27fe86920dd1eb7021a295d416e017254aab76
+./usr/lib64/libstdc++.so.6
+./usr/lib64/libstdc++.so.6.0.25
+./usr/share/gcc-8
+./usr/share/gcc-8/python
+./usr/share/gcc-8/python/libstdcxx
+./usr/share/gcc-8/python/libstdcxx/__init__.py
+./usr/share/gcc-8/python/libstdcxx/__pycache__
+./usr/share/gcc-8/python/libstdcxx/v6
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.py
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__
+./usr/share/gcc-8/python/libstdcxx/v6/printers.py
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.py
+./usr/share/gdb
+./usr/share/gdb/auto-load
+./usr/share/gdb/auto-load/usr
+./usr/share/gdb/auto-load/usr/lib64
+./usr/share/gdb/auto-load/usr/lib64/__pycache__
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.py
+./usr/share/gcc-8/python/libstdcxx/__init__.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/__init__.pyo linked to ./usr/share/gcc-8/python/libstdcxx/__init__.pyc
+./usr/share/gcc-8/python/libstdcxx/__init__.pyo
+./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/__pycache__/__init__.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__init__.pyo
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/__init__.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/printers.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.opt-1.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.pyc linked to ./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.opt-1.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/__pycache__/xmethods.cpython-36.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/printers.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/printers.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/printers.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/printers.pyo
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyc
+cpio: ./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyo linked to ./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyc
+./usr/share/gcc-8/python/libstdcxx/v6/xmethods.pyo
+./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.opt-1.pyc
+cpio: ./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.pyc linked to ./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.opt-1.pyc
+./usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.25-gdb.cpython-36.pyc
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyc
+cpio: ./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyo linked to ./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyc
+./usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.25-gdb.pyo
+3832 blocks
+./usr/bin/cstool
+./usr/lib/.build-id
+./usr/lib/.build-id/e2
+./usr/lib/.build-id/e2/db773e7fd14345cd48d94d355e2f9823e7e0b8
+./usr/lib/.build-id/ef
+./usr/lib/.build-id/ef/0e585af999c9eaab0765151d7cac670b2141b4
+./usr/lib64/libcapstone.so.3
+./usr/share/doc/capstone
+./usr/share/doc/capstone/ChangeLog
+./usr/share/doc/capstone/README
+./usr/share/licenses/capstone
+./usr/share/licenses/capstone/LICENSE.TXT
+./usr/share/licenses/capstone/LICENSE_LLVM.TXT
+5506 blocks
+./usr/lib/.build-id
+./usr/lib/.build-id/16
+./usr/lib/.build-id/16/8bc7651e4f5692ca6ddaf7d91a716c6c5ec048
+./usr/lib/.build-id/22
+./usr/lib/.build-id/22/b127d8ffe58cb0dc4b7ae7474ffb5b943daab1
+./usr/lib64/libaio.so.1
+./usr/lib64/libaio.so.1.0.0
+./usr/lib64/libaio.so.1.0.1
+./usr/share/doc/libaio
+./usr/share/doc/libaio/COPYING
+./usr/share/doc/libaio/TODO
+81 blocks
+./etc/mke2fs.conf
+./usr/bin/chattr
+./usr/bin/lsattr
+./usr/lib/.build-id
+./usr/lib/.build-id/0d
+./usr/lib/.build-id/0d/c484aaea417739eb62792964c590e65092e344
+./usr/lib/.build-id/17
+./usr/lib/.build-id/17/c498cd6a21401ad1e4e73d1458104acedbce6b
+./usr/lib/.build-id/17/c498cd6a21401ad1e4e73d1458104acedbce6b.1
+./usr/lib/.build-id/17/c498cd6a21401ad1e4e73d1458104acedbce6b.2
+./usr/lib/.build-id/17/c498cd6a21401ad1e4e73d1458104acedbce6b.3
+./usr/lib/.build-id/18
+./usr/lib/.build-id/18/9e9325319340c6d8db79d35236cc227a0acdac
+./usr/lib/.build-id/18/9e9325319340c6d8db79d35236cc227a0acdac.1
+./usr/lib/.build-id/18/9e9325319340c6d8db79d35236cc227a0acdac.2
+./usr/lib/.build-id/18/9e9325319340c6d8db79d35236cc227a0acdac.3
+./usr/lib/.build-id/44
+./usr/lib/.build-id/44/40f6886f31a91abc94887771262855e9dffe28
+./usr/lib/.build-id/67
+./usr/lib/.build-id/67/5a81f51ce5761f0a49cad933e368f144c97434
+./usr/lib/.build-id/68
+./usr/lib/.build-id/68/c5f2181cf61c08758575d3ab550f3ccf5a0fa1
+./usr/lib/.build-id/68/c5f2181cf61c08758575d3ab550f3ccf5a0fa1.1
+./usr/lib/.build-id/8f
+./usr/lib/.build-id/8f/7262a73dd8d53c01c3bf80fb139d873007f7eb
+./usr/lib/.build-id/8f/eaafae8722caf954042d5d27e330424242914e
+./usr/lib/.build-id/ac
+./usr/lib/.build-id/ac/88743ff05e244c188a07dd72f37de93d7dd15c
+./usr/lib/.build-id/b4
+./usr/lib/.build-id/b4/930b92360eb6c7f7ff378f1e0960721d3b61f9
+./usr/lib/.build-id/bd
+./usr/lib/.build-id/bd/be55623dd2f7dfc2053405467a899262b9f340
+./usr/lib/.build-id/be
+./usr/lib/.build-id/be/8684a66b510028e9171b00ad41a634475ce6dd
+./usr/lib/.build-id/c6
+./usr/lib/.build-id/c6/b4b209da568b986cfad96873e94a822e9d34bb
+./usr/lib/.build-id/df
+./usr/lib/.build-id/df/25c753e268341b008d0d8951131ba0617df559
+./usr/lib/.build-id/e4
+./usr/lib/.build-id/e4/3c36eb7f82319f2409ad3c2b6840a431e64bfe
+./usr/lib/.build-id/e7
+./usr/lib/.build-id/e7/2769378e68f792919a975094aff3c988726283
+./usr/lib/.build-id/ef
+./usr/lib/.build-id/ef/b00425a51e243faefd1601b37a280671fb188f
+./usr/lib/.build-id/f9
+./usr/lib/.build-id/f9/5056b062e3cd7d13f8f1ea1c0426b6128799ce
+./usr/sbin/badblocks
+./usr/sbin/debugfs
+./usr/sbin/dumpe2fs
+./usr/sbin/e2freefrag
+./usr/sbin/e2image
+./usr/sbin/e2undo
+./usr/sbin/e4crypt
+./usr/sbin/e4defrag
+./usr/sbin/filefrag
+./usr/sbin/fuse2fs
+./usr/sbin/logsave
+./usr/sbin/mklost+found
+./usr/sbin/resize2fs
+./usr/share/doc/e2fsprogs
+./usr/share/doc/e2fsprogs/README
+./usr/share/doc/e2fsprogs/RELEASE-NOTES
+./usr/share/locale/ca/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/cs/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/da/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/de/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/eo/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/es/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/fi/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/fr/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/hu/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/id/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/it/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/ms/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/nl/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/pl/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/sr/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/sv/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/tr/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/uk/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/vi/LC_MESSAGES/e2fsprogs.mo
+./usr/share/locale/zh_CN/LC_MESSAGES/e2fsprogs.mo
+./usr/share/man/man1/chattr.1.gz
+./usr/share/man/man1/fuse2fs.1.gz
+./usr/share/man/man1/lsattr.1.gz
+./usr/share/man/man5/e2fsck.conf.5.gz
+./usr/share/man/man5/mke2fs.conf.5.gz
+./usr/share/man/man8/badblocks.8.gz
+./usr/share/man/man8/debugfs.8.gz
+./usr/share/man/man8/dumpe2fs.8.gz
+./usr/share/man/man8/e2freefrag.8.gz
+./usr/share/man/man8/e2image.8.gz
+./usr/share/man/man8/e2label.8.gz
+./usr/share/man/man8/e2undo.8.gz
+./usr/share/man/man8/e4crypt.8.gz
+./usr/share/man/man8/e4defrag.8.gz
+./usr/share/man/man8/filefrag.8.gz
+./usr/share/man/man8/logsave.8.gz
+./usr/share/man/man8/mklost+found.8.gz
+./usr/share/man/man8/resize2fs.8.gz
+./usr/share/man/man8/tune2fs.8.gz
+./usr/sbin/e2fsck
+./usr/sbin/fsck.ext2
+./usr/sbin/fsck.ext3
+cpio: ./usr/sbin/fsck.ext4 linked to ./usr/sbin/fsck.ext3
+cpio: ./usr/sbin/fsck.ext4 linked to ./usr/sbin/fsck.ext2
+cpio: ./usr/sbin/fsck.ext4 linked to ./usr/sbin/e2fsck
+./usr/sbin/fsck.ext4
+./usr/sbin/e2label
+cpio: ./usr/sbin/tune2fs linked to ./usr/sbin/e2label
+./usr/sbin/tune2fs
+./usr/sbin/mke2fs
+./usr/sbin/mkfs.ext2
+./usr/sbin/mkfs.ext3
+cpio: ./usr/sbin/mkfs.ext4 linked to ./usr/sbin/mkfs.ext3
+cpio: ./usr/sbin/mkfs.ext4 linked to ./usr/sbin/mkfs.ext2
+cpio: ./usr/sbin/mkfs.ext4 linked to ./usr/sbin/mke2fs
+./usr/sbin/mkfs.ext4
+./usr/share/man/man5/ext2.5.gz
+./usr/share/man/man5/ext3.5.gz
+cpio: ./usr/share/man/man5/ext4.5.gz linked to ./usr/share/man/man5/ext3.5.gz
+cpio: ./usr/share/man/man5/ext4.5.gz linked to ./usr/share/man/man5/ext2.5.gz
+./usr/share/man/man5/ext4.5.gz
+./usr/share/man/man8/e2fsck.8.gz
+./usr/share/man/man8/fsck.ext2.8.gz
+./usr/share/man/man8/fsck.ext3.8.gz
+cpio: ./usr/share/man/man8/fsck.ext4.8.gz linked to ./usr/share/man/man8/fsck.ext3.8.gz
+cpio: ./usr/share/man/man8/fsck.ext4.8.gz linked to ./usr/share/man/man8/fsck.ext2.8.gz
+cpio: ./usr/share/man/man8/fsck.ext4.8.gz linked to ./usr/share/man/man8/e2fsck.8.gz
+./usr/share/man/man8/fsck.ext4.8.gz
+./usr/share/man/man8/mke2fs.8.gz
+./usr/share/man/man8/mkfs.ext2.8.gz
+./usr/share/man/man8/mkfs.ext3.8.gz
+cpio: ./usr/share/man/man8/mkfs.ext4.8.gz linked to ./usr/share/man/man8/mkfs.ext3.8.gz
+cpio: ./usr/share/man/man8/mkfs.ext4.8.gz linked to ./usr/share/man/man8/mkfs.ext2.8.gz
+cpio: ./usr/share/man/man8/mkfs.ext4.8.gz linked to ./usr/share/man/man8/mke2fs.8.gz
+./usr/share/man/man8/mkfs.ext4.8.gz
+7978 blocks
+./usr/lib/.build-id
+./usr/lib/.build-id/05
+./usr/lib/.build-id/05/c14855225434b7232190e4e0dcaf55c1fa51d9
+./usr/lib/.build-id/2d
+./usr/lib/.build-id/2d/59e8ee3c86d5516dc90c6e3bf338e252986dd9
+./usr/lib/.build-id/41
+./usr/lib/.build-id/41/681a02690a6f6201c917419f177b2480ab42a3
+./usr/lib/.build-id/b8
+./usr/lib/.build-id/b8/829a767abdf8a08aa394421a762d9bdca245e7
+./usr/sbin/biosdecode
+./usr/sbin/dmidecode
+./usr/sbin/ownership
+./usr/sbin/vpddecode
+./usr/share/doc/dmidecode
+./usr/share/doc/dmidecode/AUTHORS
+./usr/share/doc/dmidecode/CHANGELOG
+./usr/share/doc/dmidecode/README
+./usr/share/licenses/dmidecode
+./usr/share/licenses/dmidecode/LICENSE
+./usr/share/man/man8/biosdecode.8.gz
+./usr/share/man/man8/dmidecode.8.gz
+./usr/share/man/man8/ownership.8.gz
+./usr/share/man/man8/vpddecode.8.gz
+502 blocks
+./etc/profile.d/which2.csh
+./etc/profile.d/which2.sh
+./usr/bin/which
+./usr/lib/.build-id
+./usr/lib/.build-id/b5
+./usr/lib/.build-id/b5/2ba875167611446830a98a1a37b94095cf1073
+./usr/share/doc/which
+./usr/share/doc/which/AUTHORS
+./usr/share/doc/which/EXAMPLES
+./usr/share/doc/which/NEWS
+./usr/share/doc/which/README
+./usr/share/info/which.info.gz
+./usr/share/licenses/which
+./usr/share/licenses/which/COPYING
+./usr/share/man/man1/which.1.gz
+160 blocks
+Verifying packages...
+Preparing packages...
+qemu-img-2:2.11.2-5.fc28.x86_64
+Verifying packages...
+Preparing packages...
+qemu-guest-agent-2:2.11.2-5.fc28.x86_64
+Verifying packages...
+Preparing packages...
+stress-1.0.4-20.fc28.x86_64
+Verifying packages...
+Preparing packages...
+libstdc++-8.3.1-2.fc28.x86_64
+Verifying packages...
+Preparing packages...
+capstone-3.0.5-1.fc28.x86_64
+Verifying packages...
+Preparing packages...
+libaio-0.3.110-11.fc28.x86_64
+Verifying packages...
+Preparing packages...
+e2fsprogs-1.44.2-0.fc28.x86_64
+Verifying packages...
+Preparing packages...
+dmidecode-1:3.1-5.fc28.x86_64
+Verifying packages...
+Preparing packages...
+which-2.21-8.fc28.x86_64
+Target //:push-other-images up-to-date:
+  bazel-bin/push-other-images
+INFO: Elapsed time: 91.236s, Critical Path: 32.26s
+INFO: 190 processes: 190 processwrapper-sandbox.
+INFO: Build completed successfully, 232 total actions
+INFO: Build completed successfully, 232 total actions
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/cirros-container-disk-demo:devel
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/cirros-custom-container-disk-demo:devel
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/alpine-container-disk-demo:devel
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/microlivecd-container-disk-demo:devel
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/winrmcli:devel
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/subresource-access-test:devel
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/virtio-container-disk:devel
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/example-hook-sidecar:devel
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/vm-killer:devel
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/nfs-server:devel
+2020/09/19 02:37:02 Successfully pushed Docker image to localhost:32770/kubevirt/example-cloudinit-hook-sidecar:devel
+2020/09/19 02:37:03 Successfully pushed Docker image to localhost:32770/kubevirt/disks-images-provider:devel
+2020/09/19 02:37:03 Successfully pushed Docker image to localhost:32770/kubevirt/cdi-http-import-server:devel
+2020/09/19 02:37:03 Successfully pushed Docker image to localhost:32770/kubevirt/fedora-cloud-container-disk-demo:devel
+INFO: Analyzed target //:push-virt-operator (0 packages loaded, 933 targets configured).
+INFO: Found 1 target...
+Target //:push-virt-operator up-to-date:
+  bazel-bin/push-virt-operator.digest
+  bazel-bin/push-virt-operator
+INFO: Elapsed time: 6.758s, Critical Path: 6.02s
+INFO: 7 processes: 7 processwrapper-sandbox.
+INFO: Build completed successfully, 13 total actions
+INFO: Build completed successfully, 13 total actions
+2020/09/19 02:37:12 Successfully pushed Docker image to localhost:32770/kubevirt/virt-operator:devel
+INFO: Analyzed target //:push-virt-api (0 packages loaded, 43 targets configured).
+INFO: Found 1 target...
+Target //:push-virt-api up-to-date:
+  bazel-bin/push-virt-api.digest
+  bazel-bin/push-virt-api
+INFO: Elapsed time: 9.916s, Critical Path: 9.52s
+INFO: 9 processes: 9 processwrapper-sandbox.
+INFO: Build completed successfully, 13 total actions
+INFO: Build completed successfully, 13 total actions
+2020/09/19 02:37:23 Successfully pushed Docker image to localhost:32770/kubevirt/virt-api:devel
+INFO: Analyzed target //:push-virt-controller (0 packages loaded, 26 targets configured).
+INFO: Found 1 target...
+Target //:push-virt-controller up-to-date:
+  bazel-bin/push-virt-controller.digest
+  bazel-bin/push-virt-controller
+INFO: Elapsed time: 8.659s, Critical Path: 8.26s
+INFO: 6 processes: 6 processwrapper-sandbox.
+INFO: Build completed successfully, 10 total actions
+INFO: Build completed successfully, 10 total actions
+2020/09/19 02:37:34 Successfully pushed Docker image to localhost:32770/kubevirt/virt-controller:devel
+INFO: Analyzed target //:push-virt-handler (0 packages loaded, 390 targets configured).
+INFO: Found 1 target...
+Target //:push-virt-handler up-to-date:
+  bazel-bin/push-virt-handler.digest
+  bazel-bin/push-virt-handler
+INFO: Elapsed time: 10.749s, Critical Path: 10.09s
+INFO: 16 processes: 16 processwrapper-sandbox.
+INFO: Build completed successfully, 20 total actions
+INFO: Build completed successfully, 20 total actions
+2020/09/19 02:37:49 Successfully pushed Docker image to localhost:32770/kubevirt/virt-handler:devel
+INFO: Analyzed target //:push-virt-launcher (0 packages loaded, 127 targets configured).
+INFO: Found 1 target...
+Target //:push-virt-launcher up-to-date:
+  bazel-bin/push-virt-launcher.digest
+  bazel-bin/push-virt-launcher
+INFO: Elapsed time: 7.480s, Critical Path: 7.13s
+INFO: 6 processes: 6 processwrapper-sandbox.
+INFO: Build completed successfully, 10 total actions
+INFO: Build completed successfully, 10 total actions
+2020/09/19 02:38:00 Successfully pushed Docker image to localhost:32770/kubevirt/virt-launcher:devel
+INFO: Build option --define has changed, discarding analysis cache.
+DEBUG: /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_gazelle/internal/go_repository.bzl:182:13: gazelle: gazelle: finding module path for import crypto/ed25519: exit status 1: can't load package: package crypto/ed25519: unknown import path "crypto/ed25519": cannot find module providing package crypto/ed25519
+gazelle: finding module path for import crypto/ed25519: exit status 1: can't load package: package crypto/ed25519: unknown import path "crypto/ed25519": cannot find module providing package crypto/ed25519
+gazelle: finding module path for import golang.org/x/sys/windows: exit status 1: can't load package: package golang.org/x/sys/windows: build constraints exclude all Go files in /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/external/bazel_gazelle_go_repository_cache/pkg/mod/golang.org/x/sys@v0.0.0-20200918174421-af09f7315aff/windows
+INFO: Analyzed target //:push-other-images (0 packages loaded, 9966 targets configured).
+INFO: Found 1 target...
+Target //:push-other-images up-to-date:
+  bazel-bin/push-other-images
+INFO: Elapsed time: 1.844s, Critical Path: 0.23s
+INFO: 0 processes.
+INFO: Build completed successfully, 15 total actions
+INFO: Build completed successfully, 15 total actions
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/virtio-container-disk:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/microlivecd-container-disk-demo:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/cdi-http-import-server:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/cirros-container-disk-demo:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/fedora-cloud-container-disk-demo:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/winrmcli:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/disks-images-provider:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/subresource-access-test:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/example-hook-sidecar:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/vm-killer:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/example-cloudinit-hook-sidecar:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/cirros-custom-container-disk-demo:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/alpine-container-disk-demo:devel_alt
+2020/09/19 02:38:02 Successfully pushed Docker image to localhost:32770/kubevirt/nfs-server:devel_alt
+INFO: Analyzed target //:push-virt-operator (0 packages loaded, 933 targets configured).
+INFO: Found 1 target...
+Target //:push-virt-operator up-to-date:
+  bazel-bin/push-virt-operator.digest
+  bazel-bin/push-virt-operator
+INFO: Elapsed time: 0.664s, Critical Path: 0.13s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Build completed successfully, 2 total actions
+2020/09/19 02:38:03 Successfully pushed Docker image to localhost:32770/kubevirt/virt-operator:devel_alt
+INFO: Analyzed target //:push-virt-api (0 packages loaded, 43 targets configured).
+INFO: Found 1 target...
+Target //:push-virt-api up-to-date:
+  bazel-bin/push-virt-api.digest
+  bazel-bin/push-virt-api
+INFO: Elapsed time: 0.401s, Critical Path: 0.10s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Build completed successfully, 2 total actions
+2020/09/19 02:38:03 Successfully pushed Docker image to localhost:32770/kubevirt/virt-api:devel_alt
+INFO: Analyzed target //:push-virt-controller (0 packages loaded, 26 targets configured).
+INFO: Found 1 target...
+Target //:push-virt-controller up-to-date:
+  bazel-bin/push-virt-controller.digest
+  bazel-bin/push-virt-controller
+INFO: Elapsed time: 0.509s, Critical Path: 0.09s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Build completed successfully, 2 total actions
+2020/09/19 02:38:04 Successfully pushed Docker image to localhost:32770/kubevirt/virt-controller:devel_alt
+INFO: Analyzed target //:push-virt-handler (0 packages loaded, 390 targets configured).
+INFO: Found 1 target...
+Target //:push-virt-handler up-to-date:
+  bazel-bin/push-virt-handler.digest
+  bazel-bin/push-virt-handler
+INFO: Elapsed time: 0.551s, Critical Path: 0.11s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Build completed successfully, 2 total actions
+2020/09/19 02:38:05 Successfully pushed Docker image to localhost:32770/kubevirt/virt-handler:devel_alt
+INFO: Analyzed target //:push-virt-launcher (0 packages loaded, 127 targets configured).
+INFO: Found 1 target...
+Target //:push-virt-launcher up-to-date:
+  bazel-bin/push-virt-launcher.digest
+  bazel-bin/push-virt-launcher
+INFO: Elapsed time: 0.429s, Critical Path: 0.09s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Build completed successfully, 2 total actions
+2020/09/19 02:38:05 Successfully pushed Docker image to localhost:32770/kubevirt/virt-launcher:devel_alt
+go version go1.12.8 linux/amd64
+
+go version go1.12.8 linux/amd64
+2020/09/19 02:38:54 Waiting for host: 192.168.66.101:22
+2020/09/19 02:38:54 Connected to tcp://192.168.66.101:22
+Trying to pull repository registry:5000/kubevirt/virt-operator ... 
+devel: Pulling from registry:5000/kubevirt/virt-operator
+9908e4690737: Pulling fs layer
+9dad1b22e3c8: Pulling fs layer
+ceefd682c2bc: Pulling fs layer
+b592560c8c58: Pulling fs layer
+b592560c8c58: Waiting
+9dad1b22e3c8: Verifying Checksum
+9dad1b22e3c8: Download complete
+ceefd682c2bc: Verifying Checksum
+ceefd682c2bc: Download complete
+b592560c8c58: Verifying Checksum
+b592560c8c58: Download complete
+9908e4690737: Verifying Checksum
+9908e4690737: Download complete
+9908e4690737: Pull complete
+9dad1b22e3c8: Pull complete
+ceefd682c2bc: Pull complete
+b592560c8c58: Pull complete
+Digest: sha256:2118680fd364066f01f2bab4a2bb58f3713f2deb73e6a0a36e28639d546b6681
+Status: Downloaded newer image for registry:5000/kubevirt/virt-operator:devel
+Trying to pull repository registry:5000/kubevirt/virt-operator ... 
+devel_alt: Pulling from registry:5000/kubevirt/virt-operator
+Digest: sha256:2118680fd364066f01f2bab4a2bb58f3713f2deb73e6a0a36e28639d546b6681
+Status: Downloaded newer image for registry:5000/kubevirt/virt-operator:devel_alt
+Trying to pull repository registry:5000/kubevirt/virt-controller ... 
+devel: Pulling from registry:5000/kubevirt/virt-controller
+9908e4690737: Already exists
+9dad1b22e3c8: Already exists
+ceefd682c2bc: Already exists
+5274dbdb2ffd: Pulling fs layer
+5274dbdb2ffd: Verifying Checksum
+5274dbdb2ffd: Download complete
+5274dbdb2ffd: Pull complete
+Digest: sha256:6f583a0c135ad9f49815e8d78ebd3853dc0d0a2a1f3fbf9e2a78dc0bcaed3a3f
+Status: Downloaded newer image for registry:5000/kubevirt/virt-controller:devel
+Trying to pull repository registry:5000/kubevirt/virt-controller ... 
+devel_alt: Pulling from registry:5000/kubevirt/virt-controller
+Digest: sha256:6f583a0c135ad9f49815e8d78ebd3853dc0d0a2a1f3fbf9e2a78dc0bcaed3a3f
+Status: Downloaded newer image for registry:5000/kubevirt/virt-controller:devel_alt
+Trying to pull repository registry:5000/kubevirt/virt-launcher ... 
+devel: Pulling from registry:5000/kubevirt/virt-launcher
+4c69497db035: Pulling fs layer
+0c8e5e29dad0: Pulling fs layer
+0f940bf29988: Pulling fs layer
+d27cc3e4fed6: Pulling fs layer
+11e67ff58de7: Pulling fs layer
+2fd64bfc3350: Pulling fs layer
+94db3d5e1a67: Pulling fs layer
+ceefd682c2bc: Pulling fs layer
+bab6abf0f7af: Pulling fs layer
+d27cc3e4fed6: Waiting
+11e67ff58de7: Waiting
+2fd64bfc3350: Waiting
+94db3d5e1a67: Waiting
+ceefd682c2bc: Waiting
+bab6abf0f7af: Waiting
+0f940bf29988: Verifying Checksum
+0f940bf29988: Download complete
+d27cc3e4fed6: Verifying Checksum
+d27cc3e4fed6: Download complete
+11e67ff58de7: Verifying Checksum
+11e67ff58de7: Download complete
+2fd64bfc3350: Verifying Checksum
+2fd64bfc3350: Download complete
+94db3d5e1a67: Download complete
+ceefd682c2bc: Verifying Checksum
+ceefd682c2bc: Download complete
+bab6abf0f7af: Verifying Checksum
+bab6abf0f7af: Download complete
+4c69497db035: Verifying Checksum
+4c69497db035: Download complete
+0c8e5e29dad0: Verifying Checksum
+0c8e5e29dad0: Download complete
+4c69497db035: Pull complete
+0c8e5e29dad0: Pull complete
+0f940bf29988: Pull complete
+d27cc3e4fed6: Pull complete
+11e67ff58de7: Pull complete
+2fd64bfc3350: Pull complete
+94db3d5e1a67: Pull complete
+ceefd682c2bc: Pull complete
+bab6abf0f7af: Pull complete
+Digest: sha256:3637a8419608a5053e8fc3ea8abc16b3088176227a0b00c702109e7c32b48c46
+Status: Downloaded newer image for registry:5000/kubevirt/virt-launcher:devel
+Trying to pull repository registry:5000/kubevirt/virt-launcher ... 
+devel_alt: Pulling from registry:5000/kubevirt/virt-launcher
+Digest: sha256:3637a8419608a5053e8fc3ea8abc16b3088176227a0b00c702109e7c32b48c46
+Status: Downloaded newer image for registry:5000/kubevirt/virt-launcher:devel_alt
+Trying to pull repository registry:5000/kubevirt/virt-handler ... 
+devel: Pulling from registry:5000/kubevirt/virt-handler
+4c69497db035: Already exists
+0c8e5e29dad0: Already exists
+0f940bf29988: Already exists
+d27cc3e4fed6: Already exists
+11e67ff58de7: Already exists
+2fd64bfc3350: Already exists
+94db3d5e1a67: Already exists
+21ed3d454c9a: Pulling fs layer
+b1374765c3d7: Pulling fs layer
+21ed3d454c9a: Verifying Checksum
+21ed3d454c9a: Download complete
+21ed3d454c9a: Pull complete
+b1374765c3d7: Verifying Checksum
+b1374765c3d7: Download complete
+b1374765c3d7: Pull complete
+Digest: sha256:843974a5a45f52d1c81ee50553412e1875172c08b69e6c93bee2a01e3a6fe6d0
+Status: Downloaded newer image for registry:5000/kubevirt/virt-handler:devel
+Trying to pull repository registry:5000/kubevirt/virt-handler ... 
+devel_alt: Pulling from registry:5000/kubevirt/virt-handler
+Digest: sha256:843974a5a45f52d1c81ee50553412e1875172c08b69e6c93bee2a01e3a6fe6d0
+Status: Downloaded newer image for registry:5000/kubevirt/virt-handler:devel_alt
+Trying to pull repository registry:5000/kubevirt/virt-api ... 
+devel: Pulling from registry:5000/kubevirt/virt-api
+9908e4690737: Already exists
+9dad1b22e3c8: Already exists
+ceefd682c2bc: Already exists
+4508252030d3: Pulling fs layer
+4508252030d3: Verifying Checksum
+4508252030d3: Download complete
+4508252030d3: Pull complete
+Digest: sha256:da1abea2e3dc1fc5fb6bdc5e6feb6627b156e6d7e3e5bdc9c9f5deecc9729919
+Status: Downloaded newer image for registry:5000/kubevirt/virt-api:devel
+Trying to pull repository registry:5000/kubevirt/virt-api ... 
+devel_alt: Pulling from registry:5000/kubevirt/virt-api
+Digest: sha256:da1abea2e3dc1fc5fb6bdc5e6feb6627b156e6d7e3e5bdc9c9f5deecc9729919
+Status: Downloaded newer image for registry:5000/kubevirt/virt-api:devel_alt
+Trying to pull repository registry:5000/kubevirt/disks-images-provider ... 
+devel: Pulling from registry:5000/kubevirt/disks-images-provider
+9908e4690737: Already exists
+049637065200: Pulling fs layer
+2f4c5f74b7fe: Pulling fs layer
+049637065200: Verifying Checksum
+049637065200: Download complete
+049637065200: Pull complete
+2f4c5f74b7fe: Download complete
+2f4c5f74b7fe: Pull complete
+Digest: sha256:6e1347bff6d819b3cce4b1da7673c926ff73a53ca9d9bf5dec1f96da65dedd74
+Status: Downloaded newer image for registry:5000/kubevirt/disks-images-provider:devel
+Trying to pull repository registry:5000/kubevirt/disks-images-provider ... 
+devel_alt: Pulling from registry:5000/kubevirt/disks-images-provider
+Digest: sha256:6e1347bff6d819b3cce4b1da7673c926ff73a53ca9d9bf5dec1f96da65dedd74
+Status: Downloaded newer image for registry:5000/kubevirt/disks-images-provider:devel_alt
+Trying to pull repository registry:5000/kubevirt/vm-killer ... 
+devel: Pulling from registry:5000/kubevirt/vm-killer
+012cb44e3253: Pulling fs layer
+616d5208702b: Pulling fs layer
+85cea451eec0: Pulling fs layer
+85cea451eec0: Verifying Checksum
+85cea451eec0: Download complete
+616d5208702b: Verifying Checksum
+616d5208702b: Download complete
+012cb44e3253: Verifying Checksum
+012cb44e3253: Download complete
+012cb44e3253: Pull complete
+616d5208702b: Pull complete
+85cea451eec0: Pull complete
+Digest: sha256:07264066ec99a58ab90e2ad82b8535ef6d12ce867a0f245a29364c168955cbeb
+Status: Downloaded newer image for registry:5000/kubevirt/vm-killer:devel
+Trying to pull repository registry:5000/kubevirt/vm-killer ... 
+devel_alt: Pulling from registry:5000/kubevirt/vm-killer
+Digest: sha256:07264066ec99a58ab90e2ad82b8535ef6d12ce867a0f245a29364c168955cbeb
+Status: Downloaded newer image for registry:5000/kubevirt/vm-killer:devel_alt
+Trying to pull repository registry:5000/kubevirt/nfs-server ... 
+devel: Pulling from registry:5000/kubevirt/nfs-server
+01eb078129a0: Pulling fs layer
+1a0bb3b8623f: Pulling fs layer
+ba91036e1da2: Pulling fs layer
+135aff89e850: Pulling fs layer
+88dd21c0a484: Pulling fs layer
+8d46b0c6399e: Pulling fs layer
+85cea451eec0: Pulling fs layer
+135aff89e850: Waiting
+88dd21c0a484: Waiting
+8d46b0c6399e: Waiting
+85cea451eec0: Waiting
+ba91036e1da2: Download complete
+135aff89e850: Download complete
+88dd21c0a484: Verifying Checksum
+88dd21c0a484: Download complete
+8d46b0c6399e: Download complete
+85cea451eec0: Verifying Checksum
+85cea451eec0: Download complete
+1a0bb3b8623f: Verifying Checksum
+1a0bb3b8623f: Download complete
+01eb078129a0: Verifying Checksum
+01eb078129a0: Download complete
+01eb078129a0: Pull complete
+1a0bb3b8623f: Pull complete
+ba91036e1da2: Pull complete
+135aff89e850: Pull complete
+88dd21c0a484: Pull complete
+8d46b0c6399e: Pull complete
+85cea451eec0: Pull complete
+Digest: sha256:48c4bdabf8a77b4017a0a2644cf393f2ed12d8d55b3b4077b8009e7833206cce
+Status: Downloaded newer image for registry:5000/kubevirt/nfs-server:devel
+Trying to pull repository registry:5000/kubevirt/nfs-server ... 
+devel_alt: Pulling from registry:5000/kubevirt/nfs-server
+Digest: sha256:48c4bdabf8a77b4017a0a2644cf393f2ed12d8d55b3b4077b8009e7833206cce
+Status: Downloaded newer image for registry:5000/kubevirt/nfs-server:devel_alt
+Trying to pull repository registry:5000/kubevirt/subresource-access-test ... 
+devel: Pulling from registry:5000/kubevirt/subresource-access-test
+9908e4690737: Already exists
+9dad1b22e3c8: Already exists
+a3e7605c5256: Pulling fs layer
+a3e7605c5256: Download complete
+a3e7605c5256: Pull complete
+Digest: sha256:69e8dcd702261285fb815d8afd88c5fcff2b5fa997ec720af5ac1c2a54cff4cc
+Status: Downloaded newer image for registry:5000/kubevirt/subresource-access-test:devel
+Trying to pull repository registry:5000/kubevirt/subresource-access-test ... 
+devel_alt: Pulling from registry:5000/kubevirt/subresource-access-test
+Digest: sha256:69e8dcd702261285fb815d8afd88c5fcff2b5fa997ec720af5ac1c2a54cff4cc
+Status: Downloaded newer image for registry:5000/kubevirt/subresource-access-test:devel_alt
+Trying to pull repository registry:5000/kubevirt/winrmcli ... 
+devel: Pulling from registry:5000/kubevirt/winrmcli
+9908e4690737: Already exists
+86236303f53e: Pulling fs layer
+86236303f53e: Verifying Checksum
+86236303f53e: Download complete
+86236303f53e: Pull complete
+Digest: sha256:36626b21611d4dc93f86221307f5b9e29fa914257f6000e5219719e2cc32cc0d
+Status: Downloaded newer image for registry:5000/kubevirt/winrmcli:devel
+Trying to pull repository registry:5000/kubevirt/winrmcli ... 
+devel_alt: Pulling from registry:5000/kubevirt/winrmcli
+Digest: sha256:36626b21611d4dc93f86221307f5b9e29fa914257f6000e5219719e2cc32cc0d
+Status: Downloaded newer image for registry:5000/kubevirt/winrmcli:devel_alt
+Trying to pull repository registry:5000/kubevirt/example-hook-sidecar ... 
+devel: Pulling from registry:5000/kubevirt/example-hook-sidecar
+9908e4690737: Already exists
+23ad2e5caf77: Pulling fs layer
+23ad2e5caf77: Download complete
+23ad2e5caf77: Pull complete
+Digest: sha256:e3bef137efc0270d4d44a907f57b704b74e86d21300d189c69c4f1b83267d450
+Status: Downloaded newer image for registry:5000/kubevirt/example-hook-sidecar:devel
+Trying to pull repository registry:5000/kubevirt/example-hook-sidecar ... 
+devel_alt: Pulling from registry:5000/kubevirt/example-hook-sidecar
+Digest: sha256:e3bef137efc0270d4d44a907f57b704b74e86d21300d189c69c4f1b83267d450
+Status: Downloaded newer image for registry:5000/kubevirt/example-hook-sidecar:devel_alt
+Trying to pull repository registry:5000/kubevirt/example-cloudinit-hook-sidecar ... 
+devel: Pulling from registry:5000/kubevirt/example-cloudinit-hook-sidecar
+9908e4690737: Already exists
+796176a989f7: Pulling fs layer
+796176a989f7: Verifying Checksum
+796176a989f7: Download complete
+796176a989f7: Pull complete
+Digest: sha256:ac93c0daa42a618658da8e36e53f5320c57bb8d593236f1a5666027a727767f1
+Status: Downloaded newer image for registry:5000/kubevirt/example-cloudinit-hook-sidecar:devel
+Trying to pull repository registry:5000/kubevirt/example-cloudinit-hook-sidecar ... 
+devel_alt: Pulling from registry:5000/kubevirt/example-cloudinit-hook-sidecar
+Digest: sha256:ac93c0daa42a618658da8e36e53f5320c57bb8d593236f1a5666027a727767f1
+Status: Downloaded newer image for registry:5000/kubevirt/example-cloudinit-hook-sidecar:devel_alt
+Trying to pull repository registry:5000/kubevirt/cdi-http-import-server ... 
+devel: Pulling from registry:5000/kubevirt/cdi-http-import-server
+012cb44e3253: Already exists
+616d5208702b: Already exists
+4889f851aa6a: Pulling fs layer
+0037a5ee066f: Pulling fs layer
+4889f851aa6a: Verifying Checksum
+4889f851aa6a: Download complete
+4889f851aa6a: Pull complete
+0037a5ee066f: Verifying Checksum
+0037a5ee066f: Download complete
+0037a5ee066f: Pull complete
+Digest: sha256:572e0b4210a48d64b1de018af8a6801fdcbee107d0599056a03da1ca43170069
+Status: Downloaded newer image for registry:5000/kubevirt/cdi-http-import-server:devel
+Trying to pull repository registry:5000/kubevirt/cdi-http-import-server ... 
+devel_alt: Pulling from registry:5000/kubevirt/cdi-http-import-server
+Digest: sha256:572e0b4210a48d64b1de018af8a6801fdcbee107d0599056a03da1ca43170069
+Status: Downloaded newer image for registry:5000/kubevirt/cdi-http-import-server:devel_alt
+2020/09/19 02:41:06 Waiting for host: 192.168.66.101:22
+2020/09/19 02:41:06 Connected to tcp://192.168.66.101:22
+Done
+./hack/cluster-clean.sh
++ DOCKER_TAG=devel
++ source hack/common.sh
+++ '[' -f cluster-up/hack/common.sh ']'
+++ source cluster-up/hack/common.sh
++++ '[' -z '' ']'
++++++ dirname 'cluster-up/hack/common.sh[0]'
+++++ cd cluster-up/hack/../
++++++ pwd
+++++ echo /home/padmin/CODE/kubevirt/cluster-up/
++++ KUBEVIRTCI_PATH=/home/padmin/CODE/kubevirt/cluster-up/
++++ '[' -z '' ']'
++++++ dirname 'cluster-up/hack/common.sh[0]'
+++++ cd cluster-up/hack/../../
++++++ pwd
+++++ echo /home/padmin/CODE/kubevirt/_ci-configs
++++ KUBEVIRTCI_CONFIG_PATH=/home/padmin/CODE/kubevirt/_ci-configs
++++ KUBEVIRTCI_CLUSTER_PATH=/home/padmin/CODE/kubevirt/cluster-up//cluster
++++ KUBEVIRT_PROVIDER=k8s-1.15
++++ KUBEVIRT_NUM_NODES=1
++++ KUBEVIRT_MEMORY_SIZE=5120M
++++ KUBEVIRT_NUM_SECONDARY_NICS=0
++++ '[' -z '' ']'
++++ KUBEVIRT_PROVIDER_EXTRA_ARGS=' --ocp-port 8443'
++++ provider_prefix=k8s-1.15
++++ job_prefix=kubevirt
++++ mkdir -p /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15
+++++ dirname 'hack/common.sh[0]'
++++ cd hack/../
++++ pwd
+++ KUBEVIRT_DIR=/home/padmin/CODE/kubevirt
+++ OUT_DIR=/home/padmin/CODE/kubevirt/_out
+++ VENDOR_DIR=/home/padmin/CODE/kubevirt/vendor
+++ CMD_OUT_DIR=/home/padmin/CODE/kubevirt/_out/cmd
+++ TESTS_OUT_DIR=/home/padmin/CODE/kubevirt/_out/tests
+++ APIDOCS_OUT_DIR=/home/padmin/CODE/kubevirt/_out/apidocs
+++ MANIFESTS_OUT_DIR=/home/padmin/CODE/kubevirt/_out/manifests
+++ MANIFEST_TEMPLATES_OUT_DIR=/home/padmin/CODE/kubevirt/_out/templates/manifests
+++ PYTHON_CLIENT_OUT_DIR=/home/padmin/CODE/kubevirt/_out/client-python
++++ uname -m
+++ ARCHITECTURE=x86_64
++++ kubevirt_version
++++ '[' -n '' ']'
++++ '[' -d /home/padmin/CODE/kubevirt/.git ']'
+++++ git describe --always --tags
++++ echo v0.32.0-rc.1-103-g4d4ff7927
+++ KUBEVIRT_VERSION=v0.32.0-rc.1-103-g4d4ff7927
+++ DOCKER_CA_CERT_FILE=
+++ DOCKERIZED_CUSTOM_CA_PATH=/etc/pki/ca-trust/source/anchors/custom-ca.crt
++ source cluster-up/cluster/k8s-1.15/provider.sh
+++ set -e
+++ source /home/padmin/CODE/kubevirt/cluster-up//cluster/k8s-provider-common.sh
++++ set -e
++++ source /home/padmin/CODE/kubevirt/cluster-up//cluster/ephemeral-provider-common.sh
+++++ set -e
+++++ source /home/padmin/CODE/kubevirt/cluster-up//cluster/images.sh
++++++ set -e
++++++ declare -A IMAGES
++++++ IMAGES[gocli]=gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9
++++++ '[' -z ']'
++++++ IMAGES[k8s-fedora-1.17.0]=k8s-fedora-1.17.0@sha256:aebf67b8b1b499c721f4d98a7ab9542c680553a14cbc144d1fa701fe611f3c0d
++++++ IMAGES[k8s-1.18]=k8s-1.18@sha256:47731d8b9bee32bbb69aa142f11b395fa9d70c20f318d33473ef2ebb650c08dd
++++++ IMAGES[k8s-1.17]=k8s-1.17@sha256:49de8023fdce76dcf6f3685b4cedc3c84f38c90d58ddf3daf08078f3405e51df
++++++ IMAGES[k8s-1.16]=k8s-1.16@sha256:1e153fb62c9a30ce6bc6ddc1af21bb28a56b780ec93ab15e113d729bf664469a
++++++ IMAGES[k8s-1.15]=k8s-1.15@sha256:c58cb9d79968590f24e070bc2517088d44fa2f83ba73e989a7e0f690ad08460b
++++++ IMAGES[k8s-1.14]=k8s-1.14@sha256:46e449b292dcb420f0944cac0a7a5c667c6f19bba2a4192737380e8e77f27ed0
++++++ export IMAGES
++++++ image=k8s-1.15@sha256:c58cb9d79968590f24e070bc2517088d44fa2f83ba73e989a7e0f690ad08460b
++++++ export image
+++++ '[' '' = podman ']'
+++++ _cli_container=kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9
+++++ _cli='docker run --privileged --net=host --rm  -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9'
++ source hack/config.sh
+++ unset binaries docker_images docker_tag docker_tag_alt image_prefix image_prefix_alt manifest_templates namespace image_pull_policy verbosity csv_version package_name
+++ source hack/config-default.sh
++++ binaries='cmd/virt-operator cmd/virt-controller cmd/virt-launcher cmd/virt-handler cmd/virtctl cmd/fake-qemu-process cmd/virt-api cmd/subresource-access-test cmd/example-hook-sidecar cmd/example-cloudinit-hook-sidecar'
++++ docker_images='cmd/virt-operator cmd/virt-controller cmd/virt-launcher cmd/virt-handler cmd/virt-api images/disks-images-provider images/vm-killer images/nfs-server cmd/subresource-access-test images/winrmcli cmd/example-hook-sidecar cmd/example-cloudinit-hook-sidecar images/cdi-http-import-server'
++++ docker_tag=devel
++++ docker_tag_alt=
++++ image_prefix=
++++ image_prefix_alt=
++++ namespace=kubevirt
++++ deploy_testing_infra=false
++++ csv_namespace=placeholder
++++ cdi_namespace=cdi
++++ image_pull_policy=IfNotPresent
++++ verbosity=2
++++ package_name=kubevirt-dev
++++ kubevirtci_git_hash=3ae577f8d1ec1ed251ece613612a85df6d238d8e
++++ default_csv_version=devel
++++ default_csv_version=0.0.0
++++ [[ 0.0.0 == v* ]]
++++ csv_version=0.0.0
+++ source cluster-up/hack/config.sh
++++ unset docker_prefix master_ip network_provider kubeconfig manifest_docker_prefix
++++ KUBEVIRT_PROVIDER=k8s-1.15
++++ source /home/padmin/CODE/kubevirt/cluster-up/hack/config-default.sh
+++++ docker_prefix=kubevirt
+++++ master_ip=192.168.200.2
+++++ network_provider=flannel
++++ test -f /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/config-provider-k8s-1.15.sh
++++ source /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/config-provider-k8s-1.15.sh
+++++ master_ip=127.0.0.1
+++++ kubeconfig=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
+++++ kubectl=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl
+++++ gocli=/home/padmin/CODE/kubevirt/_ci-configs/../cluster-up/cli.sh
+++++ docker_prefix=localhost:32770/kubevirt
+++++ manifest_docker_prefix=registry:5000/kubevirt
++++ export docker_prefix master_ip network_provider kubeconfig manifest_docker_prefix
+++ export binaries docker_images docker_tag docker_tag_alt image_prefix image_prefix_alt manifest_templates namespace image_pull_policy verbosity csv_version package_name
++ echo 'Cleaning up ...'
+Cleaning up ...
++ set +e
++ cmdpid=29566
++ _kubectl -n kubevirt delete kv kubevirt
++ sleep 10
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete kv kubevirt
+error: the server doesn't have a resource type "kv"
++ _kubectl -n kubevirt patch kv kubevirt --type=json -p '[{ "op": "remove", "path": "/metadata/finalizers" }]'
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt patch kv kubevirt --type=json -p '[{ "op": "remove", "path": "/metadata/finalizers" }]'
+error: the server doesn't have a resource type "kv"
++ _kubectl patch cdi cdi --type=json -p '[{ "op": "remove", "path": "/metadata/finalizers" }]'
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl patch cdi cdi --type=json -p '[{ "op": "remove", "path": "/metadata/finalizers" }]'
++ kill 29566
+./hack/cluster-clean.sh: line 36: kill: (29566) - No such process
+error: the server doesn't have a resource type "cdi"
++ set -e
++ kubectl get vmsnapshots --all-namespaces -o=custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace,FINALIZERS:.metadata.finalizers --no-headers
++ grep vmsnapshot-protection
++ read p
+error: the server doesn't have a resource type "vmsnapshots"
++ kubectl get vmsnapshotcontents --all-namespaces -o=custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace,FINALIZERS:.metadata.finalizers --no-headers
++ grep vmsnapshotcontent-protection
++ read p
+error: the server doesn't have a resource type "vmsnapshotcontents"
++ grep foregroundDeleteVirtualMachine
++ _kubectl get vmis --all-namespaces -o=custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace,FINALIZERS:.metadata.finalizers --no-headers
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl get vmis --all-namespaces -o=custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace,FINALIZERS:.metadata.finalizers --no-headers
++ read p
+error: the server doesn't have a resource type "vmis"
++ _kubectl get vms --all-namespaces -o=custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace,FINALIZERS:.metadata.finalizers --no-headers
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl get vms --all-namespaces -o=custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace,FINALIZERS:.metadata.finalizers --no-headers
++ grep -e foregroundDeleteVirtualMachine -e orphan -e snapshot-source-protection
++ read p
+error: the server doesn't have a resource type "vms"
++ managed_namespaces=(${namespace} ${cdi_namespace})
++ namespaces=(default ${namespace} ${cdi_namespace})
++ labels=("operator.kubevirt.io" "operator.cdi.kubevirt.io" "kubevirt.io" "cdi.kubevirt.io")
++ for i in ${namespaces[@]}
++ for label in ${labels[@]}
++ _kubectl -n default delete deployment -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete deployment -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete ds -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete ds -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete rs -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete rs -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete pods -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete pods -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete services -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete services -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete pvc -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete pvc -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete rolebinding -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete rolebinding -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete roles -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete roles -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete serviceaccounts -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete serviceaccounts -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete configmaps -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete configmaps -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete secrets -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete secrets -l operator.kubevirt.io
+No resources found
++ _kubectl -n default delete jobs -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete jobs -l operator.kubevirt.io
+No resources found
++ for label in ${labels[@]}
++ _kubectl -n default delete deployment -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete deployment -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete ds -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete ds -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete rs -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete rs -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete pods -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete pods -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete services -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete services -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete pvc -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete pvc -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete rolebinding -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete rolebinding -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete roles -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete roles -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete serviceaccounts -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete serviceaccounts -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete configmaps -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete configmaps -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete secrets -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete secrets -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete jobs -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete jobs -l operator.cdi.kubevirt.io
+No resources found
++ for label in ${labels[@]}
++ _kubectl -n default delete deployment -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete deployment -l kubevirt.io
+No resources found
++ _kubectl -n default delete ds -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete ds -l kubevirt.io
+No resources found
++ _kubectl -n default delete rs -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete rs -l kubevirt.io
+No resources found
++ _kubectl -n default delete pods -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete pods -l kubevirt.io
+No resources found
++ _kubectl -n default delete services -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete services -l kubevirt.io
+No resources found
++ _kubectl -n default delete pvc -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete pvc -l kubevirt.io
+No resources found
++ _kubectl -n default delete rolebinding -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete rolebinding -l kubevirt.io
+No resources found
++ _kubectl -n default delete roles -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete roles -l kubevirt.io
+No resources found
++ _kubectl -n default delete serviceaccounts -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete serviceaccounts -l kubevirt.io
+No resources found
++ _kubectl -n default delete configmaps -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete configmaps -l kubevirt.io
+No resources found
++ _kubectl -n default delete secrets -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete secrets -l kubevirt.io
+No resources found
++ _kubectl -n default delete jobs -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete jobs -l kubevirt.io
+No resources found
++ for label in ${labels[@]}
++ _kubectl -n default delete deployment -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete deployment -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete ds -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete ds -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete rs -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete rs -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete pods -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete pods -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete services -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete services -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete pvc -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete pvc -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete rolebinding -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete rolebinding -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete roles -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete roles -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete serviceaccounts -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete serviceaccounts -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete configmaps -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete configmaps -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete secrets -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete secrets -l cdi.kubevirt.io
+No resources found
++ _kubectl -n default delete jobs -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n default delete jobs -l cdi.kubevirt.io
+No resources found
++ for i in ${namespaces[@]}
++ for label in ${labels[@]}
++ _kubectl -n kubevirt delete deployment -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete deployment -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete ds -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete ds -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete rs -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete rs -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete pods -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete pods -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete services -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete services -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete pvc -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete pvc -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete rolebinding -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete rolebinding -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete roles -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete roles -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete serviceaccounts -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete serviceaccounts -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete configmaps -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete configmaps -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete secrets -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete secrets -l operator.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete jobs -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete jobs -l operator.kubevirt.io
+No resources found
++ for label in ${labels[@]}
++ _kubectl -n kubevirt delete deployment -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete deployment -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete ds -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete ds -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete rs -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete rs -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete pods -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete pods -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete services -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete services -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete pvc -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete pvc -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete rolebinding -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete rolebinding -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete roles -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete roles -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete serviceaccounts -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete serviceaccounts -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete configmaps -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete configmaps -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete secrets -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete secrets -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete jobs -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete jobs -l operator.cdi.kubevirt.io
+No resources found
++ for label in ${labels[@]}
++ _kubectl -n kubevirt delete deployment -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete deployment -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete ds -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete ds -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete rs -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete rs -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete pods -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete pods -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete services -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete services -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete pvc -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete pvc -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete rolebinding -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete rolebinding -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete roles -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete roles -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete serviceaccounts -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete serviceaccounts -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete configmaps -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete configmaps -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete secrets -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete secrets -l kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete jobs -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete jobs -l kubevirt.io
+No resources found
++ for label in ${labels[@]}
++ _kubectl -n kubevirt delete deployment -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete deployment -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete ds -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete ds -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete rs -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete rs -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete pods -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete pods -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete services -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete services -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete pvc -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete pvc -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete rolebinding -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete rolebinding -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete roles -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete roles -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete serviceaccounts -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete serviceaccounts -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete configmaps -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete configmaps -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete secrets -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete secrets -l cdi.kubevirt.io
+No resources found
++ _kubectl -n kubevirt delete jobs -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt delete jobs -l cdi.kubevirt.io
+No resources found
++ for i in ${namespaces[@]}
++ for label in ${labels[@]}
++ _kubectl -n cdi delete deployment -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete deployment -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete ds -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete ds -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete rs -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete rs -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete pods -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete pods -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete services -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete services -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete pvc -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete pvc -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete rolebinding -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete rolebinding -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete roles -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete roles -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete serviceaccounts -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete serviceaccounts -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete configmaps -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete configmaps -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete secrets -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete secrets -l operator.kubevirt.io
+No resources found
++ _kubectl -n cdi delete jobs -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete jobs -l operator.kubevirt.io
+No resources found
++ for label in ${labels[@]}
++ _kubectl -n cdi delete deployment -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete deployment -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete ds -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete ds -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete rs -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete rs -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete pods -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete pods -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete services -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete services -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete pvc -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete pvc -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete rolebinding -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete rolebinding -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete roles -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete roles -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete serviceaccounts -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete serviceaccounts -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete configmaps -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete configmaps -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete secrets -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete secrets -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete jobs -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete jobs -l operator.cdi.kubevirt.io
+No resources found
++ for label in ${labels[@]}
++ _kubectl -n cdi delete deployment -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete deployment -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete ds -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete ds -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete rs -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete rs -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete pods -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete pods -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete services -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete services -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete pvc -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete pvc -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete rolebinding -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete rolebinding -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete roles -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete roles -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete serviceaccounts -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete serviceaccounts -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete configmaps -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete configmaps -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete secrets -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete secrets -l kubevirt.io
+No resources found
++ _kubectl -n cdi delete jobs -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete jobs -l kubevirt.io
+No resources found
++ for label in ${labels[@]}
++ _kubectl -n cdi delete deployment -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete deployment -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete ds -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete ds -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete rs -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete rs -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete pods -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete pods -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete services -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete services -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete pvc -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete pvc -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete rolebinding -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete rolebinding -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete roles -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete roles -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete serviceaccounts -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete serviceaccounts -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete configmaps -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete configmaps -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete secrets -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete secrets -l cdi.kubevirt.io
+No resources found
++ _kubectl -n cdi delete jobs -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n cdi delete jobs -l cdi.kubevirt.io
+No resources found
++ for label in ${labels[@]}
++ _kubectl delete validatingwebhookconfiguration -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete validatingwebhookconfiguration -l operator.kubevirt.io
+No resources found
++ _kubectl delete pv -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete pv -l operator.kubevirt.io
+No resources found
++ _kubectl delete clusterrolebinding -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete clusterrolebinding -l operator.kubevirt.io
+No resources found
++ _kubectl delete clusterroles -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete clusterroles -l operator.kubevirt.io
+No resources found
++ _kubectl delete customresourcedefinitions -l operator.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete customresourcedefinitions -l operator.kubevirt.io
+No resources found
++ _kubectl delete apiservices -l operator.kubevirt.io --wait=false
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete apiservices -l operator.kubevirt.io --wait=false
+No resources found
++ grep foregroundDeletion
++ _kubectl get apiservices -l operator.kubevirt.io -o=custom-columns=NAME:.metadata.name,FINALIZERS:.metadata.finalizers --no-headers
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ read p
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl get apiservices -l operator.kubevirt.io -o=custom-columns=NAME:.metadata.name,FINALIZERS:.metadata.finalizers --no-headers
++ for label in ${labels[@]}
++ _kubectl delete validatingwebhookconfiguration -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete validatingwebhookconfiguration -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl delete pv -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete pv -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl delete clusterrolebinding -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete clusterrolebinding -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl delete clusterroles -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete clusterroles -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl delete customresourcedefinitions -l operator.cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete customresourcedefinitions -l operator.cdi.kubevirt.io
+No resources found
++ _kubectl delete apiservices -l operator.cdi.kubevirt.io --wait=false
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete apiservices -l operator.cdi.kubevirt.io --wait=false
+No resources found
++ grep foregroundDeletion
++ _kubectl get apiservices -l operator.cdi.kubevirt.io -o=custom-columns=NAME:.metadata.name,FINALIZERS:.metadata.finalizers --no-headers
++ read p
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl get apiservices -l operator.cdi.kubevirt.io -o=custom-columns=NAME:.metadata.name,FINALIZERS:.metadata.finalizers --no-headers
++ for label in ${labels[@]}
++ _kubectl delete validatingwebhookconfiguration -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete validatingwebhookconfiguration -l kubevirt.io
+No resources found
++ _kubectl delete pv -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete pv -l kubevirt.io
+No resources found
++ _kubectl delete clusterrolebinding -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete clusterrolebinding -l kubevirt.io
+No resources found
++ _kubectl delete clusterroles -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete clusterroles -l kubevirt.io
+No resources found
++ _kubectl delete customresourcedefinitions -l kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete customresourcedefinitions -l kubevirt.io
+No resources found
++ _kubectl delete apiservices -l kubevirt.io --wait=false
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete apiservices -l kubevirt.io --wait=false
+No resources found
++ _kubectl get apiservices -l kubevirt.io -o=custom-columns=NAME:.metadata.name,FINALIZERS:.metadata.finalizers --no-headers
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl get apiservices -l kubevirt.io -o=custom-columns=NAME:.metadata.name,FINALIZERS:.metadata.finalizers --no-headers
++ grep foregroundDeletion
++ read p
++ for label in ${labels[@]}
++ _kubectl delete validatingwebhookconfiguration -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete validatingwebhookconfiguration -l cdi.kubevirt.io
+No resources found
++ _kubectl delete pv -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete pv -l cdi.kubevirt.io
+No resources found
++ _kubectl delete clusterrolebinding -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete clusterrolebinding -l cdi.kubevirt.io
+No resources found
++ _kubectl delete clusterroles -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete clusterroles -l cdi.kubevirt.io
+No resources found
++ _kubectl delete customresourcedefinitions -l cdi.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete customresourcedefinitions -l cdi.kubevirt.io
+No resources found
++ _kubectl delete apiservices -l cdi.kubevirt.io --wait=false
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl delete apiservices -l cdi.kubevirt.io --wait=false
+No resources found
++ grep foregroundDeletion
++ read p
++ _kubectl get apiservices -l cdi.kubevirt.io -o=custom-columns=NAME:.metadata.name,FINALIZERS:.metadata.finalizers --no-headers
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl get apiservices -l cdi.kubevirt.io -o=custom-columns=NAME:.metadata.name,FINALIZERS:.metadata.finalizers --no-headers
++ for i in ${managed_namespaces[@]}
+++ _kubectl get ns
+++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
+++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
+++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl get ns
+++ grep 'kubevirt '
++ '[' -n '' ']'
++ for i in ${managed_namespaces[@]}
+++ _kubectl get ns
+++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
+++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
+++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl get ns
+++ grep 'cdi '
++ '[' -n '' ']'
++ sleep 2
++ echo Done
+Done
+./hack/cluster-deploy.sh
++ DOCKER_TAG=devel
++ source hack/common.sh
+++ '[' -f cluster-up/hack/common.sh ']'
+++ source cluster-up/hack/common.sh
++++ '[' -z '' ']'
++++++ dirname 'cluster-up/hack/common.sh[0]'
+++++ cd cluster-up/hack/../
++++++ pwd
+++++ echo /home/padmin/CODE/kubevirt/cluster-up/
++++ KUBEVIRTCI_PATH=/home/padmin/CODE/kubevirt/cluster-up/
++++ '[' -z '' ']'
++++++ dirname 'cluster-up/hack/common.sh[0]'
+++++ cd cluster-up/hack/../../
++++++ pwd
+++++ echo /home/padmin/CODE/kubevirt/_ci-configs
++++ KUBEVIRTCI_CONFIG_PATH=/home/padmin/CODE/kubevirt/_ci-configs
++++ KUBEVIRTCI_CLUSTER_PATH=/home/padmin/CODE/kubevirt/cluster-up//cluster
++++ KUBEVIRT_PROVIDER=k8s-1.15
++++ KUBEVIRT_NUM_NODES=1
++++ KUBEVIRT_MEMORY_SIZE=5120M
++++ KUBEVIRT_NUM_SECONDARY_NICS=0
++++ '[' -z '' ']'
++++ KUBEVIRT_PROVIDER_EXTRA_ARGS=' --ocp-port 8443'
++++ provider_prefix=k8s-1.15
++++ job_prefix=kubevirt
++++ mkdir -p /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15
+++++ dirname 'hack/common.sh[0]'
++++ cd hack/../
++++ pwd
+++ KUBEVIRT_DIR=/home/padmin/CODE/kubevirt
+++ OUT_DIR=/home/padmin/CODE/kubevirt/_out
+++ VENDOR_DIR=/home/padmin/CODE/kubevirt/vendor
+++ CMD_OUT_DIR=/home/padmin/CODE/kubevirt/_out/cmd
+++ TESTS_OUT_DIR=/home/padmin/CODE/kubevirt/_out/tests
+++ APIDOCS_OUT_DIR=/home/padmin/CODE/kubevirt/_out/apidocs
+++ MANIFESTS_OUT_DIR=/home/padmin/CODE/kubevirt/_out/manifests
+++ MANIFEST_TEMPLATES_OUT_DIR=/home/padmin/CODE/kubevirt/_out/templates/manifests
+++ PYTHON_CLIENT_OUT_DIR=/home/padmin/CODE/kubevirt/_out/client-python
++++ uname -m
+++ ARCHITECTURE=x86_64
++++ kubevirt_version
++++ '[' -n '' ']'
++++ '[' -d /home/padmin/CODE/kubevirt/.git ']'
+++++ git describe --always --tags
++++ echo v0.32.0-rc.1-103-g4d4ff7927
+++ KUBEVIRT_VERSION=v0.32.0-rc.1-103-g4d4ff7927
+++ DOCKER_CA_CERT_FILE=
+++ DOCKERIZED_CUSTOM_CA_PATH=/etc/pki/ca-trust/source/anchors/custom-ca.crt
++ source cluster-up/cluster/k8s-1.15/provider.sh
+++ set -e
+++ source /home/padmin/CODE/kubevirt/cluster-up//cluster/k8s-provider-common.sh
++++ set -e
++++ source /home/padmin/CODE/kubevirt/cluster-up//cluster/ephemeral-provider-common.sh
+++++ set -e
+++++ source /home/padmin/CODE/kubevirt/cluster-up//cluster/images.sh
++++++ set -e
++++++ declare -A IMAGES
++++++ IMAGES[gocli]=gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9
++++++ '[' -z ']'
++++++ IMAGES[k8s-fedora-1.17.0]=k8s-fedora-1.17.0@sha256:aebf67b8b1b499c721f4d98a7ab9542c680553a14cbc144d1fa701fe611f3c0d
++++++ IMAGES[k8s-1.18]=k8s-1.18@sha256:47731d8b9bee32bbb69aa142f11b395fa9d70c20f318d33473ef2ebb650c08dd
++++++ IMAGES[k8s-1.17]=k8s-1.17@sha256:49de8023fdce76dcf6f3685b4cedc3c84f38c90d58ddf3daf08078f3405e51df
++++++ IMAGES[k8s-1.16]=k8s-1.16@sha256:1e153fb62c9a30ce6bc6ddc1af21bb28a56b780ec93ab15e113d729bf664469a
++++++ IMAGES[k8s-1.15]=k8s-1.15@sha256:c58cb9d79968590f24e070bc2517088d44fa2f83ba73e989a7e0f690ad08460b
++++++ IMAGES[k8s-1.14]=k8s-1.14@sha256:46e449b292dcb420f0944cac0a7a5c667c6f19bba2a4192737380e8e77f27ed0
++++++ export IMAGES
++++++ image=k8s-1.15@sha256:c58cb9d79968590f24e070bc2517088d44fa2f83ba73e989a7e0f690ad08460b
++++++ export image
+++++ '[' '' = podman ']'
+++++ _cli_container=kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9
+++++ _cli='docker run --privileged --net=host --rm  -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9'
++ source hack/config.sh
+++ unset binaries docker_images docker_tag docker_tag_alt image_prefix image_prefix_alt manifest_templates namespace image_pull_policy verbosity csv_version package_name
+++ source hack/config-default.sh
++++ binaries='cmd/virt-operator cmd/virt-controller cmd/virt-launcher cmd/virt-handler cmd/virtctl cmd/fake-qemu-process cmd/virt-api cmd/subresource-access-test cmd/example-hook-sidecar cmd/example-cloudinit-hook-sidecar'
++++ docker_images='cmd/virt-operator cmd/virt-controller cmd/virt-launcher cmd/virt-handler cmd/virt-api images/disks-images-provider images/vm-killer images/nfs-server cmd/subresource-access-test images/winrmcli cmd/example-hook-sidecar cmd/example-cloudinit-hook-sidecar images/cdi-http-import-server'
++++ docker_tag=devel
++++ docker_tag_alt=
++++ image_prefix=
++++ image_prefix_alt=
++++ namespace=kubevirt
++++ deploy_testing_infra=false
++++ csv_namespace=placeholder
++++ cdi_namespace=cdi
++++ image_pull_policy=IfNotPresent
++++ verbosity=2
++++ package_name=kubevirt-dev
++++ kubevirtci_git_hash=3ae577f8d1ec1ed251ece613612a85df6d238d8e
++++ default_csv_version=devel
++++ default_csv_version=0.0.0
++++ [[ 0.0.0 == v* ]]
++++ csv_version=0.0.0
+++ source cluster-up/hack/config.sh
++++ unset docker_prefix master_ip network_provider kubeconfig manifest_docker_prefix
++++ KUBEVIRT_PROVIDER=k8s-1.15
++++ source /home/padmin/CODE/kubevirt/cluster-up/hack/config-default.sh
+++++ docker_prefix=kubevirt
+++++ master_ip=192.168.200.2
+++++ network_provider=flannel
++++ test -f /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/config-provider-k8s-1.15.sh
++++ source /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/config-provider-k8s-1.15.sh
+++++ master_ip=127.0.0.1
+++++ kubeconfig=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
+++++ kubectl=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl
+++++ gocli=/home/padmin/CODE/kubevirt/_ci-configs/../cluster-up/cli.sh
+++++ docker_prefix=localhost:32770/kubevirt
+++++ manifest_docker_prefix=registry:5000/kubevirt
++++ export docker_prefix master_ip network_provider kubeconfig manifest_docker_prefix
+++ export binaries docker_images docker_tag docker_tag_alt image_prefix image_prefix_alt manifest_templates namespace image_pull_policy verbosity csv_version package_name
++ echo 'Deploying ...'
+Deploying ...
++ _kubectl apply -f -
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl apply -f -
+namespace/kubevirt created
++ [[ '' == \r\o\o\k\-\c\e\p\h ]]
++ _kubectl create -f /home/padmin/CODE/kubevirt/_out/manifests/testing
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl create -f /home/padmin/CODE/kubevirt/_out/manifests/testing
+namespace/cdi created
+customresourcedefinition.apiextensions.k8s.io/cdis.cdi.kubevirt.io created
+clusterrole.rbac.authorization.k8s.io/cdi-operator-cluster created
+clusterrolebinding.rbac.authorization.k8s.io/cdi-operator created
+serviceaccount/cdi-operator created
+role.rbac.authorization.k8s.io/cdi-operator created
+rolebinding.rbac.authorization.k8s.io/cdi-operator created
+deployment.apps/cdi-operator created
+configmap/cdi-operator-leader-election-helper created
+persistentvolume/host-path-disk-alpine created
+persistentvolume/host-path-disk-custom created
+service/cdi-http-import-server created
+deployment.apps/cdi-http-import-server created
+daemonset.apps/disks-images-provider created
+configmap/kubevirt-config created
+persistentvolume/local-block-storage-cirros created
+serviceaccount/kubevirt-testing created
+clusterrolebinding.rbac.authorization.k8s.io/kubevirt-testing-cluster-admin created
++ _kubectl apply -f -
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl apply -f -
+cdi.cdi.kubevirt.io/cdi created
++ _kubectl apply -f /home/padmin/CODE/kubevirt/_out/manifests/release/kubevirt-operator.yaml
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl apply -f /home/padmin/CODE/kubevirt/_out/manifests/release/kubevirt-operator.yaml
+namespace/kubevirt configured
+customresourcedefinition.apiextensions.k8s.io/kubevirts.kubevirt.io created
+priorityclass.scheduling.k8s.io/kubevirt-cluster-critical created
+clusterrole.rbac.authorization.k8s.io/kubevirt.io:operator created
+serviceaccount/kubevirt-operator created
+role.rbac.authorization.k8s.io/kubevirt-operator created
+rolebinding.rbac.authorization.k8s.io/kubevirt-operator-rolebinding created
+clusterrole.rbac.authorization.k8s.io/kubevirt-operator created
+clusterrolebinding.rbac.authorization.k8s.io/kubevirt-operator created
+deployment.apps/virt-operator created
++ [[ k8s-1.15 =~ os-* ]]
++ [[ k8s-1.15 =~ (okd|ocp)-* ]]
++ [[ k8s-1.15 =~ kind.* ]]
++ count=0
++ _kubectl get crd kubevirts.kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl get crd kubevirts.kubevirt.io
+NAME                    CREATED AT
+kubevirts.kubevirt.io   2020-09-19T02:42:00Z
++ count=0
++ _kubectl api-resources --api-group=kubevirt.io
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl api-resources --api-group=kubevirt.io
++ grep kubevirts
+kubevirts   kv,kvs       kubevirt.io   true         KubeVirt
++ _kubectl create -n kubevirt -f /home/padmin/CODE/kubevirt/_out/manifests/release/kubevirt-cr.yaml
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl create -n kubevirt -f /home/padmin/CODE/kubevirt/_out/manifests/release/kubevirt-cr.yaml
+kubevirt.kubevirt.io/kubevirt created
++ count=0
++ _kubectl -n kubevirt get kv kubevirt
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt get kv kubevirt
+NAME       AGE   PHASE
+kubevirt   1s    
++ count=0
++ _kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
++ export KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ KUBECONFIG=/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubeconfig
++ /home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl wait -n kubevirt kv kubevirt --for condition=Available --timeout 5m
+kubevirt.kubevirt.io/kubevirt condition met
++ echo Done
+Done
+

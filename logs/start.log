@@ -1,0 +1,116 @@
+padmin@jjvm006:~/CODE/kubevirt$ pwd
+/home/padmin/CODE/kubevirt
+padmin@jjvm006:~/CODE/kubevirt$ export DOCKER_PREFIX=/home/padmin/CODE/kubevirt
+padmin@jjvm006:~/CODE/kubevirt$ export DOCKER_TAG=/home/padmin/Kube/kv_build
+padmin@jjvm006:~/CODE/kubevirt$ make
+hack/dockerized "DOCKER_PREFIX=/home/padmin/CODE/kubevirt DOCKER_TAG=/home/padmin/Kube/kv_build IMAGE_PULL_POLICY= VERBOSITY= ./hack/build-manifests.sh && \
+    hack/bazel-fmt.sh && hack/bazel-build.sh"
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.40/volumes: dial unix /var/run/docker.sock: connect: permission denied
+Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.40/volumes/create: dial unix /var/run/docker.sock: connect: permission denied
+Makefile:5: recipe for target 'all' failed
+make: *** [all] Error 1
+padmin@jjvm006:~/CODE/kubevirt$ sudo make
+hack/dockerized "DOCKER_PREFIX= DOCKER_TAG= IMAGE_PULL_POLICY= VERBOSITY= ./hack/build-manifests.sh && \
+    hack/bazel-fmt.sh && hack/bazel-build.sh"
+kubevirt
+Unable to find image 'kubevirt/builder@sha256:e6a76ec71f2de87c3bc648bae87ab43a113540bf57da69f07f76bd0edfd500ab' locally
+sha256:e6a76ec71f2de87c3bc648bae87ab43a113540bf57da69f07f76bd0edfd500ab: Pulling from kubevirt/builder
+b0fe058ffda2: Pull complete 
+dfe6ecd6d77b: Pull complete 
+48699dca5da3: Pull complete 
+b1833078a99d: Pull complete 
+d1de41b0fa4e: Pull complete 
+5cf469971bf6: Pull complete 
+95060617e71b: Pull complete 
+aafcb618b9d8: Pull complete 
+70691977293d: Pull complete 
+d0f8d8b071eb: Pull complete 
+Digest: sha256:e6a76ec71f2de87c3bc648bae87ab43a113540bf57da69f07f76bd0edfd500ab
+Status: Downloaded newer image for kubevirt/builder@sha256:e6a76ec71f2de87c3bc648bae87ab43a113540bf57da69f07f76bd0edfd500ab
+go version go1.12.8 linux/amd64
+
+0ff9fc3b144f7ce7abb0854cbd87f30d10acf3868df3db535852cd1f7cf79abe
+go version go1.12.8 linux/amd64
+digest files not found: won't use shasums, falling back to tags
+INFO: Analyzed target //:gazelle (85 packages loaded, 6714 targets configured).
+INFO: Found 1 target...
+Target //:gazelle up-to-date:
+  bazel-bin/gazelle-runner.bash
+  bazel-bin/gazelle
+INFO: Elapsed time: 59.034s, Critical Path: 9.14s
+INFO: 68 processes: 68 processwrapper-sandbox.
+INFO: Build completed successfully, 81 total actions
+INFO: Build completed successfully, 81 total actions
+INFO: Analyzed target //:goimports (7 packages loaded, 29 targets configured).
+INFO: Found 1 target...
+Target //:goimports up-to-date:
+  bazel-bin/goimports.bash
+INFO: Elapsed time: 1.942s, Critical Path: 1.34s
+INFO: 8 processes: 8 processwrapper-sandbox.
+INFO: Build completed successfully, 12 total actions
+INFO: Build completed successfully, 12 total actions
+INFO: Analyzed target //:buildifier (23 packages loaded, 561 targets configured).
+INFO: Found 1 target...
+Target //:buildifier up-to-date:
+  bazel-bin/buildifier.bash
+INFO: Elapsed time: 109.994s, Critical Path: 15.55s
+INFO: 244 processes: 244 processwrapper-sandbox.
+INFO: Build completed successfully, 265 total actions
+INFO: Build completed successfully, 265 total actions
+INFO: Build option --stamp has changed, discarding analysis cache.
+WARNING: Download from https://copr-be.cloud.fedoraproject.org/results/%40virtmaint-sig/for-kubevirt/fedora-30-x86_64/01034621-libvirt/libvirt-devel-5.0.0-2.fc30.x86_64.rpm failed: class com.google.devtools.build.lib.bazel.repository.downloader.UnrecoverableHttpException GET returned 404 Not Found
+WARNING: Download from https://copr-be.cloud.fedoraproject.org/results/%40virtmaint-sig/for-kubevirt/fedora-30-x86_64/01034621-libvirt/libvirt-libs-5.0.0-2.fc30.x86_64.rpm failed: class com.google.devtools.build.lib.bazel.repository.downloader.UnrecoverableHttpException GET returned 404 Not Found
+INFO: Analyzed 43 targets (749 packages loaded, 11862 targets configured).
+INFO: Found 43 targets...
+INFO: Elapsed time: 207.783s, Critical Path: 64.13s
+INFO: 878 processes: 878 processwrapper-sandbox.
+INFO: Build completed successfully, 993 total actions
+INFO: Build option --platforms has changed, discarding analysis cache.
+INFO: Analyzed target //:build-dump (0 packages loaded, 10555 targets configured).
+INFO: Found 1 target...
+Target //:build-dump up-to-date:
+  bazel-bin/dump-copier
+INFO: Elapsed time: 2.761s, Critical Path: 0.25s
+INFO: 1 process: 1 processwrapper-sandbox.
+INFO: Build completed successfully, 2 total actions
+INFO: Build completed successfully, 2 total actions
+INFO: Analyzed target //:build-virtctl (0 packages loaded, 129 targets configured).
+INFO: Found 1 target...
+Target //:build-virtctl up-to-date:
+  bazel-bin/virtctl-copier
+INFO: Elapsed time: 0.476s, Critical Path: 0.11s
+INFO: 1 process: 1 processwrapper-sandbox.
+INFO: Build completed successfully, 2 total actions
+INFO: Build completed successfully, 2 total actions
+INFO: Build option --platforms has changed, discarding analysis cache.
+INFO: Analyzed target //:build-virtctl (0 packages loaded, 9076 targets configured).
+INFO: Found 1 target...
+Target //:build-virtctl up-to-date:
+  bazel-bin/virtctl-copier
+INFO: Elapsed time: 1.802s, Critical Path: 0.27s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Build completed successfully, 1 total action
+INFO: Build option --platforms has changed, discarding analysis cache.
+INFO: Analyzed target //:build-virtctl (0 packages loaded, 9065 targets configured).
+INFO: Found 1 target...
+Target //:build-virtctl up-to-date:
+  bazel-bin/virtctl-copier
+INFO: Elapsed time: 73.542s, Critical Path: 51.38s
+INFO: 299 processes: 299 processwrapper-sandbox.
+INFO: Build completed successfully, 300 total actions
+INFO: Build completed successfully, 300 total actions
+INFO: Build option --platforms has changed, discarding analysis cache.
+INFO: Analyzed target //:build-virtctl (2 packages loaded, 8856 targets configured).
+INFO: Found 1 target...
+Target //:build-virtctl up-to-date:
+  bazel-bin/virtctl-copier
+INFO: Elapsed time: 66.448s, Critical Path: 53.53s
+INFO: 300 processes: 300 processwrapper-sandbox.
+INFO: Build completed successfully, 301 total actions
+INFO: Build completed successfully, 301 total actions
+
+
+[
+
+

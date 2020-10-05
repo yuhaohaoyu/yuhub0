@@ -1,0 +1,6 @@
+NAME                  TYPE                                  DATA   AGE
+default-token-7ggs4   kubernetes.io/service-account-token   3      11m
+NAME      SECRETS   AGE
+default   1         11m
+NAME       AGE   PHASE
+kubevirt   21h   Deleting

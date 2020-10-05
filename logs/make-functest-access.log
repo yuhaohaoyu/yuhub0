@@ -1,0 +1,531 @@
+root@jjvm006:/home/padmin/CODE/kubevirt# make build-functests
+hack/dockerized "hack/build-func-tests.sh"
+go version go1.12.8 linux/amd64
+
+go version go1.12.8 linux/amd64
+root@jjvm006:/home/padmin/CODE/kubevirt# FUNC_TEST_ARGS=' -ginkgo.v -ginkgo.debug ' make functest
+hack/dockerized "hack/build-func-tests.sh"
+go version go1.12.8 linux/amd64
+
+go version go1.12.8 linux/amd64
+hack/functests.sh
+Running Suite: Tests Suite
+==========================
+Random Seed: 1601297448
+Will run 19 of 573 specs
+
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on resources are correct for view, edit, and admin 
+  [test_id:526]given a vmi
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+STEP: verifying VIEW sa for verb get
+
+• Failure [7.504 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  With default kubevirt service accounts
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51
+    should verify permissions on resources are correct for view, edit, and admin
+    /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+      [test_id:526]given a vmi [It]
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+      Expected
+          <string>: yes
+          
+      to contain substring
+          <string>: no
+
+      /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:107
+------------------------------
+failed to dump entity named [sriovnetworknodestates]: the server could not find the requested resource
+failed to dump entity named [sriovnetworknodepolicies]: the server could not find the requested resource
+failed to dump entity named [sriovnetworks]: the server could not find the requested resource
+failed to dump entity named [sriovoperatorconfigs]: the server could not find the requested resource
+failed to dump entity named [network-attachment-definitions]: the server could not find the requested resource
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on resources are correct for view, edit, and admin 
+  [test_id:527]given a vm
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+STEP: verifying VIEW sa for verb get
+
+• Failure [4.481 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  With default kubevirt service accounts
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51
+    should verify permissions on resources are correct for view, edit, and admin
+    /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+      [test_id:527]given a vm [It]
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+      Expected
+          <string>: yes
+          
+      to contain substring
+          <string>: no
+
+      /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:107
+------------------------------
+failed to dump entity named [sriovnetworknodestates]: the server could not find the requested resource
+failed to dump entity named [sriovnetworknodepolicies]: the server could not find the requested resource
+failed to dump entity named [sriovnetworks]: the server could not find the requested resource
+failed to dump entity named [sriovoperatorconfigs]: the server could not find the requested resource
+failed to dump entity named [network-attachment-definitions]: the server could not find the requested resource
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on resources are correct for view, edit, and admin 
+  [test_id:528]given a vmi preset
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+STEP: verifying VIEW sa for verb get
+
+• Failure [4.488 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  With default kubevirt service accounts
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51
+    should verify permissions on resources are correct for view, edit, and admin
+    /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+      [test_id:528]given a vmi preset [It]
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+      Expected
+          <string>: yes
+          
+      to contain substring
+          <string>: no
+
+      /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:107
+------------------------------
+failed to dump entity named [sriovnetworknodestates]: the server could not find the requested resource
+failed to dump entity named [sriovnetworknodepolicies]: the server could not find the requested resource
+failed to dump entity named [sriovnetworks]: the server could not find the requested resource
+failed to dump entity named [sriovoperatorconfigs]: the server could not find the requested resource
+failed to dump entity named [network-attachment-definitions]: the server could not find the requested resource
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on resources are correct for view, edit, and admin 
+  [test_id:529][crit:low]given a vmi replica set
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+STEP: verifying VIEW sa for verb get
+
+• Failure [4.498 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  With default kubevirt service accounts
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51
+    should verify permissions on resources are correct for view, edit, and admin
+    /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+      [test_id:529][crit:low]given a vmi replica set [It]
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+      Expected
+          <string>: yes
+          
+      to contain substring
+          <string>: no
+
+      /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:107
+------------------------------
+failed to dump entity named [sriovnetworknodestates]: the server could not find the requested resource
+failed to dump entity named [sriovnetworknodepolicies]: the server could not find the requested resource
+failed to dump entity named [sriovnetworks]: the server could not find the requested resource
+failed to dump entity named [sriovoperatorconfigs]: the server could not find the requested resource
+failed to dump entity named [network-attachment-definitions]: the server could not find the requested resource
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on resources are correct for view, edit, and admin 
+  [test_id:3230]given a vmi migration
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+STEP: verifying VIEW sa for verb get
+
+• Failure [4.485 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  With default kubevirt service accounts
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51
+    should verify permissions on resources are correct for view, edit, and admin
+    /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+      [test_id:3230]given a vmi migration [It]
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+      Expected
+          <string>: yes
+          
+      to contain substring
+          <string>: no
+
+      /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:107
+------------------------------
+failed to dump entity named [sriovnetworknodestates]: the server could not find the requested resource
+failed to dump entity named [sriovnetworknodepolicies]: the server could not find the requested resource
+failed to dump entity named [sriovnetworks]: the server could not find the requested resource
+failed to dump entity named [sriovoperatorconfigs]: the server could not find the requested resource
+failed to dump entity named [network-attachment-definitions]: the server could not find the requested resource
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts 
+  [test_id:3231]Prepare auth client
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:142
+•
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on subresources are correct for view, edit, and admin 
+  [test_id:3232]on vm start
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+STEP: verifying VIEW sa for verb get
+STEP: verifying EDIT sa for verb get
+STEP: verifying ADMIN sa for verb get
+STEP: verifying DEFAULT sa for verb get
+STEP: verifying VIEW sa for verb list
+STEP: verifying EDIT sa for verb list
+STEP: verifying ADMIN sa for verb list
+STEP: verifying DEFAULT sa for verb list
+STEP: verifying VIEW sa for verb watch
+STEP: verifying EDIT sa for verb watch
+STEP: verifying ADMIN sa for verb watch
+STEP: verifying DEFAULT sa for verb watch
+STEP: verifying VIEW sa for verb delete
+STEP: verifying EDIT sa for verb delete
+STEP: verifying ADMIN sa for verb delete
+STEP: verifying DEFAULT sa for verb delete
+STEP: verifying VIEW sa for verb create
+STEP: verifying EDIT sa for verb create
+STEP: verifying ADMIN sa for verb create
+STEP: verifying DEFAULT sa for verb create
+STEP: verifying VIEW sa for verb update
+STEP: verifying EDIT sa for verb update
+STEP: verifying ADMIN sa for verb update
+STEP: verifying DEFAULT sa for verb update
+STEP: verifying VIEW sa for verb patch
+STEP: verifying EDIT sa for verb patch
+STEP: verifying ADMIN sa for verb patch
+STEP: verifying DEFAULT sa for verb patch
+STEP: verifying VIEW sa for verb deletecollection
+STEP: verifying EDIT sa for verb deletecollection
+STEP: verifying ADMIN sa for verb deletecollection
+STEP: verifying DEFAULT sa for verb deletecollection
+
+• [SLOW TEST:8.803 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  With default kubevirt service accounts
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51
+    should verify permissions on subresources are correct for view, edit, and admin
+    /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+      [test_id:3232]on vm start
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on subresources are correct for view, edit, and admin 
+  [test_id:3233]on vm stop
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+STEP: verifying VIEW sa for verb get
+STEP: verifying EDIT sa for verb get
+STEP: verifying ADMIN sa for verb get
+STEP: verifying DEFAULT sa for verb get
+STEP: verifying VIEW sa for verb list
+STEP: verifying EDIT sa for verb list
+STEP: verifying ADMIN sa for verb list
+STEP: verifying DEFAULT sa for verb list
+STEP: verifying VIEW sa for verb watch
+STEP: verifying EDIT sa for verb watch
+STEP: verifying ADMIN sa for verb watch
+STEP: verifying DEFAULT sa for verb watch
+STEP: verifying VIEW sa for verb delete
+STEP: verifying EDIT sa for verb delete
+STEP: verifying ADMIN sa for verb delete
+STEP: verifying DEFAULT sa for verb delete
+STEP: verifying VIEW sa for verb create
+STEP: verifying EDIT sa for verb create
+STEP: verifying ADMIN sa for verb create
+STEP: verifying DEFAULT sa for verb create
+STEP: verifying VIEW sa for verb update
+STEP: verifying EDIT sa for verb update
+STEP: verifying ADMIN sa for verb update
+STEP: verifying DEFAULT sa for verb update
+STEP: verifying VIEW sa for verb patch
+STEP: verifying EDIT sa for verb patch
+STEP: verifying ADMIN sa for verb patch
+STEP: verifying DEFAULT sa for verb patch
+STEP: verifying VIEW sa for verb deletecollection
+STEP: verifying EDIT sa for verb deletecollection
+STEP: verifying ADMIN sa for verb deletecollection
+STEP: verifying DEFAULT sa for verb deletecollection
+
+• [SLOW TEST:6.811 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  With default kubevirt service accounts
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51
+    should verify permissions on subresources are correct for view, edit, and admin
+    /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+      [test_id:3233]on vm stop
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on subresources are correct for view, edit, and admin 
+  [test_id:3234]on vm restart
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+STEP: verifying VIEW sa for verb get
+STEP: verifying EDIT sa for verb get
+STEP: verifying ADMIN sa for verb get
+STEP: verifying DEFAULT sa for verb get
+STEP: verifying VIEW sa for verb list
+STEP: verifying EDIT sa for verb list
+STEP: verifying ADMIN sa for verb list
+STEP: verifying DEFAULT sa for verb list
+STEP: verifying VIEW sa for verb watch
+STEP: verifying EDIT sa for verb watch
+STEP: verifying ADMIN sa for verb watch
+STEP: verifying DEFAULT sa for verb watch
+STEP: verifying VIEW sa for verb delete
+STEP: verifying EDIT sa for verb delete
+STEP: verifying ADMIN sa for verb delete
+STEP: verifying DEFAULT sa for verb delete
+STEP: verifying VIEW sa for verb create
+STEP: verifying EDIT sa for verb create
+STEP: verifying ADMIN sa for verb create
+STEP: verifying DEFAULT sa for verb create
+STEP: verifying VIEW sa for verb update
+STEP: verifying EDIT sa for verb update
+STEP: verifying ADMIN sa for verb update
+STEP: verifying DEFAULT sa for verb update
+STEP: verifying VIEW sa for verb patch
+STEP: verifying EDIT sa for verb patch
+STEP: verifying ADMIN sa for verb patch
+STEP: verifying DEFAULT sa for verb patch
+STEP: verifying VIEW sa for verb deletecollection
+STEP: verifying EDIT sa for verb deletecollection
+STEP: verifying ADMIN sa for verb deletecollection
+STEP: verifying DEFAULT sa for verb deletecollection
+
+• [SLOW TEST:6.811 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  With default kubevirt service accounts
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51
+    should verify permissions on subresources are correct for view, edit, and admin
+    /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+      [test_id:3234]on vm restart
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user should fail without admin rights for the project should verify permissions on resources are correct for view, edit, and admin 
+  [test_id:2921]given a vmi
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+S [SKIPPING] in Spec Setup (BeforeEach) [2.407 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:249
+    should fail without admin rights for the project [BeforeEach]
+    /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:267
+      should verify permissions on resources are correct for view, edit, and admin
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+        [test_id:2921]given a vmi
+        /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+        Skip test that requires oc binary
+
+        /root/go/src/kubevirt.io/kubevirt/tests/utils.go:3224
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user should fail without admin rights for the project should verify permissions on resources are correct for view, edit, and admin 
+  [test_id:2915]given a vm
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+S [SKIPPING] in Spec Setup (BeforeEach) [4.399 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:249
+    should fail without admin rights for the project [BeforeEach]
+    /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:267
+      should verify permissions on resources are correct for view, edit, and admin
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+        [test_id:2915]given a vm
+        /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+        Skip test that requires oc binary
+
+        /root/go/src/kubevirt.io/kubevirt/tests/utils.go:3224
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user should fail without admin rights for the project should verify permissions on resources are correct for view, edit, and admin 
+  [test_id:2917]given a vmi preset
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+S [SKIPPING] in Spec Setup (BeforeEach) [4.400 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:249
+    should fail without admin rights for the project [BeforeEach]
+    /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:267
+      should verify permissions on resources are correct for view, edit, and admin
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+        [test_id:2917]given a vmi preset
+        /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+        Skip test that requires oc binary
+
+        /root/go/src/kubevirt.io/kubevirt/tests/utils.go:3224
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user should fail without admin rights for the project should verify permissions on resources are correct for view, edit, and admin 
+  [test_id:2919]given a vmi replica set
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+S [SKIPPING] in Spec Setup (BeforeEach) [4.402 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:249
+    should fail without admin rights for the project [BeforeEach]
+    /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:267
+      should verify permissions on resources are correct for view, edit, and admin
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+        [test_id:2919]given a vmi replica set
+        /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+        Skip test that requires oc binary
+
+        /root/go/src/kubevirt.io/kubevirt/tests/utils.go:3224
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user should fail without admin rights for the project should verify permissions on resources are correct for view, edit, and admin 
+  [test_id:3235]given a vmi migration
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+S [SKIPPING] in Spec Setup (BeforeEach) [4.398 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:249
+    should fail without admin rights for the project [BeforeEach]
+    /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:267
+      should verify permissions on resources are correct for view, edit, and admin
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+        [test_id:3235]given a vmi migration
+        /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+        Skip test that requires oc binary
+
+        /root/go/src/kubevirt.io/kubevirt/tests/utils.go:3224
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user should succeed with admin rights for the project should verify permissions on resources are correct the test user 
+  [test_id:2920]given a vmi
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+S [SKIPPING] in Spec Setup (BeforeEach) [4.402 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:249
+    should succeed with admin rights for the project [BeforeEach]
+    /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:293
+      should verify permissions on resources are correct the test user
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+        [test_id:2920]given a vmi
+        /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+        Skip test that requires oc binary
+
+        /root/go/src/kubevirt.io/kubevirt/tests/utils.go:3224
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user should succeed with admin rights for the project should verify permissions on resources are correct the test user 
+  [test_id:2831]given a vm
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+S [SKIPPING] in Spec Setup (BeforeEach) [4.399 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:249
+    should succeed with admin rights for the project [BeforeEach]
+    /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:293
+      should verify permissions on resources are correct the test user
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+        [test_id:2831]given a vm
+        /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+        Skip test that requires oc binary
+
+        /root/go/src/kubevirt.io/kubevirt/tests/utils.go:3224
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user should succeed with admin rights for the project should verify permissions on resources are correct the test user 
+  [test_id:2916]given a vmi preset
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+S [SKIPPING] in Spec Setup (BeforeEach) [4.400 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:249
+    should succeed with admin rights for the project [BeforeEach]
+    /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:293
+      should verify permissions on resources are correct the test user
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+        [test_id:2916]given a vmi preset
+        /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+        Skip test that requires oc binary
+
+        /root/go/src/kubevirt.io/kubevirt/tests/utils.go:3224
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user should succeed with admin rights for the project should verify permissions on resources are correct the test user 
+  [test_id:2918][crit:low]given a vmi replica set
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+S [SKIPPING] in Spec Setup (BeforeEach) [4.397 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:249
+    should succeed with admin rights for the project [BeforeEach]
+    /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:293
+      should verify permissions on resources are correct the test user
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+        [test_id:2918][crit:low]given a vmi replica set
+        /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+        Skip test that requires oc binary
+
+        /root/go/src/kubevirt.io/kubevirt/tests/utils.go:3224
+------------------------------
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user should succeed with admin rights for the project should verify permissions on resources are correct the test user 
+  [test_id:2837]given a vmi migration
+  /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+S [SKIPPING] in Spec Setup (BeforeEach) [4.401 seconds]
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36
+  [rfe_id:2919][crit:high][vendor:cnv-qe@redhat.com][level:component] With regular OpenShift user
+  /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:249
+    should succeed with admin rights for the project [BeforeEach]
+    /root/go/src/kubevirt.io/kubevirt/tests/access_test.go:293
+      should verify permissions on resources are correct the test user
+      /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:92
+        [test_id:2837]given a vmi migration
+        /root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+        Skip test that requires oc binary
+
+        /root/go/src/kubevirt.io/kubevirt/tests/utils.go:3224
+------------------------------
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+Waiting for namespace kubevirt-test-default to be removed, this can take a while ...
+Waiting for namespace kubevirt-test-alternative to be removed, this can take a while ...
+Waiting for namespace kubevirt-test-operator to be removed, this can take a while ...
+
+
+Summarizing 5 Failures:
+
+[Fail] [rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on resources are correct for view, edit, and admin [It] [test_id:526]given a vmi 
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:107
+
+[Fail] [rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on resources are correct for view, edit, and admin [It] [test_id:527]given a vm 
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:107
+
+[Fail] [rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on resources are correct for view, edit, and admin [It] [test_id:528]given a vmi preset 
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:107
+
+[Fail] [rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on resources are correct for view, edit, and admin [It] [test_id:529][crit:low]given a vmi replica set 
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:107
+
+[Fail] [rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access With default kubevirt service accounts should verify permissions on resources are correct for view, edit, and admin [It] [test_id:3230]given a vmi migration 
+/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:107
+
+Ran 9 of 573 Specs in 167.841 seconds
+FAIL! -- 4 Passed | 5 Failed | 0 Pending | 564 Skipped
+--- FAIL: TestTests (167.84s)
+FAIL
+Makefile:71: recipe for target 'functest' failed
+make: *** [functest] Error 1
+

@@ -1,0 +1,322 @@
+hack/dockerized "hack/build-func-tests.sh"
+go version go1.12.8 linux/amd64
+
+go version go1.12.8 linux/amd64
+hack/functests.sh
+Running Suite: Tests Suite
+==========================
+Random Seed: [1m1601307080[0m
+Will run [1m5[0m of [1m573[0m specs
+
+[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m
+[90m------------------------------[0m
+[0m[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access[0m [90mWith default kubevirt service accounts[0m [0mshould verify permissions on resources are correct for view, edit, and admin[0m 
+  [1m[test_id:526]given a vmi[0m
+  [37m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43[0m
+[1mSTEP[0m: verifying VIEW sa for verb get
+[1mSTEP[0m: verifying EDIT sa for verb get
+[1mSTEP[0m: verifying ADMIN sa for verb get
+[1mSTEP[0m: verifying DEFAULT sa for verb get
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default get virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:28.174653Z"}
+[1mSTEP[0m: verifying VIEW sa for verb list
+[1mSTEP[0m: verifying EDIT sa for verb list
+[1mSTEP[0m: verifying ADMIN sa for verb list
+[1mSTEP[0m: verifying DEFAULT sa for verb list
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default list virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:28.593488Z"}
+[1mSTEP[0m: verifying VIEW sa for verb watch
+[1mSTEP[0m: verifying EDIT sa for verb watch
+[1mSTEP[0m: verifying ADMIN sa for verb watch
+[1mSTEP[0m: verifying DEFAULT sa for verb watch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default watch virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:28.974019Z"}
+[1mSTEP[0m: verifying VIEW sa for verb delete
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa delete virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:29.072174Z"}
+[1mSTEP[0m: verifying EDIT sa for verb delete
+[1mSTEP[0m: verifying ADMIN sa for verb delete
+[1mSTEP[0m: verifying DEFAULT sa for verb delete
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default delete virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:29.347506Z"}
+[1mSTEP[0m: verifying VIEW sa for verb create
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa create virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:29.442053Z"}
+[1mSTEP[0m: verifying EDIT sa for verb create
+[1mSTEP[0m: verifying ADMIN sa for verb create
+[1mSTEP[0m: verifying DEFAULT sa for verb create
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default create virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:29.746300Z"}
+[1mSTEP[0m: verifying VIEW sa for verb update
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa update virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:29.839073Z"}
+[1mSTEP[0m: verifying EDIT sa for verb update
+[1mSTEP[0m: verifying ADMIN sa for verb update
+[1mSTEP[0m: verifying DEFAULT sa for verb update
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default update virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:30.135794Z"}
+[1mSTEP[0m: verifying VIEW sa for verb patch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa patch virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:30.233322Z"}
+[1mSTEP[0m: verifying EDIT sa for verb patch
+[1mSTEP[0m: verifying ADMIN sa for verb patch
+[1mSTEP[0m: verifying DEFAULT sa for verb patch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default patch virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:30.527945Z"}
+[1mSTEP[0m: verifying VIEW sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa deletecollection virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:30.628296Z"}
+[1mSTEP[0m: verifying EDIT sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-edit-test-sa deletecollection virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:30.716842Z"}
+[1mSTEP[0m: verifying ADMIN sa for verb deletecollection
+[1mSTEP[0m: verifying DEFAULT sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default deletecollection virtualmachineinstances","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:30.944706Z"}
+
+[32m• [SLOW TEST:7.556 seconds][0m
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+[90m/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36[0m
+  With default kubevirt service accounts
+  [90m/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51[0m
+    should verify permissions on resources are correct for view, edit, and admin
+    [90m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:86[0m
+      [test_id:526]given a vmi
+      [90m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43[0m
+[90m------------------------------[0m
+[0m[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access[0m [90mWith default kubevirt service accounts[0m [0mshould verify permissions on resources are correct for view, edit, and admin[0m 
+  [1m[test_id:527]given a vm[0m
+  [37m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43[0m
+[1mSTEP[0m: verifying VIEW sa for verb get
+[1mSTEP[0m: verifying EDIT sa for verb get
+[1mSTEP[0m: verifying ADMIN sa for verb get
+[1mSTEP[0m: verifying DEFAULT sa for verb get
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default get virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:33.767229Z"}
+[1mSTEP[0m: verifying VIEW sa for verb list
+[1mSTEP[0m: verifying EDIT sa for verb list
+[1mSTEP[0m: verifying ADMIN sa for verb list
+[1mSTEP[0m: verifying DEFAULT sa for verb list
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default list virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:34.183829Z"}
+[1mSTEP[0m: verifying VIEW sa for verb watch
+[1mSTEP[0m: verifying EDIT sa for verb watch
+[1mSTEP[0m: verifying ADMIN sa for verb watch
+[1mSTEP[0m: verifying DEFAULT sa for verb watch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default watch virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:34.579788Z"}
+[1mSTEP[0m: verifying VIEW sa for verb delete
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa delete virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:34.669009Z"}
+[1mSTEP[0m: verifying EDIT sa for verb delete
+[1mSTEP[0m: verifying ADMIN sa for verb delete
+[1mSTEP[0m: verifying DEFAULT sa for verb delete
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default delete virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:34.961353Z"}
+[1mSTEP[0m: verifying VIEW sa for verb create
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa create virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:35.054929Z"}
+[1mSTEP[0m: verifying EDIT sa for verb create
+[1mSTEP[0m: verifying ADMIN sa for verb create
+[1mSTEP[0m: verifying DEFAULT sa for verb create
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default create virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:35.373766Z"}
+[1mSTEP[0m: verifying VIEW sa for verb update
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa update virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:35.464630Z"}
+[1mSTEP[0m: verifying EDIT sa for verb update
+[1mSTEP[0m: verifying ADMIN sa for verb update
+[1mSTEP[0m: verifying DEFAULT sa for verb update
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default update virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:35.764603Z"}
+[1mSTEP[0m: verifying VIEW sa for verb patch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa patch virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:35.865824Z"}
+[1mSTEP[0m: verifying EDIT sa for verb patch
+[1mSTEP[0m: verifying ADMIN sa for verb patch
+[1mSTEP[0m: verifying DEFAULT sa for verb patch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default patch virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:36.237104Z"}
+[1mSTEP[0m: verifying VIEW sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa deletecollection virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:36.337595Z"}
+[1mSTEP[0m: verifying EDIT sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-edit-test-sa deletecollection virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:36.451423Z"}
+[1mSTEP[0m: verifying ADMIN sa for verb deletecollection
+[1mSTEP[0m: verifying DEFAULT sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default deletecollection virtualmachines","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:36.649930Z"}
+
+[32m• [SLOW TEST:5.705 seconds][0m
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+[90m/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36[0m
+  With default kubevirt service accounts
+  [90m/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51[0m
+    should verify permissions on resources are correct for view, edit, and admin
+    [90m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:86[0m
+      [test_id:527]given a vm
+      [90m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43[0m
+[90m------------------------------[0m
+[0m[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access[0m [90mWith default kubevirt service accounts[0m [0mshould verify permissions on resources are correct for view, edit, and admin[0m 
+  [1m[test_id:528]given a vmi preset[0m
+  [37m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43[0m
+[1mSTEP[0m: verifying VIEW sa for verb get
+[1mSTEP[0m: verifying EDIT sa for verb get
+[1mSTEP[0m: verifying ADMIN sa for verb get
+[1mSTEP[0m: verifying DEFAULT sa for verb get
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default get virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:39.468624Z"}
+[1mSTEP[0m: verifying VIEW sa for verb list
+[1mSTEP[0m: verifying EDIT sa for verb list
+[1mSTEP[0m: verifying ADMIN sa for verb list
+[1mSTEP[0m: verifying DEFAULT sa for verb list
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default list virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:39.867124Z"}
+[1mSTEP[0m: verifying VIEW sa for verb watch
+[1mSTEP[0m: verifying EDIT sa for verb watch
+[1mSTEP[0m: verifying ADMIN sa for verb watch
+[1mSTEP[0m: verifying DEFAULT sa for verb watch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default watch virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:40.255832Z"}
+[1mSTEP[0m: verifying VIEW sa for verb delete
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa delete virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:40.353300Z"}
+[1mSTEP[0m: verifying EDIT sa for verb delete
+[1mSTEP[0m: verifying ADMIN sa for verb delete
+[1mSTEP[0m: verifying DEFAULT sa for verb delete
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default delete virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:40.656409Z"}
+[1mSTEP[0m: verifying VIEW sa for verb create
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa create virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:40.757240Z"}
+[1mSTEP[0m: verifying EDIT sa for verb create
+[1mSTEP[0m: verifying ADMIN sa for verb create
+[1mSTEP[0m: verifying DEFAULT sa for verb create
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default create virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:41.054631Z"}
+[1mSTEP[0m: verifying VIEW sa for verb update
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa update virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:41.155250Z"}
+[1mSTEP[0m: verifying EDIT sa for verb update
+[1mSTEP[0m: verifying ADMIN sa for verb update
+[1mSTEP[0m: verifying DEFAULT sa for verb update
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default update virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:41.442686Z"}
+[1mSTEP[0m: verifying VIEW sa for verb patch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa patch virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:41.534515Z"}
+[1mSTEP[0m: verifying EDIT sa for verb patch
+[1mSTEP[0m: verifying ADMIN sa for verb patch
+[1mSTEP[0m: verifying DEFAULT sa for verb patch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default patch virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:41.838662Z"}
+[1mSTEP[0m: verifying VIEW sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa deletecollection virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:41.931896Z"}
+[1mSTEP[0m: verifying EDIT sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-edit-test-sa deletecollection virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:42.017254Z"}
+[1mSTEP[0m: verifying ADMIN sa for verb deletecollection
+[1mSTEP[0m: verifying DEFAULT sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default deletecollection virtualmachineinstancepresets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:42.212482Z"}
+
+[32m• [SLOW TEST:5.562 seconds][0m
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+[90m/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36[0m
+  With default kubevirt service accounts
+  [90m/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51[0m
+    should verify permissions on resources are correct for view, edit, and admin
+    [90m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:86[0m
+      [test_id:528]given a vmi preset
+      [90m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43[0m
+[90m------------------------------[0m
+[0m[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access[0m [90mWith default kubevirt service accounts[0m [0mshould verify permissions on resources are correct for view, edit, and admin[0m 
+  [1m[test_id:529][crit:low]given a vmi replica set[0m
+  [37m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43[0m
+[1mSTEP[0m: verifying VIEW sa for verb get
+[1mSTEP[0m: verifying EDIT sa for verb get
+[1mSTEP[0m: verifying ADMIN sa for verb get
+[1mSTEP[0m: verifying DEFAULT sa for verb get
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default get virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:45.417688Z"}
+[1mSTEP[0m: verifying VIEW sa for verb list
+[1mSTEP[0m: verifying EDIT sa for verb list
+[1mSTEP[0m: verifying ADMIN sa for verb list
+[1mSTEP[0m: verifying DEFAULT sa for verb list
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default list virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:46.058563Z"}
+[1mSTEP[0m: verifying VIEW sa for verb watch
+[1mSTEP[0m: verifying EDIT sa for verb watch
+[1mSTEP[0m: verifying ADMIN sa for verb watch
+[1mSTEP[0m: verifying DEFAULT sa for verb watch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default watch virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:48.766451Z"}
+[1mSTEP[0m: verifying VIEW sa for verb delete
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa delete virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:48.857492Z"}
+[1mSTEP[0m: verifying EDIT sa for verb delete
+[1mSTEP[0m: verifying ADMIN sa for verb delete
+[1mSTEP[0m: verifying DEFAULT sa for verb delete
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default delete virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:49.140222Z"}
+[1mSTEP[0m: verifying VIEW sa for verb create
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa create virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:49.241289Z"}
+[1mSTEP[0m: verifying EDIT sa for verb create
+[1mSTEP[0m: verifying ADMIN sa for verb create
+[1mSTEP[0m: verifying DEFAULT sa for verb create
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default create virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:49.544844Z"}
+[1mSTEP[0m: verifying VIEW sa for verb update
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa update virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:49.640131Z"}
+[1mSTEP[0m: verifying EDIT sa for verb update
+[1mSTEP[0m: verifying ADMIN sa for verb update
+[1mSTEP[0m: verifying DEFAULT sa for verb update
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default update virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:49.947280Z"}
+[1mSTEP[0m: verifying VIEW sa for verb patch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa patch virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:50.036842Z"}
+[1mSTEP[0m: verifying EDIT sa for verb patch
+[1mSTEP[0m: verifying ADMIN sa for verb patch
+[1mSTEP[0m: verifying DEFAULT sa for verb patch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default patch virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:50.320439Z"}
+[1mSTEP[0m: verifying VIEW sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa deletecollection virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:50.408207Z"}
+[1mSTEP[0m: verifying EDIT sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-edit-test-sa deletecollection virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:50.532851Z"}
+[1mSTEP[0m: verifying ADMIN sa for verb deletecollection
+[1mSTEP[0m: verifying DEFAULT sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default deletecollection virtualmachineinstancereplicasets","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:50.725987Z"}
+
+[32m• [SLOW TEST:8.513 seconds][0m
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+[90m/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36[0m
+  With default kubevirt service accounts
+  [90m/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51[0m
+    should verify permissions on resources are correct for view, edit, and admin
+    [90m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:86[0m
+      [test_id:529][crit:low]given a vmi replica set
+      [90m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43[0m
+[90m------------------------------[0m
+[0m[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access[0m [90mWith default kubevirt service accounts[0m [0mshould verify permissions on resources are correct for view, edit, and admin[0m 
+  [1m[test_id:3230]given a vmi migration[0m
+  [37m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43[0m
+[1mSTEP[0m: verifying VIEW sa for verb get
+[1mSTEP[0m: verifying EDIT sa for verb get
+[1mSTEP[0m: verifying ADMIN sa for verb get
+[1mSTEP[0m: verifying DEFAULT sa for verb get
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default get virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:53.592132Z"}
+[1mSTEP[0m: verifying VIEW sa for verb list
+[1mSTEP[0m: verifying EDIT sa for verb list
+[1mSTEP[0m: verifying ADMIN sa for verb list
+[1mSTEP[0m: verifying DEFAULT sa for verb list
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default list virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:53.955337Z"}
+[1mSTEP[0m: verifying VIEW sa for verb watch
+[1mSTEP[0m: verifying EDIT sa for verb watch
+[1mSTEP[0m: verifying ADMIN sa for verb watch
+[1mSTEP[0m: verifying DEFAULT sa for verb watch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default watch virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:54.331396Z"}
+[1mSTEP[0m: verifying VIEW sa for verb delete
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa delete virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:54.437084Z"}
+[1mSTEP[0m: verifying EDIT sa for verb delete
+[1mSTEP[0m: verifying ADMIN sa for verb delete
+[1mSTEP[0m: verifying DEFAULT sa for verb delete
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default delete virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:54.735014Z"}
+[1mSTEP[0m: verifying VIEW sa for verb create
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa create virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:54.834405Z"}
+[1mSTEP[0m: verifying EDIT sa for verb create
+[1mSTEP[0m: verifying ADMIN sa for verb create
+[1mSTEP[0m: verifying DEFAULT sa for verb create
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default create virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:55.117367Z"}
+[1mSTEP[0m: verifying VIEW sa for verb update
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa update virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:55.217023Z"}
+[1mSTEP[0m: verifying EDIT sa for verb update
+[1mSTEP[0m: verifying ADMIN sa for verb update
+[1mSTEP[0m: verifying DEFAULT sa for verb update
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default update virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:55.514010Z"}
+[1mSTEP[0m: verifying VIEW sa for verb patch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa patch virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:55.605638Z"}
+[1mSTEP[0m: verifying EDIT sa for verb patch
+[1mSTEP[0m: verifying ADMIN sa for verb patch
+[1mSTEP[0m: verifying DEFAULT sa for verb patch
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default patch virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:55.916365Z"}
+[1mSTEP[0m: verifying VIEW sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-view-test-sa deletecollection virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:56.026189Z"}
+[1mSTEP[0m: verifying EDIT sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:kubevirt-edit-test-sa deletecollection virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:56.119974Z"}
+[1mSTEP[0m: verifying ADMIN sa for verb deletecollection
+[1mSTEP[0m: verifying DEFAULT sa for verb deletecollection
+{"command":"/home/padmin/CODE/kubevirt/_ci-configs/k8s-1.15/.kubectl -n kubevirt-test-default auth can-i --as system:serviceaccount:kubevirt-test-default:default deletecollection virtualmachineinstancemigrations","component":"tests","level":"error","msg":"command failed: cannot run command","output":"no\n","pos":"utils.go:3254","reason":"exit status 1","stderr":"","timestamp":"2020-09-28T15:31:56.305757Z"}
+
+[32m• [SLOW TEST:5.580 seconds][0m
+[rfe_id:500][crit:high][vendor:cnv-qe@redhat.com][level:component]User Access
+[90m/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:36[0m
+  With default kubevirt service accounts
+  [90m/root/go/src/kubevirt.io/kubevirt/tests/access_test.go:51[0m
+    should verify permissions on resources are correct for view, edit, and admin
+    [90m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table.go:86[0m
+      [test_id:3230]given a vmi migration
+      [90m/root/go/src/kubevirt.io/kubevirt/vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43[0m
+[90m------------------------------[0m
+[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m[36mS[0m
+Waiting for namespace kubevirt-test-default to be removed, this can take a while ...
+Waiting for namespace kubevirt-test-alternative to be removed, this can take a while ...
+Waiting for namespace kubevirt-test-operator to be removed, this can take a while ...
+
+[1m[32mRan 5 of 573 Specs in 48.015 seconds[0m
+[1m[32mSUCCESS![0m -- [32m[1m5 Passed[0m | [91m[1m0 Failed[0m | [33m[1m0 Pending[0m | [36m[1m568 Skipped[0m
+PASS | FOCUSED
+Makefile:71: recipe for target 'functest' failed
+make: *** [functest] Error 197

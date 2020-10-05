@@ -1,0 +1,113 @@
+    1  exit
+    2  nameserver 9.2.250.86 > /etc/resolv.conf 
+    3  echo nameserver 9.2.250.86 > /etc/resolv.conf 
+    4  chattr -e /etc/resolv.conf
+    5  chattr +i /etc/resolv.conf
+    6  ping watelg50
+    7  cat /etc/resolv.conf 
+    8  ls -l /etc/resolv.conf 
+    9  cat ../run/systemd/resolve/stub-resolv.conf
+   10  systemctl restart NetworkManager.service
+   11  ls /etc/NetworkManager/
+   12  systemctl status NetworkManager
+   13  systemctl stop dhcpcd
+   14  systemctl start dhcpcd
+   15  ls
+   16  systemctl status
+   17  service --status-all
+   18  systemctl stop ufw
+   19  ping watelg50
+   20  pwd
+   21  exit
+   22  npm install -g markdown-pdf
+   23  npm WARN deprecated phantomjs-prebuilt@2.1.16: this package is now deprecated
+   24  exit
+   25  virt-host-validate
+   26  exit
+   27  minikube start --memory 4096 --driver=kvm2
+   28  ls /var/run/libvirt/
+   29  ls /usr/bin/virsh 
+   30  which libvirtd
+   31  which virsh
+   32  which qemu
+   33  sudo apt-get install libvirtd
+   34  sudo apt-get install qemu
+   35  cat /etc/gro
+   36  cat /etc/groups
+   37  cat /etc/group
+   38  cat /etc/group | grep lib
+   39  sudo apt-get install qemu0kvm
+   40  sudo apt-get install qemu-kvm
+   41  sudo apt-get install libvirt-bin
+   42  sudo apt-get install libvirt-daemon-system libvirt-clients bridge-utils
+   43  history
+   44  minikube start --memory 4096 --driver=kvm2
+   45  exit
+   46  cd /home/padmin/CODE/kubevirt/
+   47  export KUBEVIRT_PROVIDER=k8s-1.15
+   48  export KUBEVIRT_NUM_NODES=2
+   49  export KUBEVIRT_MEMORY_SIZE=8192M
+   50  make cluster-up
+   51  make cluster-sync
+   52  ./cluster-up/kubectl.sh get pods --all-namespaces
+   53  cluster-up/kubectl.sh get nodes
+   54  ./cluster-up/ssh.sh node01
+   55  make test
+   56  make functest
+   57  FUNC_TEST_ARGS='-ginkgo.focus=vmi_networking_test -ginkgo.regexScansFilePath' make functest
+   58  ./cluster-up/kubectl.sh create -f examples/vmi-ephemeral.yaml
+   59  kubectl get nodes
+   60  kubectl get pods
+   61  ./cluster-up/kubectl.sh get nodes
+   62  ./cluster-up/kubectl.sh get pods
+   63  ./cluster-up/kubectl.sh get namespaces
+   64  ./cluster-up/kubectl.sh get pods --all-namespaces
+   65  kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=node02
+   66  ./cluster-up/kubectl.sh get pods --all-namespaces -o wide --field-selector spec.nodeName=node02
+   67  ./cluster-up/kubectl.sh get pods -n kubevirt -o wide --field-selector spec.nodeName=node02
+   68  ./cluster-up/kubectl.sh get pods -n kubevirt -o wide --field-selector spec.nodeName=node01
+   69  ./cluster-up/kubectl.sh get nodes
+   70  history | grep vmi
+   71  vi examples/vmi-ephemeral.yaml 
+   72  ping vmi-ephemeral
+   73  ./cluster-up/kubectl.sh delete -f examples/vmi-ephemeral.yaml
+   74  ./cluster-up/kubectl.sh get pods
+   75  ./cluster-up/kubectl.sh -n kubevirt get pods
+   76  ./cluster-up/kubectl.sh create -f examples/vmi-ephemeral.yaml
+   77  ./cluster-up/kubectl.sh get vmis
+   78  ping 10.244.1.162
+   79  ./cluster-up/kubectl.sh get vmis -o json
+   80  ./cluster-up/kubectl.sh get vmis
+   81  ./cluster-up/kubectl.sh console vmi-ephemeral
+   82  export DISPLAY=watelg50.watson.ibm.com:28
+   83  cluster-up/virtctl.sh vnc vmi-ephemeral
+   84  pwd
+   85  ls cluster-up
+   86  ls -l
+   87  cd cluster-up/
+   88  ls -l
+   89  cat up.sh 
+   90  vi ../hack/common.sh 
+   91  cd ../
+   92  find . -name provider.sh
+   93  cd cluster-up/cluster/k8s-1.15/
+   94  vi provider.sh 
+   95  cd ../
+   96  vi k8s-provider-common.sh 
+   97  which go
+   98  cd ../
+   99  ls
+  100  cd ../
+  101  ls
+  102  vi Makefile 
+  103  which bazel
+  104  whereis bazel
+  105  find . -name BUILD.bazel
+  106  cd cmd/virtctl/
+  107  vi BUILD.bazel 
+  108  cd ../../
+  109  vi BUILD.bazel 
+  110  vi Makefile 
+  111  ./cluster-up/kubectl.sh cluster-info
+  112  ./cluster-up/kubectl.sh  get pods --all-namespaces
+  113  history > history >> ../../Kube/logs/start-1.log

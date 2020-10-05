@@ -1,0 +1,65 @@
+{
+    "apiVersion": "rbac.authorization.k8s.io/v1",
+    "kind": "ClusterRole",
+    "metadata": {
+        "annotations": {
+            "kubevirt.io/install-strategy-identifier": "4f10d8a1712324b71d0ff3612f097563b4912e51",
+            "kubevirt.io/install-strategy-registry": "index.docker.io/kubevirt",
+            "kubevirt.io/install-strategy-version": "v0.33.0",
+            "rbac.authorization.kubernetes.io/autoupdate": "true"
+        },
+        "creationTimestamp": "2020-09-15T16:56:03Z",
+        "labels": {
+            "app.kubernetes.io/component": "kubevirt",
+            "app.kubernetes.io/managed-by": "kubevirt-operator",
+            "kubernetes.io/bootstrapping": "rbac-defaults",
+            "kubevirt.io": ""
+        },
+        "managedFields": [
+            {
+                "apiVersion": "rbac.authorization.k8s.io/v1",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:kubevirt.io/install-strategy-identifier": {},
+                            "f:kubevirt.io/install-strategy-registry": {},
+                            "f:kubevirt.io/install-strategy-version": {},
+                            "f:rbac.authorization.kubernetes.io/autoupdate": {}
+                        },
+                        "f:labels": {
+                            ".": {},
+                            "f:app.kubernetes.io/component": {},
+                            "f:app.kubernetes.io/managed-by": {},
+                            "f:kubernetes.io/bootstrapping": {},
+                            "f:kubevirt.io": {}
+                        }
+                    },
+                    "f:rules": {}
+                },
+                "manager": "virt-operator",
+                "operation": "Update",
+                "time": "2020-09-15T16:56:03Z"
+            }
+        ],
+        "name": "kubevirt.io:default",
+        "resourceVersion": "130787",
+        "selfLink": "/apis/rbac.authorization.k8s.io/v1/clusterroles/kubevirt.io%3Adefault",
+        "uid": "f557484b-2e28-4424-8ad2-b894db65d651"
+    },
+    "rules": [
+        {
+            "apiGroups": [
+                "subresources.kubevirt.io"
+            ],
+            "resources": [
+                "version"
+            ],
+            "verbs": [
+                "get",
+                "list"
+            ]
+        }
+    ]
+}

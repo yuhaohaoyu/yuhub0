@@ -1,0 +1,42 @@
+NAME            ENDPOINTS   AGE
+virt-operator   <none>      10m
+LAST SEEN   TYPE     REASON              OBJECT                                MESSAGE
+<unknown>   Normal   Scheduled           pod/virt-operator-5bb996fb5d-8mckn    Successfully assigned kubevirt/virt-operator-5bb996fb5d-8mckn to minikube
+10m         Normal   Pulled              pod/virt-operator-5bb996fb5d-8mckn    Container image "index.docker.io/kubevirt/virt-operator@sha256:84c50ed3c699265512c858a8bafa9ecd662735695ce5a09c15c13c97773f15f2" already present on machine
+10m         Normal   Created             pod/virt-operator-5bb996fb5d-8mckn    Created container virt-operator
+10m         Normal   Started             pod/virt-operator-5bb996fb5d-8mckn    Started container virt-operator
+<unknown>   Normal   Scheduled           pod/virt-operator-5bb996fb5d-xhl2g    Successfully assigned kubevirt/virt-operator-5bb996fb5d-xhl2g to minikube
+10m         Normal   Pulled              pod/virt-operator-5bb996fb5d-xhl2g    Container image "index.docker.io/kubevirt/virt-operator@sha256:84c50ed3c699265512c858a8bafa9ecd662735695ce5a09c15c13c97773f15f2" already present on machine
+10m         Normal   Created             pod/virt-operator-5bb996fb5d-xhl2g    Created container virt-operator
+10m         Normal   Started             pod/virt-operator-5bb996fb5d-xhl2g    Started container virt-operator
+10m         Normal   SuccessfulCreate    replicaset/virt-operator-5bb996fb5d   Created pod: virt-operator-5bb996fb5d-8mckn
+10m         Normal   SuccessfulCreate    replicaset/virt-operator-5bb996fb5d   Created pod: virt-operator-5bb996fb5d-xhl2g
+10m         Normal   ScalingReplicaSet   deployment/virt-operator              Scaled up replica set virt-operator-5bb996fb5d to 2
+10m         Normal   LeaderElection      endpoints/virt-operator               virt-operator-5bb996fb5d-8mckn became leader
+NAME                             READY   STATUS    RESTARTS   AGE
+virt-operator-5bb996fb5d-8mckn   1/1     Running   0          10m
+virt-operator-5bb996fb5d-xhl2g   1/1     Running   0          10m
+NAME                            TYPE                                  DATA   AGE
+default-token-7ggs4             kubernetes.io/service-account-token   3      24m
+kubevirt-operator-certs         Opaque                                3      10m
+kubevirt-operator-token-bsxqj   kubernetes.io/service-account-token   3      10m
+NAME                SECRETS   AGE
+default             1         24m
+kubevirt-operator   1         10m
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+virt-operator   2/2     2            2           10m
+NAME                       DESIRED   CURRENT   READY   AGE
+virt-operator-5bb996fb5d   2         2         2       10m
+LAST SEEN   TYPE     REASON              OBJECT                                MESSAGE
+<unknown>   Normal   Scheduled           pod/virt-operator-5bb996fb5d-8mckn    Successfully assigned kubevirt/virt-operator-5bb996fb5d-8mckn to minikube
+10m         Normal   Pulled              pod/virt-operator-5bb996fb5d-8mckn    Container image "index.docker.io/kubevirt/virt-operator@sha256:84c50ed3c699265512c858a8bafa9ecd662735695ce5a09c15c13c97773f15f2" already present on machine
+10m         Normal   Created             pod/virt-operator-5bb996fb5d-8mckn    Created container virt-operator
+10m         Normal   Started             pod/virt-operator-5bb996fb5d-8mckn    Started container virt-operator
+<unknown>   Normal   Scheduled           pod/virt-operator-5bb996fb5d-xhl2g    Successfully assigned kubevirt/virt-operator-5bb996fb5d-xhl2g to minikube
+10m         Normal   Pulled              pod/virt-operator-5bb996fb5d-xhl2g    Container image "index.docker.io/kubevirt/virt-operator@sha256:84c50ed3c699265512c858a8bafa9ecd662735695ce5a09c15c13c97773f15f2" already present on machine
+10m         Normal   Created             pod/virt-operator-5bb996fb5d-xhl2g    Created container virt-operator
+10m         Normal   Started             pod/virt-operator-5bb996fb5d-xhl2g    Started container virt-operator
+10m         Normal   SuccessfulCreate    replicaset/virt-operator-5bb996fb5d   Created pod: virt-operator-5bb996fb5d-8mckn
+10m         Normal   SuccessfulCreate    replicaset/virt-operator-5bb996fb5d   Created pod: virt-operator-5bb996fb5d-xhl2g
+10m         Normal   ScalingReplicaSet   deployment/virt-operator              Scaled up replica set virt-operator-5bb996fb5d to 2
+10m         Normal   LeaderElection      endpoints/virt-operator               virt-operator-5bb996fb5d-8mckn became leader

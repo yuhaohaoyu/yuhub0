@@ -1,0 +1,6 @@
+root@jjvm006:/home/padmin/CODE/kubevirt# make cluster-down
+./cluster-up/down.sh
++ down
++ docker run --privileged --net=host --rm -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli@sha256:0cec3163e5f8b050f129fa795b76c20cb1eb27c91564c63663160b095064a1f9 rm --prefix k8s-1.15
++ set +x
+
