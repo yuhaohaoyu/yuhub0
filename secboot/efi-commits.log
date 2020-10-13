@@ -1,0 +1,177 @@
+[root@viose2 kubevirt]# git log --all --grep=' EFI '
+commit 797ba48ebbe07cd125d215df5ebc91c9235ec596
+Merge: aac7a92b2 88203c7e4
+Author: kubevirt-bot <rmohr+kubebot@redhat.com>
+Date:   Sat Jul 11 07:25:38 2020 +0200
+
+    Merge pull request #3800 from kubevirt-bot/cherry-pick-3716-to-release-0.30
+    
+    [release-0.30] Add test-id for EFI secure boot test
+
+commit 88203c7e499bd551a6ac95e9ee47a8a1ff333bf6
+Author: Kedar Bidarkar <kbidarka@redhat.com>
+Date:   Tue Jun 30 01:35:01 2020 +0530
+
+    Add test-id for EFI secure boot test
+    
+    Signed-off-by: Kedar Bidarkar <kbidarka@redhat.com>
+
+commit ea510669c211d767c697a3e78b4b1b7d889c8935
+Merge: cfcd8f187 95d578273
+Author: kubevirt-bot <rmohr+kubebot@redhat.com>
+Date:   Thu Jul 9 18:21:38 2020 +0200
+
+    Merge pull request #3736 from jean-edouard/cherry-pick-3529-to-release-0.30v3
+    
+    [release-0.30] Enable Secure Boot by default when EFI is enabled
+
+commit 95d578273dc47bdb8e1b92bc5d04b9b243c26d01
+Author: Jed Lejosne <jed@redhat.com>
+Date:   Mon Jun 8 10:29:47 2020 -0400
+
+    Enable Secure Boot by default when EFI is enabled
+    
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+    (cherry picked from commit aa144fedd101202997427d17ac8d3624cf08f54d)
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+
+commit 817402940199fcde5b83e78872e702e3a038e961
+Merge: bf49699dd 579b3d10f
+Author: kubevirt-bot <rmohr+kubebot@redhat.com>
+Date:   Thu Jul 2 04:26:50 2020 +0200
+
+    Merge pull request #3710 from kubevirt-bot/cherry-pick-3470-to-release-0.30
+    
+    [release-0.30] Add a functional test and example VMI for EFI Secure Boot
+
+commit debf82b1fa827fd4f8630135b438cc333a278654
+Merge: ac98c6b52 91c0483ee
+Author: kubevirt-bot <rmohr+kubebot@redhat.com>
+Date:   Tue Jun 30 12:20:49 2020 +0200
+
+    Merge pull request #3716 from kbidarkar/secureboot_testid
+    
+    Add test-id for EFI secure boot test
+
+commit 91c0483eefebeddec416ec70e46a40292f17da58
+Author: Kedar Bidarkar <kbidarka@redhat.com>
+Date:   Tue Jun 30 01:35:01 2020 +0530
+
+    Add test-id for EFI secure boot test
+    
+    Signed-off-by: Kedar Bidarkar <kbidarka@redhat.com>
+
+commit 579b3d10f6a112bec56a99e0f3544792925d7898
+Author: Jed Lejosne <jed@redhat.com>
+Date:   Tue May 26 15:21:56 2020 -0400
+
+    Add a functional test and example VMI for EFI Secure Boot The test uses a new containerdisk, based on MicroLiveCD
+    
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+
+commit b8543ba8217a93be3cd0537442e7ff16c4979c5a
+Merge: d036d9d83 aa144fedd
+Author: kubevirt-bot <rmohr+kubebot@redhat.com>
+Date:   Sun Jun 21 20:03:43 2020 +0200
+
+    Merge pull request #3529 from jean-edouard/defaulttosb
+    
+    Enable Secure Boot by default when EFI is enabled
+
+commit aa144fedd101202997427d17ac8d3624cf08f54d
+Author: Jed Lejosne <jed@redhat.com>
+Date:   Mon Jun 8 10:29:47 2020 -0400
+
+    Enable Secure Boot by default when EFI is enabled
+    
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+
+commit b4a1e0a21c970d7f323b5838181170284dae40b7
+Merge: c5656f9e0 9861b57d3
+Author: kubevirt-bot <rmohr+kubebot@redhat.com>
+Date:   Sun Jun 7 06:47:37 2020 +0200
+
+    Merge pull request #3470 from jean-edouard/microlivecd
+    
+    Add a functional test and example VMI for EFI Secure Boot
+
+commit 9861b57d31a3bccea2496e7092cd60d888623266
+Author: Jed Lejosne <jed@redhat.com>
+Date:   Tue May 26 15:21:56 2020 -0400
+
+    Add a functional test and example VMI for EFI Secure Boot
+    The test uses a new containerdisk, based on MicroLiveCD
+    
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+
+commit 5de00f252e978fc312dfa2573110ca59da9d998d
+Merge: 4fca264b1 bad13d698
+Author: kubevirt-bot <rmohr+kubebot@redhat.com>
+Date:   Fri May 15 16:31:26 2020 +0200
+
+    Merge pull request #3079 from jean-edouard/secureboot
+    
+    Add secureBoot EFI flag
+
+commit d77e9327480f462a3f5a13abe9d695adc1af4d82
+Author: Jed Lejosne <jed@redhat.com>
+Date:   Thu Feb 13 15:43:59 2020 -0500
+
+    Add test and validation for EFI SecureBoot
+    
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+
+commit 9b5616cb416376981415bf7ec1b0b3bc9a242ec2
+Author: Jed Lejosne <jed@redhat.com>
+Date:   Mon Feb 10 16:50:07 2020 -0500
+
+    Add support for EFI SecureBoot.
+    When SecureBoot is enabled:
+    - Pass the option to libvirt
+    - Use the SecureBoot-enabled OVMF roms (/usr/share/OVMF/OVMF_*.secboot.fd)
+    
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+
+commit a2b7fa740af9e75c76fe9ae34fb983a07be58935
+Merge: 8b12c4120 c0c8daf19
+Author: David Vossel <davidvossel@gmail.com>
+Date:   Wed Jan 30 13:56:27 2019 -0500
+
+    Merge pull request #1814 from gaahrdner/add-uefi-support
+    
+    Initial EFI support
+
+commit 20c07c426c7b4ed95d64ea7d741ccba9a2dafaae
+Author: David Vossel <davidvossel@gmail.com>
+Date:   Fri Jan 25 15:27:10 2019 -0500
+
+    Give EFI test VMIs more memory
+    
+    Signed-off-by: David Vossel <davidvossel@gmail.com>
+
+commit d6fbaa47ac820459287c9beaf4f05ab490479c71
+Author: gaahrdner <github@philipgardner.com>
+Date:   Thu Jan 24 18:44:18 2019 -0600
+
+    Add working Cirros EFI example.
+
+commit 1d61008e7893695454c48d5ee6ca1cb917d469de
+Author: gaahrdner <github@philipgardner.com>
+Date:   Fri Dec 21 12:59:27 2018 -0600
+
+    Add functional test for EFI non-secure booting.
+    
+    Add switch for EFI path based on `secure` parameter.
+
+commit 231727ca3aca723ad80d971d223b2ebdd95d3cde
+Author: Justin Barrick <jbarrick@cloudflare.com>
+Date:   Mon Dec 17 16:30:24 2018 -0800
+
+    Add tests for EFI support.
+
+commit ab38d2a8d999bee1e165903758b19aefd7555f15
+Author: gaahrdner <github@philipgardner.com>
+Date:   Wed Dec 5 11:30:34 2018 -0600
+
+    Initial EFI support
+

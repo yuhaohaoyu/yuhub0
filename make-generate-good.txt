@@ -1,0 +1,1460 @@
+hack/dockerized "DOCKER_PREFIX= DOCKER_TAG= IMAGE_PULL_POLICY= VERBOSITY= ./hack/generate.sh"
+selecting docker as container runtime
+go version go1.13.14 linux/amd64
+
+go version go1.13.14 linux/amd64
+openapi generated
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,CPU,Features
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,DHCPOptions,NTPServers
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,DHCPOptions,PrivateOptions
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,DeveloperConfiguration,FeatureGates
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,Devices,Disks
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,Devices,GPUs
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,Devices,Inputs
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,Devices,Interfaces
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,Interface,Ports
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,KubeVirtConfiguration,EmulatedMachines
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,KubeVirtConfiguration,SupportedGuestAgentVersions
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,KubeVirtList,Items
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,KubeVirtStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceFileSystemInfo,Filesystems
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceFileSystemList,Items
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceGuestAgentInfo,UserList
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceGuestOSUserList,Items
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceList,Items
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceMigrationList,Items
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceMigrationStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceNetworkInterface,IPs
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstancePresetList,Items
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceReplicaSetList,Items
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceReplicaSetStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceSpec,Networks
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceSpec,Tolerations
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceSpec,Volumes
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceStatus,Interfaces
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineList,Items
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineSpec,DataVolumeTemplates
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineStatus,StateChangeRequests
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,CDRomTarget,ReadOnly
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,CPU,DedicatedCPUPlacement
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,CloudInitConfigDriveSource,UserDataSecretRef
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,CloudInitNoCloudSource,UserDataSecretRef
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,DeveloperConfiguration,LessPVCSpaceToleration
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,Devices,GPUs
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,Devices,NetworkInterfaceMultiQueue
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,DiskDevice,CDRom
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,DiskTarget,ReadOnly
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,FeatureHyperv,SyNIC
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,FeatureHyperv,SyNICTimer
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,FeatureHyperv,TLBFlush
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,FeatureHyperv,VPIndex
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,FeatureHyperv,VendorID
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,FeatureSpinlocks,Retries
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,FeatureVendorID,VendorID
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,FloppyTarget,ReadOnly
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,HPETTimer,Enabled
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,HypervTimer,Enabled
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,KVMTimer,Enabled
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,KubeVirtConfiguration,MigrationConfiguration
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,KubeVirtConfiguration,NetworkConfiguration
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,KubeVirtConfiguration,SELinuxLauncherType
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,KubeVirtConfiguration,SMBIOSConfig
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,KubeVirtSpec,CertificateRotationStrategy
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,LunTarget,ReadOnly
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,NetworkConfiguration,NetworkInterface
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,PITTimer,Enabled
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,RTCTimer,Enabled
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceFileSystemInfo,Filesystems
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceGuestAgentInfo,GAVersion
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceGuestOSInfo,VersionID
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceMigrationState,MigrationUID
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceNetworkInterface,IP
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,VirtualMachineInstanceNetworkInterface,IPs
+API rule violation: names_match,kubevirt.io/kubevirt/staging/src/kubevirt.io/client-go/api/v1,WatchdogDevice,I6300ESB
+API rule violation: list_type_missing,k8s.io/api/core/v1,AvoidPods,PreferAvoidPods
+API rule violation: list_type_missing,k8s.io/api/core/v1,Capabilities,Add
+API rule violation: list_type_missing,k8s.io/api/core/v1,Capabilities,Drop
+API rule violation: list_type_missing,k8s.io/api/core/v1,CephFSPersistentVolumeSource,Monitors
+API rule violation: list_type_missing,k8s.io/api/core/v1,CephFSVolumeSource,Monitors
+API rule violation: list_type_missing,k8s.io/api/core/v1,ComponentStatus,Conditions
+API rule violation: list_type_missing,k8s.io/api/core/v1,ComponentStatusList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,ConfigMapList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,ConfigMapProjection,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,ConfigMapVolumeSource,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,Container,Args
+API rule violation: list_type_missing,k8s.io/api/core/v1,Container,Command
+API rule violation: list_type_missing,k8s.io/api/core/v1,Container,Env
+API rule violation: list_type_missing,k8s.io/api/core/v1,Container,EnvFrom
+API rule violation: list_type_missing,k8s.io/api/core/v1,Container,VolumeDevices
+API rule violation: list_type_missing,k8s.io/api/core/v1,Container,VolumeMounts
+API rule violation: list_type_missing,k8s.io/api/core/v1,ContainerImage,Names
+API rule violation: list_type_missing,k8s.io/api/core/v1,DownwardAPIProjection,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,DownwardAPIVolumeSource,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,EndpointSubset,Addresses
+API rule violation: list_type_missing,k8s.io/api/core/v1,EndpointSubset,NotReadyAddresses
+API rule violation: list_type_missing,k8s.io/api/core/v1,EndpointSubset,Ports
+API rule violation: list_type_missing,k8s.io/api/core/v1,Endpoints,Subsets
+API rule violation: list_type_missing,k8s.io/api/core/v1,EndpointsList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,EphemeralContainerCommon,Args
+API rule violation: list_type_missing,k8s.io/api/core/v1,EphemeralContainerCommon,Command
+API rule violation: list_type_missing,k8s.io/api/core/v1,EphemeralContainerCommon,Env
+API rule violation: list_type_missing,k8s.io/api/core/v1,EphemeralContainerCommon,EnvFrom
+API rule violation: list_type_missing,k8s.io/api/core/v1,EphemeralContainerCommon,Ports
+API rule violation: list_type_missing,k8s.io/api/core/v1,EphemeralContainerCommon,VolumeDevices
+API rule violation: list_type_missing,k8s.io/api/core/v1,EphemeralContainerCommon,VolumeMounts
+API rule violation: list_type_missing,k8s.io/api/core/v1,EphemeralContainers,EphemeralContainers
+API rule violation: list_type_missing,k8s.io/api/core/v1,EventList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,ExecAction,Command
+API rule violation: list_type_missing,k8s.io/api/core/v1,FCVolumeSource,TargetWWNs
+API rule violation: list_type_missing,k8s.io/api/core/v1,FCVolumeSource,WWIDs
+API rule violation: list_type_missing,k8s.io/api/core/v1,HTTPGetAction,HTTPHeaders
+API rule violation: list_type_missing,k8s.io/api/core/v1,HostAlias,Hostnames
+API rule violation: list_type_missing,k8s.io/api/core/v1,ISCSIPersistentVolumeSource,Portals
+API rule violation: list_type_missing,k8s.io/api/core/v1,ISCSIVolumeSource,Portals
+API rule violation: list_type_missing,k8s.io/api/core/v1,LimitRangeList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,LimitRangeSpec,Limits
+API rule violation: list_type_missing,k8s.io/api/core/v1,List,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,LoadBalancerStatus,Ingress
+API rule violation: list_type_missing,k8s.io/api/core/v1,NamespaceList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,NamespaceSpec,Finalizers
+API rule violation: list_type_missing,k8s.io/api/core/v1,NamespaceStatus,Conditions
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeAffinity,PreferredDuringSchedulingIgnoredDuringExecution
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeSelector,NodeSelectorTerms
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeSelectorRequirement,Values
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeSelectorTerm,MatchExpressions
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeSelectorTerm,MatchFields
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeSpec,PodCIDRs
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeSpec,Taints
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeStatus,Addresses
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeStatus,Conditions
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeStatus,Images
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeStatus,VolumesAttached
+API rule violation: list_type_missing,k8s.io/api/core/v1,NodeStatus,VolumesInUse
+API rule violation: list_type_missing,k8s.io/api/core/v1,PersistentVolumeClaimList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,PersistentVolumeClaimSpec,AccessModes
+API rule violation: list_type_missing,k8s.io/api/core/v1,PersistentVolumeClaimStatus,AccessModes
+API rule violation: list_type_missing,k8s.io/api/core/v1,PersistentVolumeClaimStatus,Conditions
+API rule violation: list_type_missing,k8s.io/api/core/v1,PersistentVolumeList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,PersistentVolumeSpec,AccessModes
+API rule violation: list_type_missing,k8s.io/api/core/v1,PersistentVolumeSpec,MountOptions
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodAffinity,PreferredDuringSchedulingIgnoredDuringExecution
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodAffinity,RequiredDuringSchedulingIgnoredDuringExecution
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodAffinityTerm,Namespaces
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodAntiAffinity,PreferredDuringSchedulingIgnoredDuringExecution
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodAntiAffinity,RequiredDuringSchedulingIgnoredDuringExecution
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodDNSConfig,Nameservers
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodDNSConfig,Options
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodDNSConfig,Searches
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodExecOptions,Command
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodPortForwardOptions,Ports
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodSecurityContext,SupplementalGroups
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodSecurityContext,Sysctls
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodSpec,Containers
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodSpec,EphemeralContainers
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodSpec,HostAliases
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodSpec,ImagePullSecrets
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodSpec,InitContainers
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodSpec,ReadinessGates
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodSpec,Tolerations
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodSpec,Volumes
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodStatus,Conditions
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodStatus,ContainerStatuses
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodStatus,EphemeralContainerStatuses
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodStatus,InitContainerStatuses
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodStatus,PodIPs
+API rule violation: list_type_missing,k8s.io/api/core/v1,PodTemplateList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,ProjectedVolumeSource,Sources
+API rule violation: list_type_missing,k8s.io/api/core/v1,RBDPersistentVolumeSource,CephMonitors
+API rule violation: list_type_missing,k8s.io/api/core/v1,RBDVolumeSource,CephMonitors
+API rule violation: list_type_missing,k8s.io/api/core/v1,RangeAllocation,Data
+API rule violation: list_type_missing,k8s.io/api/core/v1,ReplicationControllerList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,ReplicationControllerStatus,Conditions
+API rule violation: list_type_missing,k8s.io/api/core/v1,ResourceQuotaList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,ResourceQuotaSpec,Scopes
+API rule violation: list_type_missing,k8s.io/api/core/v1,ScopeSelector,MatchExpressions
+API rule violation: list_type_missing,k8s.io/api/core/v1,ScopedResourceSelectorRequirement,Values
+API rule violation: list_type_missing,k8s.io/api/core/v1,SecretList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,SecretProjection,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,SecretVolumeSource,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,ServiceAccount,ImagePullSecrets
+API rule violation: list_type_missing,k8s.io/api/core/v1,ServiceAccount,Secrets
+API rule violation: list_type_missing,k8s.io/api/core/v1,ServiceAccountList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,ServiceList,Items
+API rule violation: list_type_missing,k8s.io/api/core/v1,ServiceSpec,ExternalIPs
+API rule violation: list_type_missing,k8s.io/api/core/v1,ServiceSpec,LoadBalancerSourceRanges
+API rule violation: list_type_missing,k8s.io/api/core/v1,TopologySelectorLabelRequirement,Values
+API rule violation: list_type_missing,k8s.io/api/core/v1,TopologySelectorTerm,MatchLabelExpressions
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,APIGroup,ServerAddressByClientCIDRs
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,APIGroup,Versions
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,APIGroupList,Groups
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,APIResource,Categories
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,APIResource,ShortNames
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,APIResourceList,APIResources
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,APIVersions,ServerAddressByClientCIDRs
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,APIVersions,Versions
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,CreateOptions,DryRun
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,DeleteOptions,DryRun
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,FieldsV1,Raw
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,LabelSelector,MatchExpressions
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,LabelSelectorRequirement,Values
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,List,Items
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,ObjectMeta,Finalizers
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,ObjectMeta,ManagedFields
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,ObjectMeta,OwnerReferences
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,PartialObjectMetadataList,Items
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,PatchOptions,DryRun
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,RootPaths,Paths
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,StatusDetails,Causes
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,Table,ColumnDefinitions
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,Table,Rows
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,TableRow,Cells
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,TableRow,Conditions
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/apis/meta/v1,UpdateOptions,DryRun
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/runtime,RawExtension,Raw
+API rule violation: list_type_missing,k8s.io/apimachinery/pkg/runtime,Unknown,Raw
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,CPU,Features
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,DHCPOptions,NTPServers
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,DHCPOptions,PrivateOptions
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,DeveloperConfiguration,FeatureGates
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,Devices,Disks
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,Devices,GPUs
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,Devices,Inputs
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,Devices,Interfaces
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,Interface,Ports
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,KubeVirtConfiguration,EmulatedMachines
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,KubeVirtConfiguration,SupportedGuestAgentVersions
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,KubeVirtList,Items
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,KubeVirtStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceFileSystemInfo,Filesystems
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceFileSystemList,Items
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceGuestAgentInfo,UserList
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceGuestOSUserList,Items
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceList,Items
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceMigrationList,Items
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceMigrationStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceNetworkInterface,IPs
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstancePresetList,Items
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceReplicaSetList,Items
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceReplicaSetStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceSpec,Networks
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceSpec,Tolerations
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceSpec,Volumes
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineInstanceStatus,Interfaces
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineList,Items
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineSpec,DataVolumeTemplates
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/client-go/api/v1,VirtualMachineStatus,StateChangeRequests
+API rule violation: list_type_missing,kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1,CDIConfigList,Items
+API rule violation: list_type_missing,kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1,CDIList,Items
+API rule violation: list_type_missing,kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1,CDIStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1,DataVolumeList,Items
+API rule violation: list_type_missing,kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1,DataVolumeStatus,Conditions
+API rule violation: list_type_missing,kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1,NodePlacement,Tolerations
+API rule violation: names_match,k8s.io/api/core/v1,AzureDiskVolumeSource,DataDiskURI
+API rule violation: names_match,k8s.io/api/core/v1,ContainerStatus,LastTerminationState
+API rule violation: names_match,k8s.io/api/core/v1,DaemonEndpoint,Port
+API rule violation: names_match,k8s.io/api/core/v1,Event,ReportingController
+API rule violation: names_match,k8s.io/api/core/v1,FCVolumeSource,WWIDs
+API rule violation: names_match,k8s.io/api/core/v1,GlusterfsPersistentVolumeSource,EndpointsName
+API rule violation: names_match,k8s.io/api/core/v1,GlusterfsVolumeSource,EndpointsName
+API rule violation: names_match,k8s.io/api/core/v1,ISCSIPersistentVolumeSource,DiscoveryCHAPAuth
+API rule violation: names_match,k8s.io/api/core/v1,ISCSIPersistentVolumeSource,SessionCHAPAuth
+API rule violation: names_match,k8s.io/api/core/v1,ISCSIVolumeSource,DiscoveryCHAPAuth
+API rule violation: names_match,k8s.io/api/core/v1,ISCSIVolumeSource,SessionCHAPAuth
+API rule violation: names_match,k8s.io/api/core/v1,NodeResources,Capacity
+API rule violation: names_match,k8s.io/api/core/v1,NodeSpec,DoNotUse_ExternalID
+API rule violation: names_match,k8s.io/api/core/v1,PersistentVolumeSource,CephFS
+API rule violation: names_match,k8s.io/api/core/v1,PersistentVolumeSource,StorageOS
+API rule violation: names_match,k8s.io/api/core/v1,PodSpec,DeprecatedServiceAccount
+API rule violation: names_match,k8s.io/api/core/v1,RBDPersistentVolumeSource,CephMonitors
+API rule violation: names_match,k8s.io/api/core/v1,RBDPersistentVolumeSource,RBDImage
+API rule violation: names_match,k8s.io/api/core/v1,RBDPersistentVolumeSource,RBDPool
+API rule violation: names_match,k8s.io/api/core/v1,RBDPersistentVolumeSource,RadosUser
+API rule violation: names_match,k8s.io/api/core/v1,RBDVolumeSource,CephMonitors
+API rule violation: names_match,k8s.io/api/core/v1,RBDVolumeSource,RBDImage
+API rule violation: names_match,k8s.io/api/core/v1,RBDVolumeSource,RBDPool
+API rule violation: names_match,k8s.io/api/core/v1,RBDVolumeSource,RadosUser
+API rule violation: names_match,k8s.io/api/core/v1,VolumeSource,CephFS
+API rule violation: names_match,k8s.io/api/core/v1,VolumeSource,StorageOS
+API rule violation: names_match,k8s.io/apimachinery/pkg/api/resource,Quantity,Format
+API rule violation: names_match,k8s.io/apimachinery/pkg/api/resource,Quantity,d
+API rule violation: names_match,k8s.io/apimachinery/pkg/api/resource,Quantity,i
+API rule violation: names_match,k8s.io/apimachinery/pkg/api/resource,Quantity,s
+API rule violation: names_match,k8s.io/apimachinery/pkg/api/resource,int64Amount,scale
+API rule violation: names_match,k8s.io/apimachinery/pkg/api/resource,int64Amount,value
+API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,APIResourceList,APIResources
+API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,Duration,Duration
+API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,InternalEvent,Object
+API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,InternalEvent,Type
+API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,MicroTime,Time
+API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,StatusCause,Type
+API rule violation: names_match,k8s.io/apimachinery/pkg/apis/meta/v1,Time,Time
+API rule violation: names_match,k8s.io/apimachinery/pkg/runtime,Unknown,ContentEncoding
+API rule violation: names_match,k8s.io/apimachinery/pkg/runtime,Unknown,ContentType
+API rule violation: names_match,k8s.io/apimachinery/pkg/runtime,Unknown,Raw
+API rule violation: names_match,k8s.io/apimachinery/pkg/util/intstr,IntOrString,IntVal
+API rule violation: names_match,k8s.io/apimachinery/pkg/util/intstr,IntOrString,StrVal
+API rule violation: names_match,k8s.io/apimachinery/pkg/util/intstr,IntOrString,Type
+API rule violation: names_match,kubevirt.io/client-go/api/v1,CDRomTarget,ReadOnly
+API rule violation: names_match,kubevirt.io/client-go/api/v1,CPU,DedicatedCPUPlacement
+API rule violation: names_match,kubevirt.io/client-go/api/v1,CloudInitConfigDriveSource,UserDataSecretRef
+API rule violation: names_match,kubevirt.io/client-go/api/v1,CloudInitNoCloudSource,UserDataSecretRef
+API rule violation: names_match,kubevirt.io/client-go/api/v1,DeveloperConfiguration,LessPVCSpaceToleration
+API rule violation: names_match,kubevirt.io/client-go/api/v1,Devices,GPUs
+API rule violation: names_match,kubevirt.io/client-go/api/v1,Devices,NetworkInterfaceMultiQueue
+API rule violation: names_match,kubevirt.io/client-go/api/v1,DiskDevice,CDRom
+API rule violation: names_match,kubevirt.io/client-go/api/v1,DiskTarget,ReadOnly
+API rule violation: names_match,kubevirt.io/client-go/api/v1,FeatureHyperv,SyNIC
+API rule violation: names_match,kubevirt.io/client-go/api/v1,FeatureHyperv,SyNICTimer
+API rule violation: names_match,kubevirt.io/client-go/api/v1,FeatureHyperv,TLBFlush
+API rule violation: names_match,kubevirt.io/client-go/api/v1,FeatureHyperv,VPIndex
+API rule violation: names_match,kubevirt.io/client-go/api/v1,FeatureHyperv,VendorID
+API rule violation: names_match,kubevirt.io/client-go/api/v1,FeatureSpinlocks,Retries
+API rule violation: names_match,kubevirt.io/client-go/api/v1,FeatureVendorID,VendorID
+API rule violation: names_match,kubevirt.io/client-go/api/v1,FloppyTarget,ReadOnly
+API rule violation: names_match,kubevirt.io/client-go/api/v1,HPETTimer,Enabled
+API rule violation: names_match,kubevirt.io/client-go/api/v1,HypervTimer,Enabled
+API rule violation: names_match,kubevirt.io/client-go/api/v1,KVMTimer,Enabled
+API rule violation: names_match,kubevirt.io/client-go/api/v1,KubeVirtConfiguration,MigrationConfiguration
+API rule violation: names_match,kubevirt.io/client-go/api/v1,KubeVirtConfiguration,NetworkConfiguration
+API rule violation: names_match,kubevirt.io/client-go/api/v1,KubeVirtConfiguration,SELinuxLauncherType
+API rule violation: names_match,kubevirt.io/client-go/api/v1,KubeVirtConfiguration,SMBIOSConfig
+API rule violation: names_match,kubevirt.io/client-go/api/v1,KubeVirtSpec,CertificateRotationStrategy
+API rule violation: names_match,kubevirt.io/client-go/api/v1,LunTarget,ReadOnly
+API rule violation: names_match,kubevirt.io/client-go/api/v1,NetworkConfiguration,NetworkInterface
+API rule violation: names_match,kubevirt.io/client-go/api/v1,PITTimer,Enabled
+API rule violation: names_match,kubevirt.io/client-go/api/v1,RTCTimer,Enabled
+API rule violation: names_match,kubevirt.io/client-go/api/v1,VirtualMachineInstanceFileSystemInfo,Filesystems
+API rule violation: names_match,kubevirt.io/client-go/api/v1,VirtualMachineInstanceGuestAgentInfo,GAVersion
+API rule violation: names_match,kubevirt.io/client-go/api/v1,VirtualMachineInstanceGuestOSInfo,VersionID
+API rule violation: names_match,kubevirt.io/client-go/api/v1,VirtualMachineInstanceMigrationState,MigrationUID
+API rule violation: names_match,kubevirt.io/client-go/api/v1,VirtualMachineInstanceNetworkInterface,IP
+API rule violation: names_match,kubevirt.io/client-go/api/v1,VirtualMachineInstanceNetworkInterface,IPs
+API rule violation: names_match,kubevirt.io/client-go/api/v1,WatchdogDevice,I6300ESB
+API rule violation: names_match,kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1,CDISpec,Workloads
+API rule violation: names_match,kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1,DataVolumeSourceImageIO,DiskID
+2020/10/08 02:46:33 WARNING: proto: file "api.proto" is already registered
+A future release will panic on registration conflicts. See:
+https://developers.google.com/protocol-buffers/docs/reference/go/faq#namespace-conflict
+
+2020/10/08 02:46:33 WARNING: proto: file "api.proto" is already registered
+A future release will panic on registration conflicts. See:
+https://developers.google.com/protocol-buffers/docs/reference/go/faq#namespace-conflict
+
+2020/10/08 02:46:53 WARNING: proto: file "api.proto" is already registered
+A future release will panic on registration conflicts. See:
+https://developers.google.com/protocol-buffers/docs/reference/go/faq#namespace-conflict
+
+2020/10/08 02:46:53 WARNING: proto: file "api.proto" is already registered
+A future release will panic on registration conflicts. See:
+https://developers.google.com/protocol-buffers/docs/reference/go/faq#namespace-conflict
+
+{"component":"","level":"info","msg":"Updating cluster config from ConfigMap to resource version 'pwr68n2fs7'","pos":"config-map.go:472","timestamp":"2020-10-08T02:46:53.780055Z"}
+SYNC_VENDOR=true hack/dockerized "./hack/bazel-generate.sh && hack/bazel-fmt.sh"
+selecting docker as container runtime
+go version go1.13.14 linux/amd64
+
+go version go1.13.14 linux/amd64
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:gazelle (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:gazelle (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:gazelle up-to-date:
+  bazel-bin/gazelle-runner.bash
+  bazel-bin/gazelle
+INFO: Elapsed time: 0.740s, Critical Path: 0.42s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/gazelle -bazel_run -exclude vendor/google.golang.org/grpc --exclude cluster-up
+INFO: Build completed successfully, 1 total action
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/callbacks_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/callbacks_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/connect.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/connect.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/connect_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/connect_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_checkpoint.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_checkpoint.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_checkpoint_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_checkpoint_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_events.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_events.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_events_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_events_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_snapshot.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_snapshot.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_snapshot_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_snapshot_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/domain_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/error.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/error.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/events.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/events.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/events_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/events_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/interface.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/interface.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/interface_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/interface_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/lxc.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/lxc.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/lxc_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/lxc_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network_events.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network_events.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network_events_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network_events_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network_port.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network_port.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network_port_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network_port_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/network_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/node_device.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/node_device.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/node_device_events.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/node_device_events.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/node_device_events_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/node_device_events_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/node_device_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/node_device_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/nwfilter.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/nwfilter.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/nwfilter_binding.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/nwfilter_binding.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/nwfilter_binding_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/nwfilter_binding_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/nwfilter_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/nwfilter_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/qemu.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/qemu.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/qemu_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/qemu_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/secret.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/secret.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/secret_events.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/secret_events.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/secret_events_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/secret_events_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/secret_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/secret_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_pool.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_pool.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_pool_events.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_pool_events.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_pool_events_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_pool_events_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_pool_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_pool_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_volume.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_volume.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_volume_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/storage_volume_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/stream.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/stream.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/stream_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/stream_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/typedparams.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/typedparams.go: pkg-config not supported: #cgo pkg-config: libvirt
+gazelle: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/typedparams_wrapper.go: error reading go file: /root/go/src/kubevirt.io/kubevirt/vendor/libvirt.org/libvirt-go/typedparams_wrapper.go: pkg-config not supported: #cgo pkg-config: libvirt
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target @com_github_bazelbuild_buildtools//buildozer:buildozer (0 packages loaded, 0 targets configured)
+INFO: Analyzed target @com_github_bazelbuild_buildtools//buildozer:buildozer (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target @com_github_bazelbuild_buildtools//buildozer:buildozer up-to-date:
+  bazel-bin/external/com_github_bazelbuild_buildtools/buildozer/buildozer_/buildozer
+INFO: Elapsed time: 0.342s, Critical Path: 0.07s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/external/com_github_bazelbuild_buildtools/buildozer/buildozer_/buildozer 'add cdeps //:libvirt-libs //:libvirt-headers' //vendor/libvirt.org/libvirt-go:go_default_library
+INFO: Build completed successfully, 1 total action
+fixed /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/execroot/__main__/vendor/libvirt.org/libvirt-go/BUILD.bazel
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target @com_github_bazelbuild_buildtools//buildozer:buildozer (0 packages loaded, 0 targets configured)
+INFO: Analyzed target @com_github_bazelbuild_buildtools//buildozer:buildozer (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target @com_github_bazelbuild_buildtools//buildozer:buildozer up-to-date:
+  bazel-bin/external/com_github_bazelbuild_buildtools/buildozer/buildozer_/buildozer
+INFO: Elapsed time: 0.375s, Critical Path: 0.07s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/external/com_github_bazelbuild_buildtools/buildozer/buildozer_/buildozer 'add copts -Ibazel-out/k8-fastbuild/bin' //vendor/libvirt.org/libvirt-go:go_default_library
+INFO: Build completed successfully, 1 total action
+fixed /root/.cache/bazel/_bazel_root/6f347497f91c9a385dcd9294645b76e0/execroot/__main__/vendor/libvirt.org/libvirt-go/BUILD.bazel
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target @com_github_bazelbuild_buildtools//buildozer:buildozer (0 packages loaded, 0 targets configured)
+INFO: Analyzed target @com_github_bazelbuild_buildtools//buildozer:buildozer (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target @com_github_bazelbuild_buildtools//buildozer:buildozer up-to-date:
+  bazel-bin/external/com_github_bazelbuild_buildtools/buildozer/buildozer_/buildozer
+INFO: Elapsed time: 0.317s, Critical Path: 0.07s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/external/com_github_bazelbuild_buildtools/buildozer/buildozer_/buildozer 'add copts -Ibazel-out/k8-fastbuild/bin' //vendor/libvirt.org/libvirt-go:go_default_library
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:buildifier (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:buildifier (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:buildifier up-to-date:
+  bazel-bin/buildifier.bash
+INFO: Elapsed time: 0.304s, Critical Path: 0.06s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/buildifier.bash
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:gazelle (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:gazelle (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:gazelle up-to-date:
+  bazel-bin/gazelle-runner.bash
+  bazel-bin/gazelle
+INFO: Elapsed time: 0.324s, Critical Path: 0.06s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/gazelle -bazel_run pkg/ tools/ tests/ cmd/
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:goimports (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:goimports (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:goimports up-to-date:
+  bazel-bin/goimports.bash
+INFO: Elapsed time: 0.341s, Critical Path: 0.06s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/goimports.bash
+INFO: Build completed successfully, 1 total action
+diff -u ./pkg/handler-launcher-com/cmd/info/info.pb.go.orig ./pkg/handler-launcher-com/cmd/info/info.pb.go
+--- ./pkg/handler-launcher-com/cmd/info/info.pb.go.orig	2020-10-08 02:47:12.942460292 +0000
++++ ./pkg/handler-launcher-com/cmd/info/info.pb.go	2020-10-08 02:47:12.942460292 +0000
+@@ -13,12 +13,15 @@
+ */
+ package info
+ 
+-import proto "github.com/golang/protobuf/proto"
+-import fmt "fmt"
+-import math "math"
+-
+ import (
++	fmt "fmt"
++
++	proto "github.com/golang/protobuf/proto"
++
++	math "math"
++
+ 	context "golang.org/x/net/context"
++
+ 	grpc "google.golang.org/grpc"
+ )
+ 
+diff -u ./pkg/handler-launcher-com/cmd/v1/cmd.pb.go.orig ./pkg/handler-launcher-com/cmd/v1/cmd.pb.go
+--- ./pkg/handler-launcher-com/cmd/v1/cmd.pb.go.orig	2020-10-08 02:47:12.967461158 +0000
++++ ./pkg/handler-launcher-com/cmd/v1/cmd.pb.go	2020-10-08 02:47:12.967461158 +0000
+@@ -23,12 +23,15 @@
+ */
+ package v1
+ 
+-import proto "github.com/golang/protobuf/proto"
+-import fmt "fmt"
+-import math "math"
+-
+ import (
++	fmt "fmt"
++
++	proto "github.com/golang/protobuf/proto"
++
++	math "math"
++
+ 	context "golang.org/x/net/context"
++
+ 	grpc "google.golang.org/grpc"
+ )
+ 
+diff -u ./pkg/handler-launcher-com/notify/info/info.pb.go.orig ./pkg/handler-launcher-com/notify/info/info.pb.go
+--- ./pkg/handler-launcher-com/notify/info/info.pb.go.orig	2020-10-08 02:47:12.975461435 +0000
++++ ./pkg/handler-launcher-com/notify/info/info.pb.go	2020-10-08 02:47:12.975461435 +0000
+@@ -13,12 +13,15 @@
+ */
+ package info
+ 
+-import proto "github.com/golang/protobuf/proto"
+-import fmt "fmt"
+-import math "math"
+-
+ import (
++	fmt "fmt"
++
++	proto "github.com/golang/protobuf/proto"
++
++	math "math"
++
+ 	context "golang.org/x/net/context"
++
+ 	grpc "google.golang.org/grpc"
+ )
+ 
+diff -u ./pkg/handler-launcher-com/notify/v1/notify.pb.go.orig ./pkg/handler-launcher-com/notify/v1/notify.pb.go
+--- ./pkg/handler-launcher-com/notify/v1/notify.pb.go.orig	2020-10-08 02:47:12.983461712 +0000
++++ ./pkg/handler-launcher-com/notify/v1/notify.pb.go	2020-10-08 02:47:12.983461712 +0000
+@@ -14,12 +14,15 @@
+ */
+ package v1
+ 
+-import proto "github.com/golang/protobuf/proto"
+-import fmt "fmt"
+-import math "math"
+-
+ import (
++	fmt "fmt"
++
++	proto "github.com/golang/protobuf/proto"
++
++	math "math"
++
+ 	context "golang.org/x/net/context"
++
+ 	grpc "google.golang.org/grpc"
+ )
+ 
+diff -u ./pkg/hooks/info/api.pb.go.orig ./pkg/hooks/info/api.pb.go
+--- ./pkg/hooks/info/api.pb.go.orig	2020-10-08 02:47:12.991461989 +0000
++++ ./pkg/hooks/info/api.pb.go	2020-10-08 02:47:12.991461989 +0000
+@@ -14,12 +14,15 @@
+ */
+ package kubevirt_hooks_info
+ 
+-import proto "github.com/golang/protobuf/proto"
+-import fmt "fmt"
+-import math "math"
+-
+ import (
++	fmt "fmt"
++
++	proto "github.com/golang/protobuf/proto"
++
++	math "math"
++
+ 	context "golang.org/x/net/context"
++
+ 	grpc "google.golang.org/grpc"
+ )
+ 
+diff -u ./pkg/hooks/v1alpha1/api.pb.go.orig ./pkg/hooks/v1alpha1/api.pb.go
+--- ./pkg/hooks/v1alpha1/api.pb.go.orig	2020-10-08 02:47:12.997462197 +0000
++++ ./pkg/hooks/v1alpha1/api.pb.go	2020-10-08 02:47:12.997462197 +0000
+@@ -13,12 +13,15 @@
+ */
+ package kubevirt_hooks_v1alpha1
+ 
+-import proto "github.com/golang/protobuf/proto"
+-import fmt "fmt"
+-import math "math"
+-
+ import (
++	fmt "fmt"
++
++	proto "github.com/golang/protobuf/proto"
++
++	math "math"
++
+ 	context "golang.org/x/net/context"
++
+ 	grpc "google.golang.org/grpc"
+ )
+ 
+diff -u ./pkg/hooks/v1alpha2/api.pb.go.orig ./pkg/hooks/v1alpha2/api.pb.go
+--- ./pkg/hooks/v1alpha2/api.pb.go.orig	2020-10-08 02:47:13.003462405 +0000
++++ ./pkg/hooks/v1alpha2/api.pb.go	2020-10-08 02:47:13.003462405 +0000
+@@ -15,12 +15,15 @@
+ */
+ package kubevirt_hooks_v1alpha2
+ 
+-import proto "github.com/golang/protobuf/proto"
+-import fmt "fmt"
+-import math "math"
+-
+ import (
++	fmt "fmt"
++
++	proto "github.com/golang/protobuf/proto"
++
++	math "math"
++
+ 	context "golang.org/x/net/context"
++
+ 	grpc "google.golang.org/grpc"
+ )
+ 
+diff -u ./pkg/virt-handler/cmd-client/generated_mock_client.go.orig ./pkg/virt-handler/cmd-client/generated_mock_client.go
+--- ./pkg/virt-handler/cmd-client/generated_mock_client.go.orig	2020-10-08 02:47:14.318507959 +0000
++++ ./pkg/virt-handler/cmd-client/generated_mock_client.go	2020-10-08 02:47:14.318507959 +0000
+@@ -5,6 +5,7 @@
+ 
+ import (
+ 	gomock "github.com/golang/mock/gomock"
++
+ 	v1 "kubevirt.io/client-go/api/v1"
+ 	v10 "kubevirt.io/kubevirt/pkg/handler-launcher-com/cmd/v1"
+ 	api "kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/api"
+diff -u ./pkg/virt-handler/container-disk/generated_mock_mount.go.orig ./pkg/virt-handler/container-disk/generated_mock_mount.go
+--- ./pkg/virt-handler/container-disk/generated_mock_mount.go.orig	2020-10-08 02:47:14.333508479 +0000
++++ ./pkg/virt-handler/container-disk/generated_mock_mount.go	2020-10-08 02:47:14.333508479 +0000
+@@ -4,9 +4,11 @@
+ package container_disk
+ 
+ import (
++	time "time"
++
+ 	gomock "github.com/golang/mock/gomock"
++
+ 	v1 "kubevirt.io/client-go/api/v1"
+-	time "time"
+ )
+ 
+ // Mock of Mounter interface
+diff -u ./pkg/virt-handler/isolation/generated_mock_isolation.go.orig ./pkg/virt-handler/isolation/generated_mock_isolation.go
+--- ./pkg/virt-handler/isolation/generated_mock_isolation.go.orig	2020-10-08 02:47:14.415511319 +0000
++++ ./pkg/virt-handler/isolation/generated_mock_isolation.go	2020-10-08 02:47:14.415511319 +0000
+@@ -5,6 +5,7 @@
+ 
+ import (
+ 	gomock "github.com/golang/mock/gomock"
++
+ 	v1 "kubevirt.io/client-go/api/v1"
+ )
+ 
+diff -u ./pkg/virt-launcher/virtwrap/cli/generated_mock_libvirt.go.orig ./pkg/virt-launcher/virtwrap/cli/generated_mock_libvirt.go
+--- ./pkg/virt-launcher/virtwrap/cli/generated_mock_libvirt.go.orig	2020-10-08 02:47:14.808524934 +0000
++++ ./pkg/virt-launcher/virtwrap/cli/generated_mock_libvirt.go	2020-10-08 02:47:14.808524934 +0000
+@@ -5,8 +5,9 @@
+ 
+ import (
+ 	gomock "github.com/golang/mock/gomock"
+-	stats "kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/stats"
+ 	libvirt_go "libvirt.org/libvirt-go"
++
++	stats "kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/stats"
+ )
+ 
+ // Mock of Connection interface
+diff -u ./pkg/virt-launcher/virtwrap/network/generated_mock_common.go.orig ./pkg/virt-launcher/virtwrap/network/generated_mock_common.go
+--- ./pkg/virt-launcher/virtwrap/network/generated_mock_common.go.orig	2020-10-08 02:47:14.922528883 +0000
++++ ./pkg/virt-launcher/virtwrap/network/generated_mock_common.go	2020-10-08 02:47:14.922528883 +0000
+@@ -4,11 +4,13 @@
+ package network
+ 
+ import (
++	net "net"
++
+ 	iptables "github.com/coreos/go-iptables/iptables"
+ 	gomock "github.com/golang/mock/gomock"
+ 	netlink "github.com/vishvananda/netlink"
++
+ 	v1 "kubevirt.io/client-go/api/v1"
+-	net "net"
+ )
+ 
+ // Mock of NetworkHandler interface
+diff -u ./pkg/virt-launcher/virtwrap/network/generated_mock_network.go.orig ./pkg/virt-launcher/virtwrap/network/generated_mock_network.go
+--- ./pkg/virt-launcher/virtwrap/network/generated_mock_network.go.orig	2020-10-08 02:47:14.926529021 +0000
++++ ./pkg/virt-launcher/virtwrap/network/generated_mock_network.go	2020-10-08 02:47:14.926529021 +0000
+@@ -5,6 +5,7 @@
+ 
+ import (
+ 	gomock "github.com/golang/mock/gomock"
++
+ 	v1 "kubevirt.io/client-go/api/v1"
+ 	api "kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/api"
+ )
+diff -u ./pkg/virt-launcher/virtwrap/network/generated_mock_podinterface.go.orig ./pkg/virt-launcher/virtwrap/network/generated_mock_podinterface.go
+--- ./pkg/virt-launcher/virtwrap/network/generated_mock_podinterface.go.orig	2020-10-08 02:47:14.930529160 +0000
++++ ./pkg/virt-launcher/virtwrap/network/generated_mock_podinterface.go	2020-10-08 02:47:14.930529160 +0000
+@@ -5,6 +5,7 @@
+ 
+ import (
+ 	gomock "github.com/golang/mock/gomock"
++
+ 	v1 "kubevirt.io/client-go/api/v1"
+ )
+ 
+diff -u ./pkg/virt-launcher/virtwrap/generated_mock_manager.go.orig ./pkg/virt-launcher/virtwrap/generated_mock_manager.go
+--- ./pkg/virt-launcher/virtwrap/generated_mock_manager.go.orig	2020-10-08 02:47:15.018532208 +0000
++++ ./pkg/virt-launcher/virtwrap/generated_mock_manager.go	2020-10-08 02:47:15.018532208 +0000
+@@ -5,6 +5,7 @@
+ 
+ import (
+ 	gomock "github.com/golang/mock/gomock"
++
+ 	v1 "kubevirt.io/client-go/api/v1"
+ 	v10 "kubevirt.io/kubevirt/pkg/handler-launcher-com/cmd/v1"
+ 	cmd_client "kubevirt.io/kubevirt/pkg/virt-handler/cmd-client"
+diff -u ./staging/src/kubevirt.io/client-go/apis/snapshot/v1alpha1/deepcopy_generated.go.orig ./staging/src/kubevirt.io/client-go/apis/snapshot/v1alpha1/deepcopy_generated.go
+--- ./staging/src/kubevirt.io/client-go/apis/snapshot/v1alpha1/deepcopy_generated.go.orig	2020-10-08 02:47:16.433581227 +0000
++++ ./staging/src/kubevirt.io/client-go/apis/snapshot/v1alpha1/deepcopy_generated.go	2020-10-08 02:47:16.433581227 +0000
+@@ -23,6 +23,7 @@
+ import (
+ 	runtime "k8s.io/apimachinery/pkg/runtime"
+ 	types "k8s.io/apimachinery/pkg/types"
++
+ 	v1 "kubevirt.io/client-go/api/v1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/kubecli/generated_mock_kubevirt.go.orig ./staging/src/kubevirt.io/client-go/kubecli/generated_mock_kubevirt.go
+--- ./staging/src/kubevirt.io/client-go/kubecli/generated_mock_kubevirt.go.orig	2020-10-08 02:47:17.214608282 +0000
++++ ./staging/src/kubevirt.io/client-go/kubecli/generated_mock_kubevirt.go	2020-10-08 02:47:17.214608282 +0000
+@@ -50,6 +50,7 @@
+ 	v1alpha15 "k8s.io/client-go/kubernetes/typed/storage/v1alpha1"
+ 	v1beta113 "k8s.io/client-go/kubernetes/typed/storage/v1beta1"
+ 	rest "k8s.io/client-go/rest"
++
+ 	v114 "kubevirt.io/client-go/api/v1"
+ 	versioned "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned"
+ 	versioned0 "kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned"
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/clientset.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/clientset.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/clientset.go.orig	2020-10-08 02:47:17.318611885 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/clientset.go	2020-10-08 02:47:17.318611885 +0000
+@@ -24,6 +24,7 @@
+ 	discovery "k8s.io/client-go/discovery"
+ 	rest "k8s.io/client-go/rest"
+ 	flowcontrol "k8s.io/client-go/util/flowcontrol"
++
+ 	snapshotv1alpha1 "kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/scheme/register.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/scheme/register.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/scheme/register.go.orig	2020-10-08 02:47:17.322612024 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/scheme/register.go	2020-10-08 02:47:17.322612024 +0000
+@@ -24,6 +24,7 @@
+ 	schema "k8s.io/apimachinery/pkg/runtime/schema"
+ 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
+ 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
++
+ 	snapshotv1alpha1 "kubevirt.io/client-go/apis/snapshot/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/fake/register.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/fake/register.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/fake/register.go.orig	2020-10-08 02:47:17.325612128 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/fake/register.go	2020-10-08 02:47:17.325612128 +0000
+@@ -24,6 +24,7 @@
+ 	schema "k8s.io/apimachinery/pkg/runtime/schema"
+ 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
+ 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
++
+ 	snapshotv1alpha1 "kubevirt.io/client-go/apis/snapshot/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/fake/clientset_generated.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/fake/clientset_generated.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/fake/clientset_generated.go.orig	2020-10-08 02:47:17.328612231 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/fake/clientset_generated.go	2020-10-08 02:47:17.328612231 +0000
+@@ -24,6 +24,7 @@
+ 	"k8s.io/client-go/discovery"
+ 	fakediscovery "k8s.io/client-go/discovery/fake"
+ 	"k8s.io/client-go/testing"
++
+ 	clientset "kubevirt.io/client-go/generated/kubevirt/clientset/versioned"
+ 	snapshotv1alpha1 "kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1"
+ 	fakesnapshotv1alpha1 "kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake"
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinesnapshot.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinesnapshot.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinesnapshot.go.orig	2020-10-08 02:47:17.333612405 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinesnapshot.go	2020-10-08 02:47:17.333612405 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	v1alpha1 "kubevirt.io/client-go/apis/snapshot/v1alpha1"
+ 	scheme "kubevirt.io/client-go/generated/kubevirt/clientset/versioned/scheme"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinesnapshotcontent.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinesnapshotcontent.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinesnapshotcontent.go.orig	2020-10-08 02:47:17.342612716 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinesnapshotcontent.go	2020-10-08 02:47:17.342612716 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	v1alpha1 "kubevirt.io/client-go/apis/snapshot/v1alpha1"
+ 	scheme "kubevirt.io/client-go/generated/kubevirt/clientset/versioned/scheme"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/snapshot_client.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/snapshot_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/snapshot_client.go.orig	2020-10-08 02:47:17.347612890 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/snapshot_client.go	2020-10-08 02:47:17.347612890 +0000
+@@ -20,6 +20,7 @@
+ 
+ import (
+ 	rest "k8s.io/client-go/rest"
++
+ 	v1alpha1 "kubevirt.io/client-go/apis/snapshot/v1alpha1"
+ 	"kubevirt.io/client-go/generated/kubevirt/clientset/versioned/scheme"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinerestore.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinerestore.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinerestore.go.orig	2020-10-08 02:47:17.361613375 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/virtualmachinerestore.go	2020-10-08 02:47:17.361613375 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	v1alpha1 "kubevirt.io/client-go/apis/snapshot/v1alpha1"
+ 	scheme "kubevirt.io/client-go/generated/kubevirt/clientset/versioned/scheme"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_snapshot_client.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_snapshot_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_snapshot_client.go.orig	2020-10-08 02:47:17.371613721 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_snapshot_client.go	2020-10-08 02:47:17.371613721 +0000
+@@ -21,6 +21,7 @@
+ import (
+ 	rest "k8s.io/client-go/rest"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1alpha1 "kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinerestore.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinerestore.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinerestore.go.orig	2020-10-08 02:47:17.376613894 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinerestore.go	2020-10-08 02:47:17.376613894 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1alpha1 "kubevirt.io/client-go/apis/snapshot/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinesnapshot.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinesnapshot.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinesnapshot.go.orig	2020-10-08 02:47:17.380614033 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinesnapshot.go	2020-10-08 02:47:17.380614033 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1alpha1 "kubevirt.io/client-go/apis/snapshot/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinesnapshotcontent.go.orig ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinesnapshotcontent.go
+--- ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinesnapshotcontent.go.orig	2020-10-08 02:47:17.383614137 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/kubevirt/clientset/versioned/typed/snapshot/v1alpha1/fake/fake_virtualmachinesnapshotcontent.go	2020-10-08 02:47:17.383614137 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1alpha1 "kubevirt.io/client-go/apis/snapshot/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/clientset.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/clientset.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/clientset.go.orig	2020-10-08 02:47:17.386614241 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/clientset.go	2020-10-08 02:47:17.386614241 +0000
+@@ -24,6 +24,7 @@
+ 	discovery "k8s.io/client-go/discovery"
+ 	rest "k8s.io/client-go/rest"
+ 	flowcontrol "k8s.io/client-go/util/flowcontrol"
++
+ 	cdiv1alpha1 "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1"
+ 	uploadv1alpha1 "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/scheme/register.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/scheme/register.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/scheme/register.go.orig	2020-10-08 02:47:17.389614345 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/scheme/register.go	2020-10-08 02:47:17.389614345 +0000
+@@ -24,6 +24,7 @@
+ 	schema "k8s.io/apimachinery/pkg/runtime/schema"
+ 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
+ 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
++
+ 	cdiv1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1"
+ 	uploadv1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/upload/v1alpha1"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/fake/register.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/fake/register.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/fake/register.go.orig	2020-10-08 02:47:17.391614414 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/fake/register.go	2020-10-08 02:47:17.391614414 +0000
+@@ -24,6 +24,7 @@
+ 	schema "k8s.io/apimachinery/pkg/runtime/schema"
+ 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
+ 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
++
+ 	cdiv1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1"
+ 	uploadv1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/upload/v1alpha1"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/fake/clientset_generated.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/fake/clientset_generated.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/fake/clientset_generated.go.orig	2020-10-08 02:47:17.394614518 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/fake/clientset_generated.go	2020-10-08 02:47:17.394614518 +0000
+@@ -24,6 +24,7 @@
+ 	"k8s.io/client-go/discovery"
+ 	fakediscovery "k8s.io/client-go/discovery/fake"
+ 	"k8s.io/client-go/testing"
++
+ 	clientset "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned"
+ 	cdiv1alpha1 "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1"
+ 	fakecdiv1alpha1 "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake"
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/cdi.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/cdi.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/cdi.go.orig	2020-10-08 02:47:17.398614656 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/cdi.go	2020-10-08 02:47:17.398614656 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/scheme"
+ 	v1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/cdiconfig.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/cdiconfig.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/cdiconfig.go.orig	2020-10-08 02:47:17.403614829 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/cdiconfig.go	2020-10-08 02:47:17.403614829 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/scheme"
+ 	v1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/datavolume.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/datavolume.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/datavolume.go.orig	2020-10-08 02:47:17.414615211 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/datavolume.go	2020-10-08 02:47:17.414615211 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/scheme"
+ 	v1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/core_client.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/core_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/core_client.go.orig	2020-10-08 02:47:17.418615349 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/core_client.go	2020-10-08 02:47:17.418615349 +0000
+@@ -20,6 +20,7 @@
+ 
+ import (
+ 	rest "k8s.io/client-go/rest"
++
+ 	"kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/scheme"
+ 	v1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_core_client.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_core_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_core_client.go.orig	2020-10-08 02:47:17.423615522 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_core_client.go	2020-10-08 02:47:17.423615522 +0000
+@@ -21,6 +21,7 @@
+ import (
+ 	rest "k8s.io/client-go/rest"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1alpha1 "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_cdi.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_cdi.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_cdi.go.orig	2020-10-08 02:47:17.429615730 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_cdi.go	2020-10-08 02:47:17.429615730 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_cdiconfig.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_cdiconfig.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_cdiconfig.go.orig	2020-10-08 02:47:17.437616007 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_cdiconfig.go	2020-10-08 02:47:17.437616007 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_datavolume.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_datavolume.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_datavolume.go.orig	2020-10-08 02:47:17.446616319 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/core/v1alpha1/fake/fake_datavolume.go	2020-10-08 02:47:17.446616319 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/core/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/uploadtokenrequest.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/uploadtokenrequest.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/uploadtokenrequest.go.orig	2020-10-08 02:47:17.455616631 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/uploadtokenrequest.go	2020-10-08 02:47:17.455616631 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/scheme"
+ 	v1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/upload/v1alpha1"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/upload_client.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/upload_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/upload_client.go.orig	2020-10-08 02:47:17.458616735 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/upload_client.go	2020-10-08 02:47:17.458616735 +0000
+@@ -20,6 +20,7 @@
+ 
+ import (
+ 	rest "k8s.io/client-go/rest"
++
+ 	"kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/scheme"
+ 	v1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/upload/v1alpha1"
+ )
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/fake/fake_uploadtokenrequest.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/fake/fake_uploadtokenrequest.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/fake/fake_uploadtokenrequest.go.orig	2020-10-08 02:47:17.465616977 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/fake/fake_uploadtokenrequest.go	2020-10-08 02:47:17.465616977 +0000
+@@ -25,6 +25,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1alpha1 "kubevirt.io/containerized-data-importer/pkg/apis/upload/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/fake/fake_upload_client.go.orig ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/fake/fake_upload_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/fake/fake_upload_client.go.orig	2020-10-08 02:47:17.468617081 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1/fake/fake_upload_client.go	2020-10-08 02:47:17.468617081 +0000
+@@ -21,6 +21,7 @@
+ import (
+ 	rest "k8s.io/client-go/rest"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1alpha1 "kubevirt.io/client-go/generated/containerized-data-importer/clientset/versioned/typed/upload/v1alpha1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/clientset.go.orig ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/clientset.go
+--- ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/clientset.go.orig	2020-10-08 02:47:17.476617358 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/clientset.go	2020-10-08 02:47:17.476617358 +0000
+@@ -24,6 +24,7 @@
+ 	discovery "k8s.io/client-go/discovery"
+ 	rest "k8s.io/client-go/rest"
+ 	flowcontrol "k8s.io/client-go/util/flowcontrol"
++
+ 	monitoringv1 "kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/fake/clientset_generated.go.orig ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/fake/clientset_generated.go
+--- ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/fake/clientset_generated.go.orig	2020-10-08 02:47:17.481617532 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/fake/clientset_generated.go	2020-10-08 02:47:17.481617532 +0000
+@@ -24,6 +24,7 @@
+ 	"k8s.io/client-go/discovery"
+ 	fakediscovery "k8s.io/client-go/discovery/fake"
+ 	"k8s.io/client-go/testing"
++
+ 	clientset "kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned"
+ 	monitoringv1 "kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1"
+ 	fakemonitoringv1 "kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/fake"
+diff -u ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/alertmanager.go.orig ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/alertmanager.go
+--- ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/alertmanager.go.orig	2020-10-08 02:47:17.488617774 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/alertmanager.go	2020-10-08 02:47:17.488617774 +0000
+@@ -26,6 +26,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/podmonitor.go.orig ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/podmonitor.go
+--- ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/podmonitor.go.orig	2020-10-08 02:47:17.492617913 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/podmonitor.go	2020-10-08 02:47:17.492617913 +0000
+@@ -26,6 +26,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/prometheus.go.orig ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/prometheus.go
+--- ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/prometheus.go.orig	2020-10-08 02:47:17.501618224 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/prometheus.go	2020-10-08 02:47:17.501618224 +0000
+@@ -26,6 +26,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/prometheusrule.go.orig ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/prometheusrule.go
+--- ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/prometheusrule.go.orig	2020-10-08 02:47:17.506618398 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/prometheusrule.go	2020-10-08 02:47:17.506618398 +0000
+@@ -26,6 +26,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/servicemonitor.go.orig ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/servicemonitor.go
+--- ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/servicemonitor.go.orig	2020-10-08 02:47:17.515618709 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/servicemonitor.go	2020-10-08 02:47:17.515618709 +0000
+@@ -26,6 +26,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/monitoring_client.go.orig ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/monitoring_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/monitoring_client.go.orig	2020-10-08 02:47:17.518618813 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/monitoring_client.go	2020-10-08 02:47:17.518618813 +0000
+@@ -21,6 +21,7 @@
+ import (
+ 	v1 "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1"
+ 	rest "k8s.io/client-go/rest"
++
+ 	"kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/fake/fake_monitoring_client.go.orig ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/fake/fake_monitoring_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/fake/fake_monitoring_client.go.orig	2020-10-08 02:47:17.542619645 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1/fake/fake_monitoring_client.go	2020-10-08 02:47:17.542619645 +0000
+@@ -21,6 +21,7 @@
+ import (
+ 	rest "k8s.io/client-go/rest"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1 "kubevirt.io/client-go/generated/prometheus-operator/clientset/versioned/typed/monitoring/v1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/clientset.go.orig ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/clientset.go
+--- ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/clientset.go.orig	2020-10-08 02:47:17.545619749 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/clientset.go	2020-10-08 02:47:17.545619749 +0000
+@@ -24,6 +24,7 @@
+ 	discovery "k8s.io/client-go/discovery"
+ 	rest "k8s.io/client-go/rest"
+ 	flowcontrol "k8s.io/client-go/util/flowcontrol"
++
+ 	k8scnicncfiov1 "kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/fake/clientset_generated.go.orig ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/fake/clientset_generated.go
+--- ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/fake/clientset_generated.go.orig	2020-10-08 02:47:17.551619957 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/fake/clientset_generated.go	2020-10-08 02:47:17.551619957 +0000
+@@ -24,6 +24,7 @@
+ 	"k8s.io/client-go/discovery"
+ 	fakediscovery "k8s.io/client-go/discovery/fake"
+ 	"k8s.io/client-go/testing"
++
+ 	clientset "kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned"
+ 	k8scnicncfiov1 "kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1"
+ 	fakek8scnicncfiov1 "kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/fake"
+diff -u ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/networkattachmentdefinition.go.orig ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/networkattachmentdefinition.go
+--- ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/networkattachmentdefinition.go.orig	2020-10-08 02:47:17.559620234 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/networkattachmentdefinition.go	2020-10-08 02:47:17.559620234 +0000
+@@ -26,6 +26,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/k8s.cni.cncf.io_client.go.orig ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/k8s.cni.cncf.io_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/k8s.cni.cncf.io_client.go.orig	2020-10-08 02:47:17.570620615 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/k8s.cni.cncf.io_client.go	2020-10-08 02:47:17.570620615 +0000
+@@ -21,6 +21,7 @@
+ import (
+ 	v1 "github.com/k8snetworkplumbingwg/network-attachment-definition-client/pkg/apis/k8s.cni.cncf.io/v1"
+ 	rest "k8s.io/client-go/rest"
++
+ 	"kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/fake/fake_k8s.cni.cncf.io_client.go.orig ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/fake/fake_k8s.cni.cncf.io_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/fake/fake_k8s.cni.cncf.io_client.go.orig	2020-10-08 02:47:17.585621134 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1/fake/fake_k8s.cni.cncf.io_client.go	2020-10-08 02:47:17.585621134 +0000
+@@ -21,6 +21,7 @@
+ import (
+ 	rest "k8s.io/client-go/rest"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1 "kubevirt.io/client-go/generated/network-attachment-definition-client/clientset/versioned/typed/k8s.cni.cncf.io/v1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/clientset.go.orig ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/clientset.go
+--- ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/clientset.go.orig	2020-10-08 02:47:17.592621377 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/clientset.go	2020-10-08 02:47:17.592621377 +0000
+@@ -24,6 +24,7 @@
+ 	discovery "k8s.io/client-go/discovery"
+ 	rest "k8s.io/client-go/rest"
+ 	flowcontrol "k8s.io/client-go/util/flowcontrol"
++
+ 	snapshotv1beta1 "kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/fake/clientset_generated.go.orig ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/fake/clientset_generated.go
+--- ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/fake/clientset_generated.go.orig	2020-10-08 02:47:17.596621515 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/fake/clientset_generated.go	2020-10-08 02:47:17.596621515 +0000
+@@ -24,6 +24,7 @@
+ 	"k8s.io/client-go/discovery"
+ 	fakediscovery "k8s.io/client-go/discovery/fake"
+ 	"k8s.io/client-go/testing"
++
+ 	clientset "kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned"
+ 	snapshotv1beta1 "kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1"
+ 	fakesnapshotv1beta1 "kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/fake"
+diff -u ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshot_client.go.orig ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshot_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshot_client.go.orig	2020-10-08 02:47:17.600621654 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshot_client.go	2020-10-08 02:47:17.601621689 +0000
+@@ -21,6 +21,7 @@
+ import (
+ 	v1beta1 "github.com/kubernetes-csi/external-snapshotter/v2/pkg/apis/volumesnapshot/v1beta1"
+ 	rest "k8s.io/client-go/rest"
++
+ 	"kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshot.go.orig ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshot.go
+--- ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshot.go.orig	2020-10-08 02:47:17.608621931 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshot.go	2020-10-08 02:47:17.608621931 +0000
+@@ -26,6 +26,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshotclass.go.orig ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshotclass.go
+--- ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshotclass.go.orig	2020-10-08 02:47:17.613622104 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshotclass.go	2020-10-08 02:47:17.613622104 +0000
+@@ -26,6 +26,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshotcontent.go.orig ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshotcontent.go
+--- ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshotcontent.go.orig	2020-10-08 02:47:17.619622312 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/volumesnapshotcontent.go	2020-10-08 02:47:17.619622312 +0000
+@@ -26,6 +26,7 @@
+ 	types "k8s.io/apimachinery/pkg/types"
+ 	watch "k8s.io/apimachinery/pkg/watch"
+ 	rest "k8s.io/client-go/rest"
++
+ 	scheme "kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/scheme"
+ )
+ 
+diff -u ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/fake/fake_volumesnapshot_client.go.orig ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/fake/fake_volumesnapshot_client.go
+--- ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/fake/fake_volumesnapshot_client.go.orig	2020-10-08 02:47:17.622622416 +0000
++++ ./staging/src/kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1/fake/fake_volumesnapshot_client.go	2020-10-08 02:47:17.622622416 +0000
+@@ -21,6 +21,7 @@
+ import (
+ 	rest "k8s.io/client-go/rest"
+ 	testing "k8s.io/client-go/testing"
++
+ 	v1beta1 "kubevirt.io/client-go/generated/external-snapshotter/clientset/versioned/typed/volumesnapshot/v1beta1"
+ )
+ 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:buildifier (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:buildifier (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:buildifier up-to-date:
+  bazel-bin/buildifier.bash
+INFO: Elapsed time: 0.525s, Critical Path: 0.08s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/buildifier.bash
+INFO: Build completed successfully, 1 total action
+hack/dockerized hack/sync-kubevirtci.sh
+selecting docker as container runtime
+go version go1.13.14 linux/amd64
+
+go version go1.13.14 linux/amd64
+++ dirname hack/sync-kubevirtci.sh
++ source hack/common.sh
+++ '[' -f cluster-up/hack/common.sh ']'
+++ source cluster-up/hack/common.sh
++++ '[' -z '' ']'
++++++ dirname 'cluster-up/hack/common.sh[0]'
+++++ cd cluster-up/hack/../
++++++ pwd
+++++ echo /root/go/src/kubevirt.io/kubevirt/cluster-up/
++++ KUBEVIRTCI_PATH=/root/go/src/kubevirt.io/kubevirt/cluster-up/
++++ '[' -z '' ']'
++++++ dirname 'cluster-up/hack/common.sh[0]'
+++++ cd cluster-up/hack/../../
++++++ pwd
+++++ echo /root/go/src/kubevirt.io/kubevirt/_ci-configs
++++ KUBEVIRTCI_CONFIG_PATH=/root/go/src/kubevirt.io/kubevirt/_ci-configs
++++ KUBEVIRTCI_CLUSTER_PATH=/root/go/src/kubevirt.io/kubevirt/cluster-up//cluster
++++ KUBEVIRT_PROVIDER=k8s-1.18
++++ KUBEVIRT_NUM_NODES=1
++++ KUBEVIRT_MEMORY_SIZE=5120M
++++ KUBEVIRT_NUM_SECONDARY_NICS=0
++++ '[' -z '' ']'
++++ KUBEVIRT_PROVIDER_EXTRA_ARGS=' --ocp-port 8443'
++++ provider_prefix=k8s-1.18
++++ job_prefix=kubevirt
++++ mkdir -p /root/go/src/kubevirt.io/kubevirt/_ci-configs/k8s-1.18
+++ export GOFLAGS=-mod=vendor
+++ GOFLAGS=-mod=vendor
+++++ dirname 'hack/common.sh[0]'
++++ cd hack/../
++++ pwd
+++ KUBEVIRT_DIR=/root/go/src/kubevirt.io/kubevirt
+++ OUT_DIR=/root/go/src/kubevirt.io/kubevirt/_out
+++ VENDOR_DIR=/root/go/src/kubevirt.io/kubevirt/vendor
+++ CMD_OUT_DIR=/root/go/src/kubevirt.io/kubevirt/_out/cmd
+++ TESTS_OUT_DIR=/root/go/src/kubevirt.io/kubevirt/_out/tests
+++ APIDOCS_OUT_DIR=/root/go/src/kubevirt.io/kubevirt/_out/apidocs
+++ ARTIFACTS=/root/go/src/kubevirt.io/kubevirt/_out/artifacts
+++ MANIFESTS_OUT_DIR=/root/go/src/kubevirt.io/kubevirt/_out/manifests
+++ MANIFEST_TEMPLATES_OUT_DIR=/root/go/src/kubevirt.io/kubevirt/_out/templates/manifests
+++ PYTHON_CLIENT_OUT_DIR=/root/go/src/kubevirt.io/kubevirt/_out/client-python
++++ uname -m
+++ ARCHITECTURE=x86_64
++++ kubevirt_version
++++ '[' -n '' ']'
++++ '[' -d /root/go/src/kubevirt.io/kubevirt/.git ']'
+++++ git describe --always --tags
++++ echo v0.34.0-rc.0-30-g62c16cc7b
+++ KUBEVIRT_VERSION=v0.34.0-rc.0-30-g62c16cc7b
+++ DOCKER_CA_CERT_FILE=
+++ DOCKERIZED_CUSTOM_CA_PATH=/etc/pki/ca-trust/source/anchors/custom-ca.crt
+++ dirname hack/sync-kubevirtci.sh
++ source hack/config.sh
+++ unset binaries docker_images docker_tag docker_tag_alt image_prefix image_prefix_alt manifest_templates namespace image_pull_policy verbosity csv_version package_name
+++ source hack/config-default.sh
++++ binaries='cmd/virt-operator cmd/virt-controller cmd/virt-launcher cmd/virt-handler cmd/virtctl cmd/fake-qemu-process cmd/virt-api cmd/subresource-access-test cmd/example-hook-sidecar cmd/example-cloudinit-hook-sidecar'
++++ docker_images='cmd/virt-operator cmd/virt-controller cmd/virt-launcher cmd/virt-handler cmd/virt-api images/disks-images-provider images/vm-killer images/nfs-server cmd/subresource-access-test images/winrmcli cmd/example-hook-sidecar cmd/example-cloudinit-hook-sidecar images/cdi-http-import-server tests/conformance'
++++ docker_tag=latest
++++ docker_tag_alt=
++++ image_prefix=
++++ image_prefix_alt=
++++ namespace=kubevirt
++++ deploy_testing_infra=false
++++ csv_namespace=placeholder
++++ cdi_namespace=cdi
++++ image_pull_policy=IfNotPresent
++++ verbosity=2
++++ package_name=kubevirt-dev
++++ kubevirtci_git_hash=f180644d306540c2c934250e8d686468bd7ed9f1
++++ default_csv_version=0.0.0
++++ default_csv_version=0.0.0
++++ [[ 0.0.0 == v* ]]
++++ csv_version=0.0.0
+++ source cluster-up/hack/config.sh
++++ unset docker_prefix master_ip network_provider kubeconfig manifest_docker_prefix
++++ KUBEVIRT_PROVIDER=k8s-1.18
++++ source /root/go/src/kubevirt.io/kubevirt/cluster-up/hack/config-default.sh
+++++ docker_prefix=kubevirt
+++++ master_ip=192.168.200.2
+++++ network_provider=flannel
++++ test -f /root/go/src/kubevirt.io/kubevirt/_ci-configs/k8s-1.18/config-provider-k8s-1.18.sh
++++ source /root/go/src/kubevirt.io/kubevirt/_ci-configs/k8s-1.18/config-provider-k8s-1.18.sh
+++++ master_ip=127.0.0.1
+++++ kubeconfig=/home/padmin/CODE/2/kubevirt/_ci-configs/k8s-1.18/.kubeconfig
+++++ kubectl=/home/padmin/CODE/2/kubevirt/_ci-configs/k8s-1.18/.kubectl
+++++ gocli=/home/padmin/CODE/2/kubevirt/_ci-configs/../cluster-up/cli.sh
+++++ docker_prefix=localhost:32854/kubevirt
+++++ manifest_docker_prefix=registry:5000/kubevirt
++++ export docker_prefix master_ip network_provider kubeconfig manifest_docker_prefix
+++ export binaries docker_images docker_tag docker_tag_alt image_prefix image_prefix_alt manifest_templates namespace image_pull_policy verbosity csv_version package_name
++ version_file=cluster-up/version.txt
++ sha_file=cluster-up-sha.txt
++ download_cluster_up=true
++ [[ -f cluster-up/version.txt ]]
+++ cat cluster-up/version.txt
++ [[ f180644d306540c2c934250e8d686468bd7ed9f1 == f180644d306540c2c934250e8d686468bd7ed9f1 ]]
+++ getClusterUpShasum
+++ cd /root/go/src/kubevirt.io/kubevirt
+++ find cluster-up -type f
+++ LC_ALL=C
+++ sort
+++ xargs sha1sum
+++ sha1sum
+++ awk '{print $1}'
++ current_sha=40d6ac60905e9369146c16133d75237ad1393b4e
++ [[ -f cluster-up-sha.txt ]]
+++ cat cluster-up-sha.txt
++ [[ 40d6ac60905e9369146c16133d75237ad1393b4e == 40d6ac60905e9369146c16133d75237ad1393b4e ]]
++ echo 'cluster-up is up to date and not modified'
++ download_cluster_up=false
++ [[ false == true ]]
+cluster-up is up to date and not modified

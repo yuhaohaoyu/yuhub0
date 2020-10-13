@@ -1,0 +1,842 @@
+[root@viose2 virt-controller]# git show ab38d2a8d999bee1e165903758b19aefd7555f15
+commit ab38d2a8d999bee1e165903758b19aefd7555f15
+Author: gaahrdner <github@philipgardner.com>
+Date:   Wed Dec 5 11:30:34 2018 -0600
+
+    Initial EFI support
+
+diff --git a/api/openapi-spec/swagger.json b/api/openapi-spec/swagger.json
+index f405285da..72f971234 100644
+--- a/api/openapi-spec/swagger.json
++++ b/api/openapi-spec/swagger.json
+@@ -4005,6 +4005,7 @@
+      }
+     }
+    },
++   "v1.Bootloader": {},
+    "v1.CDRomTarget": {
+     "properties": {
+      "bus": {
+@@ -4315,6 +4316,9 @@
+      "devices"
+     ],
+     "properties": {
++     "bootloader": {
++      "$ref": "#/definitions/v1.Bootloader"
++     },
+      "clock": {
+       "description": "Clock sets the clock and timers of the vmi.\n+optional",
+       "$ref": "#/definitions/v1.Clock"
+diff --git a/cmd/virt-launcher/Dockerfile b/cmd/virt-launcher/Dockerfile
+index 8e41106ce..365715dd2 100644
+--- a/cmd/virt-launcher/Dockerfile
++++ b/cmd/virt-launcher/Dockerfile
+@@ -21,6 +21,7 @@ FROM kubevirt/libvirt:4.9.0
+ LABEL maintainer="The KubeVirt Project <kubevirt-dev@googlegroups.com>"
+ 
+ RUN dnf -y install \
++  edk2-ovmf \
+   socat \
+   genisoimage \
+   && dnf -y clean all && \
+diff --git a/pkg/api/v1/deepcopy_generated.go b/pkg/api/v1/deepcopy_generated.go
+index 34e63899b..cb8a44802 100644
+--- a/pkg/api/v1/deepcopy_generated.go
++++ b/pkg/api/v1/deepcopy_generated.go
+@@ -521,6 +521,15 @@ func (in *DomainSpec) DeepCopyInto(out *DomainSpec) {
+                        **out = **in
+                }
+        }
++       if in.Bootloader != nil {
++               in, out := &in.Bootloader, &out.Bootloader
++               if *in == nil {
++                       *out = nil
++               } else {
++                       *out = new(Bootloader)
++                       **out = **in
++               }
++       }
+        return
+ }
+ 
+diff --git a/pkg/api/v1/openapi_generated.go b/pkg/api/v1/openapi_generated.go
+index a94218cf4..79e8df1da 100644
+--- a/pkg/api/v1/openapi_generated.go
++++ b/pkg/api/v1/openapi_generated.go
+@@ -733,6 +733,12 @@ func schema_kubevirt_pkg_api_v1_DomainSpec(ref common.ReferenceCallback) common.
+                                                        Format:      "",
+                                                },
+                                        },
++                                       "bootloader": {
++                                               SchemaProps: spec.SchemaProps{
++                                                       Type:   []string{"string"},
++                                                       Format: "",
++                                               },
++                                       },
+                                },
+                                Required: []string{"devices"},
+                        },
+diff --git a/pkg/api/v1/schema.go b/pkg/api/v1/schema.go
+index 85f6498a5..e564f9b3d 100644
+--- a/pkg/api/v1/schema.go
++++ b/pkg/api/v1/schema.go
+@@ -34,6 +34,13 @@ const (
+        CPUModeHostModel                       = "host-model"
+ )
+ 
++type Bootloader string
++
++const (
++       BootloaderBIOS Bootloader = "bios"
++       BootloaderEFI  Bootloader = "efi"
++)
++
+ //go:generate swagger-doc
+ //go:generate openapi-gen -i . --output-package=kubevirt.io/kubevirt/pkg/api/v1  --go-header-file ../../../hack/boilerplate/boilerplate.go.txt
+ 
+@@ -136,6 +143,7 @@ type DomainSpec struct {
+        // One of: shared, auto
+        // +optional
+        IOThreadsPolicy *IOThreadsPolicy `json:"ioThreadsPolicy,omitempty"`
++       Bootloader      *Bootloader      `json:"bootloader,omitempty"`
+ }
+ 
+ // ---
+diff --git a/pkg/virt-launcher/virtwrap/api/converter.go b/pkg/virt-launcher/virtwrap/api/converter.go
+index 154ebcad8..04938be7d 100644
+--- a/pkg/virt-launcher/virtwrap/api/converter.go
++++ b/pkg/virt-launcher/virtwrap/api/converter.go
+@@ -46,7 +46,14 @@ import (
+ )
+ 
+ const (
++<<<<<<< HEAD
+        defaultIOThread = uint(1)
++=======
++       CPUModeHostPassthrough = "host-passthrough"
++       CPUModeHostModel       = "host-model"
++       defaultIOThread        = uint(1)
++       EFIBootloaderPath      = "/usr/share/OVMF/OVMF_CODE.fd"
++>>>>>>> Initial EFI support
+ )
+ 
+ type ConverterContext struct {
+@@ -596,6 +603,12 @@ func Convert_v1_VirtualMachine_To_api_Domain(vmi *v1.VirtualMachineInstance, dom
+                }
+        }
+ 
++       if vmi.Spec.Domain.Bootloader != nil {
++               if (*vmi.Spec.Domain.Bootloader) == v1.BootloaderEFI {
++                       domain.Spec.OS.Loader.Path = EFIBootloaderPath
++               }
++       }
++
+        // Take memory from the requested memory
+        if v, ok := vmi.Spec.Domain.Resources.Requests[k8sv1.ResourceMemory]; ok {
+                if domain.Spec.Memory, err = QuantityToByte(v); err != nil {
+diff --git a/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go b/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
+index da759b909..02420f2f0 100644
+--- a/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
++++ b/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
+@@ -2041,6 +2041,15 @@ func (in *OS) DeepCopyInto(out *OS) {
+                        **out = **in
+                }
+        }
++       if in.Loader != nil {
++               in, out := &in.Loader, &out.Loader
++               if *in == nil {
++                       *out = nil
++               } else {
++                       *out = new(Loader)
++                       **out = **in
+[root@viose2 virt-controller]# git show 797ba48ebbe07cd125d215df5ebc91c9235ec596
+commit 797ba48ebbe07cd125d215df5ebc91c9235ec596
+Merge: aac7a92b2 88203c7e4
+Author: kubevirt-bot <rmohr+kubebot@redhat.com>
+Date:   Sat Jul 11 07:25:38 2020 +0200
+
+    Merge pull request #3800 from kubevirt-bot/cherry-pick-3716-to-release-0.30
+    
+    [release-0.30] Add test-id for EFI secure boot test
+
+[root@viose2 virt-controller]# git show 88203c7e499bd551a6ac95e9ee47a8a1ff333bf6
+commit 88203c7e499bd551a6ac95e9ee47a8a1ff333bf6
+Author: Kedar Bidarkar <kbidarka@redhat.com>
+Date:   Tue Jun 30 01:35:01 2020 +0530
+
+    Add test-id for EFI secure boot test
+    
+    Signed-off-by: Kedar Bidarkar <kbidarka@redhat.com>
+
+diff --git a/tests/vmi_configuration_test.go b/tests/vmi_configuration_test.go
+index eb97423d1..b02ed5a92 100644
+--- a/tests/vmi_configuration_test.go
++++ b/tests/vmi_configuration_test.go
+@@ -453,7 +453,7 @@ var _ = Describe("Configurations", func() {
+                                Expect(domXml).To(ContainSubstring("OVMF_CODE.fd"))
+                        })
+ 
+-                       It("should enable EFI secure boot", func() {
++                       It("[test_id:4437]should enable EFI secure boot", func() {
+                                vmi := tests.NewRandomVMIWithSecureBoot()
+ 
+                                By("Starting a VirtualMachineInstance")
+[root@viose2 virt-controller]# git show 95d578273dc47bdb8e1b92bc5d04b9b243c26d01
+commit 95d578273dc47bdb8e1b92bc5d04b9b243c26d01
+Author: Jed Lejosne <jed@redhat.com>
+Date:   Mon Jun 8 10:29:47 2020 -0400
+
+    Enable Secure Boot by default when EFI is enabled
+    
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+    (cherry picked from commit aa144fedd101202997427d17ac8d3624cf08f54d)
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+
+diff --git a/api/openapi-spec/swagger.json b/api/openapi-spec/swagger.json
+index 1ad888947..3342c301b 100644
+--- a/api/openapi-spec/swagger.json
++++ b/api/openapi-spec/swagger.json
+@@ -4821,7 +4821,7 @@
+     "type": "object",
+     "properties": {
+      "secureBoot": {
+-      "description": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false",
++      "description": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to true",
+       "type": "boolean"
+      }
+     }
+diff --git a/examples/vmi-alpine-efi.yaml b/examples/vmi-alpine-efi.yaml
+index ef6bce94b..4cec9f005 100644
+--- a/examples/vmi-alpine-efi.yaml
++++ b/examples/vmi-alpine-efi.yaml
+@@ -14,7 +14,8 @@ spec:
+         name: containerdisk
+     firmware:
+       bootloader:
+-        efi: {}
++        efi:
++          secureBoot: false
+     machine:
+       type: ""
+     resources:
+diff --git a/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter.go b/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter.go
+index 8d5bab655..d26d1f9c8 100644
+--- a/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter.go
++++ b/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter.go
+@@ -1144,7 +1144,7 @@ func validateDomainSpec(field *k8sfield.Path, spec *v1.DomainSpec) []metav1.Stat
+        causes = append(causes, validateFirmware(field.Child("firmware"), spec.Firmware)...)
+ 
+        if spec.Firmware != nil && spec.Firmware.Bootloader != nil && spec.Firmware.Bootloader.EFI != nil &&
+-               spec.Firmware.Bootloader.EFI.SecureBoot != nil && *spec.Firmware.Bootloader.EFI.SecureBoot &&
++               (spec.Firmware.Bootloader.EFI.SecureBoot == nil || *spec.Firmware.Bootloader.EFI.SecureBoot) &&
+                (spec.Features == nil || spec.Features.SMM == nil || !*spec.Features.SMM.Enabled) {
+                causes = append(causes, metav1.StatusCause{
+                        Type:    metav1.CauseTypeFieldValueInvalid,
+diff --git a/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter_test.go b/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter_test.go
+index 5c0bc5356..2f7a6c76a 100644
+--- a/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter_test.go
++++ b/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter_test.go
+@@ -2323,10 +2323,16 @@ var _ = Describe("Validating VMICreate Admitter", func() {
+                        Expect(len(causes)).To(Equal(0))
+                })
+ 
+-               It("should accept EFI", func() {
++               It("should accept EFI with SMM", func() {
+                        vmi := v1.NewMinimalVMI("testvmi")
+                        vmi.Spec.Subdomain = "testsubdomain"
+ 
++                       _true := true
++                       vmi.Spec.Domain.Features = &v1.Features{
++                               SMM: &v1.FeatureState{
++                                       Enabled: &_true,
++                               },
++                       }
+                        vmi.Spec.Domain.Firmware = &v1.Firmware{
+                                Bootloader: &v1.Bootloader{
+                                        EFI: &v1.EFI{},
+@@ -2337,10 +2343,47 @@ var _ = Describe("Validating VMICreate Admitter", func() {
+                        Expect(len(causes)).To(Equal(0))
+                })
+ 
++               It("should not accept EFI without SMM", func() {
++                       vmi := v1.NewMinimalVMI("testvmi")
++                       vmi.Spec.Subdomain = "testsubdomain"
++
++                       vmi.Spec.Domain.Firmware = &v1.Firmware{
++                               Bootloader: &v1.Bootloader{
++                                       EFI: &v1.EFI{},
++                               },
++                       }
++
++                       causes := ValidateVirtualMachineInstanceSpec(k8sfield.NewPath("fake"), &vmi.Spec, config)
++                       Expect(len(causes)).To(Equal(1))
++               })
++
++               It("should accept EFI without secureBoot and without SMM", func() {
++                       vmi := v1.NewMinimalVMI("testvmi")
++                       vmi.Spec.Subdomain = "testsubdomain"
++
++                       _false := false
++                       vmi.Spec.Domain.Firmware = &v1.Firmware{
++                               Bootloader: &v1.Bootloader{
++                                       EFI: &v1.EFI{
++                                               SecureBoot: &_false,
++                                       },
++                               },
++                       }
++
++                       causes := ValidateVirtualMachineInstanceSpec(k8sfield.NewPath("fake"), &vmi.Spec, config)
++                       Expect(len(causes)).To(Equal(0))
++               })
++
+                It("should not accept BIOS and EFI together", func() {
+                        vmi := v1.NewMinimalVMI("testvmi")
+                        vmi.Spec.Subdomain = "testsubdomain"
+ 
++                       _true := true
++                       vmi.Spec.Domain.Features = &v1.Features{
++                               SMM: &v1.FeatureState{
++                                       Enabled: &_true,
++                               },
++                       }
+                        vmi.Spec.Domain.Firmware = &v1.Firmware{
+                                Bootloader: &v1.Bootloader{
+                                        EFI:  &v1.EFI{},
+diff --git a/pkg/virt-launcher/virtwrap/api/converter.go b/pkg/virt-launcher/virtwrap/api/converter.go
+index 889e4eecc..d8e94d44c 100644
+--- a/pkg/virt-launcher/virtwrap/api/converter.go
++++ b/pkg/virt-launcher/virtwrap/api/converter.go
+@@ -705,7 +705,7 @@ func Convert_v1_VirtualMachine_To_api_Domain(vmi *v1.VirtualMachineInstance, dom
+                }
+ 
+                if vmi.Spec.Domain.Firmware.Bootloader != nil && vmi.Spec.Domain.Firmware.Bootloader.EFI != nil {
+-                       if vmi.Spec.Domain.Firmware.Bootloader.EFI.SecureBoot != nil && *vmi.Spec.Domain.Firmware.Bootloader.EFI.SecureBoot {
++                       if vmi.Spec.Domain.Firmware.Bootloader.EFI.SecureBoot == nil || *vmi.Spec.Domain.Firmware.Bootloader.EFI.SecureBoot {
+                                domain.Spec.OS.BootLoader = &Loader{
+                                        Path:     filepath.Join(c.OVMFPath, EFICodeSecureBoot),
+                                        ReadOnly: "yes",
+diff --git a/pkg/virt-launcher/virtwrap/api/converter_test.go b/pkg/virt-launcher/virtwrap/api/converter_test.go
+index 87b612e2c..b8bcdea53 100644
+--- a/pkg/virt-launcher/virtwrap/api/converter_test.go
++++ b/pkg/virt-launcher/virtwrap/api/converter_test.go
+@@ -2171,7 +2171,9 @@ var _ = Describe("Converter", func() {
+ 
+                                vmi.Spec.Domain.Firmware = &v1.Firmware{
+                                        Bootloader: &v1.Bootloader{
+-                                               EFI: &v1.EFI{},
++                                               EFI: &v1.EFI{
++                                                       SecureBoot: False(),
++                                               },
+                                        },
+                                }
+                                domainSpec := vmiToDomainXMLToDomainSpec(vmi, c)
+@@ -2186,9 +2188,7 @@ var _ = Describe("Converter", func() {
+                        It("should configure the EFI bootloader if EFI secure option", func() {
+                                vmi.Spec.Domain.Firmware = &v1.Firmware{
+                                        Bootloader: &v1.Bootloader{
+-                                               EFI: &v1.EFI{
+-                                                       SecureBoot: True(),
+-                                               },
++                                               EFI: &v1.EFI{},
+                                        },
+                                }
+                                domainSpec := vmiToDomainXMLToDomainSpec(vmi, c)
+diff --git a/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go b/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go
+index 0332a5d2d..f2d6a0473 100644
+--- a/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go
++++ b/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go
+@@ -14394,7 +14394,7 @@ func schema_kubevirtio_client_go_api_v1_EFI(ref common.ReferenceCallback) common
+                                Properties: map[string]spec.Schema{
+                                        "secureBoot": {
+                                                SchemaProps: spec.SchemaProps{
+-                                                       Description: "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false",
++                                                       Description: "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to true",
+                                                        Type:        []string{"boolean"},
+                                                        Format:      "",
+                                                },
+diff --git a/staging/src/kubevirt.io/client-go/api/v1/schema.go b/staging/src/kubevirt.io/client-go/api/v1/schema.go
+index 73f47a190..4276ef13a 100644
+--- a/staging/src/kubevirt.io/client-go/api/v1/schema.go
++++ b/staging/src/kubevirt.io/client-go/api/v1/schema.go
+@@ -222,7 +222,7 @@ type EFI struct {
+        // If set, SecureBoot will be enabled and the OVMF roms will be swapped for
+        // SecureBoot-enabled ones.
+        // Requires SMM to be enabled.
+-       // Defaults to false
++       // Defaults to true
+        // +optional
+        SecureBoot *bool `json:"secureBoot,omitempty"`
+ }
+diff --git a/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go b/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go
+index 147d1df2c..14929b64d 100644
+--- a/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go
++++ b/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go
+@@ -99,7 +99,7 @@ func (BIOS) SwaggerDoc() map[string]string {
+ func (EFI) SwaggerDoc() map[string]string {
+        return map[string]string{
+                "":           "If set, EFI will be used instead of BIOS.\n\n+k8s:openapi-gen=true",
+-               "secureBoot": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for\nSecureBoot-enabled ones.\nRequires SMM to be enabled.\nDefaults to false\n+optional",
++               "secureBoot": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for\nSecureBoot-enabled ones.\nRequires SMM to be enabled.\nDefaults to true\n+optional",
+        }
+ }
+ 
+diff --git a/tests/utils.go b/tests/utils.go
+index 199ac7f75..62085f92a 100644
+--- a/tests/utils.go
++++ b/tests/utils.go
+@@ -1942,7 +1942,9 @@ func NewRandomVMIWithEFIBootloader() *v1.VirtualMachineInstance {
+        vmi.Spec.Domain.Resources.Requests[k8sv1.ResourceMemory] = resource.MustParse("1Gi")
+        vmi.Spec.Domain.Firmware = &v1.Firmware{
+                Bootloader: &v1.Bootloader{
+-                       EFI: &v1.EFI{},
++                       EFI: &v1.EFI{
++                               SecureBoot: NewBool(false),
++                       },
+                },
+        }
+ 
+@@ -1962,9 +1964,7 @@ func NewRandomVMIWithSecureBoot() *v1.VirtualMachineInstance {
+        }
+        vmi.Spec.Domain.Firmware = &v1.Firmware{
+                Bootloader: &v1.Bootloader{
+-                       EFI: &v1.EFI{
+-                               SecureBoot: NewBool(true),
+-                       },
++                       EFI: &v1.EFI{}, // SecureBoot should default to true
+                },
+        }
+ 
+diff --git a/tools/vms-generator/utils/utils.go b/tools/vms-generator/utils/utils.go
+index 118d66e41..d897451c0 100644
+--- a/tools/vms-generator/utils/utils.go
++++ b/tools/vms-generator/utils/utils.go
+@@ -379,10 +379,13 @@ func GetVMISecureBoot() *v1.VirtualMachineInstance {
+ func GetVMIAlpineEFI() *v1.VirtualMachineInstance {
+        vmi := getBaseVMI(VmiAlpineEFI)
+ 
++       _false := false
+        addContainerDisk(&vmi.Spec, fmt.Sprintf("%s/%s:%s", DockerPrefix, imageAlpine, DockerTag), busVirtio)
+        vmi.Spec.Domain.Firmware = &v1.Firmware{
+                Bootloader: &v1.Bootloader{
+-                       EFI: &v1.EFI{},
++                       EFI: &v1.EFI{
++                               SecureBoot: &_false,
++                       },
+                },
+        }
+ 
+[root@viose2 virt-controller]#  git show aa144fedd101202997427d17ac8d3624cf08f54d
+commit aa144fedd101202997427d17ac8d3624cf08f54d
+Author: Jed Lejosne <jed@redhat.com>
+Date:   Mon Jun 8 10:29:47 2020 -0400
+
+    Enable Secure Boot by default when EFI is enabled
+    
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+
+diff --git a/api/openapi-spec/swagger.json b/api/openapi-spec/swagger.json
+index e65c7e3f3..062de092c 100644
+--- a/api/openapi-spec/swagger.json
++++ b/api/openapi-spec/swagger.json
+@@ -6219,7 +6219,7 @@
+     "type": "object",
+     "properties": {
+      "secureBoot": {
+-      "description": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false",
++      "description": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to true",
+       "type": "boolean"
+      }
+     }
+diff --git a/examples/vmi-alpine-efi.yaml b/examples/vmi-alpine-efi.yaml
+index ef6bce94b..4cec9f005 100644
+--- a/examples/vmi-alpine-efi.yaml
++++ b/examples/vmi-alpine-efi.yaml
+@@ -14,7 +14,8 @@ spec:
+         name: containerdisk
+     firmware:
+       bootloader:
+-        efi: {}
++        efi:
++          secureBoot: false
+     machine:
+       type: ""
+     resources:
+diff --git a/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter.go b/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter.go
+index 9bc4fad0c..841f193ef 100644
+--- a/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter.go
++++ b/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter.go
+@@ -1144,7 +1144,7 @@ func validateDomainSpec(field *k8sfield.Path, spec *v1.DomainSpec) []metav1.Stat
+        causes = append(causes, validateFirmware(field.Child("firmware"), spec.Firmware)...)
+ 
+        if spec.Firmware != nil && spec.Firmware.Bootloader != nil && spec.Firmware.Bootloader.EFI != nil &&
+-               spec.Firmware.Bootloader.EFI.SecureBoot != nil && *spec.Firmware.Bootloader.EFI.SecureBoot &&
++               (spec.Firmware.Bootloader.EFI.SecureBoot == nil || *spec.Firmware.Bootloader.EFI.SecureBoot) &&
+                (spec.Features == nil || spec.Features.SMM == nil || !*spec.Features.SMM.Enabled) {
+                causes = append(causes, metav1.StatusCause{
+                        Type:    metav1.CauseTypeFieldValueInvalid,
+diff --git a/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter_test.go b/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter_test.go
+index 37339b26c..5e3e143f4 100644
+--- a/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter_test.go
++++ b/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter_test.go
+@@ -2286,10 +2286,16 @@ var _ = Describe("Validating VMICreate Admitter", func() {
+                        Expect(len(causes)).To(Equal(0))
+                })
+ 
+-               It("should accept EFI", func() {
++               It("should accept EFI with SMM", func() {
+                        vmi := v1.NewMinimalVMI("testvmi")
+                        vmi.Spec.Subdomain = "testsubdomain"
+ 
++                       _true := true
++                       vmi.Spec.Domain.Features = &v1.Features{
++                               SMM: &v1.FeatureState{
++                                       Enabled: &_true,
++                               },
++                       }
+                        vmi.Spec.Domain.Firmware = &v1.Firmware{
+                                Bootloader: &v1.Bootloader{
+                                        EFI: &v1.EFI{},
+@@ -2300,10 +2306,47 @@ var _ = Describe("Validating VMICreate Admitter", func() {
+                        Expect(len(causes)).To(Equal(0))
+                })
+ 
++               It("should not accept EFI without SMM", func() {
++                       vmi := v1.NewMinimalVMI("testvmi")
++                       vmi.Spec.Subdomain = "testsubdomain"
++
++                       vmi.Spec.Domain.Firmware = &v1.Firmware{
++                               Bootloader: &v1.Bootloader{
++                                       EFI: &v1.EFI{},
++                               },
++                       }
++
++                       causes := ValidateVirtualMachineInstanceSpec(k8sfield.NewPath("fake"), &vmi.Spec, config)
++                       Expect(len(causes)).To(Equal(1))
++               })
++
++               It("should accept EFI without secureBoot and without SMM", func() {
++                       vmi := v1.NewMinimalVMI("testvmi")
++                       vmi.Spec.Subdomain = "testsubdomain"
++
++                       _false := false
++                       vmi.Spec.Domain.Firmware = &v1.Firmware{
++                               Bootloader: &v1.Bootloader{
++                                       EFI: &v1.EFI{
++                                               SecureBoot: &_false,
++                                       },
++                               },
++                       }
++
++                       causes := ValidateVirtualMachineInstanceSpec(k8sfield.NewPath("fake"), &vmi.Spec, config)
++                       Expect(len(causes)).To(Equal(0))
++               })
++
+                It("should not accept BIOS and EFI together", func() {
+                        vmi := v1.NewMinimalVMI("testvmi")
+                        vmi.Spec.Subdomain = "testsubdomain"
+ 
++                       _true := true
++                       vmi.Spec.Domain.Features = &v1.Features{
++                               SMM: &v1.FeatureState{
++                                       Enabled: &_true,
++                               },
++                       }
+                        vmi.Spec.Domain.Firmware = &v1.Firmware{
+                                Bootloader: &v1.Bootloader{
+                                        EFI:  &v1.EFI{},
+diff --git a/pkg/virt-launcher/virtwrap/api/converter.go b/pkg/virt-launcher/virtwrap/api/converter.go
+index 889e4eecc..d8e94d44c 100644
+--- a/pkg/virt-launcher/virtwrap/api/converter.go
++++ b/pkg/virt-launcher/virtwrap/api/converter.go
+@@ -705,7 +705,7 @@ func Convert_v1_VirtualMachine_To_api_Domain(vmi *v1.VirtualMachineInstance, dom
+                }
+ 
+                if vmi.Spec.Domain.Firmware.Bootloader != nil && vmi.Spec.Domain.Firmware.Bootloader.EFI != nil {
+-                       if vmi.Spec.Domain.Firmware.Bootloader.EFI.SecureBoot != nil && *vmi.Spec.Domain.Firmware.Bootloader.EFI.SecureBoot {
++                       if vmi.Spec.Domain.Firmware.Bootloader.EFI.SecureBoot == nil || *vmi.Spec.Domain.Firmware.Bootloader.EFI.SecureBoot {
+                                domain.Spec.OS.BootLoader = &Loader{
+                                        Path:     filepath.Join(c.OVMFPath, EFICodeSecureBoot),
+                                        ReadOnly: "yes",
+diff --git a/pkg/virt-launcher/virtwrap/api/converter_test.go b/pkg/virt-launcher/virtwrap/api/converter_test.go
+index 87b612e2c..b8bcdea53 100644
+--- a/pkg/virt-launcher/virtwrap/api/converter_test.go
++++ b/pkg/virt-launcher/virtwrap/api/converter_test.go
+@@ -2171,7 +2171,9 @@ var _ = Describe("Converter", func() {
+ 
+                                vmi.Spec.Domain.Firmware = &v1.Firmware{
+                                        Bootloader: &v1.Bootloader{
+-                                               EFI: &v1.EFI{},
++                                               EFI: &v1.EFI{
++                                                       SecureBoot: False(),
++                                               },
+                                        },
+                                }
+                                domainSpec := vmiToDomainXMLToDomainSpec(vmi, c)
+@@ -2186,9 +2188,7 @@ var _ = Describe("Converter", func() {
+                        It("should configure the EFI bootloader if EFI secure option", func() {
+                                vmi.Spec.Domain.Firmware = &v1.Firmware{
+                                        Bootloader: &v1.Bootloader{
+-                                               EFI: &v1.EFI{
+-                                                       SecureBoot: True(),
+-                                               },
++                                               EFI: &v1.EFI{},
+                                        },
+                                }
+                                domainSpec := vmiToDomainXMLToDomainSpec(vmi, c)
+diff --git a/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go b/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go
+index 7eb355a32..e244e4ddf 100644
+--- a/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go
++++ b/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go
+@@ -14394,7 +14394,7 @@ func schema_kubevirtio_client_go_api_v1_EFI(ref common.ReferenceCallback) common
+                                Properties: map[string]spec.Schema{
+                                        "secureBoot": {
+                                                SchemaProps: spec.SchemaProps{
+-                                                       Description: "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false",
++                                                       Description: "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to true",
+                                                        Type:        []string{"boolean"},
+                                                        Format:      "",
+                                                },
+diff --git a/staging/src/kubevirt.io/client-go/api/v1/schema.go b/staging/src/kubevirt.io/client-go/api/v1/schema.go
+index 73f47a190..4276ef13a 100644
+--- a/staging/src/kubevirt.io/client-go/api/v1/schema.go
++++ b/staging/src/kubevirt.io/client-go/api/v1/schema.go
+@@ -222,7 +222,7 @@ type EFI struct {
+        // If set, SecureBoot will be enabled and the OVMF roms will be swapped for
+        // SecureBoot-enabled ones.
+        // Requires SMM to be enabled.
+-       // Defaults to false
++       // Defaults to true
+        // +optional
+        SecureBoot *bool `json:"secureBoot,omitempty"`
+ }
+diff --git a/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go b/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go
+index 147d1df2c..14929b64d 100644
+--- a/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go
++++ b/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go
+@@ -99,7 +99,7 @@ func (BIOS) SwaggerDoc() map[string]string {
+ func (EFI) SwaggerDoc() map[string]string {
+        return map[string]string{
+                "":           "If set, EFI will be used instead of BIOS.\n\n+k8s:openapi-gen=true",
+-               "secureBoot": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for\nSecureBoot-enabled ones.\nRequires SMM to be enabled.\nDefaults to false\n+optional",
++               "secureBoot": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for\nSecureBoot-enabled ones.\nRequires SMM to be enabled.\nDefaults to true\n+optional",
+        }
+ }
+ 
+diff --git a/staging/src/kubevirt.io/client-go/apis/snapshot/v1alpha1/openapi_generated.go b/staging/src/kubevirt.io/client-go/apis/snapshot/v1alpha1/openapi_generated.go
+index 2fbc54306..92c5e204f 100644
+--- a/staging/src/kubevirt.io/client-go/apis/snapshot/v1alpha1/openapi_generated.go
++++ b/staging/src/kubevirt.io/client-go/apis/snapshot/v1alpha1/openapi_generated.go
+@@ -14247,7 +14247,7 @@ func schema_kubevirtio_client_go_api_v1_EFI(ref common.ReferenceCallback) common
+                                Properties: map[string]spec.Schema{
+                                        "secureBoot": {
+                                                SchemaProps: spec.SchemaProps{
+-                                                       Description: "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false",
++                                                       Description: "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to true",
+                                                        Type:        []string{"boolean"},
+                                                        Format:      "",
+                                                },
+diff --git a/tests/utils.go b/tests/utils.go
+index 1d0f975bc..4e2593b26 100644
+--- a/tests/utils.go
++++ b/tests/utils.go
+@@ -1959,7 +1959,9 @@ func NewRandomVMIWithEFIBootloader() *v1.VirtualMachineInstance {
+        vmi.Spec.Domain.Resources.Requests[k8sv1.ResourceMemory] = resource.MustParse("1Gi")
+        vmi.Spec.Domain.Firmware = &v1.Firmware{
+                Bootloader: &v1.Bootloader{
+-                       EFI: &v1.EFI{},
++                       EFI: &v1.EFI{
++                               SecureBoot: NewBool(false),
++                       },
+                },
+        }
+ 
+@@ -1979,9 +1981,7 @@ func NewRandomVMIWithSecureBoot() *v1.VirtualMachineInstance {
+        }
+        vmi.Spec.Domain.Firmware = &v1.Firmware{
+                Bootloader: &v1.Bootloader{
+-                       EFI: &v1.EFI{
+-                               SecureBoot: NewBool(true),
+-                       },
++                       EFI: &v1.EFI{}, // SecureBoot should default to true
+                },
+        }
+ 
+diff --git a/tools/vms-generator/utils/utils.go b/tools/vms-generator/utils/utils.go
+index 118d66e41..d897451c0 100644
+--- a/tools/vms-generator/utils/utils.go
++++ b/tools/vms-generator/utils/utils.go
+@@ -379,10 +379,13 @@ func GetVMISecureBoot() *v1.VirtualMachineInstance {
+ func GetVMIAlpineEFI() *v1.VirtualMachineInstance {
+        vmi := getBaseVMI(VmiAlpineEFI)
+ 
++       _false := false
+        addContainerDisk(&vmi.Spec, fmt.Sprintf("%s/%s:%s", DockerPrefix, imageAlpine, DockerTag), busVirtio)
+        vmi.Spec.Domain.Firmware = &v1.Firmware{
+                Bootloader: &v1.Bootloader{
+-                       EFI: &v1.EFI{},
++                       EFI: &v1.EFI{
++                               SecureBoot: &_false,
++                       },
+                },
+        }
+ 
+[root@viose2 virt-controller]# git show 9b5616cb416376981415bf7ec1b0b3bc9a242ec2
+commit 9b5616cb416376981415bf7ec1b0b3bc9a242ec2
+Author: Jed Lejosne <jed@redhat.com>
+Date:   Mon Feb 10 16:50:07 2020 -0500
+
+    Add support for EFI SecureBoot.
+    When SecureBoot is enabled:
+    - Pass the option to libvirt
+    - Use the SecureBoot-enabled OVMF roms (/usr/share/OVMF/OVMF_*.secboot.fd)
+    
+    Signed-off-by: Jed Lejosne <jed@redhat.com>
+
+diff --git a/api/openapi-spec/swagger.json b/api/openapi-spec/swagger.json
+index 9251e7458..5a91c52fa 100644
+--- a/api/openapi-spec/swagger.json
++++ b/api/openapi-spec/swagger.json
+@@ -4818,7 +4818,13 @@
+    },
+    "v1.EFI": {
+     "description": "If set, EFI will be used instead of BIOS.",
+-    "type": "object"
++    "type": "object",
++    "properties": {
++     "secureBoot": {
++      "description": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false",
++      "type": "boolean"
++     }
++    }
+    },
+    "v1.EmptyDiskSource": {
+     "description": "EmptyDisk represents a temporary disk which shares the vmis lifecycle.",
+diff --git a/pkg/virt-launcher/virtwrap/api/converter.go b/pkg/virt-launcher/virtwrap/api/converter.go
+index 24baf3a7f..357aa94fb 100644
+--- a/pkg/virt-launcher/virtwrap/api/converter.go
++++ b/pkg/virt-launcher/virtwrap/api/converter.go
+@@ -54,6 +54,8 @@ const (
+        defaultIOThread        = uint(1)
+        EFIPath                = "/usr/share/OVMF/OVMF_CODE.fd"
+        EFIVarsPath            = "/usr/share/OVMF/OVMF_VARS.fd"
++       EFIPathSecureBoot      = "/usr/share/OVMF/OVMF_CODE.secboot.fd"
++       EFIVarsPathSecureBoot  = "/usr/share/OVMF/OVMF_VARS.secboot.fd"
+ )
+ 
+ // +k8s:deepcopy-gen=false
+@@ -702,17 +704,30 @@ func Convert_v1_VirtualMachine_To_api_Domain(vmi *v1.VirtualMachineInstance, dom
+                }
+ 
+                if vmi.Spec.Domain.Firmware.Bootloader != nil && vmi.Spec.Domain.Firmware.Bootloader.EFI != nil {
++                       if vmi.Spec.Domain.Firmware.Bootloader.EFI.SecureBoot != nil && *vmi.Spec.Domain.Firmware.Bootloader.EFI.SecureBoot {
++                               domain.Spec.OS.BootLoader = &Loader{
++                                       Path:     EFIPathSecureBoot,
++                                       ReadOnly: "yes",
++                                       Secure:   "yes",
++                                       Type:     "pflash",
++                               }
+ 
+-                       domain.Spec.OS.BootLoader = &Loader{
+-                               Path:     EFIPath,
+-                               ReadOnly: "yes",
+-                               Secure:   "no",
+-                               Type:     "pflash",
+-                       }
++                               domain.Spec.OS.NVRam = &NVRam{
++                                       NVRam:    filepath.Join("/tmp", domain.Spec.Name),
++                                       Template: EFIVarsPathSecureBoot,
++                               }
++                       } else {
++                               domain.Spec.OS.BootLoader = &Loader{
++                                       Path:     EFIPath,
++                                       ReadOnly: "yes",
++                                       Secure:   "no",
++                                       Type:     "pflash",
++                               }
+ 
+-                       domain.Spec.OS.NVRam = &NVRam{
+-                               NVRam:    filepath.Join("/tmp", domain.Spec.Name),
+-                               Template: EFIVarsPath,
++                               domain.Spec.OS.NVRam = &NVRam{
++                                       NVRam:    filepath.Join("/tmp", domain.Spec.Name),
++                                       Template: EFIVarsPath,
++                               }
+                        }
+                }
+ 
+diff --git a/staging/src/kubevirt.io/client-go/api/v1/deepcopy_generated.go b/staging/src/kubevirt.io/client-go/api/v1/deepcopy_generated.go
+index 0202424d6..f3b628c65 100644
+--- a/staging/src/kubevirt.io/client-go/api/v1/deepcopy_generated.go
++++ b/staging/src/kubevirt.io/client-go/api/v1/deepcopy_generated.go
+@@ -56,7 +56,7 @@ func (in *Bootloader) DeepCopyInto(out *Bootloader) {
+        if in.EFI != nil {
+                in, out := &in.EFI, &out.EFI
+                *out = new(EFI)
+-               **out = **in
++               (*in).DeepCopyInto(*out)
+        }
+        return
+ }
+@@ -573,6 +573,11 @@ func (in *DomainSpec) DeepCopy() *DomainSpec {
+ // DeepCopyInto is an autogenerated deepcopy function, copying the receiver, writing into out. in must be non-nil.
+ func (in *EFI) DeepCopyInto(out *EFI) {
+        *out = *in
++       if in.SecureBoot != nil {
++               in, out := &in.SecureBoot, &out.SecureBoot
++               *out = new(bool)
++               **out = **in
++       }
+        return
+ }
+ 
+diff --git a/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go b/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go
+index 2cf159842..33ef3bb7b 100644
+--- a/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go
++++ b/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go
+@@ -14391,6 +14391,15 @@ func schema_kubevirtio_client_go_api_v1_EFI(ref common.ReferenceCallback) common
+                        SchemaProps: spec.SchemaProps{
+                                Description: "If set, EFI will be used instead of BIOS.",
+                                Type:        []string{"object"},
++                               Properties: map[string]spec.Schema{
++                                       "secureBoot": {
++                                               SchemaProps: spec.SchemaProps{
++                                                       Description: "If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to false",
++                                                       Type:        []string{"boolean"},
++                                                       Format:      "",
++                                               },
++                                       },
++                               },
+                        },
+                },
+        }
+diff --git a/staging/src/kubevirt.io/client-go/api/v1/schema.go b/staging/src/kubevirt.io/client-go/api/v1/schema.go
+index 09f1bdbfd..73f47a190 100644
+--- a/staging/src/kubevirt.io/client-go/api/v1/schema.go
++++ b/staging/src/kubevirt.io/client-go/api/v1/schema.go
+@@ -219,6 +219,12 @@ type BIOS struct {
+ //
+ // +k8s:openapi-gen=true
+ type EFI struct {
++       // If set, SecureBoot will be enabled and the OVMF roms will be swapped for
++       // SecureBoot-enabled ones.
++       // Requires SMM to be enabled.
++       // Defaults to false
++       // +optional
++       SecureBoot *bool `json:"secureBoot,omitempty"`
+ }
+ 
+ //
+diff --git a/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go b/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go
+index 89ba6cb03..147d1df2c 100644
+--- a/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go
++++ b/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go
+@@ -98,7 +98,8 @@ func (BIOS) SwaggerDoc() map[string]string {
+ 
+ func (EFI) SwaggerDoc() map[string]string {
+        return map[string]string{
+-               "": "If set, EFI will be used instead of BIOS.\n\n+k8s:openapi-gen=true",
++               "":           "If set, EFI will be used instead of BIOS.\n\n+k8s:openapi-gen=true",
++               "secureBoot": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for\nSecureBoot-enabled ones.\nRequires SMM to be enabled.\nDefaults to false\n+optional",
+        }
+ }
+

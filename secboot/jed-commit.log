@@ -1,0 +1,105 @@
+https://github.com/kubevirt/kubevirt/pull/3710/files
+
+BUILD.bazel:
+	microlivecd-container-disk-demo
+
+	[root@viose2 var]# tree ./lib/docker/volumes/k8s-1.18-registry/_data/docker/registry/v2/repositories/kubevirt/microlivecd-container-disk-demo
+	./lib/docker/volumes/k8s-1.18-registry/_data/docker/registry/v2/repositories/kubevirt/microlivecd-container-disk-demo
+	├── _layers
+	│   └── sha256
+	│       ├── 8252b7249db1a531be27016ec8b705cd5107f878a4ed61d8991a6bee46309817
+	│       │   └── link
+	│       └── f3220a32cccb511cef9660ed5c07df422ba215b6136eabbd578ea700cdc065af
+	│           └── link
+	├── _manifests
+	│   ├── revisions
+	│   │   └── sha256
+	│   │       └── 9ccde831dc1ddcc37c9a181a7e299fac9f59e8a53bf8b2b1f0846962a919328a
+	│   │           └── link
+	│   └── tags
+	│       ├── devel
+	│       │   ├── current
+	│       │   │   └── link
+	│       │   └── index
+	│       │       └── sha256
+	│       │           └── 9ccde831dc1ddcc37c9a181a7e299fac9f59e8a53bf8b2b1f0846962a919328a
+	│       │               └── link
+	│       └── devel_alt
+	│           ├── current
+	│           │   └── link
+	│           └── index
+	│               └── sha256
+	│                   └── 9ccde831dc1ddcc37c9a181a7e299fac9f59e8a53bf8b2b1f0846962a919328a
+	│                       └── link
+	└── _uploads
+
+	20 directories, 7 files
+	[root@viose2 var]# 
+
+
+Launcher:
+	b/pkg/virt-launcher/virtwrap/api/converter.go
+		EFIPathSecureBoot = ...
+		domain.Spec.OS.BootLoader = ...
+		domain.Spec.OS.NVRam = ...
+
+	b/pkg/virt-launcher/virtwrap/api/converter_test.go
+		Describe("Convert",...
+
+	b/cmd/virt-launcher/Dockerfile
+		edk2-ovmf
+
+Test:
+	tests/vmi_configuration_test.go: 537
+	test_id: 4437
+
+
+	tests/utils.go:
+		def of NewRandomVMIWithEFIBootloader
+		def of NewRandomVMIWithSecureBoot
+		def of ContainerDiskFor
+		def of SecureBootExpecter
+
+Tools:
+	tools/vms-generator/utils/utils.go
+		def of GetVMISecureBoot
+			SecureBoot: &_false,
+
+Generated:
+	b/staging/src/kubevirt.io/client-go/api/v1/schema.go
+		type EFI struct { ... SecureBoot *bool... 
+		BootloaderEFI Bootloader = "efi"
+
+	b/staging/src/kubevirt.io/client-go/api/v1/openapi_generated.go
+		"secureBoot": 
+
+	b/staging/src/kubevirt.io/client-go/api/v1/schema_swagger_generated.go
+		func (EFI) SwaggerDoc() ...
+			"secureBoot": ...
+
+	b/staging/src/kubevirt.io/client-go/api/v1/deepcopy_generated.go
+		func (in *DomainSpec) DeeepCopy() *DomainSpec
+		function (in *OS) DeepCopyInto( out *OS )
+			if in.Loader != nil {....
+			if in.Bootloader != nil
+
+API:
+	b/api/openapi-spec/swagger.json
+		"v1.EFI": { ...
+			"secureBoot": {...
+
+webhooks:
+	b/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter.go
+		func validateDomainSpec
+			spec.Firmware.Bootloader.EFI.SecureBoot == ...
+
+	a/pkg/virt-api/webhooks/validating-webhook/admitters/vmi-create-admitter_test.go
+		Describe("Validating VMICreate Admitter",
+			It("should accepte EFI..."
+			It("should not accepte EFI..."
+			It("should accepte EFI without ..."
+			It("should not accepte BIOS and EFI EFI together ..."
+
+example:
+	b/examples/vmi-alpine-efi.yaml
+		secureBoot: false
