@@ -1,0 +1,10 @@
+[root@viose2 kubevirt]# cd /usr/share/OVMF/
+[root@viose2 OVMF]# ls
+OVMF_CODE.secboot.fd  OVMF_VARS.fd  OVMF_VARS.secboot.fd  UefiShell.iso
+[root@viose2 OVMF]# ls -l
+total 0
+lrwxrwxrwx. 1 root root 33 Mar 27  2020 OVMF_CODE.secboot.fd -> ../edk2/ovmf/OVMF_CODE.secboot.fd
+lrwxrwxrwx. 1 root root 25 Mar 27  2020 OVMF_VARS.fd -> ../edk2/ovmf/OVMF_VARS.fd
+lrwxrwxrwx. 1 root root 33 Mar 27  2020 OVMF_VARS.secboot.fd -> ../edk2/ovmf/OVMF_VARS.secboot.fd
+lrwxrwxrwx. 1 root root 26 Mar 27  2020 UefiShell.iso -> ../edk2/ovmf/UefiShell.iso
+

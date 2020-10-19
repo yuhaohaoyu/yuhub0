@@ -1,0 +1,41 @@
+staging/src/kubevirt.io/client-go/api/v1/types.go	Handler
+staging/src/kubevirt.io/client-go/kubecli/handler.go	virtHandler
+	
+pkg/virt-controller/watch/vm.go	VMController
+pkg/virt-controller/watch/vmi.go	VMIController
+pkg/virt-controller/watch/node.go	NodeController
+	
+pkg/virt-controller/watch/migration.go	MigrationController
+pkg/virt-controller/watch/snapshot/restore_base.go	VMRestoreController
+pkg/virt-controller/watch/snapshot/snapshot_base.go	VMSnapshotController
+	
+pkg/virt-handler/device-manager/device_controller.go	DeviceController
+pkg/virt-handler/rest/console.go	ConsoleHandler
+pkg/virt-handler/rest/lifecycle.go	LifecycleHandler
+pkg/virt-handler/vm.go	VirtualMachineController
+	
+pkg/virt-launcher/virtwrap/api/schema.go	Controller
+pkg/virt-launcher/virtwrap/cmd-server/server.go	Launcher
+pkg/virt-launcher/virtwrap/network/common.go	NetworkUtilsHandler
+	
+pkg/virt-operator/kubevirt.go	KubeVirtController
+	
+vendor/github.com/fsnotify/fsnotify/inotify_poller.go	fdPoller
+vendor/github.com/go-logfmt/logfmt/fuzz.go	saveHandler
+vendor/github.com/go-openapi/runtime/middleware/denco/server.go	Handler
+vendor/github.com/golang/mock/gomock/controller.go	Controller
+vendor/github.com/googleapis/gnostic/compiler/extension-handler.go	ExtensionHandler
+vendor/github.com/kr/logfmt/decode.go	StructHandler
+vendor/github.com/onsi/ginkgo/ginkgo/interrupthandler/interrupt_handler.go	InterruptHandler
+vendor/github.com/onsi/gomega/ghttp/test_server.go	routedHandler
+vendor/golang.org/x/net/ipv4/packet.go	packetHandler
+vendor/golang.org/x/net/ipv4/payload.go	payloadHandler
+vendor/golang.org/x/text/encoding/encoding.go	errorHandler
+vendor/k8s.io/api/core/v1/types.go	Handler
+vendor/k8s.io/api/core/v1/types.go	ReplicationController
+vendor/k8s.io/apimachinery/pkg/api/resource/suffix.go	suffixHandler
+vendor/k8s.io/client-go/tools/cache/controller.go	controller
+vendor/k8s.io/client-go/tools/cache/controller.go	FilteringResourceEventHandler
+vendor/k8s.io/client-go/tools/cache/shared_informer.go	dummyController
+vendor/k8s.io/client-go/transport/transport.go	contextCanceller
+

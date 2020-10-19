@@ -1,0 +1,93 @@
+[root@viose2 secboot]# dnf provides "*/OVMF_CODE.secboot.fd"
+	Updating Subscription Management repositories.
+	Last metadata expiration check: 2:16:46 ago on Mon 19 Oct 2020 06:01:00 AM EDT.
+	edk2-ovmf-20180508gitee3198e672e2-9.el8.noarch : UEFI firmware for x86_64 virtual machines
+	Repo        : rhel-8-for-x86_64-appstream-rpms
+	Matched from:
+	Filename    : /usr/share/OVMF/OVMF_CODE.secboot.fd
+	Filename    : /usr/share/edk2/ovmf/OVMF_CODE.secboot.fd
+
+	edk2-ovmf-20180508gitee3198e672e2-9.el8_0.1.noarch : UEFI firmware for x86_64 virtual machines
+	Repo        : rhel-8-for-x86_64-appstream-rpms
+	Matched from:
+	Filename    : /usr/share/OVMF/OVMF_CODE.secboot.fd
+	Filename    : /usr/share/edk2/ovmf/OVMF_CODE.secboot.fd
+
+	edk2-ovmf-20190308git89910a39dcfd-6.el8.noarch : UEFI firmware for x86_64 virtual machines
+	Repo        : rhel-8-for-x86_64-appstream-rpms
+	Matched from:
+	Filename    : /usr/share/OVMF/OVMF_CODE.secboot.fd
+	Filename    : /usr/share/edk2/ovmf/OVMF_CODE.secboot.fd
+
+	edk2-ovmf-20190829git37eef91017ad-9.el8.noarch : UEFI firmware for x86_64 virtual machines
+	Repo        : @System
+	Matched from:
+	Filename    : /usr/share/OVMF/OVMF_CODE.secboot.fd
+	Filename    : /usr/share/edk2/ovmf/OVMF_CODE.secboot.fd
+
+	edk2-ovmf-20190829git37eef91017ad-9.el8.noarch : UEFI firmware for x86_64 virtual machines
+	Repo        : rhel-8-for-x86_64-appstream-rpms
+	Matched from:
+	Filename    : /usr/share/OVMF/OVMF_CODE.secboot.fd
+	Filename    : /usr/share/edk2/ovmf/OVMF_CODE.secboot.fd
+
+
+[root@viose2 secboot]# rpm -ql edk2-ovmf
+	/usr/share/OVMF
+	/usr/share/OVMF/OVMF_CODE.secboot.fd
+	/usr/share/OVMF/OVMF_VARS.fd
+	/usr/share/OVMF/OVMF_VARS.secboot.fd
+	/usr/share/OVMF/UefiShell.iso
+	/usr/share/doc/edk2-ovmf
+	/usr/share/doc/edk2-ovmf/README
+	/usr/share/doc/edk2-ovmf/ovmf-whitepaper-c770f8c.txt
+	/usr/share/edk2
+	/usr/share/edk2/ovmf
+	/usr/share/edk2/ovmf/EnrollDefaultKeys.efi
+	/usr/share/edk2/ovmf/OVMF_CODE.secboot.fd
+	/usr/share/edk2/ovmf/OVMF_VARS.fd
+	/usr/share/edk2/ovmf/OVMF_VARS.secboot.fd
+	/usr/share/edk2/ovmf/Shell.efi
+	/usr/share/edk2/ovmf/UefiShell.iso
+	/usr/share/licenses/edk2-ovmf
+	/usr/share/licenses/edk2-ovmf/LICENSE.openssl
+	/usr/share/licenses/edk2-ovmf/License-History.txt
+	/usr/share/licenses/edk2-ovmf/License.OvmfPkg.txt
+	/usr/share/licenses/edk2-ovmf/License.txt
+	/usr/share/qemu
+	/usr/share/qemu/firmware
+	/usr/share/qemu/firmware/40-edk2-ovmf-sb.json
+	/usr/share/qemu/firmware/50-edk2-ovmf.json
+
+[root@viose2 IMG]# rpm -qlp ./edk2-ovmf-20190501stable-5.fc32.noarch.rpm 
+warning: ./edk2-ovmf-20190501stable-5.fc32.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID 12c944d0: NOKEY
+	/usr/share/OVMF
+	/usr/share/OVMF/OVMF_CODE.fd
+	/usr/share/OVMF/OVMF_CODE.secboot.fd
+	/usr/share/OVMF/OVMF_VARS.fd
+	/usr/share/OVMF/OVMF_VARS.secboot.fd
+	/usr/share/OVMF/UefiShell.iso
+	/usr/share/doc/edk2-ovmf
+	/usr/share/doc/edk2-ovmf/README
+	/usr/share/doc/edk2-ovmf/ovmf-whitepaper-c770f8c.txt
+	/usr/share/edk2
+	/usr/share/edk2/ovmf
+	/usr/share/edk2/ovmf/EnrollDefaultKeys.efi
+	/usr/share/edk2/ovmf/OVMF_CODE.fd
+	/usr/share/edk2/ovmf/OVMF_CODE.secboot.fd
+	/usr/share/edk2/ovmf/OVMF_VARS.fd
+	/usr/share/edk2/ovmf/OVMF_VARS.secboot.fd
+	/usr/share/edk2/ovmf/Shell.efi
+	/usr/share/edk2/ovmf/UefiShell.iso
+	/usr/share/licenses/edk2-ovmf
+	/usr/share/licenses/edk2-ovmf/LICENSE.openssl
+	/usr/share/licenses/edk2-ovmf/License.txt
+	/usr/share/qemu/firmware
+	/usr/share/qemu/firmware/40-edk2-ovmf-x64-sb-enrolled.json
+	/usr/share/qemu/firmware/50-edk2-ovmf-x64-sb.json
+	/usr/share/qemu/firmware/60-edk2-ovmf-x64.json
+
+
+[root@viose2 docker]# find . -name "microlivecd-container-disk-demo*"
+./volumes/k8s-1.18-registry/_data/docker/registry/v2/repositories/kubevirt/microlivecd-container-disk-demo
+

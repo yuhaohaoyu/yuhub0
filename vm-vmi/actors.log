@@ -1,0 +1,46 @@
+[root@viose2 kubevirt]# egrep -r 'dler struct|ncher struct|ller struct' *
+pkg/virt-controller/watch/drain/disruptionbudget/disruptionbudget.go:type DisruptionBudgetController struct {
+pkg/virt-controller/watch/drain/evacuation/evacuation.go:type EvacuationController struct {
+pkg/virt-controller/watch/migration.go:type MigrationController struct {
+pkg/virt-controller/watch/node.go:// NodeController is the main NodeController struct.
+pkg/virt-controller/watch/node.go:type NodeController struct {
+pkg/virt-controller/watch/node.go:// NewNodeController creates a new instance of the NodeController struct.
+pkg/virt-controller/watch/snapshot/restore_base.go:type VMRestoreController struct {
+pkg/virt-controller/watch/snapshot/snapshot_base.go:type VMSnapshotController struct {
+pkg/virt-controller/watch/vm.go:type VMController struct {
+pkg/virt-controller/watch/vmi.go:type VMIController struct {
+pkg/virt-handler/device-manager/device_controller.go:type DeviceController struct {
+pkg/virt-handler/rest/console.go:type ConsoleHandler struct {
+pkg/virt-handler/rest/lifecycle.go:type LifecycleHandler struct {
+pkg/virt-handler/vm.go:type VirtualMachineController struct {
+pkg/virt-launcher/virtwrap/agent-poller/agent_poller.go:type AgentPoller struct {
+pkg/virt-launcher/virtwrap/api/schema.go:type Controller struct {
+pkg/virt-launcher/virtwrap/cmd-server/server.go:type Launcher struct {
+pkg/virt-launcher/virtwrap/network/common.go:type NetworkUtilsHandler struct{}
+pkg/virt-launcher/virtwrap/network/dhcp/dhcp.go:type DHCPHandler struct {
+pkg/virt-launcher/virtwrap/network/generated_mock_common.go:type MockNetworkHandler struct {
+pkg/virt-operator/kubevirt.go:type KubeVirtController struct {
+staging/src/kubevirt.io/client-go/api/v1/types.go:type Handler struct {
+staging/src/kubevirt.io/client-go/kubecli/handler.go:type virtHandler struct {
+vendor/github.com/fsnotify/fsnotify/inotify_poller.go:type fdPoller struct {
+vendor/github.com/go-logfmt/logfmt/fuzz.go:type saveHandler struct {
+vendor/github.com/go-openapi/runtime/middleware/denco/server.go:type Handler struct {
+vendor/github.com/golang/mock/gomock/controller.go:type Controller struct {
+vendor/github.com/googleapis/gnostic/compiler/extension-handler.go:type ExtensionHandler struct {
+vendor/github.com/kr/logfmt/decode.go:type StructHandler struct {
+vendor/github.com/onsi/ginkgo/ginkgo/interrupthandler/interrupt_handler.go:type InterruptHandler struct {
+vendor/github.com/onsi/gomega/ghttp/test_server.go:type routedHandler struct {
+vendor/golang.org/x/net/ipv4/packet.go:type packetHandler struct {
+vendor/golang.org/x/net/ipv4/payload.go:type payloadHandler struct {
+vendor/golang.org/x/text/encoding/encoding.go:type errorHandler struct {
+vendor/k8s.io/api/core/v1/types.go:type Handler struct {
+vendor/k8s.io/api/core/v1/types.go:type ReplicationController struct {
+vendor/k8s.io/apimachinery/pkg/api/resource/suffix.go:type suffixHandler struct {
+vendor/k8s.io/client-go/tools/cache/controller.go:type controller struct {
+vendor/k8s.io/client-go/tools/cache/controller.go:type FilteringResourceEventHandler struct {
+vendor/k8s.io/client-go/tools/cache/shared_informer.go:type dummyController struct {
+vendor/k8s.io/client-go/transport/transport.go:type contextCanceller struct {
+
+
+
+

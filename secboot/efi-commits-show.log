@@ -1,154 +1,4 @@
-[root@viose2 virt-controller]# git show ab38d2a8d999bee1e165903758b19aefd7555f15
-commit ab38d2a8d999bee1e165903758b19aefd7555f15
-Author: gaahrdner <github@philipgardner.com>
-Date:   Wed Dec 5 11:30:34 2018 -0600
 
-    Initial EFI support
-
-diff --git a/api/openapi-spec/swagger.json b/api/openapi-spec/swagger.json
-index f405285da..72f971234 100644
---- a/api/openapi-spec/swagger.json
-+++ b/api/openapi-spec/swagger.json
-@@ -4005,6 +4005,7 @@
-      }
-     }
-    },
-+   "v1.Bootloader": {},
-    "v1.CDRomTarget": {
-     "properties": {
-      "bus": {
-@@ -4315,6 +4316,9 @@
-      "devices"
-     ],
-     "properties": {
-+     "bootloader": {
-+      "$ref": "#/definitions/v1.Bootloader"
-+     },
-      "clock": {
-       "description": "Clock sets the clock and timers of the vmi.\n+optional",
-       "$ref": "#/definitions/v1.Clock"
-diff --git a/cmd/virt-launcher/Dockerfile b/cmd/virt-launcher/Dockerfile
-index 8e41106ce..365715dd2 100644
---- a/cmd/virt-launcher/Dockerfile
-+++ b/cmd/virt-launcher/Dockerfile
-@@ -21,6 +21,7 @@ FROM kubevirt/libvirt:4.9.0
- LABEL maintainer="The KubeVirt Project <kubevirt-dev@googlegroups.com>"
- 
- RUN dnf -y install \
-+  edk2-ovmf \
-   socat \
-   genisoimage \
-   && dnf -y clean all && \
-diff --git a/pkg/api/v1/deepcopy_generated.go b/pkg/api/v1/deepcopy_generated.go
-index 34e63899b..cb8a44802 100644
---- a/pkg/api/v1/deepcopy_generated.go
-+++ b/pkg/api/v1/deepcopy_generated.go
-@@ -521,6 +521,15 @@ func (in *DomainSpec) DeepCopyInto(out *DomainSpec) {
-                        **out = **in
-                }
-        }
-+       if in.Bootloader != nil {
-+               in, out := &in.Bootloader, &out.Bootloader
-+               if *in == nil {
-+                       *out = nil
-+               } else {
-+                       *out = new(Bootloader)
-+                       **out = **in
-+               }
-+       }
-        return
- }
- 
-diff --git a/pkg/api/v1/openapi_generated.go b/pkg/api/v1/openapi_generated.go
-index a94218cf4..79e8df1da 100644
---- a/pkg/api/v1/openapi_generated.go
-+++ b/pkg/api/v1/openapi_generated.go
-@@ -733,6 +733,12 @@ func schema_kubevirt_pkg_api_v1_DomainSpec(ref common.ReferenceCallback) common.
-                                                        Format:      "",
-                                                },
-                                        },
-+                                       "bootloader": {
-+                                               SchemaProps: spec.SchemaProps{
-+                                                       Type:   []string{"string"},
-+                                                       Format: "",
-+                                               },
-+                                       },
-                                },
-                                Required: []string{"devices"},
-                        },
-diff --git a/pkg/api/v1/schema.go b/pkg/api/v1/schema.go
-index 85f6498a5..e564f9b3d 100644
---- a/pkg/api/v1/schema.go
-+++ b/pkg/api/v1/schema.go
-@@ -34,6 +34,13 @@ const (
-        CPUModeHostModel                       = "host-model"
- )
- 
-+type Bootloader string
-+
-+const (
-+       BootloaderBIOS Bootloader = "bios"
-+       BootloaderEFI  Bootloader = "efi"
-+)
-+
- //go:generate swagger-doc
- //go:generate openapi-gen -i . --output-package=kubevirt.io/kubevirt/pkg/api/v1  --go-header-file ../../../hack/boilerplate/boilerplate.go.txt
- 
-@@ -136,6 +143,7 @@ type DomainSpec struct {
-        // One of: shared, auto
-        // +optional
-        IOThreadsPolicy *IOThreadsPolicy `json:"ioThreadsPolicy,omitempty"`
-+       Bootloader      *Bootloader      `json:"bootloader,omitempty"`
- }
- 
- // ---
-diff --git a/pkg/virt-launcher/virtwrap/api/converter.go b/pkg/virt-launcher/virtwrap/api/converter.go
-index 154ebcad8..04938be7d 100644
---- a/pkg/virt-launcher/virtwrap/api/converter.go
-+++ b/pkg/virt-launcher/virtwrap/api/converter.go
-@@ -46,7 +46,14 @@ import (
- )
- 
- const (
-+<<<<<<< HEAD
-        defaultIOThread = uint(1)
-+=======
-+       CPUModeHostPassthrough = "host-passthrough"
-+       CPUModeHostModel       = "host-model"
-+       defaultIOThread        = uint(1)
-+       EFIBootloaderPath      = "/usr/share/OVMF/OVMF_CODE.fd"
-+>>>>>>> Initial EFI support
- )
- 
- type ConverterContext struct {
-@@ -596,6 +603,12 @@ func Convert_v1_VirtualMachine_To_api_Domain(vmi *v1.VirtualMachineInstance, dom
-                }
-        }
- 
-+       if vmi.Spec.Domain.Bootloader != nil {
-+               if (*vmi.Spec.Domain.Bootloader) == v1.BootloaderEFI {
-+                       domain.Spec.OS.Loader.Path = EFIBootloaderPath
-+               }
-+       }
-+
-        // Take memory from the requested memory
-        if v, ok := vmi.Spec.Domain.Resources.Requests[k8sv1.ResourceMemory]; ok {
-                if domain.Spec.Memory, err = QuantityToByte(v); err != nil {
-diff --git a/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go b/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
-index da759b909..02420f2f0 100644
---- a/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
-+++ b/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
-@@ -2041,6 +2041,15 @@ func (in *OS) DeepCopyInto(out *OS) {
-                        **out = **in
-                }
-        }
-+       if in.Loader != nil {
-+               in, out := &in.Loader, &out.Loader
-+               if *in == nil {
-+                       *out = nil
-+               } else {
-+                       *out = new(Loader)
-+                       **out = **in
 [root@viose2 virt-controller]# git show 797ba48ebbe07cd125d215df5ebc91c9235ec596
 commit 797ba48ebbe07cd125d215df5ebc91c9235ec596
 Merge: aac7a92b2 88203c7e4
@@ -181,6 +31,9 @@ index eb97423d1..b02ed5a92 100644
                                 vmi := tests.NewRandomVMIWithSecureBoot()
  
                                 By("Starting a VirtualMachineInstance")
+
+
+
 [root@viose2 virt-controller]# git show 95d578273dc47bdb8e1b92bc5d04b9b243c26d01
 commit 95d578273dc47bdb8e1b92bc5d04b9b243c26d01
 Author: Jed Lejosne <jed@redhat.com>
@@ -839,4 +692,158 @@ index 89ba6cb03..147d1df2c 100644
 +               "secureBoot": "If set, SecureBoot will be enabled and the OVMF roms will be swapped for\nSecureBoot-enabled ones.\nRequires SMM to be enabled.\nDefaults to false\n+optional",
         }
  }
+
+
+[root@viose2 virt-controller]# git show ab38d2a8d999bee1e165903758b19aefd7555f15
+commit ab38d2a8d999bee1e165903758b19aefd7555f15
+Author: gaahrdner <github@philipgardner.com>
+Date:   Wed Dec 5 11:30:34 2018 -0600
+
+    Initial EFI support
+
+diff --git a/api/openapi-spec/swagger.json b/api/openapi-spec/swagger.json
+index f405285da..72f971234 100644
+--- a/api/openapi-spec/swagger.json
++++ b/api/openapi-spec/swagger.json
+@@ -4005,6 +4005,7 @@
+      }
+     }
+    },
++   "v1.Bootloader": {},
+    "v1.CDRomTarget": {
+     "properties": {
+      "bus": {
+@@ -4315,6 +4316,9 @@
+      "devices"
+     ],
+     "properties": {
++     "bootloader": {
++      "$ref": "#/definitions/v1.Bootloader"
++     },
+      "clock": {
+       "description": "Clock sets the clock and timers of the vmi.\n+optional",
+       "$ref": "#/definitions/v1.Clock"
+diff --git a/cmd/virt-launcher/Dockerfile b/cmd/virt-launcher/Dockerfile
+index 8e41106ce..365715dd2 100644
+--- a/cmd/virt-launcher/Dockerfile
++++ b/cmd/virt-launcher/Dockerfile
+@@ -21,6 +21,7 @@ FROM kubevirt/libvirt:4.9.0
+ LABEL maintainer="The KubeVirt Project <kubevirt-dev@googlegroups.com>"
+ 
+ RUN dnf -y install \
++  edk2-ovmf \
+   socat \
+   genisoimage \
+   && dnf -y clean all && \
+diff --git a/pkg/api/v1/deepcopy_generated.go b/pkg/api/v1/deepcopy_generated.go
+index 34e63899b..cb8a44802 100644
+--- a/pkg/api/v1/deepcopy_generated.go
++++ b/pkg/api/v1/deepcopy_generated.go
+@@ -521,6 +521,15 @@ func (in *DomainSpec) DeepCopyInto(out *DomainSpec) {
+                        **out = **in
+                }
+        }
++       if in.Bootloader != nil {
++               in, out := &in.Bootloader, &out.Bootloader
++               if *in == nil {
++                       *out = nil
++               } else {
++                       *out = new(Bootloader)
++                       **out = **in
++               }
++       }
+        return
+ }
+ 
+diff --git a/pkg/api/v1/openapi_generated.go b/pkg/api/v1/openapi_generated.go
+index a94218cf4..79e8df1da 100644
+--- a/pkg/api/v1/openapi_generated.go
++++ b/pkg/api/v1/openapi_generated.go
+@@ -733,6 +733,12 @@ func schema_kubevirt_pkg_api_v1_DomainSpec(ref common.ReferenceCallback) common.
+                                                        Format:      "",
+                                                },
+                                        },
++                                       "bootloader": {
++                                               SchemaProps: spec.SchemaProps{
++                                                       Type:   []string{"string"},
++                                                       Format: "",
++                                               },
++                                       },
+                                },
+                                Required: []string{"devices"},
+                        },
+diff --git a/pkg/api/v1/schema.go b/pkg/api/v1/schema.go
+index 85f6498a5..e564f9b3d 100644
+--- a/pkg/api/v1/schema.go
++++ b/pkg/api/v1/schema.go
+@@ -34,6 +34,13 @@ const (
+        CPUModeHostModel                       = "host-model"
+ )
+ 
++type Bootloader string
++
++const (
++       BootloaderBIOS Bootloader = "bios"
++       BootloaderEFI  Bootloader = "efi"
++)
++
+ //go:generate swagger-doc
+ //go:generate openapi-gen -i . --output-package=kubevirt.io/kubevirt/pkg/api/v1  --go-header-file ../../../hack/boilerplate/boilerplate.go.txt
+ 
+@@ -136,6 +143,7 @@ type DomainSpec struct {
+        // One of: shared, auto
+        // +optional
+        IOThreadsPolicy *IOThreadsPolicy `json:"ioThreadsPolicy,omitempty"`
++       Bootloader      *Bootloader      `json:"bootloader,omitempty"`
+ }
+ 
+ // ---
+diff --git a/pkg/virt-launcher/virtwrap/api/converter.go b/pkg/virt-launcher/virtwrap/api/converter.go
+index 154ebcad8..04938be7d 100644
+--- a/pkg/virt-launcher/virtwrap/api/converter.go
++++ b/pkg/virt-launcher/virtwrap/api/converter.go
+@@ -46,7 +46,14 @@ import (
+ )
+ 
+ const (
++<<<<<<< HEAD
+        defaultIOThread = uint(1)
++=======
++       CPUModeHostPassthrough = "host-passthrough"
++       CPUModeHostModel       = "host-model"
++       defaultIOThread        = uint(1)
++       EFIBootloaderPath      = "/usr/share/OVMF/OVMF_CODE.fd"
++>>>>>>> Initial EFI support
+ )
+ 
+ type ConverterContext struct {
+@@ -596,6 +603,12 @@ func Convert_v1_VirtualMachine_To_api_Domain(vmi *v1.VirtualMachineInstance, dom
+                }
+        }
+ 
++       if vmi.Spec.Domain.Bootloader != nil {
++               if (*vmi.Spec.Domain.Bootloader) == v1.BootloaderEFI {
++                       domain.Spec.OS.Loader.Path = EFIBootloaderPath
++               }
++       }
++
+        // Take memory from the requested memory
+        if v, ok := vmi.Spec.Domain.Resources.Requests[k8sv1.ResourceMemory]; ok {
+                if domain.Spec.Memory, err = QuantityToByte(v); err != nil {
+diff --git a/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go b/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
+index da759b909..02420f2f0 100644
+--- a/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
++++ b/pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
+@@ -2041,6 +2041,15 @@ func (in *OS) DeepCopyInto(out *OS) {
+                        **out = **in
+                }
+        }
++       if in.Loader != nil {
++               in, out := &in.Loader, &out.Loader
++               if *in == nil {
++                       *out = nil
++               } else {
++                       *out = new(Loader)
++                       **out = **in
+
 

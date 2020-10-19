@@ -1,0 +1,19 @@
+smm: true
+secureBoot: true
+
+	~ # dmesg | grep -i secur
+	[    0.000000] secureboot: Secure boot enabled
+	[    0.000000] Kernel is locked down from EFI secure boot; see https://wiki.debian.org/SecureBoot
+	[   24.383283] Security Framework initialized
+	[   70.973364] Loaded X.509 cert 'Debian Secure Boot CA: 6ccece7e4c6c0d1f6149f3dd27dfcc5cbb419ea1'
+	[   71.140377] Loaded X.509 cert 'Debian Secure Boot Signer: 00a7468def'
+	[   72.458143] Lockdown: Hibernation is restricted; see https://wiki.debian.org/SecureBoot
+
+
+
+smm: false
+secureBoot: true
+
+	[root@viose2 kubevirt]# ./cluster-up/kubectl.sh create -f examples/vmi-secureboot.yaml
+	The request is invalid: spec.domain: spec.domain has EFI SecureBoot enabled. SecureBoot requires SMM, which is currently disabled.
+

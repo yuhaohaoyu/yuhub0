@@ -1,0 +1,325 @@
+
+BdsDxe: loading Boot0001 "UEFI Misc Device" from PciRoot(0x0)/Pci(0x2,0x2)/Pci(0x0,0x0)
+BdsDxe: starting Boot0001 "UEFI Misc Device" from PciRoot(0x0)/Pci(0x2,0x2)/Pci(0x0,0x0)
+Welcome to GRUB!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                             GNU GRUB  version 2.02
+
+ \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\u013f
+ \ufffd*Linux virthardened                                                         \ufffd 
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd
+ \ufffd                                                                            \ufffd 
+ \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+
+      Use the ^ and v keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                           
+   The highlighted entry will be executed automatically in 0s.                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Booting `Linux virthardened'
+
+[    0.000000] ACPI BIOS Error (bug): A valid RSDP was not found (20160831/tbxfroot-244)
+[    8.526963] ACPI BIOS Error (bug): A valid RSDP was not found (20160831/tbxfroot-244)
+[    8.606853] dmi: Firmware registration failed.
+
+
+   OpenRC 0.24.1.a941ee4a0b is starting up Linux 4.9.65-1-virthardened (x86_64)
+
+ * /proc is already mounted
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Remounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/mqueue ... [ ok ]
+ * Mounting modloop  ... [ ok ]
+ * Mounting security filesystem ... [ ok ]
+ * Mounting persistent storage (pstore) filesystem ... [ ok ]
+ * Mounting cgroup filesystem ... [ ok ]
+ * Starting busybox mdev ... [ ok ]
+ * Loading hardware drivers ... [ ok ]
+ * Loading modules ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Checking local filesystems  ... [ ok ]
+ * Remounting filesystems ... [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * Configuring kernel parameters ... [ ok ]
+ * Migrating /var/lock to /run/lock ... [ ok ]
+ * Creating user login records ... [ ok ]
+ * Wiping /tmp directory ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting busybox klogd ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+
+Welcome to Alpine Linux 3.7
+Kernel 4.9.65-1-virthardened on an x86_64 (/dev/ttyS0)
+
+localhost login: cirros
+Password: 
+Login incorrect
+localhost login: alpine
+Password: 
+Login incorrect
+localhost login: root
+Welcome to Alpine!
+
+The Alpine Wiki contains a large amount of how-to guides and general
+information about administrating Alpine systems.
+See <http://wiki.alpinelinux.org>.
+
+You can setup the system with the command: setup-alpine
+
+You may change this message by editing /etc/motd.
+
+localhost:~# ls
+localhost:~# ls
+localhost:~# who
+-ash: who: not found
+localhost:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+devtmpfs                 10240         0     10240   0% /dev
+shm                     509436         0    509436   0% /dev/shm
+/dev/vda                 37888     37888         0 100% /media/vda
+tmpfs                   509436      6508    502928   1% /
+tmpfs                   101888        60    101828   0% /run
+/dev/loop0               13312     13312         0 100% /.modloop
+cgroup_root              10240         0     10240   0% /sys/fs/cgroup
+localhost:~# pwd
+/root
+localhost:~# ls /boot
+ls: /boot: No such file or directory
+localhost:~# ls /
+bin    etc    lib    mnt    root   sbin   sys    usr
+dev    home   media  proc   run    srv    tmp    var
+localhost:~# mokutil --sb-state
+-ash: mokutil: not found
+localhost:~# yum install mokutil
+-ash: yum: not found
+localhost:~# update-
+update-conf    update-kernel
+localhost:~# update-^C
+localhost:~# dmsg | grep -i cert
+-ash: dmsg: not found
+localhost:~# dmesg | grep -i cert
+
+localhost:~# dmesg
+[   11.810000] pci 0000:00:02.4: PCI bridge to [bus 05]
+[   11.812007] pci 0000:00:02.4:   bridge window [io  0x6000-0x6fff]
+[   11.816073] pci 0000:00:02.4:   bridge window [mem 0xc1000000-0xc11fffff]
+[   11.870815] pci_bus 0000:00: busn_res: [bus 00-ff] end is updated to 05
+[   11.917989] PCI: pci_cache_line_size set to 64 bytes
+[   11.944099] pci 0000:00:1f.2: can't claim BAR 4 [io  0xa240-0xa25f]: address conflict with PCI Bus 0000:01 [io  0xa000-0xafff]
+[   11.945844] pci 0000:00:1f.3: can't claim BAR 4 [io  0xa200-0xa23f]: address conflict with PCI Bus 0000:01 [io  0xa000-0xafff]
+[   11.975968] e820: reserve RAM buffer [mem 0x3ea26000-0x3fffffff]
+[   11.977957] e820: reserve RAM buffer [mem 0x3fb9b000-0x3fffffff]
+[   11.977966] e820: reserve RAM buffer [mem 0x3ffe0000-0x3fffffff]
+[   12.082008] clocksource: Switched to clocksource kvm-clock
+[   12.092688] VFS: Disk quotas dquot_6.6.0
+[   12.094647] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[   12.104650] pnp: PnP ACPI: disabled
+[   12.132871] pci 0000:00:01.0: can't claim BAR 6 [mem 0xffff0000-0xffffffff pref]: address conflict with reserved [mem 0xffe00000-0xffffffff]
+[   12.197925] pci 0000:00:02.4: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 05] add_size 200000 add_align 100000
+[   12.197962] pci 0000:00:02.4: res[15]=[mem 0x00100000-0x000fffff 64bit pref] res_to_dev_res add_size 200000 min_align 100000
+[   12.197964] pci 0000:00:02.4: res[15]=[mem 0x00100000-0x000fffff 64bit pref] res_to_dev_res add_size 200000 min_align 100000
+[   12.197965] pci 0000:00:02.4: res[15]=[mem 0x00100000-0x002fffff 64bit pref] res_to_dev_res add_size 200000 min_align 100000
+[   12.197985] pci 0000:00:02.4: BAR 15: assigned [mem 0x100000000-0x1001fffff 64bit pref]
+[   12.197987] pci 0000:00:01.0: BAR 6: assigned [mem 0x40000000-0x4000ffff pref]
+[   12.197990] pci 0000:00:1f.3: BAR 4: assigned [io  0x1000-0x103f]
+[   12.203896] pci 0000:00:1f.2: BAR 4: assigned [io  0x1040-0x105f]
+[   12.207638] pci 0000:00:02.0: PCI bridge to [bus 01]
+[   12.209568] pci 0000:00:02.0:   bridge window [io  0xa000-0xafff]
+[   12.216609] pci 0000:00:02.0:   bridge window [mem 0xc1800000-0xc19fffff]
+[   12.222030] pci 0000:00:02.0:   bridge window [mem 0x800000000-0x8000fffff 64bit pref]
+[   12.229903] pci 0000:00:02.1: PCI bridge to [bus 02]
+[   12.232639] pci 0000:00:02.1:   bridge window [io  0x9000-0x9fff]
+[   12.238949] pci 0000:00:02.1:   bridge window [mem 0xc1600000-0xc17fffff]
+[   12.243706] pci 0000:00:02.1:   bridge window [mem 0x800100000-0x8001fffff 64bit pref]
+[   12.251741] pci 0000:00:02.2: PCI bridge to [bus 03]
+[   12.253178] pci 0000:00:02.2:   bridge window [io  0x8000-0x8fff]
+[   12.258696] pci 0000:00:02.2:   bridge window [mem 0xc1400000-0xc15fffff]
+[   12.263922] pci 0000:00:02.2:   bridge window [mem 0x800200000-0x8002fffff 64bit pref]
+[   12.272735] pci 0000:00:02.3: PCI bridge to [bus 04]
+[   12.274598] pci 0000:00:02.3:   bridge window [io  0x7000-0x7fff]
+[   12.281632] pci 0000:00:02.3:   bridge window [mem 0xc1200000-0xc13fffff]
+[   12.285692] pci 0000:00:02.3:   bridge window [mem 0x800300000-0x8003fffff 64bit pref]
+[   12.293989] pci 0000:00:02.4: PCI bridge to [bus 05]
+[   12.295585] pci 0000:00:02.4:   bridge window [io  0x6000-0x6fff]
+[   12.304169] pci 0000:00:02.4:   bridge window [mem 0xc1000000-0xc11fffff]
+[   12.308023] pci 0000:00:02.4:   bridge window [mem 0x100000000-0x1001fffff 64bit pref]
+[   12.316940] pci_bus 0000:00: resource 4 [io  0x0000-0xffff]
+[   12.316943] pci_bus 0000:00: resource 5 [mem 0x00000000-0xffffffffff]
+[   12.316945] pci_bus 0000:01: resource 0 [io  0xa000-0xafff]
+[   12.316946] pci_bus 0000:01: resource 1 [mem 0xc1800000-0xc19fffff]
+[   12.316948] pci_bus 0000:01: resource 2 [mem 0x800000000-0x8000fffff 64bit pref]
+[   12.316950] pci_bus 0000:02: resource 0 [io  0x9000-0x9fff]
+[   12.316951] pci_bus 0000:02: resource 1 [mem 0xc1600000-0xc17fffff]
+[   12.316952] pci_bus 0000:02: resource 2 [mem 0x800100000-0x8001fffff 64bit pref]
+[   12.316954] pci_bus 0000:03: resource 0 [io  0x8000-0x8fff]
+[   12.316955] pci_bus 0000:03: resource 1 [mem 0xc1400000-0xc15fffff]
+[   12.316956] pci_bus 0000:03: resource 2 [mem 0x800200000-0x8002fffff 64bit pref]
+[   12.316958] pci_bus 0000:04: resource 0 [io  0x7000-0x7fff]
+[   12.316959] pci_bus 0000:04: resource 1 [mem 0xc1200000-0xc13fffff]
+[   12.316960] pci_bus 0000:04: resource 2 [mem 0x800300000-0x8003fffff 64bit pref]
+[   12.316961] pci_bus 0000:05: resource 0 [io  0x6000-0x6fff]
+[   12.316962] pci_bus 0000:05: resource 1 [mem 0xc1000000-0xc11fffff]
+[   12.316964] pci_bus 0000:05: resource 2 [mem 0x100000000-0x1001fffff 64bit pref]
+[   12.322086] NET: Registered protocol family 2
+[   12.348955] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[   12.349774] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[   12.349871] TCP: Hash tables configured (established 8192 bind 8192)
+[   12.351602] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[   12.351606] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[   12.354810] NET: Registered protocol family 1
+[   12.365817] pci 0000:00:01.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[   12.412867] PCI: CLS 0 bytes, default 64
+[   12.514757] Unpacking initramfs...
+[   12.965916] Freeing initrd memory: 4940K
+[   12.982760] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[   12.996885] workingset: timestamp_bits=46 max_order=18 bucket_order=0
+[   13.004146] Key type asymmetric registered
+[   13.004642] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[   13.009854] io scheduler noop registered
+[   13.009874] io scheduler deadline registered (default)
+[   13.679585] pcieport 0000:00:02.0: Signaling PME through PCIe PME interrupt
+[   13.679592] pci 0000:01:00.0: Signaling PME through PCIe PME interrupt
+[   13.683449] pcie_pme 0000:00:02.0:pcie001: service driver pcie_pme loaded
+[   13.719456] pcieport 0000:00:02.1: Signaling PME through PCIe PME interrupt
+[   13.719458] pci 0000:02:00.0: Signaling PME through PCIe PME interrupt
+[   13.732733] pcie_pme 0000:00:02.1:pcie001: service driver pcie_pme loaded
+[   13.756898] pcieport 0000:00:02.2: Signaling PME through PCIe PME interrupt
+[   13.756900] pci 0000:03:00.0: Signaling PME through PCIe PME interrupt
+[   13.761118] pcie_pme 0000:00:02.2:pcie001: service driver pcie_pme loaded
+[   13.773981] pcieport 0000:00:02.3: Signaling PME through PCIe PME interrupt
+[   13.773983] pci 0000:04:00.0: Signaling PME through PCIe PME interrupt
+[   13.777118] pcie_pme 0000:00:02.3:pcie001: service driver pcie_pme loaded
+[   13.791077] pcieport 0000:00:02.4: Signaling PME through PCIe PME interrupt
+[   13.794648] pcie_pme 0000:00:02.4:pcie001: service driver pcie_pme loaded
+[   13.794685] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[   13.801883] pciehp 0000:00:02.0:pcie004: Slot #0 AttnBtn+ PwrCtrl+ MRL- AttnInd+ PwrInd+ HotPlug+ Surprise+ Interlock+ NoCompl- LLActRep+
+[   13.822544] pciehp 0000:00:02.0:pcie004: service driver pciehp loaded
+[   13.827518] pciehp 0000:00:02.1:pcie004: Slot #0 AttnBtn+ PwrCtrl+ MRL- AttnInd+ PwrInd+ HotPlug+ Surprise+ Interlock+ NoCompl- LLActRep+
+[   13.843629] pciehp 0000:00:02.1:pcie004: service driver pciehp loaded
+[   13.849762] pciehp 0000:00:02.2:pcie004: Slot #0 AttnBtn+ PwrCtrl+ MRL- AttnInd+ PwrInd+ HotPlug+ Surprise+ Interlock+ NoCompl- LLActRep+
+[   13.866396] pciehp 0000:00:02.2:pcie004: service driver pciehp loaded
+[   13.872033] pciehp 0000:00:02.3:pcie004: Slot #0 AttnBtn+ PwrCtrl+ MRL- AttnInd+ PwrInd+ HotPlug+ Surprise+ Interlock+ NoCompl- LLActRep+
+[   13.887609] pciehp 0000:00:02.3:pcie004: service driver pciehp loaded
+[   13.893686] pciehp 0000:00:02.4:pcie004: Slot #0 AttnBtn+ PwrCtrl+ MRL- AttnInd+ PwrInd+ HotPlug+ Surprise+ Interlock+ NoCompl- LLActRep+
+[   13.908153] pciehp 0000:00:02.4:pcie004: service driver pciehp loaded
+[   13.908522] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[   13.908653] ERST DBG: ERST support is disabled.
+[   13.908730] xenfs: not registering filesystem on non-xen platform
+[   13.913743] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[   14.296142] serial8250: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[   14.297615] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2283c0783fd, max_idle_ns: 440795301468 ns
+[   14.321043] VMware PVSCSI driver - version 1.0.7.0-k
+[   14.323652] ahci 0000:00:1f.2: version 3.0
+[   14.449529] ahci 0000:00:1f.2: AHCI 0001.0000 32 slots 6 ports 1.5 Gbps 0x3f impl SATA mode
+[   14.449532] ahci 0000:00:1f.2: flags: 64bit ncq only 
+[   14.571996] scsi host0: ahci
+[   14.574995] scsi host1: ahci
+[   14.575502] scsi host2: ahci
+[   14.575594] scsi host3: ahci
+[   14.575675] scsi host4: ahci
+[   14.575756] scsi host5: ahci
+[   14.576847] ata1: SATA max UDMA/133 abar m4096@0xc1a10000 port 0xc1a10100 irq 21
+[   14.577796] ata2: SATA max UDMA/133 abar m4096@0xc1a10000 port 0xc1a10180 irq 21
+[   14.578697] ata3: SATA max UDMA/133 abar m4096@0xc1a10000 port 0xc1a10200 irq 21
+[   14.579598] ata4: SATA max UDMA/133 abar m4096@0xc1a10000 port 0xc1a10280 irq 21
+[   14.581530] ata5: SATA max UDMA/133 abar m4096@0xc1a10000 port 0xc1a10300 irq 21
+[   14.582422] ata6: SATA max UDMA/133 abar m4096@0xc1a10000 port 0xc1a10380 irq 21
+[   14.583876] i8042: PNP: No PS/2 controller found. Probing ports directly.
+[   14.687436] serio: i8042 KBD port at 0x60,0x64 irq 1
+[   14.687542] serio: i8042 AUX port at 0x60,0x64 irq 12
+[   14.795843] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+[   14.918520] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+[   14.926513] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[   14.927043] gre: GRE over IPv4 demultiplexor driver
+[   14.928814] Key type dns_resolver registered
+[   14.933672] registered taskstats version 1
+[   15.051560] rtc_cmos rtc_cmos: setting system clock to 2020-10-16 12:31:12 UTC (1602851472)
+[   15.258589] ata3: SATA link down (SStatus 0 SControl 300)
+[   15.294593] ata4: SATA link down (SStatus 0 SControl 300)
+[   15.327629] ata5: SATA link down (SStatus 0 SControl 300)
+[   15.368680] ata6: SATA link down (SStatus 0 SControl 300)
+[   15.428408] ata1: SATA link down (SStatus 0 SControl 300)
+[   15.502067] ata2: SATA link down (SStatus 0 SControl 300)
+[   15.737809] Freeing unused kernel memory: 1148K
+[   15.737822] Write protecting the kernel read-only data: 8192k
+[   15.771664] Freeing unused kernel memory: 40K
+[   15.772929] Freeing unused kernel memory: 208K
+[   16.253798] loop: module loaded
+[   16.315463] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[   16.732703] usbcore: registered new interface driver usbfs
+[   16.732733] usbcore: registered new interface driver hub
+[   16.732767] usbcore: registered new device driver usb
+[   16.759767] usbcore: registered new interface driver usb-storage
+[   18.329891]  vda: vda1 vda2
+[   19.439363] ISO 9660 Extensions: Microsoft Joliet Level 3
+[   19.461924] ISO 9660 Extensions: RRIP_1991A
+[   32.228262] [drm] Initialized
+[   32.493170] bochs-drm 0000:00:01.0: BAR 0: can't reserve [mem 0xc0000000-0xc0ffffff pref]
+[   32.493408] [drm:bochs_hw_init [bochs_drm]] *ERROR* Cannot request framebuffer
+[   32.493447] Trying to free nonexistent resource <00000000c0000000-00000000c0ffffff>
+[   32.503862] bochs-drm: probe of 0000:00:01.0 failed with error -16
+[   32.542101] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[   32.653051] input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input4
+[   34.155210] input: VirtualPS/2 VMware VMMouse as /devices/platform/i8042/serio1/input/input3
+[   34.326008] mousedev: PS/2 mouse device common for all mice
+[   34.639927] NET: Registered protocol family 17
+[   34.857875] grsec: time set by /bin/busybox[hwclock:1343] uid/euid:0/0 gid/egid:0/0, parent /lib/rc/sh/openrc-run.sh[openrc-run.sh:1321] uid/euid:0/0 gid/egid:0/0
+[   34.883983] grsec: time set by /bin/busybox[hwclock:1347] uid/euid:0/0 gid/egid:0/0, parent /lib/rc/sh/openrc-run.sh[openrc-run.sh:1321] uid/euid:0/0 gid/egid:0/0
+localhost:~# dmesg | grep -i ovmf
+
