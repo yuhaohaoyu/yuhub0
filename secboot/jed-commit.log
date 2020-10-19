@@ -63,5 +63,5 @@ webhooks:
 			It("should not accepte BIOS and EFI EFI together ..."
 
 example:
-	b/examples/vmi-alpine-efi.yaml
+	b/examples/vmi-secureboot.yaml
 		secureBoot: false

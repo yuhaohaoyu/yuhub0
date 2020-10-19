@@ -91,3 +91,4 @@ warning: ./edk2-ovmf-20190501stable-5.fc32.noarch.rpm: Header V3 RSA/SHA256 Sign
 [root@viose2 docker]# find . -name "microlivecd-container-disk-demo*"
 ./volumes/k8s-1.18-registry/_data/docker/registry/v2/repositories/kubevirt/microlivecd-container-disk-demo
 
+localhost:32770/kubevirt/microlivecd-container-disk-demo:devel
