@@ -1,0 +1,90 @@
+LESSON: RHEL82, check the firewall setting and adjust:
+
+	- according to https://github.com/docker/for-linux/issues/957
+
+	- Firewall issue
+
+	- steps:
+
+	fast workaround
+		sudo nano /etc/firewalld/firewalld.conf
+			in config file change
+				FirewallBackend=nftables
+			to
+				FirewallBackend=iptables
+		save change and reload firewalld
+			sudo systemctl restart firewalld.service
+
+
+PAIN led to the lesson:
+
+	make cluster-build
+		INFO: Elapsed time: 0.931s, Critical Path: 0.18s
+		INFO: 0 processes.
+		INFO: Build completed successfully, 2 total actions
+		INFO: Build completed successfully, 2 total actions
+		2020/10/20 04:45:23 Successfully pushed Docker image to localhost:32770/kubevirt/conformance:devel_alt
+		selecting docker as container runtime
+		go version go1.13.14 linux/amd64
+
+		go version go1.13.14 linux/amd64
+		2020/10/20 04:46:43 Waiting for host: 192.168.66.101:22
+		2020/10/20 04:46:43 Connected to tcp://192.168.66.101:22
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+		Error response from daemon: Get http://registry:5000/v2/: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+
+
+
+	This was after 
+		recreate a VM, 
+		reinstall rhel82
+		reinstall docker-ce (involving purging podman and buildah)
+		
+
+	Trying fix:
+		- according to # https://github.com/moby/moby/issues/22635
+			enabling MTU probing in the kernel resolved the issue. To enable it just run:
+				sudo sysctl -w net.ipv4.tcp_mtu_probing=1
+
+			To make this permanently, add the following line to /etc/sysctl.conf:
+				net.ipv4.tcp_mtu_probing=1
+
+		- Did not fix
+
+	Trying fix 2:
+		- according to https://github.com/docker/for-win/issues/611#issuecomment-365023640
+		- restart docker
+
+		make cluster-down
+		docker stop $(docker ps -aq)
+		docker rm $(docker ps -aq)
+		docker rmi $(docker images -q)
+		systemctl restart docker
+
+		- Did not fix
+
+	Trying fix 3 : 
+		- according to https://github.com/docker/for-linux/issues/957
+
+		- Firewall issue
+
+		- steps:
+
+		fast workaround
+			sudo nano /etc/firewalld/firewalld.conf
+				in config file change
+					FirewallBackend=nftables
+				to
+					FirewallBackend=iptables
+			save change and reload firewalld
+				sudo systemctl restart firewalld.service
