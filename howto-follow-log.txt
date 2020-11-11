@@ -1,0 +1,6 @@
+
+alias kc='/home/padmin/CODE/kubevirt/cluster-up/kubectl.sh'
+
+kc get pods
+kc logs --follow virt-launcher-vmi-secureboot-rfjfr -c compute | tee ../launcher5.log
+
