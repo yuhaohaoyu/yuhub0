@@ -1,0 +1,56 @@
+LESSON: libvirt/virsh are required to be installed
+
+	virsh
+		Install package 'libvirt-client' to provide command 'virsh'? [N/y] y
+
+
+PAIN: 
+
+	[root@plspe kubevirt]# ./cluster-up/kubectl.sh get vmi
+	NAME             AGE     PHASE        IP    NODENAME
+	vmi-secureboot   5m11s   Scheduling         
+
+
+	[root@viose2 kubevirt]# ./cluster-up/kubectl.sh get pod
+	NAME                                 READY   STATUS     RESTARTS   AGE
+	local-volume-provisioner-rq64t       1/1     Running    0          23m
+	virt-launcher-vmi-secureboot-qrq7g   0/2     Init:0/2   0          75s
+	[root@viose2 kubevirt]# ./cluster-up/kubectl.sh get pod virt-launcher-vmi-secureboot-qrq7g
+	NAME                                 READY   STATUS     RESTARTS   AGE
+	virt-launcher-vmi-secureboot-qrq7g   0/2     Init:1/2   0          90s
+
+	[root@viose2 kubevirt]# ./cluster-up/kubectl.sh describe pods virt-launcher-vmi-secureboot-qrq7g
+
+
+LOG:
+[root@viosd2 ~]# virsh
+bash: virsh: command not found...
+Install package 'libvirt-client' to provide command 'virsh'? [N/y] y
+
+
+ * Waiting in queue... 
+ * Loading list of packages.... 
+The following packages have to be installed:
+ autogen-libopts-5.18.12-7.el8.x86_64   Automated option processing library based on autogen
+ gnutls-dane-3.6.8-9.el8.x86_64 A DANE protocol implementation for GnuTLS
+ gnutls-utils-3.6.8-9.el8.x86_64        Command line tools for TLS protocol
+ libvirt-bash-completion-4.5.0-42.module+el8.2.0+6024+15a2423f.x86_64   Bash completion script
+ libvirt-client-4.5.0-42.module+el8.2.0+6024+15a2423f.x86_64    Client side utilities of the libvirt library
+Proceed with changes? [N/y] y
+
+
+ * Waiting in queue... 
+ * Waiting for authentication... 
+ * Waiting in queue... 
+ * Downloading packages... 
+ * Requesting data... 
+ * Testing changes... 
+ * Installing packages... 
+Welcome to virsh, the virtualization interactive terminal.
+
+Type:  'help' for help with commands
+       'quit' to quit
+
+virsh # 
+
+

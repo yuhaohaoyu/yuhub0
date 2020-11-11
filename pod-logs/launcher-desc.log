@@ -1,0 +1,180 @@
+Name:         virt-launcher-vmi-secureboot-d9xlz
+Namespace:    default
+Priority:     0
+Node:         node01/192.168.66.101
+Start Time:   Mon, 02 Nov 2020 11:36:50 -0500
+Labels:       kubevirt.io=virt-launcher
+              kubevirt.io/created-by=9de4f1b2-3714-46fb-a138-eb0fc352c26e
+              special=vmi-secureboot
+Annotations:  cni.projectcalico.org/podIP: 10.244.196.152/32
+              cni.projectcalico.org/podIPs: 10.244.196.152/32,fd10:244::c497/128
+              kubevirt.io/domain: vmi-secureboot
+Status:       Running
+IP:           10.244.196.152
+IPs:
+  IP:           10.244.196.152
+  IP:           fd10:244::c497
+Controlled By:  VirtualMachineInstance/vmi-secureboot
+Init Containers:
+  container-disk-binary:
+    Container ID:  docker://7c9e50012c4bb807b2740805a6cb0c2ceda43008dfda29907d8a4fe8d0b6f4a3
+    Image:         registry:5000/kubevirt/virt-launcher@sha256:06fd89547304b7654a44f9808ef41164aef58f169cb8ab08a81a52d1e6aa5d6a
+    Image ID:      docker-pullable://registry:5000/kubevirt/virt-launcher@sha256:06fd89547304b7654a44f9808ef41164aef58f169cb8ab08a81a52d1e6aa5d6a
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /usr/bin/cp
+      /usr/bin/container-disk
+      /init/usr/bin/container-disk
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 02 Nov 2020 11:36:56 -0500
+      Finished:     Mon, 02 Nov 2020 11:36:56 -0500
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     100m
+      memory:  40M
+    Requests:
+      cpu:        10m
+      memory:     1M
+    Environment:  <none>
+    Mounts:
+      /init/usr/bin from virt-bin-share-dir (rw)
+  volumecontainerdisk-init:
+    Container ID:  docker://17cd12d85c562eb02ef3a6df84301543ea4bfcad91df35b20cc6dc746ef2741a
+    Image:         registry:5000/kubevirt/microlivecd-container-disk-demo:devel
+    Image ID:      docker-pullable://registry:5000/kubevirt/microlivecd-container-disk-demo@sha256:df24f575e0ce719e88c9d03047b627e04c4c74d6492db3957d9c9a8c0f1b784d
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /usr/bin/container-disk
+    Args:
+      --no-op
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 02 Nov 2020 11:37:16 -0500
+      Finished:     Mon, 02 Nov 2020 11:37:16 -0500
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     100m
+      memory:  40M
+    Requests:
+      cpu:        10m
+      memory:     1M
+    Environment:  <none>
+    Mounts:
+      /usr/bin from virt-bin-share-dir (rw)
+      /var/run/kubevirt-ephemeral-disks/container-disk-data/9de4f1b2-3714-46fb-a138-eb0fc352c26e from container-disks (rw)
+Containers:
+  compute:
+    Container ID:  docker://7bbf0d441c0df2cc9c47f0dd9642216fc4a85a732dae7783521338345f205dbc
+    Image:         registry:5000/kubevirt/virt-launcher@sha256:06fd89547304b7654a44f9808ef41164aef58f169cb8ab08a81a52d1e6aa5d6a
+    Image ID:      docker-pullable://registry:5000/kubevirt/virt-launcher@sha256:06fd89547304b7654a44f9808ef41164aef58f169cb8ab08a81a52d1e6aa5d6a
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /usr/bin/virt-launcher
+      --qemu-timeout
+      5m
+      --name
+      vmi-secureboot
+      --uid
+      9de4f1b2-3714-46fb-a138-eb0fc352c26e
+      --namespace
+      default
+      --kubevirt-share-dir
+      /var/run/kubevirt
+      --ephemeral-disk-dir
+      /var/run/kubevirt-ephemeral-disks
+      --container-disk-dir
+      /var/run/kubevirt/container-disks
+      --grace-period-seconds
+      15
+      --hook-sidecars
+      0
+      --less-pvc-space-toleration
+      10
+      --ovmf-path
+      /usr/share/OVMF
+    State:          Running
+      Started:      Mon, 02 Nov 2020 11:37:18 -0500
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      devices.kubevirt.io/kvm:        1
+      devices.kubevirt.io/tun:        1
+      devices.kubevirt.io/vhost-net:  1
+    Requests:
+      cpu:                            100m
+      devices.kubevirt.io/kvm:        1
+      devices.kubevirt.io/tun:        1
+      devices.kubevirt.io/vhost-net:  1
+      memory:                         1208392Ki
+    Environment:                      <none>
+    Mounts:
+      /var/run/kubevirt-ephemeral-disks from ephemeral-disks (rw)
+      /var/run/kubevirt/container-disks from container-disks (rw)
+      /var/run/kubevirt/sockets from sockets (rw)
+      /var/run/libvirt from libvirt-runtime (rw)
+  volumecontainerdisk:
+    Container ID:  docker://ecc51b89aa0e4b92b82fe49cc1538c2c9be9b51bd2fe5b30c858b05f316798cc
+    Image:         registry:5000/kubevirt/microlivecd-container-disk-demo:devel
+    Image ID:      docker-pullable://registry:5000/kubevirt/microlivecd-container-disk-demo@sha256:df24f575e0ce719e88c9d03047b627e04c4c74d6492db3957d9c9a8c0f1b784d
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /usr/bin/container-disk
+    Args:
+      --copy-path
+      /var/run/kubevirt-ephemeral-disks/container-disk-data/9de4f1b2-3714-46fb-a138-eb0fc352c26e/disk_0
+    State:          Running
+      Started:      Mon, 02 Nov 2020 11:37:20 -0500
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     100m
+      memory:  40M
+    Requests:
+      cpu:        10m
+      memory:     1M
+    Environment:  <none>
+    Mounts:
+      /usr/bin from virt-bin-share-dir (rw)
+      /var/run/kubevirt-ephemeral-disks/container-disk-data/9de4f1b2-3714-46fb-a138-eb0fc352c26e from container-disks (rw)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  sockets:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  virt-bin-share-dir:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  libvirt-runtime:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  ephemeral-disks:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  container-disks:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   <unset>
+QoS Class:       Burstable
+Node-Selectors:  kubevirt.io/schedulable=true
+                 vomfSecboot=Enabled
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>

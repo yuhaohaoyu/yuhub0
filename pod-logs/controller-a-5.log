@@ -1,0 +1,36 @@
+{"component":"virt-controller","level":"info","msg":"STARTING informer configMapInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:43.730838Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer CRDInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:43.731289Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer kubeVirtInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:43.731530Z"}
+{"component":"virt-controller","level":"info","msg":"CDI detected, DataVolume integration enabled","pos":"application.go:273","timestamp":"2020-11-04T00:17:43.847077Z"}
+{"component":"virt-controller","level":"info","msg":"Updating cluster config from KubeVirt to resource version '2580'","pos":"config-map.go:472","timestamp":"2020-11-04T00:17:43.847727Z"}
+{"component":"virt-controller","level":"info","msg":"certificate with common name 'virt-controller.kubevirt.pod.cluster.local' retrieved.","pos":"cert-manager.go:196","timestamp":"2020-11-04T00:17:48.918472Z"}
+{"action":"listening","component":"virt-controller","interface":"0.0.0.0","level":"info","port":8443,"pos":"application.go:322","service":"http","timestamp":"2020-11-04T00:17:48.918757Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer vmiInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350117Z"}
+{"component":"virt-controller","level":"info","msg":"SKIPPING informer configMapInformer","pos":"virtinformers.go:248","service":"http","timestamp":"2020-11-04T00:17:50.350175Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer vmSnapshotInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350191Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer vmRestoreInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350203Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer dataVolumeInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350215Z"}
+{"component":"virt-controller","level":"info","msg":"SKIPPING informer kubeVirtInformer","pos":"virtinformers.go:248","service":"http","timestamp":"2020-11-04T00:17:50.350228Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer vmirsInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350341Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer vmimInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350357Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer vmSnapshotContentInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350370Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer storageClassInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350382Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer podInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350394Z"}
+{"component":"virt-controller","level":"info","msg":"SKIPPING informer CRDInformer","pos":"virtinformers.go:248","service":"http","timestamp":"2020-11-04T00:17:50.350405Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer kubeVirtPodInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350415Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer kubeVirtNodeInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350434Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer persistentVolumeClaimInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350448Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer vmInformer","pos":"virtinformers.go:251","service":"http","timestamp":"2020-11-04T00:17:50.350463Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING controllers with following threads : node 3, vmi 3, replicaset 3, vm 3, migration 3, evacuation 3, disruptionBudget 3\n","pos":"application.go:364","timestamp":"2020-11-04T00:17:50.350497Z"}
+{"component":"virt-controller","level":"info","msg":"Starting vmi controller.","pos":"vmi.go:176","service":"http","timestamp":"2020-11-04T00:17:50.355139Z"}
+{"component":"virt-controller","level":"info","msg":"Starting VirtualMachineInstanceReplicaSet controller.","pos":"replicaset.go:110","service":"http","timestamp":"2020-11-04T00:17:50.356308Z"}
+{"component":"virt-controller","level":"info","msg":"Starting VirtualMachine controller.","pos":"vm.go:121","service":"http","timestamp":"2020-11-04T00:17:50.356427Z"}
+{"component":"virt-controller","level":"info","msg":"Starting migration controller.","pos":"migration.go:112","service":"http","timestamp":"2020-11-04T00:17:50.356506Z"}
+{"component":"virt-controller","level":"info","msg":"Starting snapshot controller.","pos":"snapshot_base.go:161","service":"http","timestamp":"2020-11-04T00:17:50.356696Z"}
+{"component":"virt-controller","level":"info","msg":"Starting restore controller.","pos":"restore_base.go:88","service":"http","timestamp":"2020-11-04T00:17:50.356790Z"}
+{"component":"virt-controller","level":"info","msg":"Starting evacuation controller.","pos":"evacuation.go:252","service":"http","timestamp":"2020-11-04T00:17:50.356958Z"}
+{"component":"virt-controller","level":"info","msg":"Starting disruption budget controller.","pos":"disruptionbudget.go:252","service":"http","timestamp":"2020-11-04T00:17:50.357066Z"}
+{"component":"virt-controller","level":"info","msg":"Starting node controller.","pos":"node.go:109","service":"http","timestamp":"2020-11-04T00:17:50.357105Z"}
+{"component":"virt-controller","level":"info","msg":"Updating cluster config from KubeVirt to resource version '3092'","pos":"config-map.go:472","service":"http","timestamp":"2020-11-04T00:17:51.695524Z"}
+{"component":"virt-controller","level":"info","msg":"reenqueuing VirtualMachineInstance default/vmi-secureboot","pos":"vmi.go:204","reason":"Operation cannot be fulfilled on virtualmachineinstances.kubevirt.io \"vmi-secureboot\": the object has been modified; please apply your changes to the latest version and try again","service":"http","timestamp":"2020-11-04T01:45:31.174003Z"}
+{"component":"virt-controller","level":"info","msg":"reenqueuing VirtualMachineInstance default/vmi-secureboot","pos":"vmi.go:204","reason":"Operation cannot be fulfilled on virtualmachineinstances.kubevirt.io \"vmi-secureboot\": the object has been modified; please apply your changes to the latest version and try again","service":"http","timestamp":"2020-11-04T01:45:31.453066Z"}

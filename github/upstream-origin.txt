@@ -1,0 +1,16 @@
+https://www.atlassian.com/git/tutorials/git-forks-and-upstreams
+
+git remote -v 
+git remote add upstream https://github.com/kubevirt/kubevirt.git
+
+> git remote -v
+origin  https://github.com/yuhaohaoyu/kubevirt.git (fetch)
+origin  https://github.com/yuhaohaoyu/kubevirt.git (push)
+upstream        https://github.com/kubevirt/kubevirt.git (fetch)
+upstream        https://github.com/kubevirt/kubevirt.git (push)
+
+> git fetch --all
+> git merge --no-commit upstream/master
+> git commit --signoff
+> git rebase upstream/master
+> git push -f

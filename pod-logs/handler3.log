@@ -1,0 +1,550 @@
+{"component":"virt-handler","hostname":"node01","level":"info","pos":"virt-handler.go:171","timestamp":"2020-11-04T00:17:48.355480Z"}
+{"component":"virt-handler","level":"info","msg":"Starting collector: node name=node01","pos":"prometheus.go:506","timestamp":"2020-11-04T00:17:49.235374Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer extensionsKubeVirtCAConfigMapInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:49.235497Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer vmiInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:49.235952Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer configMapInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:49.236071Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer CRDInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:49.236126Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer kubeVirtInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:49.236292Z"}
+{"component":"virt-handler","level":"info","msg":"certificate with common name 'kubevirt.io:system:client:virt-handler' retrieved.","pos":"cert-manager.go:196","timestamp":"2020-11-04T00:17:49.301335Z"}
+{"component":"virt-handler","level":"info","msg":"metrics: max concurrent requests=3","pos":"virt-handler.go:380","timestamp":"2020-11-04T00:17:49.303799Z"}
+{"component":"virt-handler","level":"info","msg":"certificate with common name 'kubevirt.io:system:node:virt-handler' retrieved.","pos":"cert-manager.go:196","timestamp":"2020-11-04T00:17:49.306695Z"}
+{"component":"virt-handler","level":"info","msg":"Updating cluster config from KubeVirt to resource version '2580'","pos":"config-map.go:472","timestamp":"2020-11-04T00:17:49.542510Z"}
+{"component":"virt-handler","level":"info","msg":"SELinux is reported as 'enforcing'","pos":"virt-handler.go:345","timestamp":"2020-11-04T00:17:49.656089Z"}
+{"component":"virt-handler","level":"info","msg":"Updating cluster config from KubeVirt to resource version '3092'","pos":"config-map.go:472","timestamp":"2020-11-04T00:17:51.697544Z"}
+{"component":"virt-handler","level":"info","msg":"Starting virt-handler controller.","pos":"vm.go:870","timestamp":"2020-11-04T00:19:17.542990Z"}
+{"component":"virt-handler","level":"info","msg":"Starting device plugin controller","pos":"device_controller.go:92","timestamp":"2020-11-04T00:19:17.645825Z"}
+{"component":"virt-handler","level":"info","msg":"kvm device plugin started","pos":"generic_device.go:176","timestamp":"2020-11-04T00:19:17.768696Z"}
+{"component":"virt-handler","level":"info","msg":"device '/dev/kvm' is present.","pos":"generic_device.go:310","timestamp":"2020-11-04T00:19:17.769527Z"}
+{"component":"virt-handler","level":"info","msg":"tun device plugin started","pos":"generic_device.go:176","timestamp":"2020-11-04T00:19:18.332419Z"}
+{"component":"virt-handler","level":"info","msg":"device '/dev/net/tun' is present.","pos":"generic_device.go:310","timestamp":"2020-11-04T00:19:18.332705Z"}
+{"component":"virt-handler","level":"info","msg":"vhost-net device plugin started","pos":"generic_device.go:176","timestamp":"2020-11-04T00:19:18.756424Z"}
+{"component":"virt-handler","level":"info","msg":"device '/dev/vhost-net' is present.","pos":"generic_device.go:310","timestamp":"2020-11-04T00:19:18.756680Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T00:24:17.553091Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T00:29:17.549987Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T00:34:17.550189Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T00:39:17.551287Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T00:44:17.550189Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T00:49:17.554282Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T00:54:17.550804Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T00:59:17.556847Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:04:17.549997Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:09:17.557209Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:14:17.551072Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:19:17.550101Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:24:17.550927Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:29:17.550290Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:34:17.549919Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:39:17.550989Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:44:17.550550Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T01:46:03.852164Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Scheduled\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T01:46:03.855746Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","level":"info","msg":"Domain does not exist","pos":"vm.go:1199","timestamp":"2020-11-04T01:46:03.855980Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"Bind mounting container disk at /var/lib/docker/overlay2/57bfcb6d562f9b7a8731f35e0bf1bff822491bf7b6d8dd0890594600ce29b2ae/merged/disk/downloaded to /var/lib/kubelet/pods/43ba70b4-cecd-4dd2-894a-faf0eb81efa8/volumes/kubernetes.io~empty-dir/container-disks/disk_0.img","name":"vmi-secureboot","namespace":"default","pos":"mount.go:248","timestamp":"2020-11-04T01:46:03.909726Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","level":"info","msg":"updated MAC for eth0 interface: old: 7e:0a:ec:78:96:ec -\u003e new: 7e:0a:ec:02:8c:b0","pos":"common.go:323","timestamp":"2020-11-04T01:46:04.305484Z"}
+{"component":"virt-handler","level":"info","msg":"Created tap device: tap0 in PID: 27144","pos":"common.go:388","timestamp":"2020-11-04T01:46:04.521868Z"}
+{"component":"virt-handler","level":"info","msg":"Successfully configured tap device: tap0","pos":"common.go:489","timestamp":"2020-11-04T01:46:04.602061Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"Accepted new notify pipe connection for vmi","name":"vmi-secureboot","namespace":"default","pos":"vm.go:243","timestamp":"2020-11-04T01:46:06.992296Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Received Domain Event of type ADDED","name":"vmi-secureboot","namespace":"default","pos":"server.go:78","timestamp":"2020-11-04T01:46:07.062590Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain is in state Paused reason StartingUp","name":"vmi-secureboot","namespace":"default","pos":"vm.go:2164","timestamp":"2020-11-04T01:46:07.081533Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Received Domain Event of type MODIFIED","name":"vmi-secureboot","namespace":"default","pos":"server.go:78","timestamp":"2020-11-04T01:46:07.139061Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Received Domain Event of type MODIFIED","name":"vmi-secureboot","namespace":"default","pos":"server.go:78","timestamp":"2020-11-04T01:46:07.696894Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Received Domain Event of type MODIFIED","name":"vmi-secureboot","namespace":"default","pos":"server.go:78","timestamp":"2020-11-04T01:46:09.058957Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T01:46:09.059046Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Scheduled\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T01:46:09.059094Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain is in state Running reason Unknown","name":"vmi-secureboot","namespace":"default","pos":"vm.go:2195","timestamp":"2020-11-04T01:46:09.059111Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Paused, reason: StartingUp\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T01:46:09.059147Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T01:46:09.129394Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Scheduled\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T01:46:09.129438Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T01:46:09.129590Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Received Domain Event of type MODIFIED","name":"vmi-secureboot","namespace":"default","pos":"server.go:78","timestamp":"2020-11-04T01:46:09.135119Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"","level":"error","msg":"Updating the VirtualMachineInstance status failed.","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1336","reason":"Operation cannot be fulfilled on virtualmachineinstances.kubevirt.io \"vmi-secureboot\": the object has been modified; please apply your changes to the latest version and try again","timestamp":"2020-11-04T01:46:09.181259Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","level":"info","msg":"re-enqueuing VirtualMachineInstance default/vmi-secureboot","pos":"vm.go:918","reason":"Operation cannot be fulfilled on virtualmachineinstances.kubevirt.io \"vmi-secureboot\": the object has been modified; please apply your changes to the latest version and try again","timestamp":"2020-11-04T01:46:09.181777Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T01:46:09.181986Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T01:46:09.182026Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T01:46:09.182067Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T01:46:09.287768Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T01:46:09.287843Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T01:46:09.287989Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T01:46:09.595754Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T01:46:09.595899Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T01:46:09.596109Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:49:17.551875Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T01:49:17.615255Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T01:49:17.615351Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T01:49:17.615387Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:54:17.550422Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T01:54:17.588410Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T01:54:17.588513Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T01:54:17.588885Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T01:59:17.550321Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T01:59:17.600441Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T01:59:17.601106Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T01:59:17.601155Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:04:17.551950Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:04:17.584471Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:04:17.585402Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:04:17.585553Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:09:17.550556Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:09:17.588276Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:09:17.588494Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:09:17.588741Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:14:17.550168Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:14:17.572259Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:14:17.572316Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:14:17.572347Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:19:17.551131Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:19:17.571925Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:19:17.572007Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:19:17.572079Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:24:17.551969Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:24:17.587396Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:24:17.587463Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:24:17.587818Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:29:17.550248Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:29:17.596897Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:29:17.596950Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:29:17.596976Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:34:17.550177Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:34:17.583883Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:34:17.583977Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:34:17.584012Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:39:17.551439Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:39:17.593027Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:39:17.593130Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:39:17.593166Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:44:17.553589Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:44:17.586188Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:44:17.586408Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:44:17.586490Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:49:17.550419Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:49:17.606143Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:49:17.615549Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:49:17.615778Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:54:17.549954Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:54:17.575120Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:54:17.575182Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:54:17.575214Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T02:59:17.550066Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T02:59:17.574909Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T02:59:17.574999Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T02:59:17.575032Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:04:17.550308Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:04:17.606027Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:04:17.606969Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:04:17.607014Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:09:17.550760Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:09:17.599285Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:09:17.599480Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:09:17.599548Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:14:17.550469Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:14:17.592345Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:14:17.592675Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:14:17.592749Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:19:17.549791Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:19:17.604331Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:19:17.604525Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:19:17.604708Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:24:17.550258Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:24:17.582458Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:24:17.582520Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:24:17.582925Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:29:17.551456Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:29:17.587683Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:29:17.587752Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:29:17.587779Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:34:17.552161Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:34:17.639143Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:34:17.639268Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:34:17.639317Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:39:17.553199Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:39:17.598295Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:39:17.598462Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:39:17.598512Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:44:17.551006Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:44:17.591199Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:44:17.591278Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:44:17.591339Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:49:17.550234Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:49:17.584105Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:49:17.584229Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:49:17.584287Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:54:17.551766Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:54:17.608269Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:54:17.608323Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:54:17.608349Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T03:59:17.550328Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T03:59:17.573311Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T03:59:17.573352Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T03:59:17.573376Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:04:17.550935Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:04:17.586891Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:04:17.587021Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:04:17.587057Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:09:17.550233Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:09:17.624896Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:09:17.624967Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:09:17.625000Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:14:17.550297Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:14:17.583481Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:14:17.583818Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:14:17.583858Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:19:17.568932Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:19:17.626792Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:19:17.626858Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:19:17.626913Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:24:17.550399Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:24:17.578467Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:24:17.578525Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:24:17.578840Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:29:17.554957Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:29:17.601536Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:29:17.601739Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:29:17.601778Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:34:17.551977Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:34:17.591745Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:34:17.591805Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:34:17.591837Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:39:17.550210Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:39:17.641730Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:39:17.641851Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:39:17.641886Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:44:17.550154Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:44:17.593422Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:44:17.593514Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:44:17.593560Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:49:17.552218Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:49:17.673394Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:49:17.674311Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:49:17.674455Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:54:17.552185Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:54:17.577314Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:54:17.577360Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:54:17.577515Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T04:59:17.549929Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T04:59:17.576262Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T04:59:17.576317Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T04:59:17.576344Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:04:17.551416Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:04:17.608595Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:04:17.608895Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:04:17.608953Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:09:17.550328Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:09:17.606213Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:09:17.606310Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:09:17.606362Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:14:17.551111Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:14:17.590022Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:14:17.590285Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:14:17.590347Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:19:17.550510Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:19:17.579249Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:19:17.579369Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:19:17.579425Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:24:17.554304Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:24:17.582903Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:24:17.583141Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:24:17.583179Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:29:17.550531Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:29:17.590817Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:29:17.590879Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:29:17.590924Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:34:17.550398Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:34:17.602039Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:34:17.602141Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:34:17.602203Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:39:17.549926Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:39:17.573312Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:39:17.573399Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:39:17.573441Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:44:17.551010Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:44:17.584560Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:44:17.584816Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:44:17.584857Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:49:17.550552Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:49:17.590048Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:49:17.590183Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:49:17.590240Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:54:17.553428Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:54:17.625714Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:54:17.625827Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:54:17.625861Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T05:59:17.550482Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T05:59:17.576276Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T05:59:17.576324Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T05:59:17.576349Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:04:17.560572Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:04:17.584202Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:04:17.584379Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:04:17.584447Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:09:17.550213Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:09:17.590358Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:09:17.590447Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:09:17.590476Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:14:17.550396Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:14:17.575495Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:14:17.575711Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:14:17.575747Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:19:17.551485Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:19:17.587529Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:19:17.587760Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:19:17.587843Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:24:17.550785Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:24:17.581726Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:24:17.581814Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:24:17.581855Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:29:17.557931Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:29:17.596153Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:29:17.596203Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:29:17.596243Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:34:17.556762Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:34:17.577026Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:34:17.577087Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:34:17.577196Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:39:17.550355Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:39:17.579964Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:39:17.580105Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:39:17.580263Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:44:17.552835Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:44:17.591320Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:44:17.591440Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:44:17.591476Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:49:17.550396Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:49:17.607486Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:49:17.607844Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:49:17.607974Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:54:17.550816Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:54:17.574485Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:54:17.574706Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:54:17.574764Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T06:59:17.550194Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T06:59:17.581031Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T06:59:17.581124Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T06:59:17.581162Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:04:17.551266Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:04:17.577694Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:04:17.577796Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:04:17.577835Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:09:17.554934Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:09:17.597827Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:09:17.597917Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:09:17.597960Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:14:17.551187Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:14:17.616895Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:14:17.617066Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:14:17.617154Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:19:17.557571Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:19:17.600337Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:19:17.600449Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:19:17.600507Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:24:17.550534Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:24:17.593739Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:24:17.593834Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:24:17.593908Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:29:17.553477Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:29:17.688975Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:29:17.689150Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:29:17.689318Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:34:17.550265Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:34:17.591990Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:34:17.592046Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:34:17.592075Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:39:17.551083Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:39:17.639402Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:39:17.640000Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:39:17.640033Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:44:17.570759Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:44:17.648280Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:44:17.648350Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:44:17.648384Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:49:17.553094Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:49:17.576780Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:49:17.576871Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:49:17.576920Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:54:17.552436Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:54:17.598354Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:54:17.599082Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:54:17.599138Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T07:59:17.551298Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T07:59:17.576133Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T07:59:17.576179Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T07:59:17.576213Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:04:17.551412Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:04:17.623563Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:04:17.623770Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:04:17.623831Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:09:17.551453Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:09:17.613731Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:09:17.613831Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:09:17.613877Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:14:17.550302Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:14:17.631986Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:14:17.632102Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:14:17.632144Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:19:17.549884Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:19:17.579220Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:19:17.579330Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:19:17.579443Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:24:17.551054Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:24:17.602363Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:24:17.602414Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:24:17.602450Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:29:17.557910Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:29:17.629750Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:29:17.629818Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:29:17.629850Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:34:17.550306Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:34:17.577915Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:34:17.578008Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:34:17.578051Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:39:17.550357Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:39:17.579320Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:39:17.579419Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:39:17.579453Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:44:17.557026Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:44:17.613496Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:44:17.613858Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:44:17.613946Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:49:17.556974Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:49:17.614159Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:49:17.614225Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:49:17.614266Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:54:17.550384Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:54:17.582352Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:54:17.582829Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:54:17.582885Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T08:59:17.551232Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T08:59:17.580048Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T08:59:17.580143Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T08:59:17.580186Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:04:17.557053Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:04:17.626880Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:04:17.626989Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:04:17.627023Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:09:17.559139Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:09:17.618024Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:09:17.618129Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:09:17.618169Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:14:17.550081Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:14:17.586402Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:14:17.586548Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:14:17.586859Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:19:17.549978Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:19:17.575116Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:19:17.575167Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:19:17.575191Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:24:17.560433Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:24:17.595307Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:24:17.595391Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:24:17.595439Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:29:17.550211Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:29:17.573543Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:29:17.573770Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:29:17.573800Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:34:17.553382Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:34:17.612148Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:34:17.612209Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:34:17.612267Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:39:17.574090Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:39:17.642334Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:39:17.642387Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:39:17.642422Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:44:17.550295Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:44:17.603163Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:44:17.603391Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:44:17.603477Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:49:17.557422Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:49:17.605953Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:49:17.606027Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:49:17.606060Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:54:17.550342Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:54:17.650413Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:54:17.650828Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:54:17.650898Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T09:59:17.551539Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T09:59:17.596457Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T09:59:17.596933Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T09:59:17.596992Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:04:17.550171Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:04:17.593055Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:04:17.593295Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:04:17.593373Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:09:17.550225Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:09:17.591107Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:09:17.591210Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:09:17.591248Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:14:17.550247Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:14:17.582093Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:14:17.582255Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:14:17.582302Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:19:17.550303Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:19:17.580329Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:19:17.580414Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:19:17.580543Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:24:17.550426Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:24:17.582244Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:24:17.582377Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:24:17.582405Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:29:17.550521Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:29:17.578338Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:29:17.578411Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:29:17.578443Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:34:17.550543Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:34:17.607124Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:34:17.607288Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:34:17.607407Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:39:17.551499Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:39:17.575293Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:39:17.575352Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:39:17.575401Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:44:17.551510Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:44:17.602723Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:44:17.602832Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:44:17.602881Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:49:17.563211Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:49:17.641096Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:49:17.641158Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:49:17.641184Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:54:17.566860Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:54:17.636006Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:54:17.636249Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:54:17.636330Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T10:59:17.551265Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T10:59:17.595387Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T10:59:17.595555Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T10:59:17.595777Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T11:04:17.549932Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T11:04:17.627138Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T11:04:17.627260Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T11:04:17.627302Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T11:09:17.551318Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T11:09:17.584909Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T11:09:17.584968Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T11:09:17.584994Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T11:14:17.551384Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T11:14:17.582225Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T11:14:17.583215Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T11:14:17.583341Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T11:19:17.551170Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T11:19:17.594496Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T11:19:17.594595Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T11:19:17.594863Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T11:24:17.556006Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T11:24:17.586981Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T11:24:17.587092Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T11:24:17.587126Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T11:29:17.552762Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T11:29:17.594397Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T11:29:17.594452Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T11:29:17.594489Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T11:34:17.550545Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T11:34:17.586085Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T11:34:17.586179Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T11:34:17.586224Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T11:39:17.556397Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T11:39:17.585173Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T11:39:17.585235Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T11:39:17.585270Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-04T11:44:17.557944Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-04T11:44:17.594383Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-04T11:44:17.594489Z","uid":"335a4fe4-8a9c-409e-82d3-78a9c2070631"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-04T11:44:17.594680Z","uid":""}

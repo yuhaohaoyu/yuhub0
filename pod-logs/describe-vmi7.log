@@ -1,0 +1,139 @@
+Name:         vmi-secureboot
+Namespace:    default
+Labels:       kubevirt.io/nodeName=node01
+              special=vmi-secureboot
+Annotations:  kubevirt.io/latest-observed-api-version: v1alpha3
+              kubevirt.io/storage-observed-api-version: v1alpha3
+API Version:  kubevirt.io/v1alpha3
+Kind:         VirtualMachineInstance
+Metadata:
+  Creation Timestamp:  2020-11-05T13:43:57Z
+  Finalizers:
+    foregroundDeleteVirtualMachine
+  Generation:  8
+  Managed Fields:
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .:
+          f:special:
+      f:spec:
+        .:
+        f:domain:
+          .:
+          f:devices:
+            .:
+            f:disks:
+          f:features:
+            .:
+            f:acpi:
+            f:smm:
+              .:
+              f:enabled:
+          f:firmware:
+            .:
+            f:bootloader:
+              .:
+              f:efi:
+                .:
+                f:secureBoot:
+          f:machine:
+            .:
+            f:type:
+          f:resources:
+            .:
+            f:requests:
+              .:
+              f:memory:
+        f:terminationGracePeriodSeconds:
+        f:volumes:
+    Manager:      .kubectl
+    Operation:    Update
+    Time:         2020-11-05T13:43:57Z
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubevirt.io/latest-observed-api-version:
+          f:kubevirt.io/storage-observed-api-version:
+        f:labels:
+          f:kubevirt.io/nodeName:
+      f:status:
+        .:
+        f:activePods:
+          .:
+          f:aa55263e-1825-48b1-ba51-0f2dd3cf63b5:
+        f:guestOSInfo:
+        f:nodeName:
+        f:qosClass:
+    Manager:      virt-controller
+    Operation:    Update
+    Time:         2020-11-05T13:44:34Z
+    API Version:  kubevirt.io/v1alpha3
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+        f:migrationMethod:
+        f:phase:
+    Manager:         virt-handler
+    Operation:       Update
+    Time:            2020-11-05T13:50:05Z
+  Resource Version:  90891
+  Self Link:         /apis/kubevirt.io/v1alpha3/namespaces/default/virtualmachineinstances/vmi-secureboot
+  UID:               8c8d19b9-9a5a-46c0-8eb1-5090df1edb04
+Spec:
+  Domain:
+    Devices:
+      Disks:
+        Disk:
+          Bus:  virtio
+        Name:   containerdisk
+      Interfaces:
+        Bridge:
+        Name:  default
+    Features:
+      Acpi:
+        Enabled:  true
+      Smm:
+        Enabled:  true
+    Firmware:
+      Bootloader:
+        Efi:
+          Secure Boot:  true
+      Uuid:             33d00fbb-5a3c-49fe-a3c5-8361db6267ac
+    Machine:
+      Type:  q35
+    Resources:
+      Requests:
+        Cpu:     100m
+        Memory:  1Gi
+  Networks:
+    Name:  default
+    Pod:
+  Termination Grace Period Seconds:  0
+  Volumes:
+    Container Disk:
+      Image:              registry:5000/kubevirt/microlivecd-container-disk-demo:devel
+      Image Pull Policy:  IfNotPresent
+    Name:                 containerdisk
+Status:
+  Active Pods:
+    aa55263e-1825-48b1-ba51-0f2dd3cf63b5:  node01
+  Conditions:
+    Last Probe Time:       <nil>
+    Last Transition Time:  <nil>
+    Message:               cannot migrate VMI which does not use masquerade to connect to the pod network
+    Reason:                InterfaceNotLiveMigratable
+    Status:                False
+    Type:                  LiveMigratable
+  Guest OS Info:
+  Migration Method:  BlockMigration
+  Node Name:         node01
+  Phase:             Failed
+  Qos Class:         Burstable
+Events:              <none>

@@ -1,0 +1,92 @@
+{"component":"virt-handler","hostname":"node01","level":"info","pos":"virt-handler.go:171","timestamp":"2020-11-05T16:21:42.813568Z"}
+{"component":"virt-handler","level":"info","msg":"Starting collector: node name=node01","pos":"prometheus.go:506","timestamp":"2020-11-05T16:21:44.822951Z"}
+{"component":"virt-handler","level":"info","msg":"metrics: max concurrent requests=3","pos":"virt-handler.go:380","timestamp":"2020-11-05T16:21:44.847687Z"}
+{"component":"virt-handler","level":"info","msg":"certificate with common name 'kubevirt.io:system:client:virt-handler' retrieved.","pos":"cert-manager.go:196","timestamp":"2020-11-05T16:21:44.862659Z"}
+{"component":"virt-handler","level":"info","msg":"certificate with common name 'kubevirt.io:system:node:virt-handler' retrieved.","pos":"cert-manager.go:196","timestamp":"2020-11-05T16:21:44.890146Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer extensionsKubeVirtCAConfigMapInformer","pos":"virtinformers.go:251","timestamp":"2020-11-05T16:21:44.846740Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer vmiInformer","pos":"virtinformers.go:251","timestamp":"2020-11-05T16:21:44.904248Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer configMapInformer","pos":"virtinformers.go:251","timestamp":"2020-11-05T16:21:44.904271Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer CRDInformer","pos":"virtinformers.go:251","timestamp":"2020-11-05T16:21:44.904283Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer kubeVirtInformer","pos":"virtinformers.go:251","timestamp":"2020-11-05T16:21:44.904294Z"}
+{"component":"virt-handler","level":"info","msg":"Updating cluster config from KubeVirt to resource version '2955'","pos":"config-map.go:472","timestamp":"2020-11-05T16:21:44.984042Z"}
+{"component":"virt-handler","level":"info","msg":"SELinux is reported as 'enforcing'","pos":"virt-handler.go:345","timestamp":"2020-11-05T16:21:45.757118Z"}
+{"component":"virt-handler","level":"info","msg":"Updating cluster config from KubeVirt to resource version '3635'","pos":"config-map.go:472","timestamp":"2020-11-05T16:22:30.303598Z"}
+{"component":"virt-handler","level":"info","msg":"Starting virt-handler controller.","pos":"vm.go:887","timestamp":"2020-11-05T16:22:51.187497Z"}
+{"component":"virt-handler","level":"info","msg":"Starting device plugin controller","pos":"device_controller.go:92","timestamp":"2020-11-05T16:22:51.288896Z"}
+{"component":"virt-handler","level":"info","msg":"kvm device plugin started","pos":"generic_device.go:176","timestamp":"2020-11-05T16:22:51.556200Z"}
+{"component":"virt-handler","level":"info","msg":"device '/dev/kvm' is present.","pos":"generic_device.go:310","timestamp":"2020-11-05T16:22:51.557347Z"}
+{"component":"virt-handler","level":"info","msg":"tun device plugin started","pos":"generic_device.go:176","timestamp":"2020-11-05T16:22:52.011760Z"}
+{"component":"virt-handler","level":"info","msg":"device '/dev/net/tun' is present.","pos":"generic_device.go:310","timestamp":"2020-11-05T16:22:52.011908Z"}
+{"component":"virt-handler","level":"info","msg":"vhost-net device plugin started","pos":"generic_device.go:176","timestamp":"2020-11-05T16:22:52.196500Z"}
+{"component":"virt-handler","level":"info","msg":"device '/dev/vhost-net' is present.","pos":"generic_device.go:310","timestamp":"2020-11-05T16:22:52.196722Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T16:27:51.207200Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T16:32:51.192559Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1207","timestamp":"2020-11-05T16:33:36.856813Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Scheduled\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1209","timestamp":"2020-11-05T16:33:36.857061Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","level":"info","msg":"HAO: VMI exist","pos":"vm.go:1210","timestamp":"2020-11-05T16:33:36.857106Z"}
+{"component":"virt-handler","level":"info","msg":"Domain does not exist","pos":"vm.go:1218","timestamp":"2020-11-05T16:33:36.857120Z"}
+{"component":"virt-handler","level":"info","msg":"HAO: Phase is phase","pos":"vm.go:1304","timestamp":"2020-11-05T16:33:36.858163Z"}
+{"component":"virt-handler","level":"info","msg":"Processing vmi update","pos":"vm.go:1355","timestamp":"2020-11-05T16:33:36.858301Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"Bind mounting container disk at /var/lib/docker/overlay2/0c75c2e0c6bf28fa1f14007b8eeb18efa5c508fddcbfdf303e55f33027271259/merged/disk/downloaded to /var/lib/kubelet/pods/e04eb97d-ec8c-4843-96b8-06373a0822f0/volumes/kubernetes.io~empty-dir/container-disks/disk_0.img","name":"vmi-secureboot","namespace":"default","pos":"mount.go:248","timestamp":"2020-11-05T16:33:36.890977Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","level":"info","msg":"updated MAC for eth0 interface: old: 52:90:da:45:7d:8d -\u003e new: 52:90:da:90:a8:31","pos":"common.go:323","timestamp":"2020-11-05T16:33:37.051551Z"}
+{"component":"virt-handler","level":"info","msg":"Created tap device: tap0 in PID: 20663","pos":"common.go:388","timestamp":"2020-11-05T16:33:37.250558Z"}
+{"component":"virt-handler","level":"info","msg":"Successfully configured tap device: tap0","pos":"common.go:489","timestamp":"2020-11-05T16:33:37.358264Z"}
+{"component":"virt-handler","kind":"","level":"error","msg":"Synchronizing the VirtualMachineInstance failed.","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1363","reason":"mismatch of Secure Boot setting and bootloaders: server error. command SyncVMI failed: \"Conversion failed:missing OVMF bootloader\"","timestamp":"2020-11-05T16:33:37.415510Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","level":"info","msg":"mismatch of Secure Boot setting and bootloaders: server error. command SyncVMI failed: \"Conversion failed:missing OVMF bootloader\"","pos":"vm.go:1364","timestamp":"2020-11-05T16:33:37.415644Z"}
+{"component":"virt-handler","level":"error","msg":"virt-launcher does not support the Secure Boot setting. Updating VMI vmi-secureboot status to Failed","pos":"vm.go:858","timestamp":"2020-11-05T16:33:37.416096Z"}
+{"component":"virt-handler","level":"info","msg":"HAO: fleeing 4","pos":"vm.go:871","timestamp":"2020-11-05T16:33:37.524221Z"}
+{"component":"virt-handler","level":"info","msg":"re-enqueuing VirtualMachineInstance default/vmi-secureboot","pos":"vm.go:935","reason":"mismatch of Secure Boot setting and bootloaders: server error. command SyncVMI failed: \"Conversion failed:missing OVMF bootloader\"","timestamp":"2020-11-05T16:33:37.524523Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1207","timestamp":"2020-11-05T16:33:37.524718Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Failed\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1209","timestamp":"2020-11-05T16:33:37.524755Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","level":"info","msg":"HAO: VMI exist","pos":"vm.go:1210","timestamp":"2020-11-05T16:33:37.524774Z"}
+{"component":"virt-handler","level":"info","msg":"Domain does not exist","pos":"vm.go:1218","timestamp":"2020-11-05T16:33:37.524786Z"}
+{"component":"virt-handler","level":"info","msg":"Cleaning up local data for finalized vmi.","pos":"vm.go:1290","timestamp":"2020-11-05T16:33:37.525006Z"}
+{"component":"virt-handler","level":"info","msg":"Processing local ephemeral data cleanup for shutdown domain.","pos":"vm.go:1351","timestamp":"2020-11-05T16:33:37.525058Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"Performing final local cleanup for vmi with uid 0ecde8fd-acfa-4863-8f56-eec64d702ac1","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1484","timestamp":"2020-11-05T16:33:37.525086Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","kind":"","level":"info","msg":"Found container disk mount entries","name":"vmi-secureboot","namespace":"default","pos":"mount.go:327","timestamp":"2020-11-05T16:33:37.525151Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","kind":"","level":"info","msg":"Looking to see if containerdisk is mounted at path /var/lib/kubelet/pods/e04eb97d-ec8c-4843-96b8-06373a0822f0/volumes/kubernetes.io~empty-dir/container-disks/disk_0.img","name":"vmi-secureboot","namespace":"default","pos":"mount.go:330","timestamp":"2020-11-05T16:33:37.525176Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","kind":"","level":"info","msg":"unmounting container disk at path /var/lib/kubelet/pods/e04eb97d-ec8c-4843-96b8-06373a0822f0/volumes/kubernetes.io~empty-dir/container-disks/disk_0.img","name":"vmi-secureboot","namespace":"default","pos":"mount.go:334","timestamp":"2020-11-05T16:33:37.526734Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Removing domain from cache during final cleanup","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1514","timestamp":"2020-11-05T16:33:37.639597Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1207","timestamp":"2020-11-05T16:33:37.639776Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Failed\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1209","timestamp":"2020-11-05T16:33:37.639798Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","level":"info","msg":"HAO: VMI exist","pos":"vm.go:1210","timestamp":"2020-11-05T16:33:37.639814Z"}
+{"component":"virt-handler","level":"info","msg":"Domain does not exist","pos":"vm.go:1218","timestamp":"2020-11-05T16:33:37.639840Z"}
+{"component":"virt-handler","level":"info","msg":"Cleaning up local data for finalized vmi.","pos":"vm.go:1290","timestamp":"2020-11-05T16:33:37.639960Z"}
+{"component":"virt-handler","level":"info","msg":"Processing local ephemeral data cleanup for shutdown domain.","pos":"vm.go:1351","timestamp":"2020-11-05T16:33:37.640075Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"Performing final local cleanup for vmi with uid 0ecde8fd-acfa-4863-8f56-eec64d702ac1","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1484","timestamp":"2020-11-05T16:33:37.640119Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","kind":"","level":"info","msg":"No container disk mount entries found to unmount","name":"vmi-secureboot","namespace":"default","pos":"mount.go:323","timestamp":"2020-11-05T16:33:37.640179Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Removing domain from cache during final cleanup","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1514","timestamp":"2020-11-05T16:33:37.640223Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T16:37:51.207405Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T16:42:51.200938Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T16:47:51.192213Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T16:52:51.194302Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T16:57:51.193117Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:02:51.200045Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:07:51.201884Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:12:51.192154Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:17:51.194785Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:22:51.194588Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:27:51.196156Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:32:51.193413Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:37:51.197786Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:42:51.192085Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:47:51.192678Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:52:51.204111Z"}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T17:57:51.202986Z"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1207","timestamp":"2020-11-05T18:01:30.605025Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Failed\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1209","timestamp":"2020-11-05T18:01:30.605217Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","level":"info","msg":"HAO: VMI exist","pos":"vm.go:1210","timestamp":"2020-11-05T18:01:30.605249Z"}
+{"component":"virt-handler","level":"info","msg":"Domain does not exist","pos":"vm.go:1218","timestamp":"2020-11-05T18:01:30.605278Z"}
+{"component":"virt-handler","level":"info","msg":"Cleaning up local data for finalized vmi.","pos":"vm.go:1290","timestamp":"2020-11-05T18:01:30.615986Z"}
+{"component":"virt-handler","level":"info","msg":"Processing local ephemeral data cleanup for shutdown domain.","pos":"vm.go:1351","timestamp":"2020-11-05T18:01:30.616149Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"Performing final local cleanup for vmi with uid 0ecde8fd-acfa-4863-8f56-eec64d702ac1","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1484","timestamp":"2020-11-05T18:01:30.616301Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","kind":"","level":"info","msg":"No container disk mount entries found to unmount","name":"vmi-secureboot","namespace":"default","pos":"mount.go:323","timestamp":"2020-11-05T18:01:30.616988Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Removing domain from cache during final cleanup","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1514","timestamp":"2020-11-05T18:01:30.617793Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1207","timestamp":"2020-11-05T18:01:30.955329Z"}
+{"component":"virt-handler","level":"info","msg":"VMI does not exist","pos":"vm.go:1212","timestamp":"2020-11-05T18:01:30.955714Z"}
+{"component":"virt-handler","level":"info","msg":"Domain does not exist","pos":"vm.go:1218","timestamp":"2020-11-05T18:01:30.955815Z"}
+{"component":"virt-handler","level":"info","msg":"HAO: Cleanup domain for deleted VirtualMachineInstance object.","pos":"vm.go:1259","timestamp":"2020-11-05T18:01:30.956020Z"}
+{"component":"virt-handler","level":"info","msg":"Processing local ephemeral data cleanup for shutdown domain.","pos":"vm.go:1351","timestamp":"2020-11-05T18:01:30.956190Z"}
+{"component":"virt-handler","kind":"VirtualMachineInstance","level":"info","msg":"Performing final local cleanup for vmi with uid ","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1484","timestamp":"2020-11-05T18:01:30.956252Z","uid":""}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Removing domain from cache during final cleanup","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1514","timestamp":"2020-11-05T18:01:30.960986Z","uid":""}
+{"component":"virt-handler","level":"info","msg":"resyncing virt-launcher domains","pos":"cache.go:385","timestamp":"2020-11-05T18:02:51.205262Z"}

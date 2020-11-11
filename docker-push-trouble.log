@@ -1,0 +1,20 @@
+https://forums.docker.com/t/docker-push-command-is-throwing-error-405-method-not-allowed/28384/8
+
+
+Go to /etc/containers/registries.conf
+Add/Replace registry.hub.docker.com 34 for [registries.search] and [registries.insecure] section.
+Restart your VM.
+Execute docker login -u -p
+Execute the push command and it should work.
+
+
+Problem: 
+
+[padmin@viosf2 node-labeller]$ docker push yuhaohaoyu/node-labeller
+The push refers to a repository [registry.access.redhat.com/yuhaohaoyu/node-labeller]
+130ac3f2109a: Preparing 
+3485805ce47c: Preparing 
+b0e2911c99f3: Preparing 
+error parsing HTTP 403 response body: invalid character '<' looking for beginning of value: "<HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;registry&#46;access&#46;redhat&#46;com&#47;v2&#47;yuhaohaoyu&#47;node&#45;labeller&#47;blobs&#47;uploads&#47;\" on this server.<P>\nReference&#32;&#35;18&#46;dc011fb8&#46;1604077765&#46;1213c246\n</BODY>\n</HTML>\n"
+[padmin@viosf2 node-labeller]$ 
+

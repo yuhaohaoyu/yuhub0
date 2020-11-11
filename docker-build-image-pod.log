@@ -1,0 +1,5 @@
+docker build -t test/node-labeller:test .
+docker tag 09068ce397bd docker.io/yuhaohaoyu/node-labeller:2
+docker login docker.io
+docker push docker.io/yuhaohaoyu/node-labeller:2
+

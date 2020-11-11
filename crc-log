@@ -1,0 +1,59 @@
+i[padmin@viose2 crc-linux-1.17.0-amd64]$ ./crc config set pull-secret-file ../oc-pull-secret.txt 
+Successfully configured pull-secret-file to ../oc-pull-secret.txt
+[padmin@viose2 crc-linux-1.17.0-amd64]$ ./crc start
+INFO Checking if oc binary is cached              
+INFO Checking if podman remote binary is cached   
+INFO Checking if goodhosts binary is cached       
+INFO Checking minimum RAM requirements            
+INFO Checking if running as non-root              
+INFO Checking if Virtualization is enabled        
+INFO Checking if KVM is enabled                   
+INFO Checking if libvirt is installed             
+INFO Checking if user is part of libvirt group    
+INFO Checking if libvirt daemon is running        
+INFO Checking if a supported libvirt version is installed 
+INFO Checking if crc-driver-libvirt is installed  
+INFO Checking if libvirt 'crc' network is available 
+INFO Checking if libvirt 'crc' network is active  
+INFO Checking if NetworkManager is installed      
+INFO Checking if NetworkManager service is running 
+INFO Checking if /etc/NetworkManager/conf.d/crc-nm-dnsmasq.conf exists 
+INFO Checking if /etc/NetworkManager/dnsmasq.d/crc.conf exists 
+INFO Extracting bundle: crc_libvirt_4.5.14.crcbundle ... 
+crc.qcow2: 9.97 GiB / 9.97 GiB [---------------------------------------------------------------------------------------------------------------------------------------] 100.00%
+INFO Checking size of the disk image /home/padmin/.crc/cache/crc_libvirt_4.5.14/crc.qcow2 ... 
+INFO Creating CodeReady Containers VM for OpenShift 4.5.14... 
+INFO CodeReady Containers VM is running           
+INFO Generating new SSH Key pair ...              
+INFO Copying kubeconfig file to instance dir ...  
+INFO Starting network time synchronization in CodeReady Containers VM 
+INFO Verifying validity of the cluster certificates ... 
+INFO Check internal and public DNS query ...      
+INFO Check DNS query from host ...                
+INFO Cluster TLS certificates have expired, renewing them... [will take up to 5 minutes] 
+INFO Starting OpenShift kubelet service           
+INFO Configuring cluster for first start          
+INFO Adding user's pull secret ...                
+INFO Updating cluster ID ...                      
+INFO Starting OpenShift cluster ... [waiting 3m]  
+INFO Updating kubeconfig                          
+WARN Skipping the kubeconfig update. Cluster operator authentication still not ready after 2min. 
+WARN The cluster might report a degraded or error state. This is expected since several operators have been disabled to lower the resource usage. For more information, please consult the documentation 
+Started the OpenShift cluster
+
+To access the cluster, first set up your environment by following 'crc oc-env' instructions.
+Then you can access it by running 'oc login -u developer -p developer https://api.crc.testing:6443'.
+To login as an admin, run 'oc login -u kubeadmin -p dpDFV-xamBW-kKAk3-Fi6Lg https://api.crc.testing:6443'.
+To access the cluster, first set up your environment by following 'crc oc-env' instructions.
+
+You can now run 'crc console' and use these credentials to access the OpenShift web console.
+
+
+[padmin@viose2 crc-linux-1.17.0-amd64]$ ./crc status
+CRC VM:          Running
+OpenShift:       Running (v4.5.14)
+Disk Usage:      17.33GB of 32.72GB (Inside the CRC VM)
+Cache Usage:     13.04GB
+Cache Directory: /home/padmin/.crc/cache
+[padmin@viose2 crc-linux-1.17.0-amd64]$ 
+

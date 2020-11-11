@@ -1,0 +1,121 @@
+{
+    "apiVersion": "kubevirt.io/v1alpha3",
+    "kind": "KubeVirt",
+    "metadata": {
+        "annotations": {
+            "kubevirt.io/latest-observed-api-version": "v1alpha3",
+            "kubevirt.io/storage-observed-api-version": "v1alpha3"
+        },
+        "creationTimestamp": "2020-11-06T04:12:40Z",
+        "finalizers": [
+            "foregroundDeleteKubeVirt"
+        ],
+        "generation": 1,
+        "managedFields": [
+            {
+                "apiVersion": "kubevirt.io/v1alpha3",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:spec": {
+                        ".": {},
+                        "f:certificateRotateStrategy": {},
+                        "f:configuration": {},
+                        "f:customizeComponents": {},
+                        "f:imagePullPolicy": {}
+                    }
+                },
+                "manager": ".kubectl",
+                "operation": "Update",
+                "time": "2020-11-06T04:12:40Z"
+            },
+            {
+                "apiVersion": "kubevirt.io/v1alpha3",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:kubevirt.io/latest-observed-api-version": {},
+                            "f:kubevirt.io/storage-observed-api-version": {}
+                        },
+                        "f:finalizers": {}
+                    },
+                    "f:status": {
+                        ".": {},
+                        "f:conditions": {},
+                        "f:observedDeploymentConfig": {},
+                        "f:observedDeploymentID": {},
+                        "f:observedKubeVirtRegistry": {},
+                        "f:observedKubeVirtVersion": {},
+                        "f:operatorVersion": {},
+                        "f:phase": {},
+                        "f:targetDeploymentConfig": {},
+                        "f:targetDeploymentID": {},
+                        "f:targetKubeVirtRegistry": {},
+                        "f:targetKubeVirtVersion": {}
+                    }
+                },
+                "manager": "virt-operator",
+                "operation": "Update",
+                "time": "2020-11-06T04:14:12Z"
+            }
+        ],
+        "name": "kubevirt",
+        "namespace": "kubevirt",
+        "resourceVersion": "3734",
+        "selfLink": "/apis/kubevirt.io/v1alpha3/namespaces/kubevirt/kubevirts/kubevirt",
+        "uid": "e9f27709-7a99-456d-b567-bee209258496"
+    },
+    "spec": {
+        "certificateRotateStrategy": {},
+        "configuration": {},
+        "customizeComponents": {},
+        "imagePullPolicy": "IfNotPresent"
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastProbeTime": "2020-11-06T04:14:12Z",
+                "lastTransitionTime": "2020-11-06T04:14:12Z",
+                "message": "All components are ready.",
+                "reason": "AllComponentsReady",
+                "status": "True",
+                "type": "Available"
+            },
+            {
+                "lastProbeTime": "2020-11-06T04:14:12Z",
+                "lastTransitionTime": "2020-11-06T04:14:12Z",
+                "message": "All components are ready.",
+                "reason": "AllComponentsReady",
+                "status": "False",
+                "type": "Progressing"
+            },
+            {
+                "lastProbeTime": "2020-11-06T04:14:12Z",
+                "lastTransitionTime": "2020-11-06T04:14:12Z",
+                "message": "All components are ready.",
+                "reason": "AllComponentsReady",
+                "status": "False",
+                "type": "Degraded"
+            },
+            {
+                "lastProbeTime": "2020-11-06T04:14:12Z",
+                "lastTransitionTime": null,
+                "message": "All resources were created.",
+                "reason": "AllResourcesCreated",
+                "status": "True",
+                "type": "Created"
+            }
+        ],
+        "observedDeploymentConfig": "{\"id\":\"3c98542fc05f613468ce83578b2b2571d13fe8d1\",\"namespace\":\"kubevirt\",\"registry\":\"registry:5000/kubevirt\",\"kubeVirtVersion\":\"devel\",\"virtOperatorSha\":\"sha256:6201c745a5079d7cb0c9e4f7ea0318111fc1ef9405683a3b70a9e982fd620da3\",\"virtApiSha\":\"sha256:3c63f881caad7c172f9a925580ee17c67350d761009fc4553b465d4a2e31f156\",\"virtControllerSha\":\"sha256:5fd0381bbf9fa70545e23303fe70ce21190e6219c311a9eb90f558c796c9937b\",\"virtHandlerSha\":\"sha256:ed506ae23eecfc9ec3296554a126b0d6a321bccad7651a8715284da51353c259\",\"virtLauncherSha\":\"sha256:cb94b7382f190e8872412972a0b5bacef79aef7922dbca2df949d1e1eb3d9b18\",\"additionalProperties\":{\"CertificateRotationStrategy\":\"\\u003cv1.KubeVirtCertificateRotateStrategy Value\\u003e\",\"Configuration\":\"\\u003cv1.KubeVirtConfiguration Value\\u003e\",\"CustomizeComponents\":\"\\u003cv1.CustomizeComponents Value\\u003e\",\"ImagePullPolicy\":\"IfNotPresent\",\"Infra\":\"\\u003c*v1.ComponentConfig Value\\u003e\",\"MonitorAccount\":\"\",\"MonitorNamespace\":\"\",\"ProductName\":\"\",\"ProductVersion\":\"\",\"UninstallStrategy\":\"\",\"Workloads\":\"\\u003c*v1.ComponentConfig Value\\u003e\"}}",
+        "observedDeploymentID": "3c98542fc05f613468ce83578b2b2571d13fe8d1",
+        "observedKubeVirtRegistry": "registry:5000/kubevirt",
+        "observedKubeVirtVersion": "devel",
+        "operatorVersion": "v0.0.0-master+$Format:%h$",
+        "phase": "Deployed",
+        "targetDeploymentConfig": "{\"id\":\"3c98542fc05f613468ce83578b2b2571d13fe8d1\",\"namespace\":\"kubevirt\",\"registry\":\"registry:5000/kubevirt\",\"kubeVirtVersion\":\"devel\",\"virtOperatorSha\":\"sha256:6201c745a5079d7cb0c9e4f7ea0318111fc1ef9405683a3b70a9e982fd620da3\",\"virtApiSha\":\"sha256:3c63f881caad7c172f9a925580ee17c67350d761009fc4553b465d4a2e31f156\",\"virtControllerSha\":\"sha256:5fd0381bbf9fa70545e23303fe70ce21190e6219c311a9eb90f558c796c9937b\",\"virtHandlerSha\":\"sha256:ed506ae23eecfc9ec3296554a126b0d6a321bccad7651a8715284da51353c259\",\"virtLauncherSha\":\"sha256:cb94b7382f190e8872412972a0b5bacef79aef7922dbca2df949d1e1eb3d9b18\",\"additionalProperties\":{\"CertificateRotationStrategy\":\"\\u003cv1.KubeVirtCertificateRotateStrategy Value\\u003e\",\"Configuration\":\"\\u003cv1.KubeVirtConfiguration Value\\u003e\",\"CustomizeComponents\":\"\\u003cv1.CustomizeComponents Value\\u003e\",\"ImagePullPolicy\":\"IfNotPresent\",\"Infra\":\"\\u003c*v1.ComponentConfig Value\\u003e\",\"MonitorAccount\":\"\",\"MonitorNamespace\":\"\",\"ProductName\":\"\",\"ProductVersion\":\"\",\"UninstallStrategy\":\"\",\"Workloads\":\"\\u003c*v1.ComponentConfig Value\\u003e\"}}",
+        "targetDeploymentID": "3c98542fc05f613468ce83578b2b2571d13fe8d1",
+        "targetKubeVirtRegistry": "registry:5000/kubevirt",
+        "targetKubeVirtVersion": "devel"
+    }
+}

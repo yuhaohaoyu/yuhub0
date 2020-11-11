@@ -1,0 +1,94 @@
+dnf provides "*/OVMF_VARS.fd"
+
+[root@viose2 CODE]# dnf repoquery -l edk2-ovmf-20190829git37eef91017ad-9.el8.noarch
+	Updating Subscription Management repositories.
+	Last metadata expiration check: 0:02:42 ago on Tue 27 Oct 2020 08:35:42 AM EDT.
+	/usr/share/OVMF
+	/usr/share/OVMF/OVMF_CODE.secboot.fd
+	/usr/share/OVMF/OVMF_VARS.fd
+	/usr/share/OVMF/OVMF_VARS.secboot.fd
+	/usr/share/OVMF/UefiShell.iso
+	/usr/share/doc/edk2-ovmf
+	/usr/share/doc/edk2-ovmf/README
+	/usr/share/doc/edk2-ovmf/ovmf-whitepaper-c770f8c.txt
+	/usr/share/edk2
+	/usr/share/edk2/ovmf
+	/usr/share/edk2/ovmf/EnrollDefaultKeys.efi
+	/usr/share/edk2/ovmf/OVMF_CODE.secboot.fd
+	/usr/share/edk2/ovmf/OVMF_VARS.fd
+	/usr/share/edk2/ovmf/OVMF_VARS.secboot.fd
+	/usr/share/edk2/ovmf/Shell.efi
+	/usr/share/edk2/ovmf/UefiShell.iso
+	/usr/share/licenses/edk2-ovmf
+	/usr/share/licenses/edk2-ovmf/LICENSE.openssl
+	/usr/share/licenses/edk2-ovmf/License-History.txt
+	/usr/share/licenses/edk2-ovmf/License.OvmfPkg.txt
+	/usr/share/licenses/edk2-ovmf/License.txt
+	/usr/share/qemu
+	/usr/share/qemu/firmware
+	/usr/share/qemu/firmware/40-edk2-ovmf-sb.json
+	/usr/share/qemu/firmware/50-edk2-ovmf.json
+
+
+[root@viose2 CODE]# ls -lR /usr/share/qemu
+	/usr/share/qemu:
+	total 0
+	drwxr-xr-x. 2 root root 59 Oct 27 08:42 firmware
+
+	/usr/share/qemu/firmware:
+	total 8
+	-rw-r--r--. 1 root root 770 Mar 27  2020 40-edk2-ovmf-sb.json
+	-rw-r--r--. 1 root root 722 Mar 27  2020 50-edk2-ovmf.json
+
+
+[root@viose2 CODE]# diff /usr/share/qemu/firmware/40-edk2-ovmf-sb.json /usr/share/qemu/firmware/50-edk2-ovmf.json 
+	2c2
+	<     "description": "OVMF with SB+SMM, SB enabled, MS certs enrolled",
+	---
+	>     "description": "OVMF with SB+SMM, empty varstore",
+	13c13
+	<             "filename": "/usr/share/edk2/ovmf/OVMF_VARS.secboot.fd",
+	---
+	>             "filename": "/usr/share/edk2/ovmf/OVMF_VARS.fd",
+	28d27
+	<         "enrolled-keys",
+
+
+[root@viose2 CODE]# cat /usr/share/qemu/firmware/40-edk2-ovmf-sb.json
+	{
+	    "description": "OVMF with SB+SMM, SB enabled, MS certs enrolled",
+	    "interface-types": [
+		"uefi"
+	    ],
+	    "mapping": {
+		"device": "flash",
+		"executable": {
+		    "filename": "/usr/share/edk2/ovmf/OVMF_CODE.secboot.fd",
+		    "format": "raw"
+		},
+		"nvram-template": {
+		    "filename": "/usr/share/edk2/ovmf/OVMF_VARS.secboot.fd",
+		    "format": "raw"
+		}
+	    },
+	    "targets": [
+		{
+		    "architecture": "x86_64",
+		    "machines": [
+			"pc-q35-*"
+		    ]
+		}
+	    ],
+	    "features": [
+		"acpi-s3",
+		"amd-sev",
+		"enrolled-keys",
+		"requires-smm",
+		"secure-boot",
+		"verbose-dynamic"
+	    ],
+	    "tags": [
+
+	    ]
+	}
+

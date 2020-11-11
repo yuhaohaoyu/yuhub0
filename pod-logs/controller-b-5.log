@@ -1,0 +1,9 @@
+{"component":"virt-controller","level":"info","msg":"STARTING informer configMapInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:43.152726Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer CRDInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:43.153177Z"}
+{"component":"virt-controller","level":"info","msg":"STARTING informer kubeVirtInformer","pos":"virtinformers.go:251","timestamp":"2020-11-04T00:17:43.153206Z"}
+{"component":"virt-controller","level":"info","msg":"CDI detected, DataVolume integration enabled","pos":"application.go:273","timestamp":"2020-11-04T00:17:43.663955Z"}
+{"component":"virt-controller","level":"info","msg":"Updating cluster config from KubeVirt to resource version '2580'","pos":"config-map.go:472","timestamp":"2020-11-04T00:17:43.668481Z"}
+{"component":"virt-controller","level":"info","msg":"certificate with common name 'virt-controller.kubevirt.pod.cluster.local' retrieved.","pos":"cert-manager.go:196","timestamp":"2020-11-04T00:17:49.034718Z"}
+{"action":"listening","component":"virt-controller","interface":"0.0.0.0","level":"info","port":8443,"pos":"application.go:322","service":"http","timestamp":"2020-11-04T00:17:49.034780Z"}
+E1104 00:17:50.878287       1 leaderelection.go:334] error initially creating leader election record: endpoints "virt-controller" already exists
+{"component":"virt-controller","level":"info","msg":"Updating cluster config from KubeVirt to resource version '3092'","pos":"config-map.go:472","service":"http","timestamp":"2020-11-04T00:17:51.696909Z"}

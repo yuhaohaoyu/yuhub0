@@ -1,0 +1,593 @@
+{
+    "apiVersion": "apps/v1",
+    "kind": "DaemonSet",
+    "metadata": {
+        "annotations": {
+            "deprecated.daemonset.template.generation": "1",
+            "kubevirt.io/customizer-identifier": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+            "kubevirt.io/generation": "1",
+            "kubevirt.io/install-strategy-identifier": "ff47157d6322f01a15562c0f3d5e822baa3f8dc8",
+            "kubevirt.io/install-strategy-registry": "registry:5000/kubevirt",
+            "kubevirt.io/install-strategy-version": "devel"
+        },
+        "creationTimestamp": "2020-11-01T17:45:55Z",
+        "generation": 1,
+        "labels": {
+            "app.kubernetes.io/component": "kubevirt",
+            "app.kubernetes.io/managed-by": "kubevirt-operator",
+            "app.kubernetes.io/version": "devel",
+            "kubevirt.io": "virt-handler"
+        },
+        "managedFields": [
+            {
+                "apiVersion": "apps/v1",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:deprecated.daemonset.template.generation": {},
+                            "f:kubevirt.io/customizer-identifier": {},
+                            "f:kubevirt.io/generation": {},
+                            "f:kubevirt.io/install-strategy-identifier": {},
+                            "f:kubevirt.io/install-strategy-registry": {},
+                            "f:kubevirt.io/install-strategy-version": {}
+                        },
+                        "f:labels": {
+                            ".": {},
+                            "f:app.kubernetes.io/component": {},
+                            "f:app.kubernetes.io/managed-by": {},
+                            "f:app.kubernetes.io/version": {},
+                            "f:kubevirt.io": {}
+                        }
+                    },
+                    "f:spec": {
+                        "f:revisionHistoryLimit": {},
+                        "f:selector": {
+                            "f:matchLabels": {
+                                ".": {},
+                                "f:kubevirt.io": {}
+                            }
+                        },
+                        "f:template": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubevirt.io/install-strategy-identifier": {},
+                                    "f:kubevirt.io/install-strategy-registry": {},
+                                    "f:kubevirt.io/install-strategy-version": {},
+                                    "f:scheduler.alpha.kubernetes.io/critical-pod": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app.kubernetes.io/component": {},
+                                    "f:app.kubernetes.io/managed-by": {},
+                                    "f:app.kubernetes.io/version": {},
+                                    "f:kubevirt.io": {},
+                                    "f:prometheus.kubevirt.io": {}
+                                },
+                                "f:name": {}
+                            },
+                            "f:spec": {
+                                "f:containers": {
+                                    "k:{\"name\":\"virt-handler\"}": {
+                                        ".": {},
+                                        "f:command": {},
+                                        "f:env": {
+                                            ".": {},
+                                            "k:{\"name\":\"MY_POD_IP\"}": {
+                                                ".": {},
+                                                "f:name": {},
+                                                "f:valueFrom": {
+                                                    ".": {},
+                                                    "f:fieldRef": {
+                                                        ".": {},
+                                                        "f:apiVersion": {},
+                                                        "f:fieldPath": {}
+                                                    }
+                                                }
+                                            },
+                                            "k:{\"name\":\"NODE_NAME\"}": {
+                                                ".": {},
+                                                "f:name": {},
+                                                "f:valueFrom": {
+                                                    ".": {},
+                                                    "f:fieldRef": {
+                                                        ".": {},
+                                                        "f:apiVersion": {},
+                                                        "f:fieldPath": {}
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "f:image": {},
+                                        "f:imagePullPolicy": {},
+                                        "f:livenessProbe": {
+                                            ".": {},
+                                            "f:failureThreshold": {},
+                                            "f:httpGet": {
+                                                ".": {},
+                                                "f:path": {},
+                                                "f:port": {},
+                                                "f:scheme": {}
+                                            },
+                                            "f:initialDelaySeconds": {},
+                                            "f:periodSeconds": {},
+                                            "f:successThreshold": {},
+                                            "f:timeoutSeconds": {}
+                                        },
+                                        "f:name": {},
+                                        "f:ports": {
+                                            ".": {},
+                                            "k:{\"containerPort\":8443,\"protocol\":\"TCP\"}": {
+                                                ".": {},
+                                                "f:containerPort": {},
+                                                "f:name": {},
+                                                "f:protocol": {}
+                                            }
+                                        },
+                                        "f:readinessProbe": {
+                                            ".": {},
+                                            "f:failureThreshold": {},
+                                            "f:httpGet": {
+                                                ".": {},
+                                                "f:path": {},
+                                                "f:port": {},
+                                                "f:scheme": {}
+                                            },
+                                            "f:initialDelaySeconds": {},
+                                            "f:periodSeconds": {},
+                                            "f:successThreshold": {},
+                                            "f:timeoutSeconds": {}
+                                        },
+                                        "f:resources": {},
+                                        "f:securityContext": {
+                                            ".": {},
+                                            "f:privileged": {},
+                                            "f:seLinuxOptions": {
+                                                ".": {},
+                                                "f:level": {}
+                                            }
+                                        },
+                                        "f:terminationMessagePath": {},
+                                        "f:terminationMessagePolicy": {},
+                                        "f:volumeMounts": {
+                                            ".": {},
+                                            "k:{\"mountPath\":\"/etc/virt-handler/clientcertificates\"}": {
+                                                ".": {},
+                                                "f:mountPath": {},
+                                                "f:name": {},
+                                                "f:readOnly": {}
+                                            },
+                                            "k:{\"mountPath\":\"/etc/virt-handler/servercertificates\"}": {
+                                                ".": {},
+                                                "f:mountPath": {},
+                                                "f:name": {},
+                                                "f:readOnly": {}
+                                            },
+                                            "k:{\"mountPath\":\"/pods\"}": {
+                                                ".": {},
+                                                "f:mountPath": {},
+                                                "f:name": {}
+                                            },
+                                            "k:{\"mountPath\":\"/var/lib/kubelet/device-plugins\"}": {
+                                                ".": {},
+                                                "f:mountPath": {},
+                                                "f:name": {}
+                                            },
+                                            "k:{\"mountPath\":\"/var/lib/kubelet/pods\"}": {
+                                                ".": {},
+                                                "f:mountPath": {},
+                                                "f:mountPropagation": {},
+                                                "f:name": {}
+                                            },
+                                            "k:{\"mountPath\":\"/var/lib/kubevirt\"}": {
+                                                ".": {},
+                                                "f:mountPath": {},
+                                                "f:name": {}
+                                            },
+                                            "k:{\"mountPath\":\"/var/run/kubevirt\"}": {
+                                                ".": {},
+                                                "f:mountPath": {},
+                                                "f:mountPropagation": {},
+                                                "f:name": {}
+                                            },
+                                            "k:{\"mountPath\":\"/var/run/kubevirt-libvirt-runtimes\"}": {
+                                                ".": {},
+                                                "f:mountPath": {},
+                                                "f:name": {}
+                                            },
+                                            "k:{\"mountPath\":\"/var/run/kubevirt-private\"}": {
+                                                ".": {},
+                                                "f:mountPath": {},
+                                                "f:name": {}
+                                            }
+                                        }
+                                    }
+                                },
+                                "f:dnsPolicy": {},
+                                "f:hostPID": {},
+                                "f:priorityClassName": {},
+                                "f:restartPolicy": {},
+                                "f:schedulerName": {},
+                                "f:securityContext": {},
+                                "f:serviceAccount": {},
+                                "f:serviceAccountName": {},
+                                "f:terminationGracePeriodSeconds": {},
+                                "f:tolerations": {},
+                                "f:volumes": {
+                                    ".": {},
+                                    "k:{\"name\":\"device-plugin\"}": {
+                                        ".": {},
+                                        "f:hostPath": {
+                                            ".": {},
+                                            "f:path": {},
+                                            "f:type": {}
+                                        },
+                                        "f:name": {}
+                                    },
+                                    "k:{\"name\":\"kubelet-pods\"}": {
+                                        ".": {},
+                                        "f:hostPath": {
+                                            ".": {},
+                                            "f:path": {},
+                                            "f:type": {}
+                                        },
+                                        "f:name": {}
+                                    },
+                                    "k:{\"name\":\"kubelet-pods-shortened\"}": {
+                                        ".": {},
+                                        "f:hostPath": {
+                                            ".": {},
+                                            "f:path": {},
+                                            "f:type": {}
+                                        },
+                                        "f:name": {}
+                                    },
+                                    "k:{\"name\":\"kubevirt-virt-handler-certs\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:secret": {
+                                            ".": {},
+                                            "f:defaultMode": {},
+                                            "f:optional": {},
+                                            "f:secretName": {}
+                                        }
+                                    },
+                                    "k:{\"name\":\"kubevirt-virt-handler-server-certs\"}": {
+                                        ".": {},
+                                        "f:name": {},
+                                        "f:secret": {
+                                            ".": {},
+                                            "f:defaultMode": {},
+                                            "f:optional": {},
+                                            "f:secretName": {}
+                                        }
+                                    },
+                                    "k:{\"name\":\"libvirt-runtimes\"}": {
+                                        ".": {},
+                                        "f:hostPath": {
+                                            ".": {},
+                                            "f:path": {},
+                                            "f:type": {}
+                                        },
+                                        "f:name": {}
+                                    },
+                                    "k:{\"name\":\"virt-lib-dir\"}": {
+                                        ".": {},
+                                        "f:hostPath": {
+                                            ".": {},
+                                            "f:path": {},
+                                            "f:type": {}
+                                        },
+                                        "f:name": {}
+                                    },
+                                    "k:{\"name\":\"virt-private-dir\"}": {
+                                        ".": {},
+                                        "f:hostPath": {
+                                            ".": {},
+                                            "f:path": {},
+                                            "f:type": {}
+                                        },
+                                        "f:name": {}
+                                    },
+                                    "k:{\"name\":\"virt-share-dir\"}": {
+                                        ".": {},
+                                        "f:hostPath": {
+                                            ".": {},
+                                            "f:path": {},
+                                            "f:type": {}
+                                        },
+                                        "f:name": {}
+                                    }
+                                }
+                            }
+                        },
+                        "f:updateStrategy": {
+                            "f:rollingUpdate": {
+                                ".": {},
+                                "f:maxUnavailable": {}
+                            },
+                            "f:type": {}
+                        }
+                    }
+                },
+                "manager": "virt-operator",
+                "operation": "Update",
+                "time": "2020-11-01T17:45:55Z"
+            },
+            {
+                "apiVersion": "apps/v1",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:status": {
+                        "f:currentNumberScheduled": {},
+                        "f:desiredNumberScheduled": {},
+                        "f:numberAvailable": {},
+                        "f:numberReady": {},
+                        "f:observedGeneration": {},
+                        "f:updatedNumberScheduled": {}
+                    }
+                },
+                "manager": "kube-controller-manager",
+                "operation": "Update",
+                "time": "2020-11-01T17:46:43Z"
+            }
+        ],
+        "name": "virt-handler",
+        "namespace": "kubevirt",
+        "resourceVersion": "4627",
+        "selfLink": "/apis/apps/v1/namespaces/kubevirt/daemonsets/virt-handler",
+        "uid": "24730dd1-da73-4859-87b9-9e8a7a60aecb"
+    },
+    "spec": {
+        "revisionHistoryLimit": 10,
+        "selector": {
+            "matchLabels": {
+                "kubevirt.io": "virt-handler"
+            }
+        },
+        "template": {
+            "metadata": {
+                "annotations": {
+                    "kubevirt.io/install-strategy-identifier": "ff47157d6322f01a15562c0f3d5e822baa3f8dc8",
+                    "kubevirt.io/install-strategy-registry": "registry:5000/kubevirt",
+                    "kubevirt.io/install-strategy-version": "devel",
+                    "scheduler.alpha.kubernetes.io/critical-pod": ""
+                },
+                "creationTimestamp": null,
+                "labels": {
+                    "app.kubernetes.io/component": "kubevirt",
+                    "app.kubernetes.io/managed-by": "kubevirt-operator",
+                    "app.kubernetes.io/version": "devel",
+                    "kubevirt.io": "virt-handler",
+                    "prometheus.kubevirt.io": ""
+                },
+                "name": "virt-handler"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "command": [
+                            "virt-handler",
+                            "--port",
+                            "8443",
+                            "--hostname-override",
+                            "$(NODE_NAME)",
+                            "--pod-ip-address",
+                            "$(MY_POD_IP)",
+                            "--max-metric-requests",
+                            "3",
+                            "--console-server-port",
+                            "8186",
+                            "-v",
+                            "2"
+                        ],
+                        "env": [
+                            {
+                                "name": "NODE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "MY_POD_IP",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "status.podIP"
+                                    }
+                                }
+                            }
+                        ],
+                        "image": "registry:5000/kubevirt/virt-handler@sha256:2d85f711084bc46b0246d5e4eb2fcf4710061f81b6b1d5d5b4946e3699b31de5",
+                        "imagePullPolicy": "IfNotPresent",
+                        "livenessProbe": {
+                            "failureThreshold": 8,
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 8443,
+                                "scheme": "HTTPS"
+                            },
+                            "initialDelaySeconds": 15,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 10
+                        },
+                        "name": "virt-handler",
+                        "ports": [
+                            {
+                                "containerPort": 8443,
+                                "name": "metrics",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 8443,
+                                "scheme": "HTTPS"
+                            },
+                            "initialDelaySeconds": 15,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 10
+                        },
+                        "resources": {},
+                        "securityContext": {
+                            "privileged": true,
+                            "seLinuxOptions": {
+                                "level": "s0"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/etc/virt-handler/clientcertificates",
+                                "name": "kubevirt-virt-handler-certs",
+                                "readOnly": true
+                            },
+                            {
+                                "mountPath": "/etc/virt-handler/servercertificates",
+                                "name": "kubevirt-virt-handler-server-certs",
+                                "readOnly": true
+                            },
+                            {
+                                "mountPath": "/var/run/kubevirt-libvirt-runtimes",
+                                "name": "libvirt-runtimes"
+                            },
+                            {
+                                "mountPath": "/var/run/kubevirt",
+                                "mountPropagation": "Bidirectional",
+                                "name": "virt-share-dir"
+                            },
+                            {
+                                "mountPath": "/var/lib/kubevirt",
+                                "name": "virt-lib-dir"
+                            },
+                            {
+                                "mountPath": "/var/run/kubevirt-private",
+                                "name": "virt-private-dir"
+                            },
+                            {
+                                "mountPath": "/var/lib/kubelet/device-plugins",
+                                "name": "device-plugin"
+                            },
+                            {
+                                "mountPath": "/pods",
+                                "name": "kubelet-pods-shortened"
+                            },
+                            {
+                                "mountPath": "/var/lib/kubelet/pods",
+                                "mountPropagation": "Bidirectional",
+                                "name": "kubelet-pods"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "hostPID": true,
+                "priorityClassName": "kubevirt-cluster-critical",
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "kubevirt-handler",
+                "serviceAccountName": "kubevirt-handler",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "key": "CriticalAddonsOnly",
+                        "operator": "Exists"
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "kubevirt-virt-handler-certs",
+                        "secret": {
+                            "defaultMode": 420,
+                            "optional": true,
+                            "secretName": "kubevirt-virt-handler-certs"
+                        }
+                    },
+                    {
+                        "name": "kubevirt-virt-handler-server-certs",
+                        "secret": {
+                            "defaultMode": 420,
+                            "optional": true,
+                            "secretName": "kubevirt-virt-handler-server-certs"
+                        }
+                    },
+                    {
+                        "hostPath": {
+                            "path": "/var/run/kubevirt-libvirt-runtimes",
+                            "type": ""
+                        },
+                        "name": "libvirt-runtimes"
+                    },
+                    {
+                        "hostPath": {
+                            "path": "/var/run/kubevirt",
+                            "type": ""
+                        },
+                        "name": "virt-share-dir"
+                    },
+                    {
+                        "hostPath": {
+                            "path": "/var/lib/kubevirt",
+                            "type": ""
+                        },
+                        "name": "virt-lib-dir"
+                    },
+                    {
+                        "hostPath": {
+                            "path": "/var/run/kubevirt-private",
+                            "type": ""
+                        },
+                        "name": "virt-private-dir"
+                    },
+                    {
+                        "hostPath": {
+                            "path": "/var/lib/kubelet/device-plugins",
+                            "type": ""
+                        },
+                        "name": "device-plugin"
+                    },
+                    {
+                        "hostPath": {
+                            "path": "/var/lib/kubelet/pods",
+                            "type": ""
+                        },
+                        "name": "kubelet-pods-shortened"
+                    },
+                    {
+                        "hostPath": {
+                            "path": "/var/lib/kubelet/pods",
+                            "type": ""
+                        },
+                        "name": "kubelet-pods"
+                    }
+                ]
+            }
+        },
+        "updateStrategy": {
+            "rollingUpdate": {
+                "maxUnavailable": 1
+            },
+            "type": "RollingUpdate"
+        }
+    },
+    "status": {
+        "currentNumberScheduled": 1,
+        "desiredNumberScheduled": 1,
+        "numberAvailable": 1,
+        "numberMisscheduled": 0,
+        "numberReady": 1,
+        "observedGeneration": 1,
+        "updatedNumberScheduled": 1
+    }
+}

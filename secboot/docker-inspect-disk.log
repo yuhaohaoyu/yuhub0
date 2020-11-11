@@ -1,0 +1,80 @@
+https://stackoverflow.com/questions/20813486/exploring-docker-containers-file-system
+docker pull kubevirt/microlivecd-container-disk-demo
+docker inspect docker.io/kubevirt/microlivecd-container-disk-demo:latest
+
+[
+    {
+        "Id": "sha256:612f751bb07ed81989d731073e6041b4fb5566ab15e376b73f3d4bef5f1f190f",
+        "RepoTags": [
+            "kubevirt/microlivecd-container-disk-demo:latest"
+        ],
+        "RepoDigests": [
+            "kubevirt/microlivecd-container-disk-demo@sha256:df24f575e0ce719e88c9d03047b627e04c4c74d6492db3957d9c9a8c0f1b784d"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "1970-01-01T00:00:00Z",
+        "Container": "",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "",
+        "Author": "Bazel",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 139460608,
+        "VirtualSize": 139460608,
+        "GraphDriver": {
+            "Data": {
+                "MergedDir": "/var/lib/docker/overlay2/fd6bfdf0b1ce44811d5dced4822c29f13f82fa74e7424dc6f1666b7cf3ed7fec/merged",
+                "UpperDir": "/var/lib/docker/overlay2/fd6bfdf0b1ce44811d5dced4822c29f13f82fa74e7424dc6f1666b7cf3ed7fec/diff",
+                "WorkDir": "/var/lib/docker/overlay2/fd6bfdf0b1ce44811d5dced4822c29f13f82fa74e7424dc6f1666b7cf3ed7fec/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:758ec1ecb81d40bc01cb9b6799f2a25f88c223f5fe57a1bd1c95aee7cf0eb3fe"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

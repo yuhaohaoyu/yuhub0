@@ -1,0 +1,521 @@
+./hack/cluster-build.sh
+Building ...
+selecting docker as container runtime
+go version go1.13.14 linux/amd64
+
+go version go1.13.14 linux/amd64
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 46 targets (0 packages loaded, 0 targets configured)
+INFO: Analyzed 46 targets (0 packages loaded, 0 targets configured).
+INFO: Found 46 targets...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[13 / 336] checking cached actions
+[66 / 336] checking cached actions
+[362 / 379] [Prepa] GoCompilePkg pkg/virt-controller/services/go_default_library.a
+[434 / 450] checking cached actions
+[456 / 464] checking cached actions
+[456 / 464] GoLink cmd/virt-api/virt-api_/virt-api; 0s processwrapper-sandbox
+[495 / 501] GoLink cmd/virt-api/virt-api_/virt-api; 4s processwrapper-sandbox ... (2 actions, 1 running)
+[495 / 501] GoLink cmd/virt-api/virt-api_/virt-api; 10s processwrapper-sandbox ... (2 actions running)
+[495 / 501] GoLink cmd/virt-api/virt-api_/virt-api; 14s processwrapper-sandbox ... (2 actions running)
+[496 / 501] GoLink cmd/virt-handler/virt-handler_/virt-handler; 17s processwrapper-sandbox ... (2 actions, 1 running)
+[509 / 840] [Prepa] ImageLayer cmd/virt-handler/virt-handler-image-layer.tar
+[530 / 858] GoLink cmd/virt-launcher/virt-launcher_/virt-launcher; 5s processwrapper-sandbox
+[578 / 906] checking cached actions
+[725 / 1,235] checking cached actions
+[979 / 1,310] checking cached actions
+[1,117 / 1,332] GoLink cmd/virt-controller/virt-controller_/virt-controller; 3s processwrapper-sandbox
+[1,345 / 1,346] GoLink cmd/dump/dump_/dump; 4s processwrapper-sandbox
+INFO: Elapsed time: 122.135s, Critical Path: 34.05s
+INFO: 24 processes: 24 processwrapper-sandbox.
+INFO: Build completed successfully, 25 total actions
+INFO: Build completed successfully, 25 total actions
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:build-dump (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:build-dump (0 packages loaded, 1 target configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:build-dump up-to-date:
+  bazel-bin/dump-copier
+INFO: Elapsed time: 1.704s, Critical Path: 0.24s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/dump-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/dump/dump
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:build-virtctl (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:build-virtctl (0 packages loaded, 1 target configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:build-virtctl up-to-date:
+  bazel-bin/virtctl-copier
+INFO: Elapsed time: 1.050s, Critical Path: 0.25s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/virtctl-copier /root/go/src/kubevirt.io/kubevirt/_out/cmd/virtctl/virtctl
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:build-virtctl-amd64 (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:build-virtctl-amd64 (0 packages loaded, 1 target configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:build-virtctl-amd64 up-to-date:
+  bazel-bin/virtctl-copier-amd64
+INFO: Elapsed time: 1.072s, Critical Path: 0.18s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/virtctl-copier-amd64 /root/go/src/kubevirt.io/kubevirt/_out/cmd/virtctl/virtctl-v0.34.0-rc.0-130-g38cacd560-linux-amd64
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:build-virtctl-darwin (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:build-virtctl-darwin (0 packages loaded, 1 target configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:build-virtctl-darwin up-to-date:
+  bazel-bin/virtctl-copier-darwin
+INFO: Elapsed time: 1.148s, Critical Path: 0.17s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/virtctl-copier-darwin /root/go/src/kubevirt.io/kubevirt/_out/cmd/virtctl/virtctl-v0.34.0-rc.0-130-g38cacd560-darwin-amd64
+INFO: Build completed successfully, 1 total action
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:build-virtctl-windows (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:build-virtctl-windows (0 packages loaded, 1 target configured).
+INFO: Found 1 target...
+[0 / 3] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:build-virtctl-windows up-to-date:
+  bazel-bin/virtctl-copier-windows
+INFO: Elapsed time: 0.988s, Critical Path: 0.09s
+INFO: 0 processes.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/virtctl-copier-windows /root/go/src/kubevirt.io/kubevirt/_out/cmd/virtctl/virtctl-v0.34.0-rc.0-130-g38cacd560-windows-amd64.exe
+INFO: Build completed successfully, 1 total action
+selecting docker as container runtime
+go version go1.13.14 linux/amd64
+
+go version go1.13.14 linux/amd64
+Loading: 
+Loading: 0 packages loaded
+INFO: Build options --define and --stamp have changed, discarding analysis cache.
+Analyzing: target //:push-other-images (0 packages loaded, 0 targets configured)
+Analyzing: target //:push-other-images (2 packages loaded, 625 targets configured)
+Analyzing: target //:push-other-images (9 packages loaded, 2615 targets configured)
+Analyzing: target //:push-other-images (15 packages loaded, 9850 targets configured)
+Analyzing: target //:push-other-images (18 packages loaded, 10106 targets configured)
+Analyzing: target //:push-other-images (50 packages loaded, 10366 targets configured)
+Analyzing: target //:push-other-images (57 packages loaded, 10630 targets configured)
+Analyzing: target //:push-other-images (78 packages loaded, 10774 targets configured)
+INFO: Analyzed target //:push-other-images (90 packages loaded, 10863 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[135 / 311] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[189 / 317] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[191 / 318] [Prepa] BazelWorkspaceStatusAction stable-status.txt; 5s
+[197 / 328] [Prepa] BazelWorkspaceStatusAction stable-status.txt; 7s
+[206 / 334] [Prepa] BazelWorkspaceStatusAction stable-status.txt; 10s
+[509 / 627] checking cached actions
+[519 / 628] checking cached actions
+[523 / 630] checking cached actions
+[542 / 637] [Prepa] Expanding template push-other-images.5.push
+[1,118 / 1,196] checking cached actions
+[1,125 / 1,196] [Prepa] Expanding template push-other-images.11.push
+[1,172 / 1,202] checking cached actions
+Target //:push-other-images up-to-date:
+  bazel-bin/push-other-images
+INFO: Elapsed time: 108.253s, Critical Path: 30.72s
+INFO: 0 processes.
+INFO: Build completed successfully, 16 total actions
+INFO: Running command line: bazel-bin/push-other-images
+INFO: Build completed successfully, 16 total actions
+2020/11/02 23:25:35 Successfully pushed Docker image to localhost:32778/kubevirt/virtio-container-disk:devel
+2020/11/02 23:25:35 Successfully pushed Docker image to localhost:32778/kubevirt/fedora-cloud-container-disk-demo:devel
+2020/11/02 23:25:35 Successfully pushed Docker image to localhost:32778/kubevirt/alpine-container-disk-demo:devel
+2020/11/02 23:25:35 Successfully pushed Docker image to localhost:32778/kubevirt/cirros-custom-container-disk-demo:devel
+2020/11/02 23:25:35 Successfully pushed Docker image to localhost:32778/kubevirt/microlivecd-container-disk-demo:devel
+2020/11/02 23:25:35 Successfully pushed Docker image to localhost:32778/kubevirt/cirros-container-disk-demo:devel
+2020/11/02 23:25:35 Successfully pushed Docker image to localhost:32778/kubevirt/winrmcli:devel
+2020/11/02 23:25:36 Successfully pushed Docker image to localhost:32778/kubevirt/example-hook-sidecar:devel
+2020/11/02 23:25:36 Successfully pushed Docker image to localhost:32778/kubevirt/disks-images-provider:devel
+2020/11/02 23:25:36 Successfully pushed Docker image to localhost:32778/kubevirt/vm-killer:devel
+2020/11/02 23:25:36 Successfully pushed Docker image to localhost:32778/kubevirt/cdi-http-import-server:devel
+2020/11/02 23:25:36 Successfully pushed Docker image to localhost:32778/kubevirt/subresource-access-test:devel
+2020/11/02 23:25:36 Successfully pushed Docker image to localhost:32778/kubevirt/fedora-sriov-lane-container-disk:devel
+2020/11/02 23:25:36 Successfully pushed Docker image to localhost:32778/kubevirt/example-cloudinit-hook-sidecar:devel
+2020/11/02 23:25:36 Successfully pushed Docker image to localhost:32778/kubevirt/nfs-server:devel
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-virt-operator (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-virt-operator (0 packages loaded, 996 targets configured).
+INFO: Found 1 target...
+
+[0 / 15] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[224 / 228] [Prepa] Expanding template push-virt-operator
+Target //:push-virt-operator up-to-date:
+  bazel-bin/push-virt-operator.digest
+  bazel-bin/push-virt-operator
+INFO: Elapsed time: 8.790s, Critical Path: 1.77s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Running command line: bazel-bin/push-virt-operator
+INFO: Build completed successfully, 2 total actions
+2020/11/02 23:25:45 Successfully pushed Docker image to localhost:32778/kubevirt/virt-operator:devel
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-virt-api (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-virt-api (0 packages loaded, 45 targets configured).
+INFO: Found 1 target...
+[0 / 15] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[24 / 31] GoLink cmd/virt-api/virt-api_/virt-api; 1s processwrapper-sandbox
+[24 / 31] GoLink cmd/virt-api/virt-api_/virt-api; 11s processwrapper-sandbox
+[25 / 31] [Prepa] ImageLayer cmd/virt-api/virt-api-image-layer.tar
+Target //:push-virt-api up-to-date:
+  bazel-bin/push-virt-api.digest
+  bazel-bin/push-virt-api
+INFO: Elapsed time: 16.034s, Critical Path: 15.25s
+INFO: 4 processes: 4 processwrapper-sandbox.
+INFO: Build completed successfully, 6 total actions
+INFO: Running command line: bazel-bin/push-virt-api
+INFO: Build completed successfully, 6 total actions
+2020/11/02 23:26:02 Successfully pushed Docker image to localhost:32778/kubevirt/virt-api:devel
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-virt-controller (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-virt-controller (0 packages loaded, 30 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[20 / 27] GoLink cmd/virt-controller/virt-controller_/virt-controller; 1s processwrapper-sandbox
+[24 / 27] [Prepa] GZIP cmd/virt-controller/virt-controller-image-layer.tar.gz
+[24 / 27] GZIP cmd/virt-controller/virt-controller-image-layer.tar.gz; 2s processwrapper-sandbox
+[25 / 27] [Prepa] SHA256 cmd/virt-controller/virt-controller-image-layer.tar.gz.sha256
+Target //:push-virt-controller up-to-date:
+  bazel-bin/push-virt-controller.digest
+  bazel-bin/push-virt-controller
+INFO: Elapsed time: 14.825s, Critical Path: 13.72s
+INFO: 4 processes: 4 processwrapper-sandbox.
+INFO: Build completed successfully, 6 total actions
+INFO: Running command line: bazel-bin/push-virt-controller
+INFO: Build completed successfully, 6 total actions
+2020/11/02 23:26:18 Successfully pushed Docker image to localhost:32778/kubevirt/virt-controller:devel
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-virt-handler (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-virt-handler (0 packages loaded, 502 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[115 / 122] GoLink cmd/virt-handler/virt-handler_/virt-handler; 1s processwrapper-sandbox
+[115 / 122] GoLink cmd/virt-handler/virt-handler_/virt-handler; 11s processwrapper-sandbox
+[116 / 122] ImageLayer cmd/virt-handler/virt-handler-image-layer.tar; 0s processwrapper-sandbox
+Target //:push-virt-handler up-to-date:
+  bazel-bin/push-virt-handler.digest
+  bazel-bin/push-virt-handler
+INFO: Elapsed time: 15.972s, Critical Path: 14.98s
+INFO: 4 processes: 4 processwrapper-sandbox.
+INFO: Build completed successfully, 6 total actions
+INFO: Running command line: bazel-bin/push-virt-handler
+INFO: Build completed successfully, 6 total actions
+2020/11/02 23:26:35 Successfully pushed Docker image to localhost:32778/kubevirt/virt-handler:devel
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-virt-launcher (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-virt-launcher (0 packages loaded, 28 targets configured).
+INFO: Found 1 target...
+[1 / 15] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[21 / 28] GoLink cmd/virt-launcher/virt-launcher_/virt-launcher; 1s processwrapper-sandbox
+[25 / 28] [Prepa] GZIP cmd/virt-launcher/virt-launcher-image-layer.tar.gz
+[25 / 28] GZIP cmd/virt-launcher/virt-launcher-image-layer.tar.gz; 1s processwrapper-sandbox
+[26 / 28] [Prepa] SHA256 cmd/virt-launcher/virt-launcher-image-layer.tar.gz.sha256
+Target //:push-virt-launcher up-to-date:
+  bazel-bin/push-virt-launcher.digest
+  bazel-bin/push-virt-launcher
+INFO: Elapsed time: 17.560s, Critical Path: 15.91s
+INFO: 4 processes: 4 processwrapper-sandbox.
+INFO: Build completed successfully, 6 total actions
+INFO: Running command line: bazel-bin/push-virt-launcher
+INFO: Build completed successfully, 6 total actions
+2020/11/02 23:26:54 Successfully pushed Docker image to localhost:32778/kubevirt/virt-launcher:devel
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-conformance (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-conformance (8 packages loaded, 689 targets configured).
+
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[86 / 106] checking cached actions
+[100 / 107] checking cached actions
+[100 / 107] GoLink tests/go_default_test_/go_default_test; 0s processwrapper-sandbox
+Target //:push-conformance up-to-date:
+  bazel-bin/push-conformance.digest
+  bazel-bin/push-conformance
+INFO: Elapsed time: 15.538s, Critical Path: 12.37s
+INFO: 1 process: 1 processwrapper-sandbox.
+INFO: Build completed successfully, 3 total actions
+INFO: Running command line: bazel-bin/push-conformance
+INFO: Build completed successfully, 3 total actions
+2020/11/02 23:27:11 Successfully pushed Docker image to localhost:32778/kubevirt/conformance:devel
+Loading: 
+Loading: 0 packages loaded
+INFO: Build option --define has changed, discarding analysis cache.
+Analyzing: target //:push-other-images (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-other-images (0 packages loaded, 10863 targets configured).
+
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[950 / 1,111] [Prepa] Expanding template push-other-images.9.push
+Target //:push-other-images up-to-date:
+  bazel-bin/push-other-images
+INFO: Elapsed time: 6.469s, Critical Path: 0.26s
+INFO: 0 processes.
+INFO: Build completed successfully, 16 total actions
+INFO: Running command line: bazel-bin/push-other-images
+INFO: Build completed successfully, 16 total actions
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/cirros-container-disk-demo:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/cirros-custom-container-disk-demo:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/example-hook-sidecar:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/virtio-container-disk:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/cdi-http-import-server:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/alpine-container-disk-demo:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/example-cloudinit-hook-sidecar:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/fedora-sriov-lane-container-disk:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/disks-images-provider:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/microlivecd-container-disk-demo:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/winrmcli:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/fedora-cloud-container-disk-demo:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/subresource-access-test:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/vm-killer:devel_alt
+2020/11/02 23:27:18 Successfully pushed Docker image to localhost:32778/kubevirt/nfs-server:devel_alt
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-virt-operator (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-virt-operator (0 packages loaded, 996 targets configured).
+INFO: Found 1 target...
+[7 / 221] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:push-virt-operator up-to-date:
+  bazel-bin/push-virt-operator.digest
+  bazel-bin/push-virt-operator
+INFO: Elapsed time: 1.898s, Critical Path: 0.48s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Running command line: bazel-bin/push-virt-operator
+INFO: Build completed successfully, 2 total actions
+2020/11/02 23:27:21 Successfully pushed Docker image to localhost:32778/kubevirt/virt-operator:devel_alt
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-virt-api (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-virt-api (0 packages loaded, 45 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:push-virt-api up-to-date:
+  bazel-bin/push-virt-api.digest
+  bazel-bin/push-virt-api
+INFO: Elapsed time: 1.291s, Critical Path: 0.33s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Running command line: bazel-bin/push-virt-api
+INFO: Build completed successfully, 2 total actions
+2020/11/02 23:27:22 Successfully pushed Docker image to localhost:32778/kubevirt/virt-api:devel_alt
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-virt-controller (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-virt-controller (0 packages loaded, 30 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:push-virt-controller up-to-date:
+  bazel-bin/push-virt-controller.digest
+  bazel-bin/push-virt-controller
+INFO: Elapsed time: 1.195s, Critical Path: 0.13s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Running command line: bazel-bin/push-virt-controller
+INFO: Build completed successfully, 2 total actions
+2020/11/02 23:27:24 Successfully pushed Docker image to localhost:32778/kubevirt/virt-controller:devel_alt
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-virt-handler (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-virt-handler (0 packages loaded, 502 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:push-virt-handler up-to-date:
+  bazel-bin/push-virt-handler.digest
+  bazel-bin/push-virt-handler
+INFO: Elapsed time: 1.293s, Critical Path: 0.18s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Running command line: bazel-bin/push-virt-handler
+INFO: Build completed successfully, 2 total actions
+2020/11/02 23:27:25 Successfully pushed Docker image to localhost:32778/kubevirt/virt-handler:devel_alt
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-virt-launcher (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-virt-launcher (0 packages loaded, 28 targets configured).
+INFO: Found 1 target...
+[0 / 15] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:push-virt-launcher up-to-date:
+  bazel-bin/push-virt-launcher.digest
+  bazel-bin/push-virt-launcher
+INFO: Elapsed time: 0.822s, Critical Path: 0.25s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Running command line: bazel-bin/push-virt-launcher
+INFO: Build completed successfully, 2 total actions
+2020/11/02 23:27:26 Successfully pushed Docker image to localhost:32778/kubevirt/virt-launcher:devel_alt
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:push-conformance (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //:push-conformance (0 packages loaded, 689 targets configured).
+INFO: Found 1 target...
+[2 / 104] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //:push-conformance up-to-date:
+  bazel-bin/push-conformance.digest
+  bazel-bin/push-conformance
+INFO: Elapsed time: 2.041s, Critical Path: 0.24s
+INFO: 0 processes.
+INFO: Build completed successfully, 2 total actions
+INFO: Running command line: bazel-bin/push-conformance
+INFO: Build completed successfully, 2 total actions
+2020/11/02 23:27:29 Successfully pushed Docker image to localhost:32778/kubevirt/conformance:devel_alt
+selecting docker as container runtime
+go version go1.13.14 linux/amd64
+
+go version go1.13.14 linux/amd64
+2020/11/02 23:28:10 Waiting for host: 192.168.66.101:22
+2020/11/02 23:28:10 Connected to tcp://192.168.66.101:22
+devel: Pulling from kubevirt/virt-operator
+Digest: sha256:6201c745a5079d7cb0c9e4f7ea0318111fc1ef9405683a3b70a9e982fd620da3
+Status: Image is up to date for registry:5000/kubevirt/virt-operator:devel
+registry:5000/kubevirt/virt-operator:devel
+devel_alt: Pulling from kubevirt/virt-operator
+Digest: sha256:6201c745a5079d7cb0c9e4f7ea0318111fc1ef9405683a3b70a9e982fd620da3
+Status: Image is up to date for registry:5000/kubevirt/virt-operator:devel_alt
+registry:5000/kubevirt/virt-operator:devel_alt
+devel: Pulling from kubevirt/virt-controller
+854946d575a4: Already exists
+e4b57e075e22: Already exists
+91fb802bb44d: Already exists
+983cdc0ec324: Pulling fs layer
+983cdc0ec324: Verifying Checksum
+983cdc0ec324: Download complete
+983cdc0ec324: Pull complete
+Digest: sha256:5fd0381bbf9fa70545e23303fe70ce21190e6219c311a9eb90f558c796c9937b
+Status: Downloaded newer image for registry:5000/kubevirt/virt-controller:devel
+registry:5000/kubevirt/virt-controller:devel
+devel_alt: Pulling from kubevirt/virt-controller
+Digest: sha256:5fd0381bbf9fa70545e23303fe70ce21190e6219c311a9eb90f558c796c9937b
+Status: Downloaded newer image for registry:5000/kubevirt/virt-controller:devel_alt
+registry:5000/kubevirt/virt-controller:devel_alt
+devel: Pulling from kubevirt/virt-launcher
+4c69497db035: Already exists
+0c8e5e29dad0: Already exists
+0f940bf29988: Already exists
+d27cc3e4fed6: Already exists
+11e67ff58de7: Already exists
+2fd64bfc3350: Already exists
+94db3d5e1a67: Already exists
+91fb802bb44d: Already exists
+21f78b0d8a38: Pulling fs layer
+21f78b0d8a38: Verifying Checksum
+21f78b0d8a38: Download complete
+21f78b0d8a38: Pull complete
+Digest: sha256:5debba58d974b2e740122d62be727b63ec84444ab63d6b356fa678db972d25db
+Status: Downloaded newer image for registry:5000/kubevirt/virt-launcher:devel
+registry:5000/kubevirt/virt-launcher:devel
+devel_alt: Pulling from kubevirt/virt-launcher
+Digest: sha256:5debba58d974b2e740122d62be727b63ec84444ab63d6b356fa678db972d25db
+Status: Downloaded newer image for registry:5000/kubevirt/virt-launcher:devel_alt
+registry:5000/kubevirt/virt-launcher:devel_alt
+devel: Pulling from kubevirt/virt-handler
+Digest: sha256:2d85f711084bc46b0246d5e4eb2fcf4710061f81b6b1d5d5b4946e3699b31de5
+Status: Image is up to date for registry:5000/kubevirt/virt-handler:devel
+registry:5000/kubevirt/virt-handler:devel
+devel_alt: Pulling from kubevirt/virt-handler
+Digest: sha256:2d85f711084bc46b0246d5e4eb2fcf4710061f81b6b1d5d5b4946e3699b31de5
+Status: Image is up to date for registry:5000/kubevirt/virt-handler:devel_alt
+registry:5000/kubevirt/virt-handler:devel_alt
+devel: Pulling from kubevirt/virt-api
+Digest: sha256:3c63f881caad7c172f9a925580ee17c67350d761009fc4553b465d4a2e31f156
+Status: Image is up to date for registry:5000/kubevirt/virt-api:devel
+registry:5000/kubevirt/virt-api:devel
+devel_alt: Pulling from kubevirt/virt-api
+Digest: sha256:3c63f881caad7c172f9a925580ee17c67350d761009fc4553b465d4a2e31f156
+Status: Image is up to date for registry:5000/kubevirt/virt-api:devel_alt
+registry:5000/kubevirt/virt-api:devel_alt
+devel: Pulling from kubevirt/disks-images-provider
+Digest: sha256:06f3979400147024496cb2521b78f1e800a442ebb83583edf6ca5d5b025ffdda
+Status: Image is up to date for registry:5000/kubevirt/disks-images-provider:devel
+registry:5000/kubevirt/disks-images-provider:devel
+devel_alt: Pulling from kubevirt/disks-images-provider
+Digest: sha256:06f3979400147024496cb2521b78f1e800a442ebb83583edf6ca5d5b025ffdda
+Status: Image is up to date for registry:5000/kubevirt/disks-images-provider:devel_alt
+registry:5000/kubevirt/disks-images-provider:devel_alt
+devel: Pulling from kubevirt/vm-killer
+Digest: sha256:07264066ec99a58ab90e2ad82b8535ef6d12ce867a0f245a29364c168955cbeb
+Status: Image is up to date for registry:5000/kubevirt/vm-killer:devel
+registry:5000/kubevirt/vm-killer:devel
+devel_alt: Pulling from kubevirt/vm-killer
+Digest: sha256:07264066ec99a58ab90e2ad82b8535ef6d12ce867a0f245a29364c168955cbeb
+Status: Image is up to date for registry:5000/kubevirt/vm-killer:devel_alt
+registry:5000/kubevirt/vm-killer:devel_alt
+devel: Pulling from kubevirt/nfs-server
+Digest: sha256:48c4bdabf8a77b4017a0a2644cf393f2ed12d8d55b3b4077b8009e7833206cce
+Status: Image is up to date for registry:5000/kubevirt/nfs-server:devel
+registry:5000/kubevirt/nfs-server:devel
+devel_alt: Pulling from kubevirt/nfs-server
+Digest: sha256:48c4bdabf8a77b4017a0a2644cf393f2ed12d8d55b3b4077b8009e7833206cce
+Status: Image is up to date for registry:5000/kubevirt/nfs-server:devel_alt
+registry:5000/kubevirt/nfs-server:devel_alt
+devel: Pulling from kubevirt/subresource-access-test
+Digest: sha256:a8fdf229c270654438bd62bf5c16652e05b1a26ba5ebc9e8b9bafc499edd0f96
+Status: Image is up to date for registry:5000/kubevirt/subresource-access-test:devel
+registry:5000/kubevirt/subresource-access-test:devel
+devel_alt: Pulling from kubevirt/subresource-access-test
+Digest: sha256:a8fdf229c270654438bd62bf5c16652e05b1a26ba5ebc9e8b9bafc499edd0f96
+Status: Image is up to date for registry:5000/kubevirt/subresource-access-test:devel_alt
+registry:5000/kubevirt/subresource-access-test:devel_alt
+devel: Pulling from kubevirt/winrmcli
+Digest: sha256:6bcc742b52df5f3ee9da9d109046d7fdcc3106662649e19bfb6c81ff80515b2a
+Status: Image is up to date for registry:5000/kubevirt/winrmcli:devel
+registry:5000/kubevirt/winrmcli:devel
+devel_alt: Pulling from kubevirt/winrmcli
+Digest: sha256:6bcc742b52df5f3ee9da9d109046d7fdcc3106662649e19bfb6c81ff80515b2a
+Status: Image is up to date for registry:5000/kubevirt/winrmcli:devel_alt
+registry:5000/kubevirt/winrmcli:devel_alt
+devel: Pulling from kubevirt/example-hook-sidecar
+Digest: sha256:cc417810ff634f4bc402acff26d8ef6631b15a7e0d7ae057fe018705cb79c858
+Status: Image is up to date for registry:5000/kubevirt/example-hook-sidecar:devel
+registry:5000/kubevirt/example-hook-sidecar:devel
+devel_alt: Pulling from kubevirt/example-hook-sidecar
+Digest: sha256:cc417810ff634f4bc402acff26d8ef6631b15a7e0d7ae057fe018705cb79c858
+Status: Image is up to date for registry:5000/kubevirt/example-hook-sidecar:devel_alt
+registry:5000/kubevirt/example-hook-sidecar:devel_alt
+devel: Pulling from kubevirt/example-cloudinit-hook-sidecar
+Digest: sha256:b64fad0735da87408b83d7829742ca67c0c2a5ab37e0a91d70d9afb1e21eaa2d
+Status: Image is up to date for registry:5000/kubevirt/example-cloudinit-hook-sidecar:devel
+registry:5000/kubevirt/example-cloudinit-hook-sidecar:devel
+devel_alt: Pulling from kubevirt/example-cloudinit-hook-sidecar
+Digest: sha256:b64fad0735da87408b83d7829742ca67c0c2a5ab37e0a91d70d9afb1e21eaa2d
+Status: Image is up to date for registry:5000/kubevirt/example-cloudinit-hook-sidecar:devel_alt
+registry:5000/kubevirt/example-cloudinit-hook-sidecar:devel_alt
+devel: Pulling from kubevirt/cdi-http-import-server
+Digest: sha256:f289fb664079ae7d380b4bfd4b976c83a54e618384ad28fe43a73a96f029b9c1
+Status: Image is up to date for registry:5000/kubevirt/cdi-http-import-server:devel
+registry:5000/kubevirt/cdi-http-import-server:devel
+devel_alt: Pulling from kubevirt/cdi-http-import-server
+Digest: sha256:f289fb664079ae7d380b4bfd4b976c83a54e618384ad28fe43a73a96f029b9c1
+Status: Image is up to date for registry:5000/kubevirt/cdi-http-import-server:devel_alt
+registry:5000/kubevirt/cdi-http-import-server:devel_alt
+devel: Pulling from kubevirt/conformance
+Digest: sha256:9a8799527f48e6516f3fae3a0453dcfe19b9401ecded7784644f06404423d221
+Status: Image is up to date for registry:5000/kubevirt/conformance:devel
+registry:5000/kubevirt/conformance:devel
+devel_alt: Pulling from kubevirt/conformance
+Digest: sha256:9a8799527f48e6516f3fae3a0453dcfe19b9401ecded7784644f06404423d221
+Status: Image is up to date for registry:5000/kubevirt/conformance:devel_alt
+registry:5000/kubevirt/conformance:devel_alt
+2020/11/02 23:28:37 Waiting for host: 192.168.66.101:22
+2020/11/02 23:28:37 Connected to tcp://192.168.66.101:22
+Done

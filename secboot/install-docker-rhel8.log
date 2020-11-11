@@ -1,0 +1,136 @@
+[padmin@viosd2 CODE]$ which docker
+/usr/bin/which: no docker in (/home/padmin/.local/bin:/home/padmin/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin)
+[padmin@viosd2 CODE]$ which podman
+/usr/bin/podman
+[padmin@viosd2 CODE]$ sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+Updating Subscription Management repositories.
+Adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
+[padmin@viosd2 CODE]$ sudo dnf install docker-ce
+Updating Subscription Management repositories.
+Docker CE Stable - x86_64                                                                                                                      12 kB/s | 3.8 kB     00:00    
+Error: 
+ Problem: problem with installed package buildah-1.11.6-7.module+el8.2.0+5856+b8046c6d.x86_64
+  - package buildah-1.11.6-7.module+el8.2.0+5856+b8046c6d.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed
+  - package buildah-1.5-3.gite94b4f9.module+el8+2769+577ad176.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed
+  - package buildah-1.5-3.gite94b4f9.module+el8.0.0+2958+4e823551.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed
+  - package buildah-1.5-3.gite94b4f9.module+el8.0.0+4017+bbba319f.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed
+  - package buildah-1.5-3.gite94b4f9.module+el8.0.0.z+3525+56c076c3.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed
+  - package buildah-1.9.0-5.module+el8.1.0+4240+893c1ab8.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed
+  - package buildah-1.11.6-6.module+el8.1.1+5865+cc793d95.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed
+  - package buildah-1.11.6-4.module+el8.1.1+5259+bcdd613a.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed
+  - package buildah-1.11.6-8.module+el8.2.0+6368+cf16aa14.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed
+  - package buildah-1.14.9-1.module+el8.2.1+6689+748e6520.x86_64 requires runc >= 1.0.0-26, but none of the providers can be installed
+  - package containerd.io-1.3.7-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-54.rc5.dev.git2abd837.module+el8+2769+577ad176.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-54.rc5.dev.git2abd837.module+el8+2769+577ad176.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-55.rc5.dev.git2abd837.module+el8.0.0+3049+59fd2bba.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-55.rc5.dev.git2abd837.module+el8.0.0+3049+59fd2bba.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-55.rc5.dev.git2abd837.module+el8.0.0.z+3525+56c076c3.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-55.rc5.dev.git2abd837.module+el8.0.0.z+3525+56c076c3.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-56.rc8.dev.git425e105.module+el8.0.0+4017+bbba319f.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-56.rc8.dev.git425e105.module+el8.0.0+4017+bbba319f.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-60.rc8.module+el8.1.0+4081+b29780af.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-60.rc8.module+el8.1.0+4081+b29780af.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-61.rc8.module+el8.1.0+4873+4a24e241.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-61.rc8.module+el8.1.0+4873+4a24e241.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-64.rc9.module+el8.1.1+5259+bcdd613a.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-64.rc9.module+el8.1.1+5259+bcdd613a.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-65.rc10.module+el8.2.0+6368+cf16aa14.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-65.rc10.module+el8.2.0+6368+cf16aa14.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 conflicts with runc provided by runc-1.0.0-66.rc10.module+el8.2.1+6465+1a51e8b6.x86_64
+  - package containerd.io-1.3.7-3.1.el8.x86_64 obsoletes runc provided by runc-1.0.0-66.rc10.module+el8.2.1+6465+1a51e8b6.x86_64
+  - package docker-ce-3:19.03.13-3.el8.x86_64 requires containerd.io >= 1.2.2-3, but none of the providers can be installed
+  - conflicting requests
+  - package runc-1.0.0-55.rc5.dev.git2abd837.module+el8+2794+c81bb0a1.x86_64 is filtered out by modular filtering
+  - package runc-1.0.0-55.rc5.dev.git2abd837.module+el8.0.0+2956+30df4692.x86_64 is filtered out by modular filtering
+  - package runc-1.0.0-55.rc5.dev.git2abd837.module+el8.0.0+4014+8662b6b2.x86_64 is filtered out by modular filtering
+  - package runc-1.0.0-55.rc5.dev.git2abd837.module+el8.1.0+3468+011f0ab0.x86_64 is filtered out by modular filtering
+  - package runc-1.0.0-56.rc5.dev.git2abd837.module+el8.1.0+4908+72a45cef.x86_64 is filtered out by modular filtering
+  - package runc-1.0.0-64.rc10.module+el8.2.0+5728+ac3aae00.x86_64 is filtered out by modular filtering
+  - package runc-1.0.0-56.rc5.dev.git2abd837.module+el8.2.0+6370+6fb6c8ca.x86_64 is filtered out by modular filtering
+  - package runc-1.0.0-64.rc10.module+el8.2.0+6369+1f4293b4.x86_64 is filtered out by modular filtering
+(try to add '--allowerasing' to command line to replace conflicting packages or '--skip-broken' to skip uninstallable packages or '--nobest' to use not only best candidate packages)
+[padmin@viosd2 CODE]$ sudo dnf install --nobest --allowerasing docker-ce
+Updating Subscription Management repositories.
+Last metadata expiration check: 0:00:54 ago on Wed 28 Oct 2020 01:04:20 PM EDT.
+Dependencies resolved.
+==============================================================================================================================================================================
+ Package                           Architecture              Version                                                   Repository                                        Size
+==============================================================================================================================================================================
+Installing:
+ docker-ce                         x86_64                    3:19.03.13-3.el8                                          docker-ce-stable                                  24 M
+Installing dependencies:
+ containerd.io                     x86_64                    1.3.7-3.1.el8                                             docker-ce-stable                                  29 M
+     replacing  runc.x86_64 1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb
+ docker-ce-cli                     x86_64                    1:19.03.13-3.el8                                          docker-ce-stable                                  38 M
+ libcgroup                         x86_64                    0.41-19.el8                                               rhel-8-for-x86_64-baseos-rpms                     70 k
+Removing dependent packages:
+ buildah                           x86_64                    1.11.6-7.module+el8.2.0+5856+b8046c6d                     @AppStream                                        35 M
+ cockpit-podman                    noarch                    12-1.module+el8.2.0+5950+6d183a6a                         @AppStream                                       4.0 M
+ podman                            x86_64                    1.6.4-10.module+el8.2.0+6063+e761893a                     @AppStream                                        55 M
+
+Transaction Summary
+==============================================================================================================================================================================
+Install  4 Packages
+Remove   3 Packages
+
+Total download size: 92 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/4): docker-ce-19.03.13-3.el8.x86_64.rpm                                                                                                     26 MB/s |  24 MB     00:00    
+(2/4): libcgroup-0.41-19.el8.x86_64.rpm                                                                                                       290 kB/s |  70 kB     00:00    
+(3/4): docker-ce-cli-19.03.13-3.el8.x86_64.rpm                                                                                                 27 MB/s |  38 MB     00:01    
+(4/4): containerd.io-1.3.7-3.1.el8.x86_64.rpm                                                                                                  18 MB/s |  29 MB     00:01    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                          55 MB/s |  92 MB     00:01     
+warning: /var/cache/dnf/docker-ce-stable-fa9dc42ab4cec2f4/packages/containerd.io-1.3.7-3.1.el8.x86_64.rpm: Header V4 RSA/SHA512 Signature, key ID 621e9f35: NOKEY
+Docker CE Stable - x86_64                                                                                                                      48 kB/s | 1.6 kB     00:00    
+Importing GPG key 0x621E9F35:
+ Userid     : "Docker Release (CE rpm) <docker@docker.com>"
+ Fingerprint: 060A 61C5 1B55 8A7F 742B 77AA C52F EB6B 621E 9F35
+ From       : https://download.docker.com/linux/centos/gpg
+Is this ok [y/N]: y
+Key imported successfully
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                      1/1 
+  Running scriptlet: libcgroup-0.41-19.el8.x86_64                                                                                                                         1/1 
+  Running scriptlet: libcgroup-0.41-19.el8.x86_64                                                                                                                         1/8 
+  Installing       : libcgroup-0.41-19.el8.x86_64                                                                                                                         1/8 
+  Running scriptlet: libcgroup-0.41-19.el8.x86_64                                                                                                                         1/8 
+  Installing       : docker-ce-cli-1:19.03.13-3.el8.x86_64                                                                                                                2/8 
+  Running scriptlet: docker-ce-cli-1:19.03.13-3.el8.x86_64                                                                                                                2/8 
+  Installing       : containerd.io-1.3.7-3.1.el8.x86_64                                                                                                                   3/8 
+  Running scriptlet: containerd.io-1.3.7-3.1.el8.x86_64                                                                                                                   3/8 
+  Installing       : docker-ce-3:19.03.13-3.el8.x86_64                                                                                                                    4/8 
+  Running scriptlet: docker-ce-3:19.03.13-3.el8.x86_64                                                                                                                    4/8 
+  Erasing          : cockpit-podman-12-1.module+el8.2.0+5950+6d183a6a.noarch                                                                                              5/8 
+  Erasing          : podman-1.6.4-10.module+el8.2.0+6063+e761893a.x86_64                                                                                                  6/8 
+  Running scriptlet: podman-1.6.4-10.module+el8.2.0+6063+e761893a.x86_64                                                                                                  6/8 
+  Erasing          : buildah-1.11.6-7.module+el8.2.0+5856+b8046c6d.x86_64                                                                                                 7/8 
+  Obsoleting       : runc-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.x86_64                                                                                               8/8 
+  Running scriptlet: runc-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.x86_64                                                                                               8/8 
+  Verifying        : containerd.io-1.3.7-3.1.el8.x86_64                                                                                                                   1/8 
+  Verifying        : runc-1.0.0-65.rc10.module+el8.2.0+5762+aaee29fb.x86_64                                                                                               2/8 
+  Verifying        : docker-ce-3:19.03.13-3.el8.x86_64                                                                                                                    3/8 
+  Verifying        : docker-ce-cli-1:19.03.13-3.el8.x86_64                                                                                                                4/8 
+  Verifying        : libcgroup-0.41-19.el8.x86_64                                                                                                                         5/8 
+  Verifying        : buildah-1.11.6-7.module+el8.2.0+5856+b8046c6d.x86_64                                                                                                 6/8 
+  Verifying        : cockpit-podman-12-1.module+el8.2.0+5950+6d183a6a.noarch                                                                                              7/8 
+  Verifying        : podman-1.6.4-10.module+el8.2.0+6063+e761893a.x86_64                                                                                                  8/8 
+Installed products updated.
+
+Installed:
+  containerd.io-1.3.7-3.1.el8.x86_64          docker-ce-3:19.03.13-3.el8.x86_64          docker-ce-cli-1:19.03.13-3.el8.x86_64          libcgroup-0.41-19.el8.x86_64         
+
+Removed:
+  buildah-1.11.6-7.module+el8.2.0+5856+b8046c6d.x86_64     cockpit-podman-12-1.module+el8.2.0+5950+6d183a6a.noarch     podman-1.6.4-10.module+el8.2.0+6063+e761893a.x86_64    
+
+Complete!
+[padmin@viosd2 CODE]$ which docker
+/usr/bin/docker
+

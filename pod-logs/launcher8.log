@@ -1,0 +1,21 @@
+{"component":"virt-launcher","level":"info","msg":"Collected all requested hook sidecar sockets","pos":"manager.go:68","timestamp":"2020-11-05T16:33:35.807184Z"}
+{"component":"virt-launcher","level":"info","msg":"Sorted all collected sidecar sockets per hook point based on their priority and name: map[]","pos":"manager.go:71","timestamp":"2020-11-05T16:33:35.807324Z"}
+{"component":"virt-launcher","level":"info","msg":"Connecting to libvirt daemon: qemu:///system","pos":"libvirt.go:380","timestamp":"2020-11-05T16:33:35.854391Z"}
+{"component":"virt-launcher","level":"info","msg":"Connecting to libvirt daemon failed: virError(Code=38, Domain=7, Message='Failed to connect socket to '/var/run/libvirt/libvirt-sock': No such file or directory')","pos":"libvirt.go:388","timestamp":"2020-11-05T16:33:35.906667Z"}
+{"component":"virt-launcher","level":"info","msg":"libvirt version: 6.0.0, package: 16.fc31 (Unknown, 2020-04-07-15:55:55, )","subcomponent":"libvirt","thread":"43","timestamp":"2020-11-05T16:33:36.014000Z"}
+{"component":"virt-launcher","level":"info","msg":"hostname: vmi-secureboot","subcomponent":"libvirt","thread":"43","timestamp":"2020-11-05T16:33:36.014000Z"}
+{"component":"virt-launcher","level":"error","msg":"internal error: Child process (/usr/sbin/dmidecode -q -t 0,1,2,3,4,17) unexpected exit status 1: /dev/mem: No such file or directory","pos":"virCommandWait:2709","subcomponent":"libvirt","thread":"43","timestamp":"2020-11-05T16:33:36.014000Z"}
+{"component":"virt-launcher","level":"info","msg":"Connected to libvirt daemon","pos":"libvirt.go:396","timestamp":"2020-11-05T16:33:36.429157Z"}
+{"component":"virt-launcher","level":"info","msg":"Registered libvirt event notify callback","pos":"client.go:394","timestamp":"2020-11-05T16:33:36.471795Z"}
+{"component":"virt-launcher","level":"info","msg":"Marked as ready","pos":"virt-launcher.go:71","timestamp":"2020-11-05T16:33:36.479761Z"}
+{"component":"virt-launcher","level":"info","msg":"DDDD virt-launcher OS does not support the VMI secure boot option","pos":"converter.go:742","timestamp":"2020-11-05T16:33:37.407235Z"}
+{"component":"virt-launcher","level":"info","msg":"EEEE virt-launcher OS does not support the VMI secure boot option","pos":"converter.go:744","timestamp":"2020-11-05T16:33:37.409751Z"}
+{"component":"virt-launcher","kind":"","level":"error","msg":"Conversion failed.","name":"vmi-secureboot","namespace":"default","pos":"manager.go:1247","reason":"missing OVMF bootloader","timestamp":"2020-11-05T16:33:37.409911Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-launcher","kind":"","level":"error","msg":"Failed to sync vmi","name":"vmi-secureboot","namespace":"default","pos":"server.go:161","reason":"Conversion failed:missing OVMF bootloader","timestamp":"2020-11-05T16:33:37.410041Z","uid":"0ecde8fd-acfa-4863-8f56-eec64d702ac1"}
+{"component":"virt-launcher","level":"info","msg":"Received signal terminated","pos":"virt-launcher.go:418","timestamp":"2020-11-05T16:33:39.030398Z"}
+{"component":"virt-launcher","level":"info","msg":"AAAA virt-launcher OS does not support the VMI secure boot option","pos":"virt-launcher.go:463","timestamp":"2020-11-05T16:33:39.030693Z"}
+{"component":"virt-launcher","level":"info","msg":"CCCC virt-launcher OS does not support the VMI secure boot option","pos":"virt-launcher.go:478","timestamp":"2020-11-05T16:33:39.030727Z"}
+{"component":"virt-launcher","level":"info","msg":"stopping cmd server","pos":"server.go:448","timestamp":"2020-11-05T16:33:39.030894Z"}
+{"component":"virt-launcher","level":"error","msg":"failed to read libvirt logs","pos":"libvirt_helper.go:205","reason":"read |0: file already closed","timestamp":"2020-11-05T16:33:39.037765Z"}
+{"component":"virt-launcher","level":"error","msg":"timeout on stopping the cmd server, continuing anyway.","pos":"server.go:459","timestamp":"2020-11-05T16:33:40.032263Z"}
+{"component":"virt-launcher","level":"info","msg":"Exiting...","pos":"virt-launcher.go:456","timestamp":"2020-11-05T16:33:40.032574Z"}

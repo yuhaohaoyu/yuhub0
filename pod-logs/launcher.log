@@ -1,0 +1,47 @@
+{"component":"virt-launcher","level":"info","msg":"Collected all requested hook sidecar sockets","pos":"manager.go:68","timestamp":"2020-11-03T20:19:37.907005Z"}
+{"component":"virt-launcher","level":"info","msg":"Sorted all collected sidecar sockets per hook point based on their priority and name: map[]","pos":"manager.go:71","timestamp":"2020-11-03T20:19:37.907137Z"}
+{"component":"virt-launcher","level":"info","msg":"Connecting to libvirt daemon: qemu:///system","pos":"libvirt.go:380","timestamp":"2020-11-03T20:19:38.019436Z"}
+{"component":"virt-launcher","level":"info","msg":"Connecting to libvirt daemon failed: virError(Code=38, Domain=7, Message='Failed to connect socket to '/var/run/libvirt/libvirt-sock': No such file or directory')","pos":"libvirt.go:388","timestamp":"2020-11-03T20:19:38.047996Z"}
+{"component":"virt-launcher","level":"info","msg":"libvirt version: 6.0.0, package: 16.fc31 (Unknown, 2020-04-07-15:55:55, )","subcomponent":"libvirt","thread":"44","timestamp":"2020-11-03T20:19:38.135000Z"}
+{"component":"virt-launcher","level":"info","msg":"hostname: vmi-secureboot","subcomponent":"libvirt","thread":"44","timestamp":"2020-11-03T20:19:38.135000Z"}
+{"component":"virt-launcher","level":"error","msg":"internal error: Child process (/usr/sbin/dmidecode -q -t 0,1,2,3,4,17) unexpected exit status 1: /dev/mem: No such file or directory","pos":"virCommandWait:2709","subcomponent":"libvirt","thread":"44","timestamp":"2020-11-03T20:19:38.135000Z"}
+{"component":"virt-launcher","level":"info","msg":"Connected to libvirt daemon","pos":"libvirt.go:396","timestamp":"2020-11-03T20:19:38.563081Z"}
+{"component":"virt-launcher","level":"info","msg":"Registered libvirt event notify callback","pos":"client.go:394","timestamp":"2020-11-03T20:19:38.570551Z"}
+{"component":"virt-launcher","level":"info","msg":"AAAA virt-launcher OS does not support the VMI secure boot option","pos":"virt-launcher.go:461","timestamp":"2020-11-03T20:19:38.572269Z"}
+{"component":"virt-launcher","level":"info","msg":"CCCC virt-launcher OS does not support the VMI secure boot option","pos":"virt-launcher.go:476","timestamp":"2020-11-03T20:19:38.572359Z"}
+{"component":"virt-launcher","level":"info","msg":"Marked as ready","pos":"virt-launcher.go:71","timestamp":"2020-11-03T20:19:38.572445Z"}
+
+
+{"component":"virt-launcher","kind":"","level":"info","msg":"Executing PreStartHook on VMI pod environment","name":"vmi-secureboot","namespace":"default","pos":"manager.go:982","timestamp":"2020-11-03T20:19:39.836032Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-launcher","kind":"","level":"info","msg":"Starting PreCloudInitIso hook","name":"vmi-secureboot","namespace":"default","pos":"manager.go:1001","timestamp":"2020-11-03T20:19:39.836139Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-launcher","kind":"","level":"info","msg":"bridge pod interface: VIF: { Name: eth0, IP: 10.244.196.147, Mask: ffffffff, MAC: 82:0f:0c:28:75:68, Gateway: 169.254.1.1, MTU: 1440, IPAMDisabled: false, TapDevice: tap0} \u0026{vmi:0xc0001b0900 vif:0xc0000beb40 iface:0xc0001a4a00 virtIface:0xc000cb9ad0 podNicLink:\u003cnil\u003e domain:0xc0001a6000 podInterfaceName:eth0 bridgeInterfaceName:k6t-eth0}","name":"vmi-secureboot","namespace":"default","pos":"podinterface.go:419","timestamp":"2020-11-03T20:19:39.836864Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-launcher","level":"info","msg":"Found nameservers in /etc/resolv.conf: \n`\u0000\n","pos":"converter.go:1681","timestamp":"2020-11-03T20:19:39.836988Z"}
+{"component":"virt-launcher","level":"info","msg":"Found search domains in /etc/resolv.conf: default.svc.cluster.local svc.cluster.local cluster.local","pos":"converter.go:1682","timestamp":"2020-11-03T20:19:39.837017Z"}
+{"component":"virt-launcher","level":"info","msg":"Starting SingleClientDHCPServer","pos":"dhcp.go:64","timestamp":"2020-11-03T20:19:39.837352Z"}
+{"component":"virt-launcher","level":"info","msg":"/var/run/kubevirt/container-disks/disk_0.img backing file system does not support direct I/O","pos":"converter.go:173","timestamp":"2020-11-03T20:19:39.889989Z"}
+{"component":"virt-launcher","level":"info","msg":"Driver cache mode for /var/run/kubevirt-ephemeral-disks/disk-data/containerdisk/disk.qcow2 set to none","pos":"converter.go:192","timestamp":"2020-11-03T20:19:39.890066Z"}
+{"component":"virt-launcher","kind":"","level":"info","msg":"Domain XML generated. Base64 dump ==","name":"vmi-secureboot","namespace":"default","pos":"libvirt_helper.go:97","timestamp":"2020-11-03T20:19:39.890810Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+
+
+{"component":"virt-launcher","kind":"","level":"info","msg":"Domain defined.","name":"vmi-secureboot","namespace":"default","pos":"manager.go:1269","timestamp":"2020-11-03T20:19:41.977042Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-launcher","level":"info","msg":"DomainLifecycle event 0 with reason 0 received","pos":"client.go:358","timestamp":"2020-11-03T20:19:41.978427Z"}
+{"component":"virt-launcher","level":"error","msg":"At least one cgroup controller is required: No such device or address","pos":"virCgroupDetect:416","subcomponent":"libvirt","thread":"29","timestamp":"2020-11-03T20:19:42.203000Z"}
+{"component":"virt-launcher","level":"info","msg":"kubevirt domain status: Paused(3):StartingUp(11)","pos":"client.go:241","timestamp":"2020-11-03T20:19:42.257908Z"}
+{"component":"virt-launcher","level":"info","msg":"Successfully connected to domain notify socket at /var/run/kubevirt/domain-notify-pipe.sock","pos":"client.go:136","timestamp":"2020-11-03T20:19:42.310722Z"}
+{"component":"virt-launcher","level":"info","msg":"Detected domain with UUID e0160bcc-c6fd-424e-93db-c191aac4fea9","pos":"virt-launcher.go:217","timestamp":"2020-11-03T20:19:42.321705Z"}
+{"component":"virt-launcher","level":"info","msg":"Monitoring loop: rate 1s start timeout 5m0s","pos":"monitor.go:164","timestamp":"2020-11-03T20:19:42.321801Z"}
+{"component":"virt-launcher","level":"info","msg":"Domain name event: default_vmi-secureboot","pos":"client.go:334","timestamp":"2020-11-03T20:19:42.323730Z"}
+{"component":"virt-launcher","level":"info","msg":"GuestAgentLifecycle event state 2 with reason 1 received","pos":"client.go:377","timestamp":"2020-11-03T20:19:42.645439Z"}
+{"component":"virt-launcher","level":"info","msg":"kubevirt domain status: Paused(3):StartingUp(11)","pos":"client.go:241","timestamp":"2020-11-03T20:19:42.675333Z"}
+{"component":"virt-launcher","level":"info","msg":"Domain name event: default_vmi-secureboot","pos":"client.go:334","timestamp":"2020-11-03T20:19:42.678489Z"}
+{"component":"virt-launcher","level":"info","msg":"Found PID for e0160bcc-c6fd-424e-93db-c191aac4fea9: 76","pos":"monitor.go:133","timestamp":"2020-11-03T20:19:43.326118Z"}
+{"component":"virt-launcher","level":"info","msg":"DomainLifecycle event 4 with reason 0 received","pos":"client.go:358","timestamp":"2020-11-03T20:19:43.792929Z"}
+{"component":"virt-launcher","level":"info","msg":"DomainLifecycle event 2 with reason 0 received","pos":"client.go:358","timestamp":"2020-11-03T20:19:43.825557Z"}
+{"component":"virt-launcher","kind":"","level":"info","msg":"Domain started.","name":"vmi-secureboot","namespace":"default","pos":"manager.go:1304","timestamp":"2020-11-03T20:19:43.847284Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-launcher","kind":"","level":"info","msg":"Synced vmi","name":"vmi-secureboot","namespace":"default","pos":"server.go:167","timestamp":"2020-11-03T20:19:43.850653Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-launcher","level":"info","msg":"kubevirt domain status: Running(1):Unknown(1)","pos":"client.go:241","timestamp":"2020-11-03T20:19:43.863352Z"}
+{"component":"virt-launcher","level":"info","msg":"Domain name event: default_vmi-secureboot","pos":"client.go:334","timestamp":"2020-11-03T20:19:43.876314Z"}
+{"component":"virt-launcher","level":"info","msg":"kubevirt domain status: Running(1):Unknown(1)","pos":"client.go:241","timestamp":"2020-11-03T20:19:43.957997Z"}
+{"component":"virt-launcher","level":"info","msg":"Domain name event: default_vmi-secureboot","pos":"client.go:334","timestamp":"2020-11-03T20:19:43.985135Z"}
+{"component":"virt-launcher","kind":"","level":"info","msg":"Synced vmi","name":"vmi-secureboot","namespace":"default","pos":"server.go:167","timestamp":"2020-11-03T20:19:44.099833Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-launcher","kind":"","level":"info","msg":"Synced vmi","name":"vmi-secureboot","namespace":"default","pos":"server.go:167","timestamp":"2020-11-03T20:19:44.199646Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}

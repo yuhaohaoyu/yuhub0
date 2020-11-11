@@ -1,0 +1,48 @@
+{"component":"virt-handler","hostname":"node01","level":"info","pos":"virt-handler.go:171","timestamp":"2020-11-03T20:16:21.673611Z"}
+{"component":"virt-handler","level":"info","msg":"Starting collector: node name=node01","pos":"prometheus.go:506","timestamp":"2020-11-03T20:16:29.501535Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer vmiInformer","pos":"virtinformers.go:251","timestamp":"2020-11-03T20:16:29.501631Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer configMapInformer","pos":"virtinformers.go:251","timestamp":"2020-11-03T20:16:29.501663Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer CRDInformer","pos":"virtinformers.go:251","timestamp":"2020-11-03T20:16:29.501677Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer kubeVirtInformer","pos":"virtinformers.go:251","timestamp":"2020-11-03T20:16:29.501689Z"}
+{"component":"virt-handler","level":"info","msg":"STARTING informer extensionsKubeVirtCAConfigMapInformer","pos":"virtinformers.go:251","timestamp":"2020-11-03T20:16:29.501699Z"}
+{"component":"virt-handler","level":"info","msg":"certificate with common name 'kubevirt.io:system:client:virt-handler' retrieved.","pos":"cert-manager.go:196","timestamp":"2020-11-03T20:16:29.522814Z"}
+{"component":"virt-handler","level":"info","msg":"metrics: max concurrent requests=3","pos":"virt-handler.go:380","timestamp":"2020-11-03T20:16:29.543678Z"}
+{"component":"virt-handler","level":"info","msg":"certificate with common name 'kubevirt.io:system:node:virt-handler' retrieved.","pos":"cert-manager.go:196","timestamp":"2020-11-03T20:16:29.545530Z"}
+{"component":"virt-handler","level":"info","msg":"Updating cluster config from KubeVirt to resource version '2474'","pos":"config-map.go:472","timestamp":"2020-11-03T20:16:29.602522Z"}
+{"component":"virt-handler","level":"info","msg":"SELinux is reported as 'enforcing'","pos":"virt-handler.go:345","timestamp":"2020-11-03T20:16:30.292697Z"}
+{"component":"virt-handler","level":"info","msg":"Updating cluster config from KubeVirt to resource version '3047'","pos":"config-map.go:472","timestamp":"2020-11-03T20:16:36.050670Z"}
+{"component":"virt-handler","level":"info","msg":"Starting virt-handler controller.","pos":"vm.go:870","timestamp":"2020-11-03T20:17:39.007685Z"}
+{"component":"virt-handler","level":"info","msg":"Starting device plugin controller","pos":"device_controller.go:92","timestamp":"2020-11-03T20:17:39.109271Z"}
+{"component":"virt-handler","level":"info","msg":"kvm device plugin started","pos":"generic_device.go:176","timestamp":"2020-11-03T20:17:39.189828Z"}
+{"component":"virt-handler","level":"info","msg":"device '/dev/kvm' is present.","pos":"generic_device.go:310","timestamp":"2020-11-03T20:17:39.191751Z"}
+{"component":"virt-handler","level":"info","msg":"tun device plugin started","pos":"generic_device.go:176","timestamp":"2020-11-03T20:17:39.512669Z"}
+{"component":"virt-handler","level":"info","msg":"device '/dev/net/tun' is present.","pos":"generic_device.go:310","timestamp":"2020-11-03T20:17:39.512804Z"}
+{"component":"virt-handler","level":"info","msg":"vhost-net device plugin started","pos":"generic_device.go:176","timestamp":"2020-11-03T20:17:39.603701Z"}
+{"component":"virt-handler","level":"info","msg":"device '/dev/vhost-net' is present.","pos":"generic_device.go:310","timestamp":"2020-11-03T20:17:39.603844Z"}
+
+
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-03T20:19:39.102581Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Scheduled\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-03T20:19:39.102689Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","level":"info","msg":"Domain does not exist","pos":"vm.go:1199","timestamp":"2020-11-03T20:19:39.102795Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"Bind mounting container disk at /var/lib/docker/overlay2/79bc1a45c17e5ccc9231e60fda6f9125be41f649a2d43494ea64a90d78348611/merged/disk/downloaded to /var/lib/kubelet/pods/b360abf7-e54f-4d99-9021-27157384d3e8/volumes/kubernetes.io~empty-dir/container-disks/disk_0.img","name":"vmi-secureboot","namespace":"default","pos":"mount.go:248","timestamp":"2020-11-03T20:19:39.116061Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","level":"info","msg":"updated MAC for eth0 interface: old: 82:0f:0c:28:75:68 -\u003e new: 82:0f:0c:ad:d0:2c","pos":"common.go:323","timestamp":"2020-11-03T20:19:39.620373Z"}
+{"component":"virt-handler","level":"info","msg":"Created tap device: tap0 in PID: 32642","pos":"common.go:388","timestamp":"2020-11-03T20:19:39.739670Z"}
+{"component":"virt-handler","level":"info","msg":"Successfully configured tap device: tap0","pos":"common.go:489","timestamp":"2020-11-03T20:19:39.792787Z"}
+
+{"component":"virt-handler","kind":"","level":"info","msg":"Accepted new notify pipe connection for vmi","name":"vmi-secureboot","namespace":"default","pos":"vm.go:243","timestamp":"2020-11-03T20:19:42.282490Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Received Domain Event of type ADDED","name":"vmi-secureboot","namespace":"default","pos":"server.go:78","timestamp":"2020-11-03T20:19:42.317628Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain is in state Paused reason StartingUp","name":"vmi-secureboot","namespace":"default","pos":"vm.go:2164","timestamp":"2020-11-03T20:19:42.318081Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Received Domain Event of type MODIFIED","name":"vmi-secureboot","namespace":"default","pos":"server.go:78","timestamp":"2020-11-03T20:19:42.323481Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Received Domain Event of type MODIFIED","name":"vmi-secureboot","namespace":"default","pos":"server.go:78","timestamp":"2020-11-03T20:19:42.677872Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Received Domain Event of type MODIFIED","name":"vmi-secureboot","namespace":"default","pos":"server.go:78","timestamp":"2020-11-03T20:19:43.868355Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain is in state Running reason Unknown","name":"vmi-secureboot","namespace":"default","pos":"vm.go:2195","timestamp":"2020-11-03T20:19:43.868589Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-03T20:19:43.947052Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Scheduled\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-03T20:19:43.947301Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-03T20:19:43.947358Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Received Domain Event of type MODIFIED","name":"vmi-secureboot","namespace":"default","pos":"server.go:78","timestamp":"2020-11-03T20:19:43.978269Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-03T20:19:44.017439Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-03T20:19:44.017533Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-03T20:19:44.017567Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","level":"info","msg":"Processing event default/vmi-secureboot","pos":"vm.go:1190","timestamp":"2020-11-03T20:19:44.133784Z"}
+{"component":"virt-handler","kind":"","level":"info","msg":"VMI is in phase: Running\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1192","timestamp":"2020-11-03T20:19:44.133833Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
+{"component":"virt-handler","kind":"Domain","level":"info","msg":"Domain status: Running, reason: Unknown\n","name":"vmi-secureboot","namespace":"default","pos":"vm.go:1197","timestamp":"2020-11-03T20:19:44.133859Z","uid":"490b138d-e2b0-4249-beb7-446cbc62d165"}
