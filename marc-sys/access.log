@@ -1,0 +1,67 @@
+padmin@jjvm006:~$ ssh -J 9.2.156.99,172.16.28.90 root@172.16.17.54
+
+
+
+
+[root@netsres54 ~]# history
+    1  top
+    2  ip r
+    3  uptime
+    4  ip r
+    5  ip a
+    6  ip r
+    7  ping google.com
+    8  systemctl status firewalld
+    9  systemctl start firewalld
+   10  iptable -S
+   11  iptables -S
+   12  firewalld --help
+   13  firewall-cmd --help
+   14  firewall-cmd --list-all
+   15  firewall-cmd --list-services --zone=public
+   16  firewall-cmd --list-services --zone=internal
+   17  firewall-cmd --list-zones
+   18  firewall-cmd --list-all-zones
+   19  systemctl enable --now firewalld
+   20  firewall-cmd h|less
+   21  firewall-cmd -h|less
+   22  firewall-cmd --get-log-denied
+   23  fg
+   24  firewall-cmd -h|less
+   25  top
+   26  systemctl status boinc-client
+   27  top
+   28  last
+   29  cat /etc/os-release 
+   30  cat ~/.ssh/authorized_keys 
+   31  cat /etc/os-release 
+   32  df -h
+   33  cat /proc/cpuinfo 
+   34  grep -c proc  /proc/cpuinfo 
+   35  cat /proc/meminfo 
+   36  vi ~/.ssh/authorized_keys 
+   37  cat  ~/.ssh/authorized_keys 
+   38  vi ~/.ssh/authorized_keys 
+   39  exit
+   40  ip r
+   41  ping google.com
+   42  ip r
+   43  cat /etc/os-release 
+   44  which dnf
+   45  cat /proc/cpuinfo | egrep "vmx|svm"
+   46  lscpu | grep Virtual
+   47  dnf update
+   48  dnf install @virt
+   49  lsmod | grep kvm
+   50  dnf -y install virt-top libguestfs-tools
+   51  systemctl enable --now libvirtd
+   52  yum -y install virt-manager
+   53  xclock
+   54  xterm
+   55  virt-manager
+   56  ping watelg50.watson.ibm.com
+   57  ping 9.2.221.174
+   58  export DISPLAY=9.2.221.174:28
+   59  virt-manager
+   60  history
+
