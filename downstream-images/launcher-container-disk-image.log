@@ -1,0 +1,68 @@
+docker.io/yuhaohaoyu/virt-launcher:latest
+
+[quicklab@upi-0 IMGS]$ oc -n openshift-cnv rsh virt-launcher-vmi-secureboot-k5mzb
+	Defaulting container name to compute.
+	Use 'oc describe pod/virt-launcher-vmi-secureboot-k5mzb -n openshift-cnv' to see all of the containers in this pod.
+sh-5.0# cat /etc/os-release
+	NAME=Fedora
+	VERSION="31 (Container Image)"
+	ID=fedora
+	VERSION_ID=31
+	VERSION_CODENAME=""
+	PLATFORM_ID="platform:f31"
+	PRETTY_NAME="Fedora 31 (Container Image)"
+	ANSI_COLOR="0;34"
+	LOGO=fedora-logo-icon
+	CPE_NAME="cpe:/o:fedoraproject:fedora:31"
+	HOME_URL="https://fedoraproject.org/"
+	DOCUMENTATION_URL="https://docs.fedoraproject.org/en-US/fedora/f31/system-administrators-guide/"
+	SUPPORT_URL="https://fedoraproject.org/wiki/Communicating_and_getting_help"
+	BUG_REPORT_URL="https://bugzilla.redhat.com/"
+	REDHAT_BUGZILLA_PRODUCT="Fedora"
+	REDHAT_BUGZILLA_PRODUCT_VERSION=31
+	REDHAT_SUPPORT_PRODUCT="Fedora"
+	REDHAT_SUPPORT_PRODUCT_VERSION=31
+	PRIVACY_POLICY_URL="https://fedoraproject.org/wiki/Legal:PrivacyPolicy"
+	VARIANT="Container Image"
+	VARIANT_ID=container
+sh-5.0# [quicklab@upi-0 IMGS]$ oc -n openshift-cnv rsh virt-launcher-vmi-secureboot-k5mzb
+	Defaulting container name to compute.
+	Use 'oc describe pod/virt-launcher-vmi-secureboot-k5mzb -n openshift-cnv' to see all of the containers in this pod.
+sh-5.0# uname -a
+	Linux vmi-secureboot 4.18.0-193.24.1.el8_2.dt1.x86_64 #1 SMP Thu Sep 24 14:57:05 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux
+sh-5.0# ls /usr/share/OVMF/
+	OVMF_CODE.fd  OVMF_CODE.secboot.fd  OVMF_VARS.fd  OVMF_VARS.secboot.fd  UefiShell.iso
+sh-5.0# ls /usr/share/edk2/ovmf/
+	EnrollDefaultKeys.efi  OVMF_CODE.fd  OVMF_CODE.secboot.fd  OVMF_VARS.fd  OVMF_VARS.secboot.fd  Shell.efi  UefiShell.iso
+
+
+
+docker.io/yuhaohaoyu/virt-launcher:latest_1130
+
+[quicklab@upi-0 IMGS]$ oc -n openshift-cnv rsh virt-launcher-vmi-secureboot-pg8wr
+	Defaulting container name to compute.
+	Use 'oc describe pod/virt-launcher-vmi-secureboot-pg8wr -n openshift-cnv' to see all of the containers in this pod.
+sh-4.4# uname -a
+	Linux vmi-secureboot 4.18.0-193.24.1.el8_2.dt1.x86_64 #1 SMP Thu Sep 24 14:57:05 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux
+sh-4.4# cat /etc/os-release
+	NAME="Red Hat Enterprise Linux"
+	VERSION="8.2 (Ootpa)"
+	ID="rhel"
+	ID_LIKE="fedora"
+	VERSION_ID="8.2"
+	PLATFORM_ID="platform:el8"
+	PRETTY_NAME="Red Hat Enterprise Linux 8.2 (Ootpa)"
+	ANSI_COLOR="0;31"
+	CPE_NAME="cpe:/o:redhat:enterprise_linux:8.2:GA"
+	HOME_URL="https://www.redhat.com/"
+	BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+	REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 8"
+	REDHAT_BUGZILLA_PRODUCT_VERSION=8.2
+	REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.2"
+sh-4.4# ls /usr/share/OVMF/
+	OVMF_CODE.secboot.fd  OVMF_VARS.fd  OVMF_VARS.secboot.fd  UefiShell.iso
+sh-4.4# ls /usr/share/edk2/ovmf/
+	EnrollDefaultKeys.efi  OVMF_CODE.secboot.fd  OVMF_VARS.fd  OVMF_VARS.secboot.fd  Shell.efi  UefiShell.iso
+

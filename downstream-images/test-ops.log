@@ -1,0 +1,194 @@
+AzureAD+HAOYU@DESKTOP-2FEKDG6 ~/.ssh
+$ ssh -i quicklab.key -o "StrictHostKeyChecking no" quicklab@upi-0.secboottest.lab.pnq2.cee.redhat.com
+	Last login: Thu Nov 26 09:37:19 2020 from 10.10.67.132
+
+[quicklab@upi-0 ~]$ which podman
+	/usr/bin/podman
+[quicklab@upi-0 ~]$ which docker
+	/usr/bin/docker
+
+[quicklab@upi-0 ~]$ sudo su -
+
+[root@upi-0 ~]# cd /home/quicklab/IMGS/
+[root@upi-0 IMGS]# ls -l *.tar
+	-rwxr-xr-x. 1 quicklab quicklab 724890624 Nov 24 08:41 virt-handler.tar
+	-rw-r--r--. 1 root     root     679730176 Nov 24 20:33 virt-launcher-2.6.0-75.tar
+	-rwxr-xr-x. 1 quicklab quicklab 699803136 Nov 24 08:51 virt-launcher-devel.tar
+
+[root@upi-0 IMGS]# docker images
+	REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
+	localhost/virt-launcher   v2.6.0-75           e88a0819c529        2 days ago          668 MB
+
+[root@upi-0 IMGS]# docker load -i virt-handler.tar
+	88557d3f8a58: Loading layer [==================================================>] 208.1 MB/208.1 MB
+	f72eb114e8cd: Loading layer [==================================================>] 405.9 MB/405.9 MB
+	0ca52c23ae09: Loading layer [==================================================>] 44.03 kB/44.03 kB
+	b2a17a411a98: Loading layer [==================================================>] 100.9 kB/100.9 kB
+	8f4071e109d1: Loading layer [==================================================>] 45.06 kB/45.06 kB
+	2a7645ff40c7: Loading layer [==================================================>] 45.06 kB/45.06 kB
+	ef061cdf1bb6: Loading layer [==================================================>] 28.45 MB/28.45 MB
+	3c0b45304178: Loading layer [==================================================>] 10.24 kB/10.24 kB
+	aba2eb7ecb5d: Loading layer [==================================================>] 82.14 MB/82.14 MB
+	Loaded image: kubevirt/virt-handler:latest
+
+[root@upi-0 IMGS]# docker load -i virt-launcher-devel.tar
+	c605c37eee33: Loading layer [==================================================>] 10.24 kB/10.24 kB
+	f27572a03652: Loading layer [==================================================>] 57.05 MB/57.05 MB
+	Loaded image: localhost:32770/kubevirt/virt-launcher:devel_alt
+
+[root@upi-0 IMGS]# docker images
+	REPOSITORY                               TAG                 IMAGE ID            CREATED             SIZE
+	localhost/virt-launcher                  v2.6.0-75           e88a0819c529        2 days ago          668 MB
+	kubevirt/virt-handler                    latest              b9525cd18051        50 years ago        706 MB
+	localhost:32770/kubevirt/virt-launcher   devel_alt           343e2ba4fde3        50 years ago        681 MB
+
+[root@upi-0 IMGS]# skopeo inspect docker-daemon:localhost:32770/kubevirt/virt-launcher:devel_alt
+	{
+	    "Name": "localhost:32770/kubevirt/virt-launcher",
+	    "Digest": "sha256:62e1361f105dc9347ced95d3603d351595342452fd351a5ccd2e5daa0579d317",
+	    "RepoTags": [],
+	    "Created": "1970-01-01T00:00:00Z",
+	    "DockerVersion": "",
+	    "Labels": {
+		"maintainer": "The KubeVirt Project \u003ckubevirt-dev@googlegroups.com\u003e"
+	    },
+	    "Architecture": "amd64",
+	    "Os": "linux",
+	    "Layers": [
+		"sha256:88557d3f8a58a7ca4c8b429593aede5a9b6b963905c32aae55057503893d9e28",
+		"sha256:f72eb114e8cdb06e5cfe212515832dfda7d397fbfb7fd6d5d55b097330d996b5",
+		"sha256:0ca52c23ae095b12862156dda158694ac23386d48ae9b2f5446cde5bc45f5025",
+		"sha256:b2a17a411a987fac95041fadf9230552d990341b5c69e4846c1e21a29eac3f75",
+		"sha256:8f4071e109d1037c67fe92cb1cd4a134dbb06b8d5b6a802b390ca5584cd1a412",
+		"sha256:2a7645ff40c7fdb69742ff69b977e764a1179b13be98be0dbab069f16be9e131",
+		"sha256:ef061cdf1bb66d9a975e05b6803b4db12a7c33f9697d199fdb0f81a00a4631d0",
+		"sha256:c605c37eee339581dd275dcfcf4fb9aca6eeea21c2f99cee53b39754f6b15337",
+		"sha256:f27572a0365201226f34c7b7bc56d19777cc2e882ea002ce86996a9a6c2ac0e9"
+	    ],
+	    "Env": [
+		"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+		"DISTTAG=f32container",
+		"FGC=f32",
+		"FBR=f32"
+	    ]
+	}
+
+[root@upi-0 IMGS]# skopeo inspect docker-archive:virt-launcher-devel.tar
+	{
+	    "Digest": "sha256:62e1361f105dc9347ced95d3603d351595342452fd351a5ccd2e5daa0579d317",
+	    "RepoTags": [],
+	    "Created": "1970-01-01T00:00:00Z",
+	    "DockerVersion": "",
+	    "Labels": {
+		"maintainer": "The KubeVirt Project \u003ckubevirt-dev@googlegroups.com\u003e"
+	    },
+	    "Architecture": "amd64",
+	    "Os": "linux",
+	    "Layers": [
+		"sha256:88557d3f8a58a7ca4c8b429593aede5a9b6b963905c32aae55057503893d9e28",
+		"sha256:f72eb114e8cdb06e5cfe212515832dfda7d397fbfb7fd6d5d55b097330d996b5",
+		"sha256:0ca52c23ae095b12862156dda158694ac23386d48ae9b2f5446cde5bc45f5025",
+		"sha256:b2a17a411a987fac95041fadf9230552d990341b5c69e4846c1e21a29eac3f75",
+		"sha256:8f4071e109d1037c67fe92cb1cd4a134dbb06b8d5b6a802b390ca5584cd1a412",
+		"sha256:2a7645ff40c7fdb69742ff69b977e764a1179b13be98be0dbab069f16be9e131",
+		"sha256:ef061cdf1bb66d9a975e05b6803b4db12a7c33f9697d199fdb0f81a00a4631d0",
+		"sha256:c605c37eee339581dd275dcfcf4fb9aca6eeea21c2f99cee53b39754f6b15337",
+		"sha256:f27572a0365201226f34c7b7bc56d19777cc2e882ea002ce86996a9a6c2ac0e9"
+	    ],
+	    "Env": [
+		"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+		"DISTTAG=f32container",
+		"FGC=f32",
+		"FBR=f32"
+	    ]
+	}
+
+
+[root@upi-0 IMGS]# skopeo inspect docker-daemon:kubevirt/virt-handler:latest
+	{
+	    "Name": "docker.io/kubevirt/virt-handler",
+	    "Digest": "sha256:126652c61269a76258a25eb04901f73368c5423692118f66734a6d74b7b25053",
+	    "RepoTags": [],
+	    "Created": "1970-01-01T00:00:00Z",
+	    "DockerVersion": "",
+	    "Labels": {
+		"maintainer": "The KubeVirt Project \u003ckubevirt-dev@googlegroups.com\u003e"
+	    },
+	    "Architecture": "amd64",
+	    "Os": "linux",
+	    "Layers": [
+		"sha256:88557d3f8a58a7ca4c8b429593aede5a9b6b963905c32aae55057503893d9e28",
+		"sha256:f72eb114e8cdb06e5cfe212515832dfda7d397fbfb7fd6d5d55b097330d996b5",
+		"sha256:0ca52c23ae095b12862156dda158694ac23386d48ae9b2f5446cde5bc45f5025",
+		"sha256:b2a17a411a987fac95041fadf9230552d990341b5c69e4846c1e21a29eac3f75",
+		"sha256:8f4071e109d1037c67fe92cb1cd4a134dbb06b8d5b6a802b390ca5584cd1a412",
+		"sha256:2a7645ff40c7fdb69742ff69b977e764a1179b13be98be0dbab069f16be9e131",
+		"sha256:ef061cdf1bb66d9a975e05b6803b4db12a7c33f9697d199fdb0f81a00a4631d0",
+		"sha256:3c0b45304178f67221295f22cd09d4e4a95cf62cb2c2a0d0f0d6d331b1daac1d",
+		"sha256:aba2eb7ecb5d322b23f7f64103f6b49556ff0af27b9d467e4f61dee5e2c567e2"
+	    ],
+	    "Env": [
+		"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+		"DISTTAG=f32container",
+		"FGC=f32",
+		"FBR=f32"
+	    ]
+	}
+
+[root@upi-0 IMGS]# skopeo inspect docker-archive:virt-handler.tar
+	{
+	    "Digest": "sha256:126652c61269a76258a25eb04901f73368c5423692118f66734a6d74b7b25053",
+	    "RepoTags": [],
+	    "Created": "1970-01-01T00:00:00Z",
+	    "DockerVersion": "",
+	    "Labels": {
+		"maintainer": "The KubeVirt Project \u003ckubevirt-dev@googlegroups.com\u003e"
+	    },
+	    "Architecture": "amd64",
+	    "Os": "linux",
+	    "Layers": [
+		"sha256:88557d3f8a58a7ca4c8b429593aede5a9b6b963905c32aae55057503893d9e28",
+		"sha256:f72eb114e8cdb06e5cfe212515832dfda7d397fbfb7fd6d5d55b097330d996b5",
+		"sha256:0ca52c23ae095b12862156dda158694ac23386d48ae9b2f5446cde5bc45f5025",
+		"sha256:b2a17a411a987fac95041fadf9230552d990341b5c69e4846c1e21a29eac3f75",
+		"sha256:8f4071e109d1037c67fe92cb1cd4a134dbb06b8d5b6a802b390ca5584cd1a412",
+		"sha256:2a7645ff40c7fdb69742ff69b977e764a1179b13be98be0dbab069f16be9e131",
+		"sha256:ef061cdf1bb66d9a975e05b6803b4db12a7c33f9697d199fdb0f81a00a4631d0",
+		"sha256:3c0b45304178f67221295f22cd09d4e4a95cf62cb2c2a0d0f0d6d331b1daac1d",
+		"sha256:aba2eb7ecb5d322b23f7f64103f6b49556ff0af27b9d467e4f61dee5e2c567e2"
+	    ],
+	    "Env": [
+		"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+		"DISTTAG=f32container",
+		"FGC=f32",
+		"FBR=f32"
+	    ]
+	}
+
+[root@upi-0 IMGS]# exit
+
+[quicklab@upi-0 IMGS]$ oc -n openshift-cnv get kv
+NAME                               AGE   PHASE
+kubevirt-kubevirt-hyperconverged   2d    Deployed
+
+[quicklab@upi-0 IMGS]$ oc -n openshift-cnv get kv kubevirt-kubevirt-hyperconverged -o yaml > kubevirt-kubevirt-hyperconverged.yaml
+
+
+[quicklab@upi-0 IMGS]$ vi kubevirt-kubevirt-hyperconverged.yaml
+
+     71   customizeComponents: {}
+
+  >>>>>
+
+     71   customizeComponents:
+     72     patches:
+     73     - resourceType: Deployment
+     74       resourceName: virt-operator
+     75       patch: '[{"op": "replace", "path": "/spec/template/spec/containers/0/env/5/value", "value": "sha256:126652c61269a76258a25eb04901f73368c5423692118f66734a6d74b7b25053"}, {"op": "replace", "path": "/spec/template/spec/containers/0/env/6/value", "value": "sha256:62e1361f105dc9347ced95d3603d351595342452fd351a5ccd2e5daa0579d317"}]'
+     76       type: json
+
+
+[quicklab@upi-0 IMGS]$ oc apply -f kubevirt-kubevirt-hyperconverged.yaml
+	Warning: oc apply should be used on resource created by either oc create --save-config or oc apply
+	kubevirt.kubevirt.io/kubevirt-kubevirt-hyperconverged configured
+

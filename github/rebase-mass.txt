@@ -1,0 +1,19 @@
+[root@plspe kubevirt]# git rebase upstream/master
+First, rewinding head to replay your work on top of it...
+Applying: Issue-3512, to limit access of CRDs in kubevirt.io API Group from kubevirt-operator via refactoring RBAC rules, with associated functional tests
+Using index info to reconstruct a base tree...
+M       tests/access_test.go
+M       tests/utils.go
+Falling back to patching base and 3-way merge...
+Auto-merging tests/utils.go
+CONFLICT (content): Merge conflict in tests/utils.go
+Auto-merging tests/access_test.go
+error: Failed to merge in the changes.
+Patch failed at 0001 Issue-3512, to limit access of CRDs in kubevirt.io API Group from kubevirt-operator via refactoring RBAC rules, with associated functional tests
+Use 'git am --show-current-patch' to see the failed patch
+
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+

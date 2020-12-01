@@ -1,0 +1,36 @@
+sudo docker login docker.io
+	yuhaohaoyu/Haijing9@
+
+[quicklab@upi-0 IMGS]$ sudo docker images
+	REPOSITORY                               TAG                 IMAGE ID            CREATED             SIZE
+	localhost/virt-launcher                  v2.6.0-75           e88a0819c529        2 days ago          668 MB
+	kubevirt/virt-handler                    latest              b9525cd18051        50 years ago        706 MB
+	localhost:32770/kubevirt/virt-launcher   devel_alt           343e2ba4fde3        50 years ago        681 MB
+[quicklab@upi-0 IMGS]$ sudo docker tag e88a0819c529 docker.io/yuhaohaoyu/virt-handler:test1126_1
+[quicklab@upi-0 IMGS]$ sudo docker push docker.io/yuhaohaoyu/virt-handler:test1126_1
+	The push refers to a repository [docker.io/yuhaohaoyu/virt-handler]
+	7c7f890c5696: Pushed
+	37330a2a1954: Pushed
+	d6ec160dc60f: Pushed
+	test1126_1: digest: sha256:431360e055846c54c7b37ce68ba7a0cd92a0fbcdf11d07857108e848e5038486 size: 950
+[quicklab@upi-0 IMGS]$ sudo docker tag 343e2ba4fde3 docker.io/yuhaohaoyu/virt-launcher:test1126_1
+[quicklab@upi-0 IMGS]$ sudo docker push docker.io/yuhaohaoyu/virt-launcher:test1126_1
+	The push refers to a repository [docker.io/yuhaohaoyu/virt-launcher]
+	f27572a03652: Pushed
+	c605c37eee33: Pushed
+	ef061cdf1bb6: Pushed
+	2a7645ff40c7: Pushed
+	8f4071e109d1: Pushed
+	b2a17a411a98: Pushed
+	0ca52c23ae09: Pushed
+	f72eb114e8cd: Pushed
+	88557d3f8a58: Pushed
+	test1126_1: digest: sha256:e7b5dec95a77eb389e27ee7f0c4ccbbfc53a3b51042e9a8277502cd87a1d6486 size: 2205
+
+oc -n openshift-cnv get ds virt-handler -o yaml > vh-deployment.yaml
+
+[quicklab@upi-0 IMGS]$ oc apply -f vh-deployment.yaml
+	daemonset.apps/virt-handler configured
+
+[quicklab@upi-0 IMGS]$ oc -n openshift-cnv  get pods
+	virt-handler-dnfdp                                    0/1     CreateContainerError   0          4m2s

@@ -1,0 +1,131 @@
+  749  git config --list
+  724  git config --global user.name "Hao Yu"
+  725  git config --global user.email yuh@us.ibm.com
+
+   31  git clone https://github.com/yuhaohaoyu/kubevirt.git
+  716  git remote -v
+  717  git remote add upstream https://github.com/kubevirt/kubevirt.git
+  718  git remote -v
+  720  git fetch --all
+  730  git rebase upstream/master
+
+  744  git clone https://github.com/yuhaohaoyu/kubevirt.git
+  747  git config
+  748  git config --get-all
+  751  git log
+  753  git remote add upstream https://github.com/kubevirt/kubevirt.git
+  754  git fetch --all
+  756  git rebase upstream/master
+  759  git add tests/utils.go tests/access_test.go 
+  760  git rebase --continue
+  761  git push -f
+
+A Bad Move
+  762  git log
+  763  git branch insecure-boot
+  764  git checkout insecure-boot
+  765  git log
+  766  git checkout master
+  767  git log
+
+A Right Move (to skip the un-merged commits)
+  768  git checkout -b efi-insecureboot eb4a7ff2b09033eeb90946487f45a8f3f1775d84
+  778  git branch
+  784  git log
+  789  git remote -v
+  790  git merge --no-commit upstream/master
+  791  git commit --signoff
+  792  git rebase upstream/master
+
+Stash is easy
+  793  git stash pkg/virt-handler/vm.go pkg/virt-launcher/virtwrap/api/converter.go tests/utils.go tests/vmi_configuration_test.go
+  794  git stash save pkg/virt-handler/vm.go pkg/virt-launcher/virtwrap/api/converter.go tests/utils.go tests/vmi_configuration_test.go
+  795  git stash list
+  796  git rebase upstream/master
+  806  git stash pop
+
+
+Before the first checkin of the EFI PR
+  807  git add pkg/virt-handler/vm.ge pkg/virt-launcher/virtwrap/api/converter.go tests/utils.go tests/vmi_configuration_test.go
+  808  git commit -s -m "Fail gracefully when EFI without SB is not available" pkg/virt-handler/vm.go pkg/virt-launcher/virtwrap/api/converter.go tests/utils.go tests/vmi_configuration_test.go
+  809  git push
+  810      git push --set-upstream origin efi-insecureboot
+  812  git add [root@plspe kubevirt]# vim pkg/virt-launcher/virtwrap/api/converter.go
+  813  git add pkg/virt-launcher/virtwrap/api/converter.go
+  814  git commit --amend -s pkg/virt-launcher/virtwrap/api/converter.go
+  815  git push -f
+  816  git branch
+  817  git checkout master
+  818  git cluster-down
+  821  git status
+  822  git log
+  823  git fetch --all
+  824  git status
+  825  git merge --no-commit upstream/master
+  826  git commit --signoff
+  827  git rebase upstream/master
+  828  git push -f
+  829  git status
+  830  git log
+  831  git diff tests/utils.go
+  833  git log 88b2eb932bd42a355767f58a86abf63a0b5afc80
+  834  git show 88b2eb932bd42a355767f58a86abf63a0b5afc80
+  835  git log
+  837  git add tests/utils.go 
+  839  git branch
+  840  git checkout efi-insecureboot
+  841  git stash save tests/utils.go
+  842  git checkout efi-insecureboot
+  852  git add pkg/virt-launcher/virtwrap/api/converter.go tests/utils.go tests/vmi_configuration_test.go
+  853  history | grep git | tail -20
+  854  history | grep git | tail -40
+  856  git commit --amend -s pkg/virt-launcher/virtwrap/api/converter.go tests/utils.go tests/vmi_configuration_test.go
+  857  git push -f
+  867  git status
+  868  git add .
+  869  history | grep git | tail -30
+  870  git commit --amend -s 
+  871  git push -f
+  873  git status
+  875  git status
+  876  git add pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
+  877  git commit --amend -s
+  878  git status
+  879  git log | head -30
+  880  git status
+  881  git commit --amend -s
+  882  git rm pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
+  883  git status
+  884  git commit --amend -s
+  885  git status
+  886  git log | head -30
+  887  git show --name-only b4e6d142c30a565dee95952d208aaefeddc72052
+  890  git status
+  891  git ls-files
+  892  git log
+  893  git status
+  894  git rm --cached pkg/virt-launcher/virtwrap/api/deepcopy_generated.go
+  895  git show  --name-only b4e6d142c30a565dee95952d208aaefeddc72052
+  896  git reset --soft HEAD~1
+  897  git status
+  898  git log | head -20
+  899  git reset HEAD pkg/virt-handler/vm.go pkg/virt-launcher/virtwrap/api/converter.go tests/utils.go tests/vmi_configuration_test.go
+  900  git log | head -20
+  901  git commit --amend -s
+  902  git branch
+  903  git show --name-only b4e6d142c30a565dee95952d208aaefeddc72052
+  904  git reset --soft HEAD
+  905  git log 
+  906  git show --name-only 8c9b2eda974b43cf47203055ec5a355d9d9b3e28
+  907  git rebase
+  908  git status
+  909  git commit --amend b4e6d142c30a565dee95952d208aaefeddc72052
+  910  git branch
+  912  git checkout efi-insecureboot
+  918  git status
+  921  git status
+  922  git add .
+  923  git status
+  924  git commit --amend -s
+  925  git push -f
+

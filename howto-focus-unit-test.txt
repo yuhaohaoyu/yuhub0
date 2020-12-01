@@ -1,0 +1,18 @@
+
+modify the last line in the hack/bazel-test.sh to point to specific directories
+
+> git diff
+
+	diff --git a/hack/bazel-test.sh b/hack/bazel-test.sh
+	index 2f9dd3e28..6d6281009 100755
+	--- a/hack/bazel-test.sh
+	+++ b/hack/bazel-test.sh
+	@@ -6,4 +6,6 @@ source hack/config.sh
+	 bazel test \
+	     --config=${ARCHITECTURE} \
+	     --stamp \
+	-    --test_output=errors -- //staging/src/kubevirt.io/client-go/... //pkg/... //cmd/...
+	+    --test_output=errors -- //pkg/virt-launcher/virtwrap/cmd-server/...
+	+
+	+#     --test_output=errors -- //staging/src/kubevirt.io/client-go/... //pkg/... //cmd/...
+
