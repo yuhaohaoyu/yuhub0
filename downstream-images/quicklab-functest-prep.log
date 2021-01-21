@@ -1,0 +1,35 @@
+    8  oc -n openshift-cnv get pods
+    9  oc get clusteroperators
+   10  sudo yum install grubby
+   11  sudo yum install docker
+   12  sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+   13  sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
+   14  sudo firewall-cmd --reload
+   15  sudo groupadd docker
+   16  sudo usermod -aG docker $(whoami)
+   17  sudo service docker start
+   18  docker ps
+   19  sudo docker ps
+   20  sudo yum install git
+   21  sudo  yum install wget
+   22  wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
+   23  tar -C $HOME/ -xzf go1.13.linux-amd64.tar.gz
+   24  ls
+   25  mkdir $HOME/go-projects
+   26  cat > go-activate.sh << __EOF__
+export GOPATH=$HOME/go-projects
+export GOROOT=$HOME/go
+export GOBIN=$GOROOT/bin
+export PATH=$PATH:$GOBIN
+__EOF__
+
+   27  chmod a+x go-activate.sh
+   28  vi go-activate.sh
+   29  source go-activate.sh
+   30  which go
+   31  which curl
+   32  curl -L -o virtctl https://github.com/kubevirt/kubevirt/releases/download/v0.34.1/virtctl-v0.34.1-linux-amd64
+   33  chmod +x virtctl
+   34  sudo install virtctl /usr/local/bin
+   35  which virtctl
+

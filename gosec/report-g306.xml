@@ -1,0 +1,82 @@
+	<testsuite name="Expect WriteFile permissions to be 0600 or less" tests="10">
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/network/podinterface.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/network/podinterface.go:82] - Expect WriteFile permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 81: func writeVifFile(buf []byte, pid, name string) error {
+82: 	err := ioutil.WriteFile(getVifFilePath(pid, name), buf, 0644)
+83: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/network/common.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/network/common.go:544] - Expect WriteFile permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 543: 	fileName = getInterfaceCacheFile(fileName, pid, name)
+544: 	err = ioutil.WriteFile(fileName, buf, 0644)
+545: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/selinux/labels.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/selinux/labels.go:133] - Expect WriteFile permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 132: 	destinationFile := dir + &#34;/&#34; + sourceFile
+133: 	err = ioutil.WriteFile(destinationFile, input, 0644)
+134: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/hotplug-disk/mount.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/hotplug-disk/mount.go:206] - Expect WriteFile permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 205: 
+206: 	err = ioutil.WriteFile(recordFile, bytes, 0644)
+207: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/container-disk/mount.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/container-disk/mount.go:169] - Expect WriteFile permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 168: 
+169: 	err = ioutil.WriteFile(recordFile, bytes, 0644)
+170: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/util/sysctl/sysctl.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/util/sysctl/sysctl.go:63] - Expect WriteFile permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 62: func (*procSysctl) SetSysctl(sysctl string, newVal int) error {
+63: 	return ioutil.WriteFile(path.Join(sysctlBase, sysctl), []byte(strconv.Itoa(newVal)), 0640)
+64: }
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/ignition/ignition.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/ignition/ignition.go:77] - Expect WriteFile permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 76: 	ignitionData := []byte(vmi.Annotations[v1.IgnitionAnnotation])
+77: 	err = ioutil.WriteFile(ignitionFile, ignitionData, 0644)
+78: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/cloud-init/cloud-init.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/cloud-init/cloud-init.go:543] - Expect WriteFile permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 542: 	if len(networkData) &gt; 0 {
+543: 		err = ioutil.WriteFile(networkFile, networkData, 0644)
+544: 		if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/cloud-init/cloud-init.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/cloud-init/cloud-init.go:533] - Expect WriteFile permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 532: 	}
+533: 	err = ioutil.WriteFile(metaFile, metaData, 0644)
+534: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/cloud-init/cloud-init.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/cloud-init/cloud-init.go:529] - Expect WriteFile permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 528: 
+529: 	err = ioutil.WriteFile(userFile, userData, 0644)
+530: 	if err != nil {
+</failure>
+		</testcase>
+	</testsuite>

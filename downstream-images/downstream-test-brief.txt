@@ -1,0 +1,45 @@
+
+PR4546, https://github.com/kubevirt/kubevirt/pull/4546, is tested in downstream environment. 
+
+==================================================
+The test in downstream environment is composed of:
+==================================================
+(1) OCP cluster: quicklab openshift4upi cluster, 1 executor node, 3 master nodes, 2 worker nodes, running OpenShift 4.6 with CNV 2.5.1
+	- quicklab URL: https://quicklab.upshift.redhat.com/clusters/23853
+(2) Mid-stream build container images: used the virt-launcher and virt-handler images. 
+	- mid-stream build URL: https://code.engineering.redhat.com/gerrit/#/c/219475/
+(3) Functional test: mostly followed Kedar's howto write-up
+	- howto URL: https://source.redhat.com/personal_blogs/running_kubevirt_tests_for_cnvdownstream_setups
+
+===================
+Experiment factors:
+===================
+(1) Container images:
+	(a) CNV-2.5.1 launcher/handler: Use the virt-launcher and the virt-handler images deployed by the quicklab deployment process, CNV 2.5.1
+	(b) PR4546 launcher/handler: Use the virt-launcher and the virt-handler images built via code.engineering.redhat.com. (It appears that quicklab cluster can not directly pull images from registr-proxy.engineering.redhat.com. The images were pre-loaded to docker.io)
+(2) Functest specs:
+	(a) "[test_id:1668]should use EFI" test in vmi_configuration_test.go: asks for the OVMF_CODE.fd, which does not exist in the downstream container-disk of virt-launcher, but exists in the upstream virt-launcher.
+	(b) "[test_id:4437]should enable EFI secure boot" test in vmi_configuration_test.go: asks for the OVMF_CODE.secboot.fd, which exists in both the downstream and upstream container-disks of virt-launcher.
+
+
+===================
+Experiment results:
+===================
+(1) Container-image = CNV-2.5.1; test_id:1668 
+    - test fails after 200 seconds, with following message:
+	      Unexpected Warning event received: testvmijxgcsnd2xbktb7qj2chlhmpzwd4x2kxgnr95mgvrs6hkbv9f,48631439-6272-4ba5-962c-7eb75818d50f: server error. command SyncVMI failed: "LibvirtError(Code=1, Domain=10, Message='internal error: process exited while connecting to monitor: 2020-12-04T18:54:29.717293Z qemu-kvm: -blockdev {\"driver\":\"file\",\"filename\":\"/usr/share/OVMF/OVMF_CODE.fd\",\"node-name\":\"libvirt-pflash0-storage\",\"auto-read-only\":true,\"discard\":\"unmap\"}: Could not open '/usr/share/OVMF/OVMF_CODE.fd': No such file or directory')"
+	      Expected
+		  <string>: Warning
+	      not to equal
+		  <string>: Warning
+
+(2) Container-image = PR4546; test_id:1668
+    - test passes in 20 seconds (with the error handled by the PR and interpreted by the test code)
+
+(3) Container-image = CNV-2.5.1; test_id:4437
+    - test passes in 60 seconds (the guest VM booted with EFI secure boot)
+
+(4) Container-image = PR4546; test_id:4437
+    - test passes in 60 seconds (the guest VM booted with EFI secure boot)
+
+

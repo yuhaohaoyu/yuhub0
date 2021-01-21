@@ -1,0 +1,220 @@
+
+ot@upi-0 quicklab]# history
+    1  subscription-manager repos --enable=rhel-7-server-cnv-1.4-tech-preview-rpms
+    2  exit
+    3  yum install podman
+    4  which docker
+    5  which podman
+    6  yum install docker
+    7  pwd
+    8  ls
+    9  exit
+   10  yum install skopeo
+   11  yum install buildah
+   12  docker ps
+   13  podman images
+   14  skopeo -h
+   15  podman images
+   16  skopeo inspect localhost/kubevirt/virt-handler
+   17  skopeo inspect docker-daemon:localhost/kubevirt/virt-handler
+   18  skopeo inspect docker-daemon:b9525cd18051
+   19  docker ps
+   20  docker images
+   21  skopeo inspect -h
+   22  man skopeo
+   23  ls
+   24  pwd
+   25  exit
+   26  history | grep skopeo
+   27  skopeo inspect localhost/kubevirt/virt-handler
+   28  skopeo inspect docker-daemon:b9525cd18051
+   29  skopeo inspect docker:localhost/kubevirt/virt-handler
+   30  man skopeo
+   31  skopeo inspect docker://localhost/kubevirt/virt-handler
+   32  man skopeo
+   33  skopeo inspect container-storage:localhost/kubevirt/virt-handler
+   34  skopeo inspect docker://localhost:5000/kubevirt/virt-handler
+   35  docker images
+   36  dockerd
+   37  bg
+   38  docker images
+   39  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-launcher:v2.6.0-75 docker-daemon:localhost/virt-launcher:v2.6.0-75
+   40  docker images
+   41  sudo skopeo inspect docker-daemon:localhost/virt-launcher
+   42  sudo skopeo inspect docker-daemon:localhost/virt-launcher:v2.6.0-75
+   43  podman images
+   44  sudo skopeo inspect docker://localhost/kubevirt/virt-handler:latest
+   45  history
+   46  exit
+   47  history
+   48  ls
+   49  exit
+   50  pwd
+   51  cd /home/quicklab/IMGS/
+   52  ls
+   53  ls -l
+   54  ls -l *.tar
+   55  docker ps
+   56  docker images
+   57  docker load -i virt-handler.tar
+   58  docker load -i virt-launcher-devel.tar
+   59  docker images
+   60  skopeo inspect docker-daemon:localhost:32770/kubevirt/virt-launcher:devel_alt
+   61  skopeo inspect docker-daemon:kubevirt/virt-handler:latest
+   62  man skopeo
+   63  dkopeo inspect docker-archive:virt-launcher-devel.tar
+   64  skopeo inspect docker-archive:virt-launcher-devel.tar
+   65  skopeo inspect docker-archive:virt-handler.tar
+   66  ls
+   67  exit
+   68  history | grep skopeo
+   69  exit
+   70  history | grep skopeo | grep copy
+   71  exit
+   72  history | grep copy
+   73  skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-handler:v2.5.1 docker-daemon:localhost/virt-handler::v2.5.1
+   74  skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-handler:v2.5.1 docker-daemon:localhost/virt-handler:v2.5.1
+   75  history | grep push
+   76  history
+   77  exit
+   78  history | grep launch
+   79  docker images
+   80  skopeo inspect docker.io/yuhaohaoyu/virt-launcher:test1126_1
+   81  skopeo inspect docker-daemon:docker.io/yuhaohaoyu/virt-launcher:test1126_1
+   82  exit
+   83  docker images
+   84  history | grep yaml
+   85  exit
+   86  subscription-manager repos --enable rhel-7-server-cnv-2.5-rpms
+   87  subscription-manager repos --list | grep cnv
+   88  exit
+   89  cd /home/quicklab/IMGS/
+   90  ls -l
+   91  ls *.tar
+   92  ls ../
+   93  docker load -i virt-launcher-devel.tar
+   94  docker images
+   95  history | grep tag | grep doc
+   96  docker tag 343e2ba4fde3 docker.io/yuhaohaoyu/virt-launcher:devel_alt
+   97  docker push docker.io/yuhaohaoyu/virt-launcher:devel_alt
+   98  docker pull docker.io/yuhaohaoyu/microlivecd-container-disk-demo
+   99  docker login docker.io
+  100  docker images
+  101  docker tag 4172b7e36075 docker.io/yuhaohaoyu/virt-launcher:latest_1130
+  102  docker images
+  103  docker push docker.io/yuhaohaoyu/virt-launcher:latest_1130
+  104  history | grep yaml
+  105  exit
+  106  docker push docker.io/yuhaohaoyu/virt-handler:pr4546
+  107  docker push docker.io/yuhaohaoyu/virt-launcher:pr4546
+  108  oc -n openshift-cnv get deployment virt-controller -o yaml > virt-controller.yaml
+  109  exit
+  110  which oc
+  111  oc get nodes
+  112  export KUBECONFIG=/home/quicklab/oc4/auth/kubeconfig
+  113  oc get nodes
+  114  export PATH=$PATH:/usr/libexec/docker
+  115  cd /home/quicklab/upstream/kubevirt/
+  116  hack/dockerized hack/build-func-tests.sh
+  117  ln -s /usr/libexec/docker/* /usr/bin/
+  118  which docker-runc
+  119  hack/dockerized hack/build-func-tests.sh
+  120  cd /usr/bin/
+  121  ls
+  122  ls docker*-current
+  123  ln -s docker-init-current docker-init
+  124  ln -s docker-proxy-current  docker-proxy
+  125  cd /home/quicklab/upstream/kubevirt/
+  126  hack/dockerized hack/build-func-tests.sh
+  127  ls -l
+  128  ls _out/
+  129  cd tests/
+  130  ls
+  131  cd ../
+  132  ls
+  133  cd test
+  134  vi tests/vmi_configuration_test.go
+  135  wget
+  136  mv tests/vmi_configuration_test.go ../
+  137  mv ../../vmi_configuration_test.go tests/
+  138  hack/dockerized hack/build-func-tests.sh
+  139  mv tests/utils.go ../
+  140  mv ../../utils.go tests/
+  141  hack/dockerized hack/build-func-tests.sh
+  142  cd ../
+  143  rm -rf kubevirt/
+  144  ls
+  145  rm kv.tgz
+  146  tar xfz ../kv.tgz
+  147  cd kubevirt/
+  148  ls
+  149  hack/dockerized hack/build-func-tests.sh
+  150  vi tests/vmi_configuration_test.go
+  151  hack/dockerized hack/build-func-tests.sh
+  152  which make
+  153  make manifests
+  154  cd _out/manifests/testing/
+  155  ls -l
+  156  mv cdi-v1.25.0.yaml ../../../../
+  157  sed -i "s/namespace: kubevirt/namespace: ${kubevirtNamespace}/g" *.yaml
+  158  grep 'namespace: ' *
+  159  export kubevirtNamespace="openshift-cnv"
+  160  _kubectl=$(which kubectl)
+  161  _oc=$(which oc)
+  162  echo $_oc
+  163  cd ../../../
+  164  make manifests
+  165  cd _out/manifests/testing/
+  166  ls -l
+  167  rm cdi-v1.25.0.yaml
+  168  ${kubevirtNamespace}
+  169  echo ${kubevirtNamespace}
+  170  sed -i "s/namespace: kubevirt/namespace: ${kubevirtNamespace}/g" *.yaml
+  171  grep 'namespace: ' *
+  172  cd ../../../
+  173  echo $KUBECONFIG
+  174  _out/tests/tests.test         --cdi-namespace="openshift-cnv"         --config=${PWD}/test_config.json         --container-tag=v0.26.1 --container-tag-alt=v0.26.1_alt         --deploy-testing-infra         --ginkgo.seed=0         --installed-namespace=openshift-cnv         --junit-output=${PWD}/xunit_results.xml         --kubeconfig=${KUBECONFIG}         --kubectl-path=${_kubectl}         --oc-path=${_oc}         --path-to-testing-infra-manifests=${PWD}/_out/manifests/testing         --polarion-custom-plannedin=2_3         --polarion-execution=true         --polarion-project-id=CNV         --polarion-report-file=polarion_results.xml         --test-tier=tier1
+  175  _out/tests/tests.test         --cdi-namespace="openshift-cnv"         --config=${PWD}/test_config.json         --container-tag=v0.26.1 --container-tag-alt=v0.26.1_alt         --deploy-testing-infra         --ginkgo.seed=0         --installed-namespace=openshift-cnv         --junit-output=${PWD}/xunit_results.xml         --kubeconfig=${KUBECONFIG}         --kubectl-path=${_kubectl}         --oc-path=${_oc}         --path-to-testing-infra-manifests=${PWD}/_out/manifests/testing         --polarion-custom-plannedin=2_3         --polarion-execution=true         --polarion-project-id=CNV         --polarion-report-file=polarion_results.xml
+  176  cat << EOF > test_config.json
+  177  {
+  178   "storageClassLocal": "hostpath-provisioner",
+  179   "storageClassHostPath": "hostpath-provisioner",
+  180   "storageClassRhel": "hostpath-provisioner",
+  181   "storageClassWindows": "hostpath-provisioner",
+  182   "manageStorageClasses": false
+  183  }
+  184   cat << EOF > test_config.json
+  185  {
+  186   "storageClassLocal": "nfs",
+  187   "storageClassHostPath": "nfs",
+  188   "storageClassRhel": "nfs",
+  189   "storageClassWindows": "nfs",
+  190   "manageStorageClasses": false
+  191  }
+  192  EOF
+  193  cat test_config.json
+  194  _out/tests/tests.test         --cdi-namespace="openshift-cnv"         --config=${PWD}/test_config.json         --container-tag=v0.26.1 --container-tag-alt=v0.26.1_alt         --deploy-testing-infra         --ginkgo.seed=0         --installed-namespace=openshift-cnv         --junit-output=${PWD}/xunit_results.xml         --kubeconfig=${KUBECONFIG}         --kubectl-path=${_kubectl}         --oc-path=${_oc}         --path-to-testing-infra-manifests=${PWD}/_out/manifests/testing         --polarion-custom-plannedin=2_3         --polarion-execution=true         --polarion-project-id=CNV         --polarion-report-file=polarion_results.xml
+  195  oc get nodes
+  196  vi tests/vmi_configuration_test.go
+  197  history | grep build
+  198  hack/dockerized hack/build-func-tests.sh
+  199  _out/tests/tests.test         --cdi-namespace="openshift-cnv"         --config=${PWD}/test_config.json         --container-tag=v0.26.1 --container-tag-alt=v0.26.1_alt         --deploy-testing-infra         --ginkgo.seed=0         --installed-namespace=openshift-cnv         --junit-output=${PWD}/xunit_results.xml         --kubeconfig=${KUBECONFIG}         --kubectl-path=${_kubectl}         --oc-path=${_oc}         --path-to-testing-infra-manifests=${PWD}/_out/manifests/testing         --polarion-custom-plannedin=2_3         --polarion-execution=true         --polarion-project-id=CNV         --polarion-report-file=polarion_results.xml
+  200  oc get nodes
+  201  history
+  202  history | grep export
+  203  export KUBECONFIG=/home/quicklab/oc4/auth/kubeconfig
+  204  cd /home/quicklab/
+  205  ls -l
+  206  oc -n openshift-cnv get pods
+  207  fetch_pod_version_info_icsp.sh virt-controller-8687955974-76xt6 openshift-cnv
+  208  ./fetch_pod_version_info_icsp.sh virt-controller-8687955974-76xt6 openshift-cnv
+  209  skopeo inspect docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-controller
+  210  history | grep 'skopeo copy'
+  211  skopeo inspect --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-controller
+  212  skopeo inspect --tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-controller
+  213  ls
+  214  vi fetch_pod_version_info_icsp.sh
+  215  ./fetch_pod_version_info_icsp.sh virt-controller-8687955974-76xt6 openshift-cnv
+  216  oc -n openshift-cnv get pods
+  217  history
+

@@ -1,0 +1,19 @@
+------------------------------
+ Failure [199.630 seconds]
+Configurations
+tests/vmi_configuration_test.go:60
+  VirtualMachineInstance definition
+  tests/vmi_configuration_test.go:175
+    [rfe_id:2262][crit:medium][vendor:cnv-qe@redhat.com][level:component]with EFI bootloader method
+    vendor/github.com/onsi/ginkgo/extensions/table/table.go:86
+      [Serial][test_id:1668]should use EFI [It]
+      vendor/github.com/onsi/ginkgo/extensions/table/table_entry.go:43
+
+      Unexpected Warning event received: testvmijxgcsnd2xbktb7qj2chlhmpzwd4x2kxgnr95mgvrs6hkbv9f,48631439-6272-4ba5-962c-7eb75818d50f: server error. command SyncVMI failed: "LibvirtError(Code=1, Domain=10, Message='internal error: process exited while connecting to monitor: 2020-12-04T18:54:29.717293Z qemu-kvm: -blockdev {\"driver\":\"file\",\"filename\":\"/usr/share/OVMF/OVMF_CODE.fd\",\"node-name\":\"libvirt-pflash0-storage\",\"auto-read-only\":true,\"discard\":\"unmap\"}: Could not open '/usr/share/OVMF/OVMF_CODE.fd': No such file or directory')"
+      Expected
+          <string>: Warning
+      not to equal
+          <string>: Warning
+
+      tests/utils.go:360
+

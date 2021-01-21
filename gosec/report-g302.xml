@@ -1,0 +1,66 @@
+	<testsuite name="Expect file permissions to be 0600 or less" tests="8">
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/util/libvirt_helper.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/util/libvirt_helper.go:406] - Expect file permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 405: 	// Let libvirt log to stderr
+406: 	libvirtConf, err := os.OpenFile(&#34;/etc/libvirt/libvirtd.conf&#34;, os.O_APPEND|os.O_WRONLY, 0644)
+407: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/util/libvirt_helper.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/util/libvirt_helper.go:386] - Expect file permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 385: 
+386: 	qemuConf, err := os.OpenFile(&#34;/etc/libvirt/qemu.conf&#34;, os.O_APPEND|os.O_WRONLY, 0644)
+387: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/util/libvirt_helper.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/util/libvirt_helper.go:378] - Expect file permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 377: 		}
+378: 		err = os.Chmod(&#34;/dev/kvm&#34;, 0660)
+379: 		if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/manager.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/manager.go:1490] - Expect file permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 1489: 	// Before attempting to attach, ensure we can open the file
+1490: 	file, err := os.OpenFile(filename, os.O_RDWR, 0660)
+1491: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/manager.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/manager.go:1479] - Expect file permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 1478: 	if (info.Mode() &amp; os.ModeDevice) != 0 {
+1479: 		file, err := os.OpenFile(filename, os.O_RDONLY, 0777)
+1480: 		if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/manager.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/manager.go:840] - Expect file permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 839: var updateHostsFile = func(entry string) (err error) {
+840: 	file, err := os.OpenFile(&#34;/etc/hosts&#34;, os.O_WRONLY|os.O_APPEND, 0644)
+841: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/monitor.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/monitor.go:70] - Expect file permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 69: 
+70: 	err = os.Chmod(baseDir, 0755)
+71: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/ephemeral-disk/ephemeral-disk.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/ephemeral-disk/ephemeral-disk.go:106] - Expect file permissions to be 0600 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 105: 
+106: 	if err = os.Chmod(imagePath, 0640); err != nil {
+107: 		return fmt.Errorf(&#34;failed to change permissions on %s&#34;, imagePath)
+</failure>
+		</testcase>
+	</testsuite>

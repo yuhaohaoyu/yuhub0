@@ -66,3 +66,34 @@ sh-4.4# ls /usr/share/OVMF/
 sh-4.4# ls /usr/share/edk2/ovmf/
 	EnrollDefaultKeys.efi  OVMF_CODE.secboot.fd  OVMF_VARS.fd  OVMF_VARS.secboot.fd  Shell.efi  UefiShell.iso
 
+
+docker.io/yuhaohaoyu/virt-launcher:pr4546
+
+[quicklab@upi-0 IMGS]$ oc -n openshift-cnv rsh virt-launcher-vmi-secureboot-9bb4c
+Defaulting container name to compute.
+Use 'oc describe pod/virt-launcher-vmi-secureboot-9bb4c -n openshift-cnv' to see all of the containers in this pod.
+sh-4.4# ls /usr/share/OVMF/
+OVMF_CODE.secboot.fd  OVMF_VARS.fd  OVMF_VARS.secboot.fd  UefiShell.iso
+sh-4.4# ls -l /^C
+sh-4.4# ls /usr/share/edk2/ovmf/
+EnrollDefaultKeys.efi  OVMF_CODE.secboot.fd  OVMF_VARS.fd  OVMF_VARS.secboot.fd  Shell.efi  UefiShell.iso
+sh-4.4# cat /etc/os-release
+NAME="Red Hat Enterprise Linux"
+VERSION="8.3 (Ootpa)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="8.3"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Red Hat Enterprise Linux 8.3 (Ootpa)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:8.3:GA"
+HOME_URL="https://www.redhat.com/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 8"
+REDHAT_BUGZILLA_PRODUCT_VERSION=8.3
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.3"
+sh-4.4# uname -a
+Linux vmi-secureboot 4.18.0-193.24.1.el8_2.dt1.x86_64 #1 SMP Thu Sep 24 14:57:05 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux
+

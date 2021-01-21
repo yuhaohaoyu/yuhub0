@@ -1,0 +1,45 @@
+G301	dir-perm-750
+	pkg/virt-launcher/virtwrap/network/network.go \
+	pkg/virt-launcher/monitor.go \
+	pkg/virt-launcher/monitor.go \
+	pkg/virt-handler/vm.go \
+	pkg/virt-handler/migration-proxy/migration-proxy.go \
+	pkg/virt-handler/hotplug-disk/mount.go \
+	pkg/virt-handler/container-disk/mount.go \
+	pkg/virt-handler/cache/cache.go \
+	pkg/util/net/grpc/grpc.go \
+	pkg/ignition/ignition.go \
+	pkg/ignition/ignition.go \
+	pkg/hotplug-disk/hotplug-disk.go \
+	pkg/hotplug-disk/hotplug-disk.go \
+	pkg/host-disk/host-disk.go \
+	pkg/ephemeral-disk/ephemeral-disk.go \
+	pkg/ephemeral-disk/ephemeral-disk.go \
+	pkg/ephemeral-disk/ephemeral-disk.go \
+	pkg/emptydisk/emptydisk.go \
+	pkg/container-disk/container-disk.go \
+	pkg/container-disk/container-disk.go \
+	pkg/cloud-init/cloud-init.go \
+	pkg/cloud-init/cloud-init.go
+
+G306 file-perm-600
+	pkg/virt-launcher/virtwrap/util/libvirt_helper.go \
+	pkg/virt-launcher/virtwrap/util/libvirt_helper.go \
+	pkg/virt-launcher/virtwrap/util/libvirt_helper.go \
+	pkg/virt-launcher/virtwrap/manager.go \
+	pkg/virt-launcher/virtwrap/manager.go \
+	pkg/virt-launcher/virtwrap/manager.go \
+	pkg/virt-launcher/monitor.go \
+	pkg/ephemeral-disk/ephemeral-disk.go 
+
+G306 writefile-perm-600
+	pkg/virt-launcher/virtwrap/network/podinterface.go \
+	pkg/virt-launcher/virtwrap/network/common.go \
+	pkg/virt-handler/selinux/labels.go \
+	pkg/virt-handler/hotplug-disk/mount.go \
+	pkg/virt-handler/container-disk/mount.go \
+	pkg/util/sysctl/sysctl.go \
+	pkg/ignition/ignition.go \
+	pkg/cloud-init/cloud-init.go \
+	pkg/cloud-init/cloud-init.go \
+	pkg/cloud-init/cloud-init.go 

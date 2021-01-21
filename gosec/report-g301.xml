@@ -1,0 +1,178 @@
+	<testsuite name="Expect directory permissions to be 0750 or less" tests="22">
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/network/network.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/virtwrap/network/network.go:111] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 110: 	// Create a dir with VMI UID under network-info-dir to store network files
+111: 	err := os.MkdirAll(fmt.Sprintf(util.VMIInterfaceDir, vmi.ObjectMeta.UID), 0755)
+112: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/monitor.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/monitor.go:65] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 64: func InitializeDisksDirectories(baseDir string) error {
+65: 	err := os.MkdirAll(baseDir, 0755)
+66: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/monitor.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-launcher/monitor.go:55] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 54: func InitializePrivateDirectories(baseDir string) error {
+55: 	if err := os.MkdirAll(baseDir, 0755); err != nil {
+56: 		return err
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vm.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/vm.go:292] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 291: 	os.RemoveAll(socketPath)
+292: 	err = os.MkdirAll(filepath.Dir(socketPath), 0755)
+293: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/migration-proxy/migration-proxy.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/migration-proxy/migration-proxy.go:351] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 350: 	os.RemoveAll(m.unixSocketPath)
+351: 	err := os.MkdirAll(filepath.Dir(m.unixSocketPath), 0755)
+352: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/hotplug-disk/mount.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/hotplug-disk/mount.go:201] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 200: 
+201: 	err = os.MkdirAll(filepath.Dir(recordFile), 0755)
+202: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/container-disk/mount.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/container-disk/mount.go:164] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 163: 
+164: 	err = os.MkdirAll(filepath.Dir(recordFile), 0755)
+165: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/cache/cache.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/virt-handler/cache/cache.go:105] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 104: 	ghostRecordDir = directoryPath
+105: 	err := os.MkdirAll(ghostRecordDir, 0755)
+106: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/util/net/grpc/grpc.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/util/net/grpc/grpc.go:68] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 67: 
+68: 	err := os.MkdirAll(filepath.Dir(socketPath), 0755)
+69: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/ignition/ignition.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/ignition/ignition.go:69] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 68: 	domainBasePath := GetDomainBasePath(vmi.Name, namespace)
+69: 	err := os.MkdirAll(domainBasePath, 0755)
+70: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/ignition/ignition.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/ignition/ignition.go:44] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 43: func SetLocalDirectory(dir string) error {
+44: 	err := os.MkdirAll(dir, 0755)
+45: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/hotplug-disk/hotplug-disk.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/hotplug-disk/hotplug-disk.go:76] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 75: 	mountBaseDir = dir
+76: 	return os.MkdirAll(dir, 0755)
+77: }
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/hotplug-disk/hotplug-disk.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/hotplug-disk/hotplug-disk.go:63] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 62: 	if !exists &amp;&amp; create {
+63: 		err = os.Mkdir(diskPath, 0755)
+64: 		if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/host-disk/host-disk.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/host-disk/host-disk.go:50] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 49: 	pvcBaseDir = dir
+50: 	return os.MkdirAll(dir, 0755)
+51: }
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/ephemeral-disk/ephemeral-disk.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/ephemeral-disk/ephemeral-disk.go:61] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 60: 
+61: 	err := os.MkdirAll(dir, 0755)
+62: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/ephemeral-disk/ephemeral-disk.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/ephemeral-disk/ephemeral-disk.go:55] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 54: 	pvcBaseDir = dir
+55: 	return os.MkdirAll(dir, 0755)
+56: }
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/ephemeral-disk/ephemeral-disk.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/ephemeral-disk/ephemeral-disk.go:49] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 48: 	mountBaseDir = dir
+49: 	return os.MkdirAll(dir, 0755)
+50: }
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/emptydisk/emptydisk.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/emptydisk/emptydisk.go:23] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 22: 			file := FilePathForVolumeName(volume.Name)
+23: 			if err := os.MkdirAll(EmptyDiskBaseDir, 0777); err != nil {
+24: 				return err
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/container-disk/container-disk.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/container-disk/container-disk.go:107] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 106: 	podsBaseDir = dir
+107: 	return os.MkdirAll(dir, 0755)
+108: }
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/container-disk/container-disk.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/container-disk/container-disk.go:97] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 96: 	mountBaseDir = dir
+97: 	return os.MkdirAll(dir, 0755)
+98: }
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/cloud-init/cloud-init.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/cloud-init/cloud-init.go:508] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 507: 
+508: 	err = os.MkdirAll(dataPath, 0755)
+509: 	if err != nil {
+</failure>
+		</testcase>
+		<testcase name="/root/go/src/kubevirt.io/kubevirt/pkg/cloud-init/cloud-init.go">
+			<failure message="Found 1 vulnerability. See stacktrace for details.">Results:
+[/root/go/src/kubevirt.io/kubevirt/pkg/cloud-init/cloud-init.go:416] - Expect directory permissions to be 0750 or less (Confidence: 2, Severity: 1, CWE: 276)
+> 415: func SetLocalDirectory(dir string) error {
+416: 	err := os.MkdirAll(dir, 0755)
+417: 	if err != nil {
+</failure>
+		</testcase>
+	</testsuite>

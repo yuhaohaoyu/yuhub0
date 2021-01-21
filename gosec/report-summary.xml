@@ -1,0 +1,44 @@
+G301
+	pkg/virt-launcher/virtwrap/network/network.go:111 , 		Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-launcher/monitor.go:65 , 				Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-launcher/monitor.go:55 , 				Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-handler/vm.go:292 , 					Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-handler/migration-proxy/migration-proxy.go:351 , 	Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-handler/hotplug-disk/mount.go:201 , 			Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-handler/container-disk/mount.go:164 , 		Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-handler/cache/cache.go:105 , 				Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/util/net/grpc/grpc.go:68 , 				Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/ignition/ignition.go:69 , 					Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/ignition/ignition.go:44 , 					Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/hotplug-disk/hotplug-disk.go:76 , 				Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/hotplug-disk/hotplug-disk.go:63 , 				Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/host-disk/host-disk.go:50 , 				Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/ephemeral-disk/ephemeral-disk.go:61 , 			Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/ephemeral-disk/ephemeral-disk.go:55 , 			Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/ephemeral-disk/ephemeral-disk.go:49 , 			Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/emptydisk/emptydisk.go:23 , 				Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/container-disk/container-disk.go:107 , 			Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/container-disk/container-disk.go:97 , 			Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/cloud-init/cloud-init.go:508 , 				Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/cloud-init/cloud-init.go:416 , 				Expect directory permissions to be 0750 or less , Confidence: 2, Severity: 1, CWE: 276
+
+G306
+	pkg/virt-launcher/virtwrap/util/libvirt_helper.go:406 , 	Expect file permissions to be 0600 or less ,      Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-launcher/virtwrap/util/libvirt_helper.go:386 , 	Expect file permissions to be 0600 or less ,      Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-launcher/virtwrap/util/libvirt_helper.go:378 , 	Expect file permissions to be 0600 or less ,      Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-launcher/virtwrap/manager.go:1490 , 			Expect file permissions to be 0600 or less ,      Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-launcher/virtwrap/manager.go:1479 , 			Expect file permissions to be 0600 or less ,      Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-launcher/virtwrap/manager.go:840 , 			Expect file permissions to be 0600 or less ,      Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-launcher/monitor.go:70 , 				Expect file permissions to be 0600 or less ,      Confidence: 2, Severity: 1, CWE: 276
+	pkg/ephemeral-disk/ephemeral-disk.go:106 , 			Expect file permissions to be 0600 or less ,      Confidence: 2, Severity: 1, CWE: 276
+
+	pkg/virt-launcher/virtwrap/network/podinterface.go:82 , 	Expect WriteFile permissions to be 0600 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-launcher/virtwrap/network/common.go:544 , 		Expect WriteFile permissions to be 0600 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-handler/selinux/labels.go:133 , 			Expect WriteFile permissions to be 0600 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-handler/hotplug-disk/mount.go:206 , 			Expect WriteFile permissions to be 0600 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/virt-handler/container-disk/mount.go:169 , 		Expect WriteFile permissions to be 0600 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/util/sysctl/sysctl.go:63 , 				Expect WriteFile permissions to be 0600 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/ignition/ignition.go:77 , 					Expect WriteFile permissions to be 0600 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/cloud-init/cloud-init.go:543 , 				Expect WriteFile permissions to be 0600 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/cloud-init/cloud-init.go:533 , 				Expect WriteFile permissions to be 0600 or less , Confidence: 2, Severity: 1, CWE: 276
+	pkg/cloud-init/cloud-init.go:529 , 				Expect WriteFile permissions to be 0600 or less , Confidence: 2, Severity: 1, CWE: 276

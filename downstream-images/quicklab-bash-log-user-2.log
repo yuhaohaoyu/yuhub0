@@ -1,0 +1,121 @@
+    1  cat /proc/cpuinfo
+    2  oc get nodes
+    3  cd .ssh/
+    4  ls
+    5  vi quicklab.key
+    6  ssh -i ~/.ssh/quicklab.key master-0
+    7  exit
+    8  cd .ssh/
+    9  ls -l
+   10  chmod 600 quicklab.key
+   11  ls -l
+   12  ssh -i ~/.ssh/quicklab.key master-0
+   13  ssh -i ~/.ssh/quicklab.key bootstrap-0
+   14  ls
+   15  pwd
+   16  cd
+   17  ls
+   18  oc get nodes
+   19  echo $KUBECONFIG
+   20  cat ocp4cert_approver.sh
+   21  ssh -i ~/.ssh/quicklab.key bootstrap-0
+   22  vi .ssh/authorized_keys
+   23  ssh -i ~/.ssh/quicklab.key bootstrap-0
+   24  oc -n openshift-cnv get pods
+   25  oc -n openshift-cnv describe pods virt-operator-cb8586ccd-s77dw
+   26  cat /etc/os-release
+   27  sudo dnf install grubby
+   28  sudo yum install grubby
+   29  sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+   30  sudo yum config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+   31  sudo yum install dnf
+   32  sudo dnf update
+   33  sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+   34  sudo config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+   35  dnf --help
+   36  sudo dnf-config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+   37  sudo yum-config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+   38  sudo dnf install docker-ce
+   39  sudo yum install docker-ce
+   40  sudo yum install docker
+   41  subscription-manager repos --disable=docker-ce-stable
+   42  yum-config-manager --disable docker-ce-stable
+   43  sudo yum-config-manager --disable docker-ce-stable
+   44  sudo yum install docker
+   45  which docker
+   46  firewall-cmd --permanent --zone=trusted --add-interface=docker0
+   47  sudo firewall-cmd --permanent --zone=trusted --add-interface=docker0
+   48  sudo firewall-cmd --reload
+   49  sudo usermod -aG docker $(whoami)
+   50  which docker
+   51  docker ps
+   52  sudo docker ps
+   53  sudo groupadd docker
+   54  sudo usermod -aG docker $(whoami)
+   55  sudo service docker start
+   56  docker ps
+   57  whoami
+   58  sudo docker ps
+   59  sudo ls -ld /var/run/docker.sock
+   60  sudo yum install git
+   61  df
+   62  which go
+   63  wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
+   64  sudo  yum install wget
+   65  wget https://dl.google.com/go/go1.13.linux-amd64.tar.gz
+   66  echo $HOME
+   67  tar -C $HOME/ -xzf go1.13.linux-amd64.tar.gz
+   68  ls
+   69  mkdir $HOME/go-projects
+   70   cat > go-activate.sh << __EOF__
+ export GOPATH=$HOME/go-projects
+ export GOROOT=$HOME/go
+ export GOBIN=$GOROOT/bin
+ export PATH=$PATH:$GOBIN
+ __EOF__
+
+
+   71  cat > go-activate.sh << __EOF__
+export GOPATH=$HOME/go-projects
+export GOROOT=$HOME/go
+export GOBIN=$GOROOT/bin
+export PATH=$PATH:$GOBIN
+__EOF__
+
+   72  source go-activate.sh
+   73  chmod a+x go-activate.sh
+   74  go version
+   75  which go
+   76  echo $GOBIN
+   77  echo $HOME
+   78  vi go-activate.sh
+   79  . go-activate.sh
+   80  which go
+   81  go version
+   82  history | grep manager
+   83  sudo yum config-manager --add-repo rhel-7-server-cnv-2.5-rpms
+   84  sudo yum-config-manager --add-repo rhel-7-server-cnv-2.5-rpms
+   85  sudo subscription-manager repos --enable rhel-7-server-cnv-2.5-rpms
+   86  sudo yum install kubevirt-virtctl
+   87  sudo subscription-manager repos --enable rhel-7-server-cnv-rpms
+   88  sudo subscription-manager repos --list | grep server
+   89  which curl
+   90  curl -L -o virtctl https://github.com/kubevirt/kubevirt/releases/download/v0.34.2/virtctl-v0.34.2-linux-amd64
+   91  chmod +x virtctl
+   92  ls -l virtctl
+   93  sudo install virtctl /usr/local/bin
+   94  which virtctl
+   95  virtctl version
+   96  kubectl get kubevirt.kubevirt.io
+   97  kubectl get kubevirt.kubevirt.io/kubevirt -n openshift-cnv
+   98  curl -L -o virtctl https://github.com/kubevirt/kubevirt/releases/download/v0.34.1/virtctl-v0.34.1-linux-amd64
+   99  chmod +x virtctl
+  100  sudo install virtctl /usr/local/bin
+  101  which virtctl
+  102  virtctl version
+  103  pwd
+  104  ls
+  105  oc get clusteroperators
+  106  oc -n openshift-cnv get pods
+  107  oc get clusteroperators
+  108  oc -n openshift-cnv get pods

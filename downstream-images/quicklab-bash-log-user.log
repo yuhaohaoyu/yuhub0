@@ -1,0 +1,779 @@
+[quicklab@upi-0 ~]$ history
+    1  cat /etc/os-release
+    2  oc version
+    3  who
+    4  ls
+    5  pwd
+    6  cd .ssh/
+    7  ls
+    8  pwd
+    9  vim cnv-qe-jenkins.key
+   10  vi cnv-qe-jenkins.key
+   11  ssh -i cnv-qe-jenkins.key cnv-qe-jenkins@10.0.99.236
+   12  ls -l cnv-qe-jenkins.key
+   13  chmod g-w cnv-qe-jenkins.key
+   14  chmod o-r cnv-qe-jenkins.key
+   15  ssh -i cnv-qe-jenkins.key cnv-qe-jenkins@10.0.99.236
+   16  ls -l
+   17  chmod g-r cnv-qe-jenkins.key
+   18  ssh -i cnv-qe-jenkins.key cnv-qe-jenkins@10.0.99.236
+   19  which podman
+   20  which docker
+   21  oc cluster-info
+   22  pwd
+   23  hostname
+   24  oc get nodes
+   25  pwd
+   26  which vnc
+   27  top
+   28  cat /proc/cpuinfo
+   29  ifconfig
+   30  ping bootstrap-0.secboottest.lab.pnq2.cee.redhat.com
+   31  ssh bootstrap-0.secboottest.lab.pnq2.cee.redhat.com
+   32  ls
+   33  vi quicklab.key
+   34  ls -l
+   35  chmod go-rw quicklab.key
+   36  ls -l
+   37  ssh -i quicklab.key bootstrap-0.secboottest.lab.pnq2.cee.redhat.com
+   38  ssh -i quicklab.key master-1.secboottest.lab.pnq2.cee.redhat.com
+   39  oc get nodes
+   40  ssh -i quicklab.key worker-1.secboottest.lab.pnq2.cee.redhat.com
+   41  oc get nodes
+   42  oc get pods -n openshift-cnv
+   43  oc get ns
+   44  oc version
+   45  ssh -i quicklab.key master-1.secboottest.lab.pnq2.cee.redhat.com
+   46  which virtctl
+   47  subscription-manager repos --enable=rhel-7-server-cnv-1.4-tech-preview-rpms
+   48  sudo su -
+   49  which podman
+   50  hostname
+   51  cd
+   52  ls
+   53  pwd
+   54  mkdir Downloads
+   55  mv openshift-client-linux.tar.gz Downloads/
+   56  cd Downloads/
+   57  ls
+   58  tar xfz openshift-client-linux.tar.gz
+   59  ls -ot
+   60  kubectl version
+   61  cd ../
+   62  cd Downloads/
+   63  ./oc version
+   64  which version
+   65  cd ../
+   66  history
+   67  ssh -i ~/.ssh/quicklab.key bootstrap-0.secboottest.lab.pnq2.cee.redhat.com
+   68  ping bootstrap-0.secboottest.lab.pnq2.cee.redhat.com
+   69  pwd
+   70  df
+   71  ssh -i quicklab.key master-1.secboottest.lab.pnq2.cee.redhat.com
+   72  ssh -i ~/.ssh/quicklab.key master-1.secboottest.lab.pnq2.cee.redhat.com
+   73  oc get nodes
+   74  virtctl
+   75  echo $KUBECONFIG
+   76  ls
+   77  ls oc4/
+   78  ls oc4/auth/
+   79  exit
+   80  ls -l
+   81  scp -i ~/.ssh/quicklab.key *.gz quicklab@master-1.secboottest.lab.pnq2.cee.redhat.com:
+   82  man skopeo
+   83  history | grep pull
+   84  ssh -i ~/.ssh/quicklab.key master-1.secboottest.lab.pnq2.cee.redhat.com
+   85  ssh -i ~/.ssh/quicklab.key master-1.secboottest.lab.pnq2.cee.redhat.com
+   86  ls
+   87  echo $KUBECONFIG
+   88  cd oc4/
+   89  ls
+   90  cd ../
+   91  ls
+   92  pwd
+   93  find . -name kubeconfig
+   94  scp -i ~/.ssh/quicklab.key /home/quicklab/oc4/auth/kubeconfig quicklab@master-1.secboottest.lab.pnq2.cee.redhat.com:
+   95  ssh -i ~/.ssh/quicklab.key master-1.secboottest.lab.pnq2.cee.redhat.com
+   96  dnf
+   97  yum
+   98  yum install podman
+   99  sudo su -
+  100  oc get nodes
+  101  ls -ot
+  102  mkdir IMGS
+  103  mv virt-* IMGS/
+  104  ls
+  105  cd IMGS/
+  106  ls
+  107  mv virt-handler.tar.gz virt-handler.tar
+  108  mv virt-launcher-devel.tar.gz virt-launcher-devel.tar
+  109  docker load -i virt-handler.tar
+  110  podman load virt-handler.tar
+  111  podman load -i virt-handler.tar
+  112  sudo podman load -i virt-handler.tar
+  113  podman images
+  114  sudo podman images
+  115  yum --help
+  116  yum install podman
+  117  which skopeo
+  118  yum install skopeo
+  119  sudo su -
+  120  ls
+  121  sudo skopeo inspect docker-archive:virt-handler.tar
+  122  man skopeo
+  123  which podman
+  124  man podman-login
+  125  podman login quay.io
+  126  sudo podman login quay.io
+  127  skopeo copy docker-archive:virt-handler.tar quay.io/yuhaohaoyu/kv/virt-handler
+  128  skopeo copy docker-archive:virt-handler.tar docker://quay.io/yuhaohaoyu/kv/virt-handler
+  129  skopeo copy docker-archive:virt-handler.tar docker://quay.io/yuhaohaoyu/virt-handler
+  130  skopeo copy docker-archive:virt-handler.tar docker://quay.io/yuhaohaoyu/virt-handler-upstr
+  131  sudo skopeo copy docker-archive:virt-handler.tar docker://quay.io/yuhaohaoyu/virt-handler-upstr
+  132  sudo skopeo copy --src-tls-verify=false docker-archive:virt-handler.tar docker://quay.io/yuhaohaoyu/virt-handler-upstr
+  133  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-launcher:v2.6.0-75 docker-archive:virt-launcher-2.6.0-75.tar
+  134  sudo skopeo inspect docker-archive:virt-launcher-2.6.0-75.tar
+  135  man skopeo
+  136  cat /etc/containers/storage.conf
+  137  vi /etc/containers/storage.conf
+  138  vim /etc/containers/storage.conf
+  139  vi /etc/containers/storage.conf
+  140  man 5 containers-storage.conf
+  141  man skopeo
+  142  sudo skopeo copy --src-tls-verify=false docker-archive:virt-launcher-2.6.0-75.tar docker://registry-proxy.engineering.redhat.com/yuhaohaoyu/container-native-virtualization-virt-launcher:v2.6.0-75
+  143  history | grep pull
+  144  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-launcher:cnv-2.6-rhel-8-containers-candidate-21470-20201124111641 docker://localhost/kubevirt/virt-launcher-cnv
+  145  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-launcher:cnv-2.6-rhel-8-containers-candidate-21470-20201124111641 docker://upi-0.apps.secboottest.lab.pnq2.cee.redhat.com/kubevirt/virt-launcher-cnv
+  146  df
+  147  podman images
+  148  sudo podman images
+  149  oc get kv
+  150  oc get kv -n kubevirt
+  151  oc get hc -n kubevirt
+  152  oc get oc get ds
+  153  oc get pods
+  154  oc api-resources
+  155  oc get pods -n kubevirt
+  156  echo $KUBECONFIG
+  157  export KUBECONFIG ../oc4/auth/kubeconfig
+  158  export KUBECONFIG=../oc4/auth/kubeconfig
+  159  export KUBECONFIG=~/oc4/auth/kubeconfig
+  160  oc get kv
+  161  oc get pods -A
+  162  oc api-resources -n openshift-cnv
+  163  clear
+  164  oc api-resources -n openshift-cnv
+  165  oc api-resources -n openshift-cnv | sort
+  166  oc -n openshift-cnv get kv
+  167  oc -n openshift-cnv get kv kubevirt-kubevirt-hyperconverged -o yaml > kubevirt-kubevirt-hyperconverged.yaml
+  168  vi kubevirt-kubevirt-hyperconverged.yaml
+  169  oc get deployments
+  170  oc -n openshift-cnv  get deployments
+  171  oc -n openshift-cnv  get deployments virt-operator -o yaml > virt-operator.yaml
+  172  vi virt-operator.yaml
+  173  vi virt-operator.yaml oc get pods
+  174  oc get pods
+  175  oc get ds -n openshift-cnv
+  176  vi kubevirt-kubevirt-hyperconverged.yaml
+  177  oc get deployments virt-controller -n openshift-cnv -o yaml > virt-controller.yaml
+  178  vi virt-controller.yaml
+  179  oc get ds virt-handler -n openshift-cnv -o yaml > virt-handler.yaml
+  180  vi virt-handler.
+  181  vi virt-handler.yaml
+  182  vi virt-operator.yaml
+  183  oc -n openshift-cnv  get deployments virt-operator -o json > virt-operator.json
+  184  vi virt-operator.json
+  185  vi patch.json
+  186  vi virt-operator.json patch.json
+  187  podman images
+  188  sudo podman images
+  189  sudo skopeo inspect localhost/kubevirt/virt-handler
+  190  history | grep inspect
+  191  sudo su -
+  192  history
+  193  which podman
+  194  which docker
+  195  docker ps
+  196  sudo su -
+  197  ls
+  198  pwd
+  199  oc get pods -n openshift-cnv
+  200  ls -l
+  201  ls IMGS/
+  202  cd IMGS/
+  203  ls
+  204  cat patch.json
+  205  vi patch.json
+  206  cat patch*
+  207  mv patch.json patch_template.json
+  208  vi patch_template.json
+  209  history | grep json
+  210  oc -n openshift-cnv get kv kubevirt -o json > kv.json
+  211  oc -n openshift-cnv get kv
+  212  oc -n openshift-cnv get kv kubevirt-kubevirt-hyperconverged -o json > kubevirt-kubevirt-hyperconverged.yaml
+  213  oc -n openshift-cnv get kv kubevirt-kubevirt-hyperconverged -o yaml > kubevirt-kubevirt-hyperconverged.yaml
+  214  vi kubevirt-kubevirt-hyperconverged.yaml
+  215  ls
+  216  cat virt-operator.yaml
+  217  vi kubevirt-kubevirt-hyperconverged.yaml
+  218  oc apply -f kubevirt-kubevirt-hyperconverged.yaml
+  219  oc -n openshift-cnv get deployments
+  220  oc -n openshift-cnv get ds
+  221  oc -n openshift-cnv get pods
+  222  oc -n openshift-cnv logs virt-handler-9gd7m
+  223  oc -n openshift-cnv get pods
+  224  oc -n openshift-cnv describe virt-handler-9gd7m
+  225  oc -n openshift-cnv describe pod virt-handler-9gd7m
+  226  oc -n openshift-cnv get pods
+  227  oc -n openshift-cnv describe virt-operator-84fff88bbb-dvtmk
+  228  oc -n openshift-cnv describe pod virt-operator-84fff88bbb-dvtmk
+  229  oc -n openshift-cnv get pods
+  230  oc -n openshift-cnv describe pod virt-handler-9gd7m
+  231  oc -n openshift-cnv describe ds
+  232  oc -n openshift-cnv get ds
+  233  oc -n openshift-cnv get ds virt-handler
+  234  oc -n openshift-cnv describe ds virt-handler
+  235  oc -n openshift-cnv get pods
+  236  oc -n openshift-cnv get pods virt-operator-84fff88bbb-j5wk9
+  237  oc -n openshift-cnv describe pods virt-operator-84ff
+  238  oc -n openshift-cnv get dc
+  239  oc -n openshift-cnv get deployment
+  240  oc -n openshift-cnv describe deployment hco-operator
+  241  oc -n openshift-cnv get deployment hco-operator -o yaml | grep customizeC
+  242  oc -n openshift-cnv get deployment
+  243  oc -n openshift-cnv get kv
+  244  oc -n openshift-cnv get kv kubevirt-kubevirt-hyperconverged -o yaml > 0.yaml
+  245  vi 0.yaml
+  246  cat patch-1.json
+  247  cat kubevirt-kubevirt-hyperconverged.yaml
+  248  history | grep apply
+  249  oc apply -f kubevirt-kubevirt-hyperconverged.yaml
+  250  oc -n openshift-cnv get kv kubevirt-kubevirt-hyperconverged -o yaml > 0.yaml
+  251  vidiff 0.yaml kubevirt-kubevirt-hyperconverged.yaml
+  252  diff 0.yaml kubevirt-kubevirt-hyperconverged.yaml
+  253  date
+  254  vi 0.yaml
+  255  oc -n openshift-cnv get deployment
+  256  oc -n openshift-cnv get deployment virt-operator
+  257  oc -n openshift-cnv describe deployment virt-operator
+  258  oc --help
+  259  oc -n openshift-cnv get pods
+  260  oc -n openshift-cnv logs virt-handler-tpdbp
+  261  date --help
+  262  date -u
+  263  oc -n openshift-cnv get pod virt-handler-tpdbp -o json > virt-handler-tpdbp.json
+  264  vi virt-handler-tpdbp.json
+  265  oc -n openshift-cnv describe pod virt-handler-tpdbp
+  266  oc -n openshift-cnv describe ds virt-handler
+  267  oc -n openshift-cnv get ds virt-handler -o yaml > vh-deployment.yaml
+  268  vi vh-deployment.yaml
+  269  sudo docker images
+  270  vi vh-deployment.yaml
+  271  oc -n openshift-cnv apply -f vh-deployment.yaml
+  272  oc -n openshift-cnv  get pods
+  273  docker login docker.io
+  274  oc -n openshift-cnv  get pods
+  275  docker login docker.io
+  276  sudo docker login docker.io
+  277  pwd
+  278  sudo docker images
+  279  sudo docker tag e88a0819c529 docker.io/yuhaohaoyu/virt-handler:test1126_1
+  280  sudo docker push docker.io/yuhaohaoyu/virt-handler:test1126_1
+  281  sudo docker tag 343e2ba4fde3 docker.io/yuhaohaoyu/virt-launcher:test1126_1
+  282  sudo docker push docker.io/yuhaohaoyu/virt-launcher:test1126_1
+  283  history
+  284  oc -n openshift-cnv get ds virt-handler -o yaml > vh-deployment.yaml
+  285  vi vh-deployment.yaml
+  286  oc apply vh-deployment.yaml
+  287  oc apply -f vh-deployment.yaml
+  288  oc -n openshift-cnv  get pods
+  289  oc -n openshift-cnv  logs virt-handler-dnfdp
+  290  oc -n openshift-cnv  get pods
+  291  oc -n openshift-cnv describe pod
+  292  oc -n openshift-cnv  logs virt-handler-dnfdp
+  293  sudo su -
+  294  oc -n openshift-cnv  get pods
+  295  oc -n openshift-cnv describe pod virt-handler-tpdbp
+  296  cp vh-deployment.yaml vh-deployment-docker-io-failed.yaml
+  297  oc -n openshift-cnv get ds virt-handler -o yaml > vh-deployment.yaml
+  298  vi vh-deployment
+  299  vi vh-deployment.yaml
+  300  oc apply -f vh-deployment.yaml
+  301  oc -n openshift-cnv  get pods
+  302  cat vh-deployment.yaml
+  303  sudo docker pull registry.redhat.io/container-native-virtualization/virt-handler@sha256:6aba07a9db642cd042729e5ec0c0e3452af846f9b71cd51ec14617336ad89958
+  304  sudo su -
+  305  sudo skopeo copy --src-tls-verify=false docker://registry.redhat.io/container-native-virtualization/virt-handler@sha256:6aba07a9db642cd042729e5ec0c0e3452af846f9b71cd51ec14617336ad89958 docker-archive:vh-registry.redhat.cnv.tar
+  306  exit
+  307  cd IMGS/
+  308  sudo skopeo copy --src-tls-verify=false docker://registry.redhat.io/container-native-virtualization/virt-handler@sha256:6aba07a9db642cd042729e5ec0c0e3452af846f9b71cd51ec14617336ad89958 docker-archive:vh-registry.redhat.cnv.tar
+  309  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-launcher:v2.6.0-75 docker-archive:virt-launcher-registry-proxy-cnv.tar
+  310  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-handler:v2.5.1 docker-archive:virt-handler-registry-proxy-cnv.tar
+  311  df
+  312  history | grep copy
+  313  ls
+  314  sudo su -
+  315  history | grep push
+  316  history | grep docker
+  317  sudo docker images
+  318  sudo docker tag e2f70eac8030 docker.io/yuhaohaoyu/virt-handler:v2.5.1
+  319  sudo docker push docker.io/yuhaohaoyu/virt-handler:v2.5.1
+  320  history | grep vh*
+  321  cd IMGS/
+  322  sudo skopeo copy --src-tls-verify=false docker://registry.redhat.io/container-native-virtualization/virt-handler@sha256:6aba07a9db642cd042729e5ec0c0e3452af846f9b71cd51ec14617336ad89958 docker-archive:vh-registry.redhat.cnv.tar
+  323  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-launcher:v2.6.0-75 docker-archive:virt-launcher-registry-proxy-cnv.tar
+  324  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-handler:v2.5.1 docker-archive:virt-handler-registry-proxy-cnv.tar
+  325  df
+  326  history | grep copy
+  327  ls
+  328  sudo su -
+  329  history | grep push
+  330  history | grep docker
+  331  sudo docker images
+  332  sudo docker tag e2f70eac8030 docker.io/yuhaohaoyu/virt-handler:v2.5.1
+  333  sudo docker push docker.io/yuhaohaoyu/virt-handler:v2.5.1
+  334  history | grep vh*
+  335  history | grep deploy
+  336  oc -n openshift-cnv get ds virt-handler -o yaml > vh-deployment.yaml
+  337  vi vh-deployment.yaml
+  338  oc apply -f vh-deployment
+  339  oc apply -f vh-deployment.yaml
+  340  oc -n openshift-cnv get ds
+  341  oc -n openshift-cnv get pods
+  342  oc -n openshift-cnv describe pod virt-handler-mswml
+  343  cp vh-deployment.yaml vh-deployment-2.5.1-good.yaml
+  344  history | grep skopeo | grep copy
+  345  sudo skopeo inspect docker-archive:vh-registry.redhat.cnv.tar
+  346  oc version
+  347  virtctl
+  348  ssh -i ~/.ssh/quicklab.key master-1.secboottest.lab.pnq2.cee.redhat.com
+  349  sudo skopeo copy --src-tls-verify=false docker://registry.redhat.io/container-native-virtualization/virt-handler@sha256:6aba07a9db642cd042729e5ec0c0e3452af846f9b71cd51ec14617336ad89958 docker-daemon:virt-handler:default_461
+  350  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-handler:latest docker-daemon:virt-handler:latest_1126
+  351  sudo docker image
+  352  sudo docker images
+  353  sudo docker tag 17782cf90f65 docker.io/yuhaohaoyu/virt-handler:latest_1126
+  354  sudo docker push docker.io/yuhaohaoyu/virt-handler:latest_1126
+  355  docker.io/yuhaohaoyu/virt-handler:latest_1126@sha256:07ca4a170261a7ee083dae983278b683b9aa5b59d18a796a93f6ccc526ccfe00
+  356  oc -n openshift-cnv get ds virt-handler -o yaml > vh-deployment.yaml
+  357  vi vh-deployment.yaml
+  358  oc apply -f vh-deployment.yaml
+  359  history | grep pod | tail -10
+  360  oc -n openshift-cnv get pods
+  361  cp vh-deployment.yaml vh-deployment-latest_1126.yaml
+  362  grep image: vh-deployment.yaml
+  363  grep image: vh-deployment*.yaml
+  364  oc -n openshift-cnv get ds virt-handler -o yaml > vh-deployment.yaml
+  365  vi vh-deployment.yaml
+  366  oc apply -f vh-deployment.yaml
+  367  oc -n openshift-cnv get pods
+  368  oc -n openshift-cnv logs virt-handler-cmm5w
+  369  oc -n openshift-cnv get pods
+  370  vi vh-deployment.yaml
+  371  sudo docker pull docker.io/yuhaohaoyu/virt-handler:test1126_1@sha256:431360e055846c54c7b37ce68ba7a0cd92a0fbcdf11d07857108e848e5038486
+  372  sudo podman pull docker.io/yuhaohaoyu/virt-handler:test1126_1@sha256:431360e055846c54c7b37ce68ba7a0cd92a0fbcdf11d07857108e848e5038486
+  373  podman login docker.io
+  374  sudo podman login docker.io
+  375  sudo podman pull  docker.io/yuhaohaoyu/virt-handler:test1126_1
+  376  sudo docker images
+  377  sudo skopeo inspect docker-daemon:docker.io/yuhaohaoyu/virt-handler:latest_1126
+  378  sudo skopeo inspect docker-daemon:docker.io/yuhaohaoyu/virt-handler:v2.5.1
+  379  sudo skopeo inspect docker-daemon:docker.io/yuhaohaoyu/virt-handler:test1126_1
+  380  grep image: vh-deployment.yaml
+  381  sudo docker images
+  382  sudo skopeo inspect docker-daemon:docker.io/yuhaohaoyu/virt-launcher:test1126_1
+  383  sudo skopeo inspect docker-daemon:kubevirt/virt-handler:latest
+  384  sudo docker images
+  385  sudo docker tag b9525cd18051 docker.io/yuhaohaoyu/virt-handler:upstr
+  386  sudo docker push docker.io/yuhaohaoyu/virt-handler:upstr
+  387  oc -n openshift-cnv get ds virt-handler -o yaml > vh-deployment.yaml
+  388  vi vh-deployment.yaml
+  389  oc apply vh-deployment.yaml
+  390  oc apply -f vh-deployment.yaml
+  391  oc -n openshift-cnv get pods
+  392  oc -n openshift-cnv logs virt-handler-dff9z
+  393  oc -n openshift-cnv get pods
+  394  oc -n openshift-cnv logs virt-handler-dff9z
+  395  oc -n openshift-cnv get pods
+  396  oc -n openshift-cnv logs virt-handler-nwtl7
+  397  oc -n openshift-cnv describe pod virt-handler-nwtl7
+  398  clear
+  399  sudo docker images
+  400  history
+  401  oc -n openshift-cnv get pods
+  402  cd IMGS/
+  403  ls
+  404  ping github.com
+  405  wget https://github.com/kubevirt/kubevirt/blob/master/examples/vmi-secureboot.yaml
+  406  curl https://github.com/kubevirt/kubevirt/blob/master/examples/vmi-secureboot.yaml
+  407  ls -l
+  408  curl https://github.com/kubevirt/kubevirt/blob/master/examples/vmi-secureboot.yaml --output vmi-secureboot.yaml
+  409  cat vmi-secureboot.yaml
+  410  rm vmi-secureboot.yaml
+  411  hostname
+  412  exit
+  413  firefox &
+  414  which firefox
+  415  history | grep ssh
+  416  ssh -i ~/.ssh/quicklab.key master-1.secboottest.lab.pnq2.cee.redhat.com
+  417  pwd
+  418  cd IMGS/
+  419  mv ../vmi-* .
+  420  oc apply -f vmi-secureboot.yaml
+  421  oc -n openshift-cnv get vmi
+  422  oc get vmi
+  423  oc get pods
+  424  oc logs virt-launcher-vmi-secureboot-cbqht
+  425  oc logs virt-launcher-vmi-secureboot-cbqht -c compute
+  426  oc get pods
+  427  oc describe pod virt-launcher-vmi-secureboot-cbqht
+  428  oc get pod virt-launcher-vmi-secureboot-cbqht -o yaml
+  429  cat vmi-secureboot.yaml
+  430  cat vmi-secureboot.yaml
+  431  cat vmi-alpine-efi.yaml
+  432  mv ../vmi-alpine-efi.yaml .
+  433  cat vmi-alpine-efi.yaml
+  434  history | grep copy
+  435  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-alpine-container-disk-demo docker-daemon:alpine-container-disk-demo:devel
+  436  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization/alpine-container-disk-demo docker-daemon:alpine-container-disk-demo:devel
+  437  mkdir temp
+  438  cd temp/
+  439  curl -X GET https://registry-proxy.engineering.redhat.com/rh-osbs/_catelog
+  440  curl -k -X GET https://registry-proxy.engineering.redhat.com/rh-osbs/_catelog
+  441  curl -k -X GET https://registry-proxy.engineering.redhat.com/_catelog
+  442  curl -k -X GET https://registry-proxy.engineering.redhat.com/v2/_catelog
+  443  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization/alpine-container-disk-demo:latest docker-daemon:alpine-container-disk-demo:devel
+  444  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-alpine-container-disk-demo:latest docker-daemon:alpine-container-disk-demo:devel
+  445  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization/kubevirt/alpine-container-disk-demo:latest docker-daemon:alpine-container-disk-demo:devel
+  446  man skopeo
+  447  docker login registry-proxy.engineering.redhat.com
+  448  docker login https://registry-proxy.engineering.redhat.com
+  449  history | grep copy
+  450  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/container-native-virtualization-alpine-container-disk-demo docker-daemon:alpine-container-disk-demo:devel
+  451  cd ../
+  452  ls
+  453  cat vmi-secureboot.yaml
+  454  oc get vmi
+  455  oc describe vmi vmi-secureboot
+  456  oc get pod
+  457  oc describe pod virt-launcher-vmi-secureboot-cbqht
+  458  cd IMGS/
+  459  ls
+  460  oc -n openshift get deployment virt-controller -o yaml > virt-controller.yaml
+  461  oc -n openshift get deployment
+  462  oc -n openshift get deployments
+  463  oc -n openshift-cnv get deployments
+  464  oc -n openshift-cnv get deployment virt-controller -o yaml > virt-controller.yaml
+  465  vi virt-controller.yaml
+  466  oc apply -f virt-controller.yaml
+  467  oc -n openshift-cnv get deployments
+  468  oc -n openshift-cnv get pods
+  469  vi vmi-secureboot.yaml
+  470  oc apply -f vmi-secureboot.yaml
+  471  oc get pods
+  472  oc get vmi
+  473  oc logs virt-launcher-vmi-secureboot-zh2sq
+  474  oc logs virt-launcher-vmi-secureboot-zh2sq -c compute
+  475  oc describe pod virt-launcher-vmi-secureboot-zh2sq
+  476  oc get pods
+  477  oc console vmi-secureboot
+  478  oc get pods
+  479  oc logs virt-launcher-vmi-secureboot-zh2sq -c compute
+  480  oc logs virt-launcher-vmi-secureboot-zh2sq -c compute > launcher.log
+  481  vi launcher.log
+  482  oc get vms
+  483  oc -n openshift-cnv get vms
+  484  oc -n openshift-cnv get vmi
+  485  oc -n openshift-cnv get pods
+  486  cat vmi-secureboot.yaml
+  487  ls
+  488  oc -n openshift-cnv get deployments
+  489  oc -n openshift-cnv get deployment virt-controller -o yaml > virt-controller.yaml
+  490  vi virt-controller.yaml
+  491  oc -n openshift-cnv apply -f virt-controller.yaml
+  492  oc -n openshift-cnf get pods
+  493  oc -n openshift-cnv get pods
+  494  oc -n openshift-cnv get ds
+  495  oc -n openshift-cnv get ds virt-handler > virt-handler-ds.yaml
+  496  vi virt-handler-ds.yaml
+  497  oc -n openshift-cnv get ds virt-handler -o yaml  > virt-handler-ds.yaml
+  498  vi virt-handler-ds.yaml
+  499  oc -n openshift-cnv apply -f virt-handler-ds.yaml
+  500  oc -n openshift-cnv get pods
+  501  vi vmi-secureboot.yaml
+  502  oc -n openshift-cnv get pods | grep operator
+  503  oc -n openshift-cnv get pods
+  504  vi vmi-secureboot.yaml
+  505  oc -n openshift-cnv create -f vmi-secureboot.yaml
+  506  oc -n openshift-cnv get pods
+  507  oc -n openshift-cnv get pods virt-launcher-vmi-secureboot-k6bd2
+  508  oc -n openshift-cnv logs virt-launcher-vmi-secureboot-k6bd2
+  509  oc -n openshift-cnv logs virt-launcher-vmi-secureboot-k6bd2 -c compute
+  510  oc -n openshift-cnv get pods virt-launcher-vmi-secureboot-k6bd2
+  511  oc -n openshift-cnv get vmi
+  512  oc -n openshift-cnv describe vmi worker-0.secboottest.lab.pnq2.cee.redhat.com
+  513  oc -n openshift-cnv get vmi vmi-secureboot
+  514  oc -n openshift-cnv describe vmi vmi-secureboot
+  515  oc -n openshift-cnv logs virt-launcher-vmi-secureboot-k6bd2 -c compute > launcher-sync-err.log
+  516  oc -n openshift-cnv logs virt-launcher-vmi-secureboot-k6bd2 -c compute
+  517  oc -n openshift-cnv get pods
+  518  oc -n openshift-cnv logs virt-launcher-vmi-secureboot-k6bd2 -c compute
+  519  oc -n openshift-cnv logs virt-launcher-vmi-secureboot-k6bd2 -c compute > launcher-sync-err.log
+  520  oc -n openshift-cnv describe vmi vmi-secureboot > vmi-sec-err.log
+  521  oc -n openshift-cnv delete -f vmi-secureboot.yaml
+  522  history | grep yaml
+  523  oc -n openshift-cnv get ds virt-handler -o yaml  > virt-handler-ds.yaml
+  524  vi virt-handler-ds.yaml
+  525  oc -n openshift-cnv apply -f virt-handler-ds.yaml
+  526  sleep 100
+  527  oc -n openshift-cnv get pods
+  528  history | grep yaml
+  529  oc -n openshift-cnv get deployment virt-controller -o yaml > virt-controller.yaml
+  530  vi virt-controller.yaml
+  531  oc apply -f virt-controller.yaml
+  532  sleep 200
+  533  oc -n openshift-cnv get pods
+  534  vi vmi-secureboot.yaml
+  535  history | grep yaml
+  536  oc apply -f vmi-secureboot.yaml
+  537  oc -n openshift-cnv get pods
+  538  oc -n openshift-cnv follow virt-launcher-vmi-secureboot-2xcf9 -c compute
+  539  oc -n openshift-cnv logs --follow virt-launcher-vmi-secureboot-2xcf9 -c compute
+  540  oc -n openshift-cnv get pods
+  541  ls -ot *.log
+  542  vi launcher-sync-err.log
+  543  sudo su -
+  544  history | grep yaml
+  545  oc -n openshift-cnv get deployment virt-controller -o yaml > virt-controller.yaml
+  546  vi virt-controller.yaml
+  547  oc apply -f virt-controller.yaml
+  548  oc -n openshift-cnv get ds virt-handler -o yaml  > virt-handler-ds.yaml
+  549  vi virt-handler-ds.yaml
+  550  oc -n openshift-cnv apply -f virt-handler-ds.yaml
+  551  oc -n openshift-cnv delete -f vmi-secureboot.yaml
+  552  sleep 50
+  553  oc apply -f vmi-secureboot.yaml
+  554  oc -n openshift-cnv get pods
+  555  history | grep follow
+  556  oc -n openshift-cnv logs --follow virt-launcher-vmi-secureboot-2xcf9 -c compute
+  557  oc -n openshift-cnv logs --follow virt-launcher-vmi-secureboot-s49qd -c compute
+  558  oc -n openshift-cnv get pods
+  559  oc -n openshift-cnv logs --follow virt-launcher-vmi-secureboot-s49qd -c compute
+  560  oc -n openshift-cnv logs virt-launcher-vmi-secureboot-s49qd -c compute > launcher-sync-good.log
+  561  tail launcher-sync-good.log
+  562  which virtctl
+  563  ls
+  564  ls ../
+  565  ls ../Downloads/
+  566  sudo yum install kubevirt-virtctl
+  567  which virtctl
+  568  subscription-manager repos --enable rhel-7-server-cnv-2.1-rpms
+  569  exit
+  570  ls
+  571  cd IMGS/
+  572  ls
+  573  pwd
+  574  history
+  575  pwd
+  576  ls
+  577  sudo su -
+  578  oc get pods
+  579  oc get vmi
+  580  oc delete -f vmi-secureboot.yaml
+  581  oc -n openshift-cnv get deployment
+  582  vi virt-controller.yaml
+  583  sudo su -
+  584  subscription-manager repos --enable rhel-7-server-cnv-2.1-rpms
+  585  sudo subscription-manager repos --enable rhel-7-server-cnv-2.1-rpms
+  586  sudo subscription-manager repos --list | grep cnv
+  587  sudo subscription-manager repos --list | grep rhel-7
+  588  sudo su -
+  589  ssh -i ~/.ssh/quicklab.key master-0
+  590  sudo subscription-manager remove --all
+  591  sudo subscription-manager unregister
+  592  sudo subscription-manager clean
+  593  sudo subscription-manager register
+  594  oc history | grep pods
+  595  which oc
+  596  history | grep pods
+  597  oc -n openshift-cnv get pods
+  598  oc -n openshift-cnv delete -f IMGS/vmi-secureboot.yaml
+  599  cd IMGS/
+  600  ls
+  601  vi vmi-alpine-efi.yaml
+  602  cat vmi-secureboot.yaml
+  603  cat vmi-alpine-efi.yaml
+  604  oc -n openshift-cnv get pods
+  605  oc -n openshift-cnv get vmi
+  606  oc -n openshift-cnv create -f vmi-alpine-efi.yaml
+  607  oc -n openshift-cnv get pods
+  608  oc -n openshift-cnv logs --follow virt-launcher-vmi-alpine-efi-xg952 -c compute
+  609  oc -n openshift-cnv logs virt-launcher-vmi-alpine-efi-xg952 -c compute > launcher-alpine-good.log
+  610  oc delete -f vmi-alpine-efi.yaml
+  611  history | grep registry
+  612  grep image vmi-secureboot.yaml
+  613  sudo skopeo copy --src-tls-verify=false  docker://registry-proxy.engineering.redhat.com/rh-osbs/microlivecd-container-disk-demo:latest docker-daemon:microlivecd-container-disk-demo:downstream
+  614  sudo skopeo copy --src-tls-verify=false  docker://registry-proxy.engineering.redhat.com/rh-osbs/microlivecd-container-disk-demo docker-daemon:microlivecd-container-disk-demo:downstream
+  615  sudo skopeo copy --src-tls-verify=false  docker://registry-proxy.engineering.redhat.com/microlivecd-container-disk-demo docker-daemon:microlivecd-container-disk-demo:downstream
+  616  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-launcher:latest docker-daemon:launcher:latest_1130
+  617  oc -n openshift-cnv create -f vmi-alpine-efi.yaml
+  618  cd IMGS/
+  619  oc -n openshift-cnv create -f vmi-alpine-efi.yaml
+  620  oc -n openshift-cnv describe vmi vmi-alpine-efi
+  621  oc delete -f vmi-alpine-efi.yaml
+  622  vi vmi-secureboot.yaml
+  623  oc -n openshift-cnv create -f vmi-secureboot.yaml
+  624  oc -n openshift-cnv get vmi vmi-secureboot
+  625  oc -n openshift-cnv describe vmi vmi-secureboot
+  626  vi nsenter-node.sh
+  627  oc -n openshift-cnv get pods
+  628  oc -n openshift-cnv rsh virt-launcher-vmi-secureboot-k5mzb
+  629  cat /etc/os-release
+  630  oc -n openshift-cnv rsh virt-launcher-vmi-secureboot-k5mzb
+  631  history | grep skopeo
+  632  vi virt-controller.yaml
+  633  history | grep docker | grep tag
+  634  history | grep docker | grep push
+  635  sudo skopeo inspect docker://docker.io/yuhaohaoyu/virt-launcher:latest
+  636  oc -n openshift-cnv get pods
+  637  docker images
+  638  sudo docker images
+  639  sudo su -
+  640  history | grep yaml
+  641  oc -n openshift-cnv get deployment virt-controller -o yaml > virt-controller.yaml
+  642  vi virt-controller.yaml
+  643  oc apply -f virt-controller.yaml
+  644  oc -n openshift-cnv get pods
+  645  oc -n openshift-cnv create -f vmi-secureboot.yaml
+  646  oc -n openshift-cnv delete -f vmi-secureboot.yaml
+  647  oc -n openshift-cnv create -f vmi-secureboot.yaml
+  648  oc -n openshift-cnv describe vmi vmi-secureboot
+  649  oc -n openshift-cnv get pods
+  650  oc -n openshift-cnv rsh virt-launcher-vmi-secureboot-wc5z7
+  651  oc -n openshift-cnv get vmi vmi-secureboot
+  652  oc -n openshift-cnv logs virt-launcher-vmi-secureboot-wc5z7
+  653  oc -n openshift-cnv logs virt-launcher-vmi-secureboot-wc5z7 -c compute
+  654  oc -n openshift-cnv delete -f vmi-secureboot.yaml
+  655  oc -n openshift-cnv create -f vmi-alpine-efi.yaml
+  656  history | grep skopeo | grep 1130
+  657  oc -n openshift-cnv describe vmi vmi-alpine-efi
+  658  vi vmi-secureboot.yaml
+  659  oc -n openshift-cnv delete -f vmi-alpine-efi.yaml
+  660  oc -n openshift-cnv delete vmi vmi-secureboot
+  661  oc -n openshift-cnv create -f vmi-secureboot.yaml
+  662  oc -n openshift-cnv describe vmi vmi-secureboot
+  663  oc -n openshift-cnv get pod virt-launcher-vmi-secureboot-pg8wr
+  664  history | grep rsh
+  665  oc -n openshift-cnv rsh virt-launcher-vmi-secureboot-pg8wr
+  666  history | grep copy
+  667  sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-handler:cnv-2.6-rhel-8-containers-candidate-21258-20201201173116 docker-daemon:docker.io/yuhaohaoyu/virt-handler:pr4546
+  668   sudo skopeo copy --src-tls-verify=false docker://registry-proxy.engineering.redhat.com/rh-osbs/container-native-virtualization-virt-launcher:cnv-2.6-rhel-8-containers-candidate-42943-20201201173119 docker-daemon:docker.io/yuhaohaoyu/virt-launcher:pr4546
+  669  hostname
+  670  which kubectl
+  671  which oc
+  672  echo ${KUBECONFIG}
+  673  export KUBECONFIG=~/oc4/auth/kubeconfig
+  674  mount
+  675  history
+  676  sudo su -
+  677  oc -n openshift-cnv get deployment virt-controller -o yaml > virt-controller.yaml
+  678  vi virt-controller.yaml
+  679  oc -n openshift-cnv apply -f virt-controller.yaml
+  680  oc -n openshift-cnv get pods
+  681  oc -n openshift-cnv get ds virt-handler -o yaml > virt-handler-ds.yaml
+  682  vi virt-handler-ds.yaml
+  683  oc -n openshift-cnv apply -f virt-handler-ds.yaml
+  684  oc -n openshift-cnv get pods
+  685  history | grep yaml | tail -20
+  686  oc -n openshift-cnv create -f vmi-secureboot.yaml
+  687  oc -n openshift-cnv delete -f vmi-secureboot.yaml
+  688  oc -n openshift-cnv create -f vmi-secureboot.yaml
+  689  oc -n openshift-cnv get pods
+  690  oc -n openshift-cnv logs --follow virt-launcher-vmi-secureboot-9bb4c
+  691  oc -n openshift-cnv logs --follow virt-launcher-vmi-secureboot-9bb4c -c compute
+  692  oc -n openshift-cnv describe vmi vmi-secureboot
+  693  pwd
+  694  history | grep rsh
+  695  oc -n openshift-cnv rsh virt-launcher-vmi-secureboot-9bb4c -c compute
+  696  oc -n openshift-cnv rsh virt-launcher-vmi-secureboot-9bb4c
+  697  oc -n openshift-cnv delete -f vmi-secureboot.yaml
+  698  oc -n openshift-cnv delete -f vmi-alpine-efi.yaml
+  699  oc -n openshift-cnv create -f vmi-secureboot.yaml
+  700  oc -n openshift-cnv describe vmi vmi-alpine-efi
+  701  oc -n openshift-cnv describe vmi
+  702  oc -n openshift-cnv get vmi
+  703  oc -n openshift-cnv delete -f vmi-secureboot.yaml
+  704  oc -n openshift-cnv get vmi
+  705  oc -n openshift-cnv create -f vmi-alpine-efi.yaml
+  706  oc -n openshift-cnv get vmi
+  707  oc -n openshift-cnv describe vmi vmi-alpine-efi
+  708  oc -n openshift-cnv get pod
+  709  oc -n openshift-cnv describe pod virt-launcher-vmi-alpine-efi-k7xcc
+  710  oc -n openshift-cnv logs virt-launcher-vmi-alpine-efi-k7xcc
+  711  oc -n openshift-cnv logs virt-launcher-vmi-alpine-efi-k7xcc -c compute
+  712  oc -n openshift-cnv get vmi
+  713  echo $KUBECONFIG
+  714  file /home/quicklab/oc4/auth/kubeconfig
+  715  vi /home/quicklab/oc4/auth/kubeconfig
+  716  cd ../
+  717  ls
+  718  mkdir upstream
+  719  cd upstream/
+  720  ls
+  721  git clone https://github.com/kubevirt/kubevirt.git
+  722  hostname
+  723  mv ~/kv.tgz .
+  724  tar xfz kv.tgz
+  725  cd kubevirt/
+  726  ls
+  727  export kubevirtNamespace="openshift-cnv"
+  728  _kubectl=$(which kubectl)
+  729  _oc=$(which oc)
+  730          cat << EOF > test_config.json
+  731  {
+  732   "storageClassLocal": "nfs",
+  733   "storageClassHostPath": "nfs",
+  734   "storageClassRhel": "nfs",
+  735   "storageClassWindows": "nfs",
+  736   "manageStorageClasses": false
+  737  }
+  738  EOF
+  739  cat test_config.json
+  740  oc create namespace kubevirt
+  741  hack/dockerized hack/build-func-tests.sh
+  742  pwd
+  743  sudo mv ~/git /usr/bin/
+  744  which git
+  745  hack/dockerized hack/build-func-tests.sh
+  746  sudo hack/dockerized hack/build-func-tests.sh
+  747  ls /usr/libexec/docker/
+  748  cd /usr/libexec/docker/
+  749  sudo ln -s docker-runc-current docker-runc
+  750  cd
+  751  ls
+  752  cd upstream/kubevirt/
+  753  sudo hack/dockerized hack/build-func-tests.sh
+  754  /usr/bin/docker-current --help
+  755  sudo su -
+  756  history
+  757  oc -n openshift-cnv get pods
+  758  oc -n openshift-cnv get vmi
+  759  oc -n openshift-cnv delete -f IMGS/vmi-alpine-efi.yaml
+  760  oc -n openshift-cnv get pods
+  761  oc -n openshift-cnv logs hco-operator-7ffdcdccfb-vnz7b
+  762  oc -n openshift-cnv describe pod hco-operator-7ffdcdccfb-vnz7b
+  763  oc -n openshift-cnv get pods
+  764  oc -n openshift-cnv describe pod hco-operator-7ffdcdccfb-vnz7b
+  765  oc -n openshift-cnv describe pod cdi-operator-7657695587-n4l9b
+  766  oc version
+  767  pwd
+  768  ls
+  769  vi fetch_pod_version_info_icsp.sh
+  770  chmod a+x fetch_pod_version_info_icsp.sh
+  771  ./fetch_pod_version_info_icsp.sh
+  772  oc -n openshift-cnv get pods
+  773  ./fetch_pod_version_info_icsp.sh virt-api-694b44d5b5-kqq6n openshift-cnv
+  774  cat fetch_pod_version_info_icsp.sh
+  775  vi fetch_pod_version_info_icsp.sh
+  776  ./fetch_pod_version_info_icsp.sh virt-api-694b44d5b5-kqq6n openshift-cnv
+  777  sudo su -
+  778  history

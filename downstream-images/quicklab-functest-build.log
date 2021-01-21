@@ -1,0 +1,201 @@
+sudo su - 
+
+       . go-activate.sh
+       export DOCKER_TAG=v0.34.1
+       export KUBEVIRT_INSTALLED_NAMESPACE=openshift-cnv
+       export KUBEVIRT_CRI=docker
+       export KUBECONFIG=/home/quicklab/oc4/auth/kubeconfig
+       export CLUSTERNAME=secboot3
+       export KUBEVIRT_DIR=${GOPATH}/src/kubevirt.io/kubevirt
+       export ARTIFACTS=${KUBEVIRT_DIR}/tests-artifacts
+
+       which oc
+       oc get pods -n openshift-cnv
+
+	hack/dockerized hack/build-func-tests.sh
+
+	make manifests
+	rm -f _out/manifests/testing/cdi-v1.25.0.yaml
+
+	 ./mytest.sh
+
+
+alias oco='oc -n openshift-cnv'
+
+oco edit deployment virt-controller
+oco edit ds virt-handler
+
+while [ 1 ]; do date; oco get pods | egrep 'irt-hand|irt-cont|irt-laun'; echo; sleep 10; done
+
+docker.io/yuhaohaoyu/virt-launcher:pr4546@sha256:f40d78b457d6e1be024b8802457c2e677bf535894887720aed42cede1d23fee7
+docker.io/yuhaohaoyu/virt-handler:pr4546@sha256:568ae872c697f8481c329652947e1c21b5cfeb8fbff20d61d9f3acc2b0438c5e
+
+docker.io/yuhaohaoyu/virt-launcher:pr4546@	
+sha256:f40d78b457d6e1be024b8802457c2e677bf535894887720aed42cede1d23fee7
+
+docker.io/yuhaohaoyu/virt-handler:pr4546@	
+sha256:568ae872c697f8481c329652947e1c21b5cfeb8fbff20d61d9f3acc2b0438c5e
+
+
+[root@upi-0 kubevirt]# hack/dockerized hack/build-func-tests.sh
+
+	kubevirt
+	Unable to find image 'kubevirt/builder@sha256:756e317913e2e5c4f342ff4cd5319bc504286bc52ca7aead3337d79182d11b46' locally
+	Trying to pull repository registry.access.redhat.com/kubevirt/builder ...
+	Trying to pull repository registry.redhat.io/kubevirt/builder ...
+	Trying to pull repository docker.io/kubevirt/builder ...
+	sha256:756e317913e2e5c4f342ff4cd5319bc504286bc52ca7aead3337d79182d11b46: Pulling from docker.io/kubevirt/builder
+	c7def56d621e: Pull complete
+	9d240124a5b9: Pull complete
+	82fd73d13a5a: Pull complete
+	eb6bbaf859cb: Pull complete
+	71f8cd4e2098: Pull complete
+	4715bedcdf06: Pull complete
+	f97b8bc81b22: Pull complete
+	b0b90fcba7ec: Pull complete
+	7e96412d0073: Pull complete
+	6eecf2202c82: Pull complete
+	9bb9758041f4: Pull complete
+	fb3f0cc85662: Pull complete
+	c14e5856d646: Pull complete
+	ecb20d2db8e5: Pull complete
+	Digest: sha256:756e317913e2e5c4f342ff4cd5319bc504286bc52ca7aead3337d79182d11b46
+	Status: Downloaded newer image for docker.io/kubevirt/builder@sha256:756e317913e2e5c4f342ff4cd5319bc504286bc52ca7aead3337d79182d11b46
+	go version go1.13.14 linux/amd64
+	Waiting for rsyncd to be ready
+	682120f6e6ec6a5cdea2fb61d22c083625a49ca6f2e93120c95a1e75bb8b6155
+	go version go1.13.14 linux/amd64
+	Another command holds the client lock:
+	pid=12
+	owner=client
+	cwd=/root/go/src/kubevirt.io/kubevirt
+
+	Waiting for it to complete...
+	Another command (pid=12) is running.  Waiting for it to complete on the server...
+	INFO: Analyzed target //:build-ginkgo (91 packages loaded, 7048 targets configured).
+	INFO: Found 1 target...
+	Target //:build-ginkgo up-to-date:
+	  bazel-bin/ginkgo-copier
+	INFO: Elapsed time: 235.705s, Critical Path: 18.15s
+	INFO: 68 processes: 68 processwrapper-sandbox.
+	INFO: Build completed successfully, 70 total actions
+	INFO: Build completed successfully, 70 total actions
+	INFO: Analyzed target //:build-functests (695 packages loaded, 4914 targets configured).
+	INFO: Found 1 target...
+	INFO: From Compiling external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc [for host]:
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc: In member function 'void google::protobuf::Reflection::SwapOneofField(google::protobuf::Message*, google::protobuf::Message*, const google::protobuf::OneofDescriptor*) const':
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:2129:37: warning: 'temp_float' may be used uninitialized in this function [-Wmaybe-uninitialized]
+	 2129 |   *MutableRaw<Type>(message, field) = value;
+	      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:494:9: note: 'temp_float' was declared here
+	  494 |   float temp_float;
+	      |         ^~~~~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:2129:37: warning: 'temp_uint64' may be used uninitialized in this function [-Wmaybe-uninitialized]
+	 2129 |   *MutableRaw<Type>(message, field) = value;
+	      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:493:10: note: 'temp_uint64' was declared here
+	  493 |   uint64 temp_uint64;
+	      |          ^~~~~~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:2129:37: warning: 'temp_uint32' may be used uninitialized in this function [-Wmaybe-uninitialized]
+	 2129 |   *MutableRaw<Type>(message, field) = value;
+	      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:492:10: note: 'temp_uint32' was declared here
+	  492 |   uint32 temp_uint32;
+	      |          ^~~~~~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:2129:37: warning: 'temp_int64' may be used uninitialized in this function [-Wmaybe-uninitialized]
+	 2129 |   *MutableRaw<Type>(message, field) = value;
+	      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:491:9: note: 'temp_int64' was declared here
+	  491 |   int64 temp_int64;
+	      |         ^~~~~~~~~~
+	INFO: From Compiling external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc: In member function 'void google::protobuf::Reflection::SwapOneofField(google::protobuf::Message*, google::protobuf::Message*, const google::protobuf::OneofDescriptor*) const':
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:2129:37: warning: 'temp_float' may be used uninitialized in this function [-Wmaybe-uninitialized]
+	 2129 |   *MutableRaw<Type>(message, field) = value;
+	      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:494:9: note: 'temp_float' was declared here
+	  494 |   float temp_float;
+	      |         ^~~~~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:2129:37: warning: 'temp_uint64' may be used uninitialized in this function [-Wmaybe-uninitialized]
+	 2129 |   *MutableRaw<Type>(message, field) = value;
+	      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:493:10: note: 'temp_uint64' was declared here
+	  493 |   uint64 temp_uint64;
+	      |          ^~~~~~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:2129:37: warning: 'temp_uint32' may be used uninitialized in this function [-Wmaybe-uninitialized]
+	 2129 |   *MutableRaw<Type>(message, field) = value;
+	      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:492:10: note: 'temp_uint32' was declared here
+	  492 |   uint32 temp_uint32;
+	      |          ^~~~~~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:2129:37: warning: 'temp_int64' may be used uninitialized in this function [-Wmaybe-uninitialized]
+	 2129 |   *MutableRaw<Type>(message, field) = value;
+	      |   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+	external/com_google_protobuf/src/google/protobuf/generated_message_reflection.cc:491:9: note: 'temp_int64' was declared here
+	  491 |   int64 temp_int64;
+	      |         ^~~~~~~~~~
+	Target //:build-functests up-to-date:
+	  bazel-bin/functests-copier
+	INFO: Elapsed time: 1725.464s, Critical Path: 117.65s
+	INFO: 1100 processes: 1100 processwrapper-sandbox.
+	INFO: Build completed successfully, 1110 total actions
+	INFO: Build completed successfully, 1110 total actions
+	INFO: Analyzed target //:build-junit-merger (1 packages loaded, 4 targets configured).
+	INFO: Found 1 target...
+	Target //:build-junit-merger up-to-date:
+	  bazel-bin/junit-merger-copier
+	INFO: Elapsed time: 11.906s, Critical Path: 7.64s
+	INFO: 3 processes: 3 processwrapper-sandbox.
+	INFO: Build completed successfully, 4 total actions
+	INFO: Build completed successfully, 4 total actions
+
+
+
+[root@upi-0 kubevirt]# make manifests
+	hack/dockerized "CSV_VERSION= QUAY_REPOSITORY= \
+	  DOCKER_PREFIX= DOCKER_TAG=v0.34.1 \
+	  IMAGE_PULL_POLICY= VERBOSITY= PACKAGE_NAME= \
+	  KUBEVIRT_INSTALLED_NAMESPACE=openshift-cnv ./hack/build-manifests.sh"
+	go version go1.13.14 linux/amd64
+
+	Unable to find image 'imega/jq:1.6' locally
+	Trying to pull repository registry.access.redhat.com/imega/jq ...
+	Pulling repository registry.access.redhat.com/imega/jq
+	Trying to pull repository registry.redhat.io/imega/jq ...
+	Trying to pull repository docker.io/imega/jq ...
+	1.6: Pulling from docker.io/imega/jq
+	7962620bcd88: Pulling fs layer
+	7962620bcd88: Verifying Checksum
+	7962620bcd88: Download complete
+	7962620bcd88: Pull complete
+	Digest: sha256:39d079b17c958870d03cac5b7b70300dc2e86fc97f9c31ae9a505fcd97418fae
+	Status: Downloaded newer image for docker.io/imega/jq:1.6
+	go version go1.13.14 linux/amd64
+	digest files not found: won't use shasums, falling back to tags
+
+[root@upi-0 kubevirt]# cat mytest.sh
+#!/bin/bash
+
+./_out/tests/tests.test \
+        --cdi-namespace=${KUBEVIRT_INSTALLED_NAMESPACE} \
+        --config=${KUBEVIRT_DIR}/tests/default-config.json \
+        --container-tag=${DOCKER_TAG} \
+        --container-tag-alt=${DOCKER_TAG}_alt \
+        --ginkgo.seed=0 \
+        --installed-namespace=${KUBEVIRT_INSTALLED_NAMESPACE} \
+        --kubeconfig=/home/quicklab/oc4/auth/kubeconfig \
+        --kubectl-path=/usr/local/bin/kubectl \
+        --oc-path=/usr/local/bin/oc \
+        --virtctl-path=/usr/local/bin/virtctl \
+        --path-to-testing-infra-manifests=${KUBEVIRT_DIR}/_out/manifests/testing \
+        --ginkgo.reportPassed \
+        --test.v \
+        --test.parallel 1 \
+        --ginkgo.parallel.total 1 \
+        --skip-shasums-check \
+        --test.timeout=600m
+
+####    --deploy-testing-infra \
+
+
+

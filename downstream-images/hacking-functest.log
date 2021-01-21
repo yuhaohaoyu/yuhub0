@@ -1,0 +1,41 @@
+hack/functests.sh
+
+_out/tests/ginkgo -r --slowSpecThreshold 60 $@ 
+    _out/tests/tests.test -- ${extra_args} 
+	-config=${KUBEVIRT_DIR}/tests/default-config.json 
+	-container-tag=${docker_tag} 
+	-container-tag-alt=${docker_tag_alt} 
+	-container-prefix=${functest_docker_prefix} 
+	-deploy-testing-infra=${deploy_testing_infra} 
+	-gocli-path=${gocli} 
+	-image-prefix-alt=${image_prefix_alt} 
+	-installed-namespace=${namespace} 
+	-kubeconfig=${kubeconfig} 
+	-kubectl-path=${kubectl} 
+	-oc-path=${oc} 
+	-previous-release-tag=${PREVIOUS_RELEASE_TAG} 
+	-previous-release-registry=${previous_release_registry} 
+	--artifacts=${ARTIFACTS}
+
+
+runtest.sh
+
+_out/tests/tests.test \
+        --cdi-namespace="openshift-cnv" \
+        --config=${PWD}/test_config.json \
+        --container-tag=v0.26.1 --container-tag-alt=v0.26.1_alt \
+        --deploy-testing-infra \
+        --ginkgo.seed=0 \
+        --installed-namespace=openshift-cnv \
+        --junit-output=${PWD}/xunit_results.xml \
+        --kubeconfig=${KUBECONFIG} \
+        --kubectl-path=${_kubectl} \
+        --oc-path=${_oc} \
+        --path-to-testing-infra-manifests=${PWD}/_out/manifests/testing \
+        --polarion-custom-plannedin=2_3 \
+        --polarion-execution=true \
+        --polarion-project-id=CNV \
+        --polarion-report-file=polarion_results.xml \
+        --test-tier=tier1
+
+
